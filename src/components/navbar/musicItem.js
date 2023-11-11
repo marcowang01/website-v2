@@ -18,8 +18,8 @@ export default function MusicItem() {
   }
 
   useEffect(() => {
-    const intervalId = setInterval(fetchTrack, 1000 * 5); 
-
+    const intervalId = setInterval(fetchTrack, 1000 * 30); 
+    fetchTrack();
     // Clean up the interval on component unmount
     return () => clearInterval(intervalId);
   }, []);
@@ -28,8 +28,8 @@ export default function MusicItem() {
   return (
     <>
       {currentTrack && (
-        <div className={`${styles.navbarItems} ${styles.hideOnMobile}`}>
-          LISTENING TO ${currentTrack.toUpperCase()}
+        <div className={`${styles.navbarItems} ${styles.hideOnMobile} ${styles.tight}`}>
+          LISTENING TO: {currentTrack.toUpperCase()}
         </div>
       )}
     </>

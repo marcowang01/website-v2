@@ -1,7 +1,7 @@
 import Breadcrumbs from './breadcrumbs'
-import NameItem from './name'
-import DateItem from './date'
-import MusicItem from './music'
+import NameItem from './nameItem'
+import TimeItem from './timeItem'
+import MusicItem from './musicItem'
 import styles from './navbar.module.css'
 
 export default function Navbar() {
@@ -13,7 +13,7 @@ export default function Navbar() {
           <Breadcrumbs />
         </div>
         <div className={styles.navbarRightContainer}>
-          <DateItem />
+          <TimeItem />
           <MusicItem />
         </div>
       </div>

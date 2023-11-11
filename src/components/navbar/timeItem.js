@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 
 import styles from './navbar.module.css'
-export default function DateItem() {
+export default function TimeItem() {
   // useState hook to store the current time
   const [currentTime, setCurrentTime] = useState(new Date());
 
@@ -30,7 +30,7 @@ export default function DateItem() {
   
 
   return (
-    <div className={`${styles.navbarItems} ${styles.hideOnMobile}`}>
+    <div className={`${styles.navbarItems} ${styles.hideOnMobile}  ${styles.tight}`}>
       {timeString.toUpperCase()}
     </div>
   )

@@ -54,6 +54,11 @@
   font-weight: var(--font-semibold);
 }
 
+.tight {
+  letter-spacing: -3%;
+  padding: 3px 6px;
+}
+
 .hideOnMobile {
   display: block;
 }
