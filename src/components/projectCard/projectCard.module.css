@@ -24,20 +24,20 @@
 .title {
   font-weight: var(--font-medium);
   font-size: 20px;
-  letter-spacing: -0.5%;
+  letter-spacing: -0.005em;
 }
 
 .date {
   font-weight: var(--font-light);
   font-size: 12px;
-  letter-spacing: -2%;
+  letter-spacing: -0.02em;
   text-transform: uppercase;
 }
 
 .description {
   width: 80%;
   font-size: 16px;
-  letter-spacing: -2%;
+  letter-spacing: -0.02em;
   line-height: 1.2;
 }
 
@@ -50,7 +50,7 @@
   width: 100%;
   color: rgb(var(--project-card-light-text-rgb));
   font-size: 13px;
-  letter-spacing: -2%;
+  letter-spacing: -0.02em;
 }
 
 .links {

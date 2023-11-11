@@ -13,3 +13,4 @@ export default function Home() {
 // - Add favicon
 // - Add download icon for resume
 // - add better interactions with project cards (clicking links, etc.)
+// - add better interactions with resume download link
