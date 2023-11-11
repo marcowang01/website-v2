@@ -4,7 +4,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   gap: 10px;
-  width: 150px;
+  width: var(--sidebar-width);
 }
 
 
@@ -12,7 +12,6 @@
 .sidebarButtonContainer {
   display: flex;
   flex-direction: row;
-  flex-grow: 1;
   width: 100%;
   justify-content: space-between;
   align-items: center;
@@ -24,6 +23,7 @@
   background-color: rgba(var(--light-btn-bg-rgb), 0.3);
   color: rgba(var(--light-btn-text-rgb), 0.7);
   font-size: 16px;
+  height: min-content;
 }
 
 .sidebarKey {

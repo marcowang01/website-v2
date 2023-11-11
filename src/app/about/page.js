@@ -8,10 +8,10 @@ export default function About() {
         About
       </div>
       <div className={styles.paragraph}>
-        Hello! My name is Marco, and I am currently studying computer science and physics at Northwestern University.
+        Hello! My name is Marco, welcome to my website!
       </div>
-      <div>
-        Here is some cool bean.
+      <div className={styles.paragraph}>
+        I study CS and Physics at Northwestern University.
       </div>
     </main>
   )

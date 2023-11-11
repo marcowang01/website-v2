@@ -9,11 +9,13 @@
   padding: 0rem 11px;
   margin: 0 auto;
   max-width: 1200px;
-  /* min-height: 100vh; */
+  overflow: hidden;
+  height: calc(85vh - 50px);
 }
 
 .content{
-  flex-grow: 2;
+  width: calc(100% - var(--sidebar-width));
+  overflow-y: auto; 
 }
 
 /* .description {

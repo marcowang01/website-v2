@@ -18,6 +18,22 @@ const projects = [
     date: "Winter, 2022",
     skills: ["React", "Next.js", "JavaScript", "HTML", "CSS"]
   }),
+  new Project({
+    title: "This Website",
+    description: "This website was created using Next.js, a React framework. The source code is available on GitHub.",
+    link: "marcowang.me",
+    github: "https://github.com/marcowang01",
+    date: "Winter, 2022",
+    skills: ["React", "Next.js", "JavaScript", "HTML", "CSS"]
+  }),
+  new Project({
+    title: "This Website",
+    description: "This website was created using Next.js, a React framework. The source code is available on GitHub.",
+    link: "marcowang.me",
+    github: "https://github.com/marcowang01",
+    date: "Winter, 2022",
+    skills: ["React", "Next.js", "JavaScript", "HTML", "CSS"]
+  }),
 ];
 
 export default projects;

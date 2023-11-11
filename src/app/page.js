@@ -8,3 +8,8 @@ export default function Home() {
     </div>
   )
 }
+
+// Todo:
+// - Add favicon
+// - Add download icon for resume
+// - add better interactions with project cards (clicking links, etc.)

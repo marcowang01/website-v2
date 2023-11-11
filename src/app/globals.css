@@ -14,6 +14,7 @@
 
   /* side bar buttons */
   --sidebar-border: 1px solid #e7e7e7;
+  --sidebar-width: 150px;
 
   --light-btn-text-rgb: 119, 119, 119;
   --light-btn-bg-rgb: 222, 222, 222;
