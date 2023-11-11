@@ -18,7 +18,7 @@ const expericences = {
         // "GPA: 3.97/4.00",
         // "Relevant Coursework: Data Structures, Algorithms, Computer Systems, Machine Learning, Computer Vision, Quantum Mechanics, Electromagnetism, Statistical Mechanics, Linear Algebra, Differential Equations, Multivariable Calculus",
       ],
-      date: "September, 2020 - June, 2024",
+      date: "2020-2024",
       location: "Evanston, IL",
       skills: []
     }),

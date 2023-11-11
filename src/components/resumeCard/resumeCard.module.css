@@ -43,8 +43,13 @@
 }
 
 .bulletpoint {
-  font-size: 12px;
-  line-height: 13px;
+  font-size: 13px;
+  line-height: 1.2;
   font-weight: var(--font-regular);
   letter-spacing: -0.03em;
+  margin-left: 3px;
+}
+
+.dot {
+  margin: 0 5px 0 3px;
 }

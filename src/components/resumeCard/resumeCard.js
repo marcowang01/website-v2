@@ -23,10 +23,10 @@ export default function ResumeCard(experience) {
           {date}
         </div>
       </section>
-      {bulletpoints && <section className={styles.bulletpoints}>
+      {bulletpoints && bulletpoints.length > 0 && <section className={styles.bulletpoints}>
         {bulletpoints.map((bulletpoint, index) => (
           <div className={styles.bulletpoint} key={`${bulletpoint}-${index}`}>
-            • {bulletpoint}
+            <span className={styles.dot}>•</span>{bulletpoint}
           </div>
         ))}
       </section>}
