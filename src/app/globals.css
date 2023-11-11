@@ -1,13 +1,41 @@
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+  --foreground-rgb: 102, 102, 102;
+  --background-rgb: 245, 245, 244;
+  --blue-highlight-rgb: 163, 209, 236;
+
+
+  /* side bar buttons */
+  --light-btn-text-rgb: 119, 119, 119;
+  --light-btn-bg-rgb: 222, 222, 222;
+  --light-btn-border-rgb: 231, 231, 231;
+  --light-btn-white-rgb: 255, 255, 255;
+
+  --light-btn-default-bg: linear-gradient(
+    0deg, 
+    rgba(var(--light-btn-bg-rgb), 0.7),
+    rgba(var(--light-btn-bg-rgb) 0.3), 
+  );
+  --light-btn-active-bg: linear-gradient(
+    0deg, 
+    rgba(var(--light-btn-white-rgb), 0.7),
+    rgba(var(--light-btn-white-rgb), 1), 
+  );
+
+  --light-key-default-bg-rgba: 217, 217, 217, 0.3;
+  --light-key-hover-bg-rgba: 255, 255, 255, 0.3;
+  --light-key-pressed-bg-rgba: 233, 233, 233, 0.3;
+  --light-key-active-bg-rgba: 255, 255, 255, 1;
+
+  /* nav bar */
+  --nav-bar-text-rgb: 218, 220, 222;
+
+  /* project page */
+  --project-card-bg-rgb: 249, 249, 247;
+  --project-card-text-rgb: 85, 85, 85;
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
