@@ -1,5 +1,6 @@
 import styles from './sidebar.module.css'
 import Link from 'next/link'
+import SidebarButton from './sidebarButton'
 
 export default function Sidebar() {
 
@@ -33,30 +34,13 @@ export default function Sidebar() {
 
   return (
     <div className={styles.container}>
-      {buttonList.map((button, index) => {
-        // Determine if the link is an external link
-        const isExternalLink = button.link.includes('http');
-        // Set up common props for the Link component
-        const linkProps = isExternalLink
-          ? { target: "_blank", rel: "noopener noreferrer" }
-          : {};
-
-        return (
-          <Link 
-            href={button.link} 
-            {...linkProps} 
-            key={`button_${index}`}
-            className={styles.sidebarButtonContainer}
-          >
-            <div>
-              {button.name}
-            </div>
-            <div className={styles.sidebarKey}>
-              {button.name.charAt(0)}
-            </div>
-          </Link>
-        );
-      })}
+      {buttonList.map((button, index) => (
+        <SidebarButton 
+          name={button.name}
+          link={button.link}
+          key={`button_${index}`}
+        />
+      ))}
     </div>
   )
 }

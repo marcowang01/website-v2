@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 
-export default function About() {
+export default function Projects() {
   return (
     <main className={styles.main}>
-      about
+      projects 
     </main>
   )
 }
