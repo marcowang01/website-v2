@@ -18,10 +18,6 @@
   border-radius: 5px;
   cursor: pointer;
   border: var(--sidebar-border);
-  /* background: linear-gradient(
-    #F4F4F4,
-    #F44444,
-  ); */
   background-image: linear-gradient(#f4f4f4b3, #f3f3f336);
   background-color: rgba(var(--light-btn-bg-rgb), 0.3);
   color: rgba(var(--light-btn-text-rgb), 0.7);
@@ -54,7 +50,6 @@
 
 .sidebarButtonContainer:active .sidebarKey {
   background: rgba(var(--light-key-pressed-bg-rgba));
-  color: #777777;
   scale: 0.95;
   transition: var(--long-transition);
 }

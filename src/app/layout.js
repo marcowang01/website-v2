@@ -19,12 +19,15 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <Navbar />
+        <div className={styles.paddingContainer}>
         <main className={styles.container}>
           <Sidebar />
           <div className={styles.content}>
             {children}
           </div>
         </main>
+        </div>
+        
       </body>
     </html>
   )
