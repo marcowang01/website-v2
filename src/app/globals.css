@@ -12,28 +12,21 @@
   --font-regular: 400;
 
   /* side bar buttons */
-  --sidebar-button-border-radius: 5px;
-  --sidebar-key-border-radius: 3px;
+  --sidebar-border: 1px solid #e7e7e7;
+
   --light-btn-text-rgb: 119, 119, 119;
   --light-btn-bg-rgb: 222, 222, 222;
   --light-btn-border-rgb: 231, 231, 231;
   --light-btn-white-rgb: 255, 255, 255;
 
-  --light-btn-default-bg: linear-gradient(
-    0deg, 
-    rgba(var(--light-btn-bg-rgb), 0.7),
-    rgba(var(--light-btn-bg-rgb) 0.3), 
-  );
-  --light-btn-active-bg: linear-gradient(
-    0deg, 
-    rgba(var(--light-btn-white-rgb), 0.7),
-    rgba(var(--light-btn-white-rgb), 1), 
-  );
 
   --light-key-default-bg-rgba: 217, 217, 217, 0.3;
   --light-key-hover-bg-rgba: 255, 255, 255, 0.3;
   --light-key-pressed-bg-rgba: 233, 233, 233, 0.3;
-  --light-key-active-bg-rgba: 255, 255, 255, 1;
+  --light-key-selected-bg-rgba: 255, 255, 255, 1;
+
+  --short-transition: background-color 0.2s ease, color 0.2s ease, background-image 0.2s ease, scale 0.2s ease;
+  --long-transition: background-color 0.5s ease, color 0.5s ease, background-image 0.5s ease, scale 0.5s ease;
 
   /* nav bar */
   --navbar-text-rgb: 218, 220, 222;

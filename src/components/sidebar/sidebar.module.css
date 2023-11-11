@@ -14,16 +14,67 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 7px 10px;
   border-radius: 5px;
   cursor: pointer;
-  border-color: rgb(var(--light-btn-border-rgb));
-  border: 1px solid;
+  border: var(--sidebar-border);
+  /* background: linear-gradient(
+    #F4F4F4,
+    #F44444,
+  ); */
+  background-image: linear-gradient(#f4f4f4b3, #f3f3f336);
+  background-color: rgba(var(--light-btn-bg-rgb), 0.3);
+  color: rgba(var(--light-btn-text-rgb), 0.7);
+  font-size: 16px;
 }
 
 .sidebarKey {
-  border: 1px solid;
-  border-color: rgb(var(--light-btn-border-rgb));
-  padding: 5px;
+  border: var(--sidebar-border);
+  font-size: 10px;
   border-radius: 3px;
+  background-color: rgba(var(--light-key-default-bg-rgba));
+  color: rgba(var(--light-btn-text-rgb), 1);
+  height: 19px;
+  width: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.sidebarButtonContainer:hover {
+  color: rgba(var(--light-btn-text-rgb), 1);
+  transition: var(--short-transition);
+}
+
+.sidebarButtonContainer:hover .sidebarKey {
+  background-color: rgba(var(--light-key-hover-bg-rgba));
+  color: rgba(var(--light-btn-text-rgb), 0.2);
+  transition: var(--short-transition);
+}
+
+.sidebarButtonContainer:active .sidebarKey {
+  background: rgba(var(--light-key-pressed-bg-rgba));
+  color: #777777;
+  scale: 0.95;
+  transition: var(--long-transition);
+}
+
+.sidebarButtonContainer:active {
+  color: rgba(var(--light-btn-text-rgb), 0.9);
+  scale: 0.95;
+  transition: var(--long-transition);
+}
+
+.sidebarButtonContainer.selected {
+  background-image: linear-gradient(#f3f3f336, #f4f4f4b3);
+  background-color: rgb(var(--light-btn-white-rgb));
+  color: rgba(var(--light-btn-text-rgb), 0.9);
+  transition: var(--long-transition);
+}
+
+.sidebarButtonContainer.selected .sidebarKey {
+  background: rgba(var(--light-key-selected-bg-rgba));
+  color: rgba(var(--light-btn-text-rgb), 1);
+  transition: var(--long-transition);
+}
+
