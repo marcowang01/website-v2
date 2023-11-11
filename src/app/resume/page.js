@@ -11,8 +11,8 @@ export default function Resume() {
           Education
         </div>
         <div className={styles.experiencesContainer}>
-          {expericences.education.map((experience) => (
-            <ResumeCard {...experience} />
+          {expericences.education.map((experience, index) => (
+            <ResumeCard {...experience} key={`${experience.company}-${index}`} />
           ))}
         </div>
       </div>
@@ -21,8 +21,8 @@ export default function Resume() {
           Work Experience
         </div>
         <div className={styles.experiencesContainer}>
-          {expericences.work.map((experience) => (
-            <ResumeCard {...experience} />
+          {expericences.work.map((experience, index) => (
+            <ResumeCard {...experience} key={`${experience.company}-${index}`} />
           ))}
         </div>
       </div>

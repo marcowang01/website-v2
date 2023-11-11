@@ -6,8 +6,8 @@ import projects from '@/content/projects'
 export default function Projects() {
   return (
     <main className={styles.main}>
-      {projects.map((project) => (
-        <ProjectCard {...project} />
+      {projects.map((project, index) => (
+        <ProjectCard {...project} key={`${project.title}-${index}`} />
       ))}
     </main>
   )

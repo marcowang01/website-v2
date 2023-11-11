@@ -5,8 +5,6 @@ import Image from 'next/image'
 export default function ResumeCard(experience) {
   const { company, position, bulletpoints, date, location, skills } = experience
 
-  console.log(experience)
-
   return (
     <div className={styles.container}>
       <section className={styles.topHeader}>
