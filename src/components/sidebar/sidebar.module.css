@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  width: var(--sidebar-width);
+}
+
+.sidebarButtonContainer {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  border-color: rgb(var(--light-btn-border-rgb));
+  border: 1px solid;
+}
+
+.sidebarKey {
+  border: 1px solid;
+  border-color: rgb(var(--light-btn-border-rgb));
+  padding: 5px;
+  border-radius: 3px;
+}

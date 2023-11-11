@@ -9,6 +9,7 @@
 
 
   /* side bar buttons */
+  --sidebar-width: 150px;
   --light-btn-text-rgb: 119, 119, 119;
   --light-btn-bg-rgb: 222, 222, 222;
   --light-btn-border-rgb: 231, 231, 231;
