@@ -9,7 +9,8 @@
 
 
   /* side bar buttons */
-  --sidebar-width: 150px;
+  --sidebar-button-border-radius: 5px;
+  --sidebar-key-border-radius: 3px;
   --light-btn-text-rgb: 119, 119, 119;
   --light-btn-bg-rgb: 222, 222, 222;
   --light-btn-border-rgb: 231, 231, 231;
@@ -33,6 +34,8 @@
 
   /* nav bar */
   --nav-bar-text-rgb: 218, 220, 222;
+  --navbar-border-radius: 12px;
+
 
   /* project page */
   --project-card-bg-rgb: 249, 249, 247;
