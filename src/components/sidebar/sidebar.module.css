@@ -7,6 +7,8 @@
   width: 150px;
 }
 
+
+
 .sidebarButtonContainer {
   display: flex;
   flex-direction: row;
@@ -44,7 +46,6 @@
 
 .sidebarButtonContainer:hover .sidebarKey {
   background-color: rgba(var(--light-key-hover-bg-rgba));
-  color: rgba(var(--light-btn-text-rgb), 0.2);
   transition: var(--short-transition);
 }
 

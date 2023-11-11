@@ -10,6 +10,7 @@
   --font-semibold: 600;
   --font-light: 300;
   --font-regular: 400;
+  --font-medium: 500;
 
   /* side bar buttons */
   --sidebar-border: 1px solid #e7e7e7;
@@ -37,6 +38,8 @@
   /* project page */
   --project-card-bg-rgb: 249, 249, 247;
   --project-card-text-rgb: 85, 85, 85;
+  --project-card-border: 1px solid #eee;
+  --project-card-light-text-rgb: 153, 153, 153;
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,

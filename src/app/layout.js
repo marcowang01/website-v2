@@ -5,7 +5,7 @@ import Sidebar from '@/components/sidebar/sidebar'
 import styles from './page.module.css'
 
 const inter = Inter({ 
-  weight: ['400', '600', '300', '700'],
+  weight: ['400', '600', '300', '700', '500'],
   subsets: ['latin'] 
 })
 
