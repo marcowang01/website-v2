@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  width: 87%;
 }
 
 .title {
@@ -20,12 +21,23 @@
 
 .section {
   margin: 20px 0px;
+  width: 100%;
 }
 
 .sectionTitle {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: var(--font-semibold);
   color: var(--foreground-rgb);
   text-transform: capitalize;
   letter-spacing: -0.01em;
+  margin-bottom: 10px;
+}
+
+.experiencesContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
 }

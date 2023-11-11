@@ -15,8 +15,8 @@ const expericences = {
       company: "Northwetsern University",
       position: "MS in Computer Science, BA in Physics",
       bulletpoints: [
-        "GPA: 3.97/4.00",
-        "Relevant Coursework: Data Structures, Algorithms, Computer Systems, Machine Learning, Computer Vision, Quantum Mechanics, Electromagnetism, Statistical Mechanics, Linear Algebra, Differential Equations, Multivariable Calculus",
+        // "GPA: 3.97/4.00",
+        // "Relevant Coursework: Data Structures, Algorithms, Computer Systems, Machine Learning, Computer Vision, Quantum Mechanics, Electromagnetism, Statistical Mechanics, Linear Algebra, Differential Equations, Multivariable Calculus",
       ],
       date: "September, 2020 - June, 2024",
       location: "Evanston, IL",

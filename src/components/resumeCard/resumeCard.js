@@ -15,7 +15,7 @@ export default function ResumeCard(experience) {
           {location}
         </div>
       </section>
-      <section className={styles.bottomHearder}>
+      <section className={styles.bottomHeader}>
         <div className={styles.position}>
           {position}
         </div>
@@ -23,13 +23,13 @@ export default function ResumeCard(experience) {
           {date}
         </div>
       </section>
-      <section className={styles.bulletpoints}>
+      {bulletpoints && <section className={styles.bulletpoints}>
         {bulletpoints.map((bulletpoint, index) => (
           <div className={styles.bulletpoint} key={`${bulletpoint}-${index}`}>
-            {bulletpoint}
+            • {bulletpoint}
           </div>
         ))}
-      </section>
+      </section>}
     </div>
   )
 }

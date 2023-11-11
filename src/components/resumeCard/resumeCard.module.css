@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.topHeader, .bottomHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.company {
+  font-size: 14px;
+  font-weight: var(--font-medium);
+  text-transform: capitalize;
+  letter-spacing: -0.05em;
+}
+
+.position {
+  font-size: 14px;
+  font-weight: var(--font-light);
+  letter-spacing: -0.05em;
+}
+
+.location, .date {
+  font-size: 14px;
+  font-weight: var(--font-regular);
+  letter-spacing: -0.05em;
+}
+
+.bulletpoints {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.bulletpoint {
+  font-size: 12px;
+  line-height: 13px;
+  font-weight: var(--font-regular);
+  letter-spacing: -0.03em;
+}
