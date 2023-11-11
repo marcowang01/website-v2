@@ -4,7 +4,10 @@ import Navbar from '@/components/navbar/navbar'
 import Sidebar from '@/components/sidebar/sidebar'
 import styles from './page.module.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ 
+  weight: ['400', '600', '300', '700'],
+  subsets: ['latin'] 
+})
 
 export const metadata = {
   title: 'Marco Wang',
@@ -18,7 +21,9 @@ export default function RootLayout({ children }) {
         <Navbar />
         <main className={styles.container}>
           <Sidebar />
-          {children}
+          <div className={styles.content}>
+            {children}
+          </div>
         </main>
       </body>
     </html>

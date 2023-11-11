@@ -5,18 +5,18 @@ export default function Navbar() {
     <div className={styles.container}>
       <div className={styles.navbarContainer}>
         <div className={styles.navbarLeftContainer}>
-          <div>
+          <div className={styles.navbarItems}>
             Marco Wang
           </div>
-          <div>
+          <div className={styles.navbarItems}>
             Breadcrumbs
           </div>
         </div>
         <div className={styles.navbarRightContainer}>
-          <div>
+          <div className={styles.navbarItems}>
             12:00 PM
           </div>
-          <div>
+          <div className={styles.navbarItems}>
             Listening to: Hans Zimmer
           </div>
         </div>
