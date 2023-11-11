@@ -9,30 +9,35 @@ class Experience {
     }
 }
 
-const expericences = [
-  new Experience({
-    company: "Northwetsern University",
-    position: "MS in Computer Science, BA in Physics",
-    bulletpoints: [
-      "GPA: 3.97/4.00",
-      "Relevant Coursework: Data Structures, Algorithms, Computer Systems, Machine Learning, Computer Vision, Quantum Mechanics, Electromagnetism, Statistical Mechanics, Linear Algebra, Differential Equations, Multivariable Calculus",
-    ],
-    date: "September, 2020 - June, 2024",
-    location: "Evanston, IL",
-    skills: []
-  }),
-  new Experience({
-    company: "Google",
-    position: "Software Engineering Intern",
-    bulletpoints: [
-      "Worked on the Google Cloud Platform (GCP) Console, a web-based UI for GCP customers to manage their cloud resources.",
-      "Implemented a new feature that allows users to view and manage their Cloud Storage buckets and objects.",
-      "Used TypeScript, Angular, and Google Cloud APIs.",
-    ],
-    date: "Summer, 2021",
-    location: "Mountain View, CA",
-    skills: ["TypeScript", "Angular", "JavaScript", "HTML", "CSS"]
-  }),
-];
+const expericences = {
+  education : [
+    new Experience({
+      company: "Northwetsern University",
+      position: "MS in Computer Science, BA in Physics",
+      bulletpoints: [
+        "GPA: 3.97/4.00",
+        "Relevant Coursework: Data Structures, Algorithms, Computer Systems, Machine Learning, Computer Vision, Quantum Mechanics, Electromagnetism, Statistical Mechanics, Linear Algebra, Differential Equations, Multivariable Calculus",
+      ],
+      date: "September, 2020 - June, 2024",
+      location: "Evanston, IL",
+      skills: []
+    }),
+  ],
+  work: [
+    new Experience({
+      company: "Google",
+      position: "Software Engineering Intern",
+      bulletpoints: [
+        "Worked on the Google Cloud Platform (GCP) Console, a web-based UI for GCP customers to manage their cloud resources.",
+        "Implemented a new feature that allows users to view and manage their Cloud Storage buckets and objects.",
+        "Used TypeScript, Angular, and Google Cloud APIs.",
+      ],
+      date: "Summer, 2021",
+      location: "Mountain View, CA",
+      skills: ["TypeScript", "Angular", "JavaScript", "HTML", "CSS"]
+    }),
+  ]
+}
+
 
 export default expericences;

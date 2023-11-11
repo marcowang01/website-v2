@@ -1,10 +1,31 @@
 import Image from 'next/image'
 import styles from './page.module.css'
+import expericences from '@/content/experiences'
+import ResumeCard from '@/components/resumeCard/resumeCard'
 
 export default function Resume() {
   return (
     <main className={styles.main}>
-      resume 
+      <div className={styles.section}>
+        <div className={styles.title}>
+          Education
+        </div>
+        <div className={styles.experiencesContainer}>
+          {expericences.education.map((experience) => (
+            <ResumeCard {...experience} />
+          ))}
+        </div>
+      </div>
+      <div className={styles.section}>
+        <div className={styles.title}>
+          Work Experience
+        </div>
+        <div className={styles.experiencesContainer}>
+          {expericences.work.map((experience) => (
+            <ResumeCard {...experience} />
+          ))}
+        </div>
+      </div>
     </main>
   )
 }

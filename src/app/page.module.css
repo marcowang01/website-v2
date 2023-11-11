@@ -16,6 +16,7 @@
 .content{
   width: calc(100% - var(--sidebar-width));
   overflow-y: auto; 
+  padding-left: 10vw;
 }
 
 /* .description {
