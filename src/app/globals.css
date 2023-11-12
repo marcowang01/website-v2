@@ -89,13 +89,13 @@
 
   /* For the scrollbar handle (the part you click on and drag) */
   ::-webkit-scrollbar-thumb {
-    background: rgb(var(--light-btn-bg-rgb)); /* color of the scroll thumb */
+    background: rgb(222, 222, 222); /* color of the scroll thumb */
     border-radius: 6px; /* roundness of the scroll thumb */
   }
 
   /* For the scrollbar handle when it's being hovered or clicked */
   ::-webkit-scrollbar-thumb:vertical:hover {
-    background: rgb(var(--foreground-light-rgb)); /* color when hovering over the scroll thumb */
+    background: rgb(180, 180, 180); /* color when hovering over the scroll thumb */
   }
 }
 
