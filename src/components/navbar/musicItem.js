@@ -7,7 +7,7 @@ export default function MusicItem() {
   const [currentTrack, setCurrentTrack] = useState('');
 
   const fetchTrack = async () => {
-    const response = await fetch('/api/spotify', {});
+    const response = await fetch('/api/spotify', { cache: 'no-cache' });
     if (response.status !== 200) {
       console.error('Error fetching current track');
       return;
