@@ -28,7 +28,7 @@ const projects = [
   }),
   new Project({
     title: "PlatzUI",
-    description: "Platz is an open-source personal website template for creatives. It aims to streamline the design-to-implementation process.",
+    description: "Platz is an open-source personal website template for creatives, with a focus on streamlining the design-to-implementation process.",
     link: "https://platz.ooo/",
     github: "https://github.com/szgbo/platz",
     date: "Winter, 2023",
