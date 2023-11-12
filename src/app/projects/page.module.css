@@ -6,3 +6,9 @@
   gap: 20px;
   margin-bottom: 30px;
 }
+
+@media (max-width: 768px) {
+  .main {
+    padding-top: calc(11px + 1rem);
+  }
+}

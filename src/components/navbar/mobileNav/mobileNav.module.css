@@ -39,3 +39,9 @@
 .button.active {
   color: rgb(var(--foreground-rgb));
 }
+
+.arrow {
+  width: 17px;
+  height: 17px;
+  fill: #666;
+}

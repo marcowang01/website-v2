@@ -4,7 +4,7 @@ import { useRouter, usePathname } from 'next/navigation';
 
 import Link from 'next/link';
 import styles from './mobileNav.module.css';
-import Image from 'next/image';
+import ArrowIcon from '@/svg/arrow';
 
 export default function MobileNavButton({name, link}) {
   const pathname = usePathname()
@@ -29,7 +29,7 @@ export default function MobileNavButton({name, link}) {
     <Link href={link} {...linkProps}>
       <div className={isSelected ? `${styles.button} ${styles.active}` : styles.button}>
         {name}
-        {isExternalLink && <Image src={'/images/arrow.svg'} width={17} height={17} alt='external link' unoptimized />}
+        {isExternalLink && <ArrowIcon className={styles.arrow} />}
       </div>
     </Link>
   )

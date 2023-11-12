@@ -43,7 +43,7 @@
     position: fixed;
     bottom: calc(3% + 50px);
     height: calc(97% - 50px);
-    padding: calc(11px + 1rem) 0 0 calc(11px + 1rem);
+    padding: 0 0 0 calc(11px + 1rem);
   }
 
   .hideOnMobile {

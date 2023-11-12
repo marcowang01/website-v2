@@ -18,6 +18,22 @@
   justify-content: flex-start;
   align-items: center;
   gap: 7px;
+  transition: color 0.2s ease-in-out;
+}
+
+.title svg {
+  transition: fill 0.2s ease-in-out;
+  width: 17px;
+  height: 17px;
+  fill: rgb(var(--foreground-rgb));
+}
+
+.title:hover {
+  color: #444;
+}
+
+.title:hover svg {
+  fill: #444;
 }
 
 .section {
@@ -43,6 +59,9 @@
   width: 100%;
 }
 
-/* @media (max-width: 768px) {
-  .main
-} */
+
+@media (max-width: 768px) {
+  .main {
+    padding-top: calc(11px + 1rem);
+  }
+}

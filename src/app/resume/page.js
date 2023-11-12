@@ -1,20 +1,15 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import styles from './page.module.css'
 import expericences from '@/content/experiences'
 import ResumeCard from '@/components/resumeCard/resumeCard'
+import ArrowIcon from '@/svg/arrow'
 
 export default function Resume() {
   return (
     <main className={styles.main}>
       <Link className={styles.title} href="/files/marco_wang_resume.pdf" target="_blank" rel="noopener noreferrer">
         Resume
-        <Image
-          src="/images/arrow.svg"
-          alt="arrow"
-          width={17}
-          height={17}
-        />
+        <ArrowIcon className={styles.icon}/>
       </Link>
       <div className={styles.section}>
         <div className={styles.sectionTitle}>
