@@ -11,8 +11,8 @@ class Project {
 
 const projects = [
   new Project({
-    title: "NV",
-    description: "NV is a LLM-powered app that can create lecture notes and study guides from live lectures",
+    title: "Scribe",
+    description: "Scribe is a LLM-powered app that can create lecture notes and study guides from live lectures",
     link: "https://notetaker-git-master-marcowang01.vercel.app/",
     github: "https://github.com/marcowang01/notetaker",
     date: "Fall, 2023",
