@@ -27,6 +27,14 @@ const projects = [
     skills: ["Python", "Typescript", "Next.js"]
   }),
   new Project({
+    title: "Realm",
+    description: "Realm (retrieval Augmented Language Model) is an LLM pipeline that leverages vector databases to improve performance and reduce costs for question answering tasks.",
+    link: "https://www.boboland.xyz/llm",
+    github: "https://github.com/marcowang01/realm",
+    date: "Spring, 2023",
+    skills: ["Python", "Modal", "Langchain", "ChromaDB"]
+  }),
+  new Project({
     title: "PlatzUI",
     description: "Platz is an open-source personal website template for creatives, with a focus on streamlining the design-to-implementation process.",
     link: "https://platz.ooo/",
