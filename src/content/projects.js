@@ -12,7 +12,7 @@ class Project {
 const projects = [
   new Project({
     title: "Scribe",
-    description: "Scribe is a LLM-powered app that can create lecture notes and study guides from live lectures",
+    description: "Scribe is an LLM-powered app that can create lecture notes and study guides from live lectures.",
     link: "https://notetaker-git-master-marcowang01.vercel.app/",
     github: "https://github.com/marcowang01/notetaker",
     date: "Fall, 2023",
@@ -20,7 +20,7 @@ const projects = [
   }),
   new Project({
     title: "Tomo",
-    description: "Tomo is a real-time audio chatbot aimed at enhancing children’s learning through story‑driven dialogues. It is powered by OpenAI and elevenlabs.",
+    description: "Tomo is a real-time audio-based chatbot aimed at enhancing children’s learning through story‑driven dialogues.",
     link: "https://tomo-xi.vercel.app/",
     github: "",
     date: "Summer, 2023",
@@ -28,7 +28,7 @@ const projects = [
   }),
   new Project({
     title: "PlatzUI",
-    description: "An open-source personal website template for creatives built on Next.js. The component library is built for designers to streamline the design-to-implementation process.",
+    description: "Platz is an open-source personal website template for creatives. It aims to streamline the design-to-implementation process.",
     link: "https://platz.ooo/",
     github: "https://github.com/szgbo/platz",
     date: "Winter, 2023",
@@ -36,7 +36,7 @@ const projects = [
   }),
   new Project({
     title: "Igloo",
-    description: "Igloo is a reimagination of a social tool driven by organic interpersonal relationships. Currently, a prototype tested within a small community of 20+ users.",
+    description: "Igloo is a reimagination of social tools, driven by organic interpersonal relationships. Currently, a prototype tested within a small community of 20+ users.",
     link: "https://www.igloo.place/",
     github: "https://github.com/marcowang01/Igloo",
     date: "Summer, 2022",

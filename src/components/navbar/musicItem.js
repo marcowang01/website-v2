@@ -18,7 +18,7 @@ export default function MusicItem() {
   }
 
   useEffect(() => {
-    const intervalId = setInterval(fetchTrack, 1000 * 5); 
+    const intervalId = setInterval(fetchTrack, 1000 * 10); 
     fetchTrack();
     // Clean up the interval on component unmount
     return () => clearInterval(intervalId);

@@ -10,8 +10,4 @@ export default function Home() {
 }
 
 // Todo:
-// - Add favicon
-// - Add download icon for resume
-// - add better interactions with project cards (clicking links, etc.)
-// - add better interactions with resume download link
-// - load in animation 
+// add load in and exit animations with framer motion

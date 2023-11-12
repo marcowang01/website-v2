@@ -39,7 +39,6 @@ export async function GET() {
 
     // refresh token
     const refreshTokenResponse = await spotifyApi.refreshAccessToken();
-    console.log('The access token has been refreshed!');
     spotifyApi.setAccessToken(refreshTokenResponse.body.access_token);
 
     // Fetch the current playing track.

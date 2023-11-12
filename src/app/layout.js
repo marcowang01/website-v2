@@ -11,7 +11,7 @@ const inter = Inter({
 
 export const metadata = {
   title: 'Marco Wang',
-  description: 'Marco Wang is a software engineer studying at Northwestern University.',
+  description: 'Marco Wang is a software engineer, currently studying CS and Physics at Northwestern University. He is interested in building tools that help people create, learn, and connect.',
 }
 
 export default function RootLayout({ children }) {

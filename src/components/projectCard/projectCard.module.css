@@ -9,12 +9,14 @@
   background-color: rgb(var(--project-card-bg-rgb));
   border-radius: 20px;
   color: rgb(var(--project-card-text-rgb));
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  transform-origin: center;
   cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
 }
 
 .container:hover {
   background-color: rgb(var(--project-card-hover-bg-rgb));
+  transform: scale(1.02);
 }
 
 .headerContainer {
@@ -67,9 +69,14 @@
   gap: 12px;
 }
 
+.links .icon{
+  z-index: 100;
+}
+
 .links svg {
   transition: fill 0.15s ease-in-out;
   fill: #777777;
+  z-index: 100;
 }
 
 .links svg:hover {

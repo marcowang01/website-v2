@@ -1,14 +1,21 @@
+'use client'
 import styles from './projectCard.module.css'
-import Link from 'next/link'
-
-import GithubIcon from '@/svg/github'
-import BrowserIcon from '@/svg/browser'
+import LinkIcon from './linkIcon'
 
 export default function ProjectCard(project) {
   const {title, description, link, github, date, skills} = project
 
+  const priorityLink = link || github
+
+  const handleOnClick = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    console.log(priorityLink)
+    window.open(priorityLink, '_blank', 'noopener,noreferrer');
+  }
+
   return (
-    <div className={styles.container}>
+    <div className={styles.container} onClick={handleOnClick}>
       <div>
         <section className={styles.headerContainer}>
           <div className={styles.title}>
@@ -32,23 +39,13 @@ export default function ProjectCard(project) {
         </div>
         <div className={styles.links}>
           {github && github.length > 0 && <div className={styles.github}>
-            <Link href={github} target="_blank" rel="noopener noreferrer">
-              <div className={styles.icon}>
-                <GithubIcon  className={styles.icon}/>
-              </div>
-            </Link>
+            <LinkIcon iconName={'github'} link={github}/>
           </div>}
           {link && link.length > 0 &&  <div className={styles.link}>
-            <Link href={link} target="_blank" rel="noopener noreferrer">
-              <div className={styles.icon}>
-                <BrowserIcon  fill="#000000" className={styles.icon}/>
-              </div>
-            </Link>
+            <LinkIcon iconName={'browser'} link={link}/>
           </div>}
         </div>
       </section>
     </div>
   )
-
-
 }
