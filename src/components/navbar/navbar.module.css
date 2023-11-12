@@ -81,7 +81,9 @@
 
 @media (max-width: 768px) {
   .container {
-    padding: 3vh 1rem 3vh 1rem;
+    padding: 0 1rem;
+    position: fixed;
+    bottom: 3%;
   }
 
   .hideOnMobile {
