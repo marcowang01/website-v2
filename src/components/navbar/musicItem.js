@@ -12,8 +12,8 @@ export default function MusicItem() {
       console.error('Error fetching current track');
       return;
     }
-    console.log('Fetched current track: ', response);
     const json = await response.json();
+    console.log('Fetched current track: ', json.track);
     setCurrentTrack(json.track);
   }
 
