@@ -1,6 +1,8 @@
 import styles from './projectCard.module.css'
 import Link from 'next/link'
-import Image from 'next/image'
+
+import GithubIcon from '@/svg/github'
+import BrowserIcon from '@/svg/browser'
 
 export default function ProjectCard(project) {
   const {title, description, link, github, date, skills} = project
@@ -31,12 +33,16 @@ export default function ProjectCard(project) {
         <div className={styles.links}>
           {github && github.length > 0 && <div className={styles.github}>
             <Link href={github} target="_blank" rel="noopener noreferrer">
-              <Image src="images/github.svg" alt="GitHub" width={16} height={16} />
+              <div className={styles.icon}>
+                <GithubIcon  className={styles.icon}/>
+              </div>
             </Link>
           </div>}
           {link && link.length > 0 &&  <div className={styles.link}>
             <Link href={link} target="_blank" rel="noopener noreferrer">
-              <Image src="images/browser.svg" alt="Link" width={16} height={16} />
+              <div className={styles.icon}>
+                <BrowserIcon  fill="#000000" className={styles.icon}/>
+              </div>
             </Link>
           </div>}
         </div>

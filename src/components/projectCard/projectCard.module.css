@@ -9,6 +9,12 @@
   background-color: rgb(var(--project-card-bg-rgb));
   border-radius: 20px;
   color: rgb(var(--project-card-text-rgb));
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.container:hover {
+  background-color: rgb(var(--project-card-hover-bg-rgb));
 }
 
 .headerContainer {
@@ -61,8 +67,13 @@
   gap: 12px;
 }
 
-.links a {
-  cursor: pointer
+.links svg {
+  transition: fill 0.2s ease-in-out;
+  fill: #777777;
+}
+
+.links svg:hover {
+  fill: #444444;
 }
 
 .footerContainer {

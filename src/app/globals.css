@@ -39,8 +39,9 @@
 
   /* project page */
   --project-card-bg-rgb: 249, 249, 247;
+  --project-card-hover-bg-rgb: 251, 251, 250;
   --project-card-text-rgb: 85, 85, 85;
-  --project-card-border: 1px solid #eee;
+  --project-card-border: 2px solid #eee;
   --project-card-light-text-rgb: 153, 153, 153;
 
   --primary-glow: conic-gradient(
