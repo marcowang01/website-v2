@@ -11,8 +11,8 @@ class Project {
 
 const projects = [
   new Project({
-    title: "Notetaker",
-    description: "Notetaker is a LLM-powered app that can create lecture notes and study guides from live lectures",
+    title: "NV",
+    description: "NV is a LLM-powered app that can create lecture notes and study guides from live lectures",
     link: "https://notetaker-git-master-marcowang01.vercel.app/",
     github: "https://github.com/marcowang01/notetaker",
     date: "Fall, 2023",
@@ -35,20 +35,20 @@ const projects = [
     skills: ["Typescript", "Next.js"]
   }),
   new Project({
-    title: "Formula Telemtry Pipeiline",
-    description: "The dashboard is an intuitive interface for the NU Formula Racing team to visualize, persist and analyze data from the car's sensors in real-time.",
-    link: "",
-    github: "https://github.com/NU-Formula-Racing/telemetry-remote-23",
-    date: "Winter, 2022",
-    skills: ["React", "Next.js", "JavaScript", "HTML", "CSS"]
-  }),
-  new Project({
     title: "Igloo",
     description: "Igloo is a reimagination of a social tool driven by organic interpersonal relationships. Currently, a prototype tested within a small community of 20+ users.",
     link: "https://www.igloo.place/",
     github: "https://github.com/marcowang01/Igloo",
-    date: "Summer, 2021",
+    date: "Summer, 2022",
     skills: ["PHP", "Javascript", "Laravel", "React Native"]
+  }),
+  new Project({
+    title: "Dash",
+    description: "Dash is a full-stack telemetry dashboard built for the NU Formula Racing team to visualize, persist and analyze data from the car's sensors in real-time.",
+    link: "",
+    github: "https://github.com/NU-Formula-Racing/telemetry-remote-23",
+    date: "Winter, 2022",
+    skills: ["React", "Next.js", "JavaScript", "HTML", "CSS"]
   }),
 ];
 

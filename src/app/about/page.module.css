@@ -13,3 +13,9 @@
   width: 60%;
   letter-spacing: -0.005em;
 }
+
+@media (max-width: 768px) {
+  .paragraph {
+    width: 90%;
+  }
+}

@@ -46,7 +46,7 @@ export async function GET() {
     const { body: trackBody } = await spotifyApi.getMyCurrentPlayingTrack();
     if (!trackBody.item) {
       console.log(trackBody);
-      return new NextResponse('No Track Found', { status: 404 });
+      return new NextResponse('No Track Found', { status: 500 });
     } else {
       console.log(`listening to ${trackBody.item.name}`);
     }

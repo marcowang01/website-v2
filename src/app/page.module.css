@@ -35,9 +35,13 @@
     padding-left: 0;
   }
 
+  .container {
+    padding: 0;
+  }
+
   .paddingContainer {
     height: calc(100vh - 50px - 6vh);
-    padding: 0;
+    padding: calc(11px + 1rem) 0 0 calc(11px + 1rem);
   }
 
   .hideOnMobile {

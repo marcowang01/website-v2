@@ -70,5 +70,28 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding-top: 20px;
   width: 100%;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    width: auto;
+    margin-right: calc(11px + 1rem);
+    padding: 30px;
+    min-height: 110px;
+  }
+
+  .description {
+    width: 100%;
+  }
+
+  .footerContainer {
+    justify-content: flex-end;
+  }
+
+  .skills {
+    display: none;
+  }
 }

@@ -7,7 +7,7 @@ import ResumeCard from '@/components/resumeCard/resumeCard'
 export default function Resume() {
   return (
     <main className={styles.main}>
-      <Link className={styles.title} href="/files/marco_wang_resume.pdf" target="_blank" download>
+      <Link className={styles.title} href="/files/marco_wang_resume.pdf" target="_blank" rel="noopener noreferrer">
         Resume
         <Image
           src="/images/arrow.svg"
