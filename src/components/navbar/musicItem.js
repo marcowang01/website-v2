@@ -18,7 +18,7 @@ export default function MusicItem() {
   }
 
   useEffect(() => {
-    const intervalId = setInterval(fetchTrack, 1000 * 30); 
+    const intervalId = setInterval(fetchTrack, 1000 * 5); 
     fetchTrack();
     // Clean up the interval on component unmount
     return () => clearInterval(intervalId);
@@ -29,7 +29,12 @@ export default function MusicItem() {
     <>
       {currentTrack && (
         <div className={`${styles.navbarItems} ${styles.hideOnMobile} ${styles.tight}`}>
-          LISTENING TO: {currentTrack.toUpperCase()}
+          LISTENING TO: 
+          <span className={styles.horizontalScrollContainer}>
+            <span>
+                {currentTrack.length > 30 ? currentTrack.slice(0, 30) + '...' : currentTrack.toUpperCase()}
+            </span>
+          </span>
         </div>
       )}
     </>

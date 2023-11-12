@@ -32,6 +32,7 @@
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
+  font-weight: var(--font-light);
   gap: 6px;
 }
 
@@ -49,7 +50,38 @@
   justify-content: center;
   align-items: center;
   gap: 4px;
+  overflow: hidden;
+  white-space: nowrap;
 }
+
+/* uncomment for a scrolling effect on long song names */
+/* will need to stack the song name twice in the js file for continuous scrolling */
+/* 
+.horizontalScrollContainer {
+  max-width: 30ch; 
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.horizontalScrollContainer span{
+  display: inline-block;
+  animation: scrollText 20s linear infinite;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+@keyframes scrollText {
+  from {
+    transform: translateX(0); 
+  }
+  to {
+    transform: translateX(-100%);
+  }
+} */
+
 
 .semiBold {
   font-weight: var(--font-semibold);
@@ -71,6 +103,10 @@
 
 .showOnMobile {
   display: none;
+}
+
+.light-font {
+  font-weight: var(--font-light);
 }
 
 @media (max-width: 900px) {
