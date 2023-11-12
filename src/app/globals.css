@@ -3,6 +3,7 @@
   --border-radius: 12px;
   --mobile-width: 700px;
 
+  --foreground-light-rgb: 153, 153, 153;
   --foreground-rgb: 102, 102, 102;
   --background-rgb: 245, 245, 244;
   --blue-highlight-rgb: 163, 209, 236;

@@ -41,7 +41,8 @@
   font-size: 18px;
   line-height: 1.2;
   border-radius: 5px;
-  padding: 3px 11px;
+  padding: 0px 11px;
+  height: 28px;
   text-transform: uppercase;
   display: flex;
   flex-direction: row;
@@ -56,15 +57,38 @@
 
 .tight {
   letter-spacing: -0.03em;
-  padding: 3px 6px;
+  padding: 0px 6px;
+}
+
+.hideOnTablet {
+  display: flex;
 }
 
 .hideOnMobile {
-  display: block;
+  display: flex;
+
+}
+
+.showOnMobile {
+  display: none;
 }
 
 @media (max-width: 900px) {
+  .hideOnTablet {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 3vh 1rem 3vh 1rem;
+  }
+
   .hideOnMobile {
     display: none;
+  }
+
+  .showOnMobile {
+    display: flex;
   }
 }

@@ -1,0 +1,37 @@
+.mobileNavContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: end;
+  gap: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 50px - 6vh);
+  background-color: rgb(var(--background-rgb));
+  z-index: 100;
+}
+
+.buttonContainer {
+  color: rgb(var(--foreground-light-rgb));
+  text-align: center;
+  width: 100%;
+}
+
+.button {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  font-weight: var(--font-semibold);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: calc(1rem + 11px);
+  gap: 6px;
+}
+
+.button.active {
+  color: rgb(var(--foreground-rgb));
+}

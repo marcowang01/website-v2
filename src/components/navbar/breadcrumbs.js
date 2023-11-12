@@ -6,7 +6,7 @@ export default function Breadcrumbs() {
   const pathname = usePathname()
 
   return (
-    <div className={`${styles.navbarItems} ${styles.semiBold}  ${styles.tight}`}>
+    <div className={`${styles.navbarItems} ${styles.hideOnMobile} ${styles.semiBold} ${styles.tight}`}>
       {pathname.toUpperCase()}
     </div>
   )

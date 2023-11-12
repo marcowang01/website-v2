@@ -2,36 +2,34 @@ import styles from './sidebar.module.css'
 import Link from 'next/link'
 import SidebarButton from './sidebarButton'
 
+export const buttonList = [
+  {
+    name: 'About',
+    link: '/about',
+  },
+  {
+    name: 'Projects',
+    link: '/projects',
+  },
+  {
+    name: 'Resume',
+    link: '/resume',
+  },
+  {
+    name: 'Github',
+    link: 'https://github.com/marcowang01',
+  },
+  {
+    name: 'Email',
+    link: 'mailto:marcowang0101@gmail.com',
+  },
+  {
+    name: 'LinkedIn',
+    link: 'https://www.linkedin.com/in/marco-01/',
+  },
+]
+
 export default function Sidebar() {
-
-  const buttonList = [
-    {
-      name: 'About',
-      link: '/about',
-    },
-    {
-      name: 'Projects',
-      link: '/projects',
-    },
-    {
-      name: 'Resume',
-      link: '/resume',
-    },
-    {
-      name: 'Github',
-      link: 'https://github.com/marcowang01',
-    },
-    {
-      name: 'Email',
-      link: 'mailto:marcowang0101@gmail.com',
-    },
-    {
-      name: 'LinkedIn',
-      link: 'https://www.linkedin.com/in/marco-01/',
-    },
-  ]
-
-
   return (
     <div className={styles.container}>
       {buttonList.map((button, index) => (

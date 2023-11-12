@@ -1,5 +1,6 @@
 .paddingContainer {
   padding: 0rem 1rem;
+  height: calc(85vh - 50px);
 }
 
 .container {
@@ -9,14 +10,43 @@
   padding: 0rem 11px;
   margin: 0 auto;
   max-width: var(--max-width);
+  height: 100%;
   overflow: hidden;
-  height: calc(85vh - 50px);
 }
 
 .content{
   width: calc(100% - var(--sidebar-width));
   overflow-y: auto; 
   padding-left: 10vw;
+}
+
+.hideOnMobile {
+  display: block;
+}
+
+.showOnMobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .content {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .paddingContainer {
+    height: calc(100vh - 50px - 6vh);
+    padding: 0;
+  }
+
+  .hideOnMobile {
+    display: none;
+  }
+
+  .showOnMobile {
+    display: block;
+  }
 }
 
 /* .description {

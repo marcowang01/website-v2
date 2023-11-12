@@ -18,16 +18,22 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar />
+        <div className={styles.hideOnMobile}>
+          <Navbar />
+        </div>
         <div className={styles.paddingContainer}>
           <main className={styles.container}>
-            <Sidebar />
+            <div className={styles.hideOnMobile}>
+              <Sidebar />
+            </div>
             <div className={styles.content}>
               {children}
             </div>
           </main>
         </div>
-        
+        <div className={styles.showOnMobile}>
+          <Navbar />
+        </div>
       </body>
     </html>
   )
