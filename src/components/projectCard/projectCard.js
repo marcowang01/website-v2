@@ -1,26 +1,27 @@
 'use client'
 import styles from './projectCard.module.css'
 import LinkIcon from './linkIcon'
+import Link from 'next/link'
 
 export default function ProjectCard(project) {
   const {title, description, link, github, date, skills} = project
 
   const priorityLink = link || github
 
-  const handleOnClick = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    console.log(priorityLink)
-    window.open(priorityLink, '_blank', 'noopener,noreferrer');
-  }
+  // const handleOnClick = (e) => {
+  //   e.preventDefault();
+  //   e.stopPropagation();
+  //   console.log(priorityLink)
+  //   window.open(priorityLink, '_blank', 'noopener,noreferrer');
+  // }
 
   return (
-    <div className={styles.container} onClick={handleOnClick}>
+    <div className={styles.container}>
       <div>
         <section className={styles.headerContainer}>
-          <div className={styles.title}>
+          <Link href={priorityLink} target="_blank" rel="noopener noreferrer" className={styles.title}>
             {title}
-          </div>
+          </Link>
           <div className={styles.date}>
             {date}
           </div>

@@ -14,4 +14,4 @@ export default function Home() {
 // archives page: tetris, conway, news analyzer, unity games, glide paper pipeline
 // create pages for conway, unity game, glide paper pipeline
 // for fun page: manga covers page, f1, squash? 
-// 
+// leave credit for Shaobo somewhere

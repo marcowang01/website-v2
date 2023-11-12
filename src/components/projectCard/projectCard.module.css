@@ -11,12 +11,11 @@
   color: rgb(var(--project-card-text-rgb));
   transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
   transform-origin: center;
-  cursor: pointer;
 }
 
 .container:hover {
   background-color: rgb(var(--project-card-hover-bg-rgb));
-  transform: scale(1.02);
+  transform: scale(1.01);
 }
 
 .headerContainer {
@@ -33,6 +32,15 @@
   font-weight: var(--font-medium);
   font-size: 20px;
   letter-spacing: -0.005em;
+  /* background: 
+    linear-gradient(currentColor 0 0) 
+    bottom /var(--d, 0) 1px 
+  no-repeat; */
+  transition:0.2s;
+}
+
+.title:hover {
+  color: #989893;
 }
 
 .date {
