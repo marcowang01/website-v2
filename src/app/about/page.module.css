@@ -14,6 +14,16 @@
   letter-spacing: -0.005em;
 }
 
+.paragraph a {
+  color: rgb(var(--foreground-rgb));
+  text-decoration: underline;
+  transition: color 0.2s ease-in-out;
+}
+
+.paragraph a:hover {
+  color: #444;
+}
+
 @media (max-width: 768px) {
   .paragraph {
     width: 90%;
