@@ -8,10 +8,11 @@ export default function About() {
         About
       </div>
       <div className={styles.paragraph}>
-        Hello! My name is Marco, welcome to my website!
+        Hi! I am a software engineer, currently studying CS and Physics at Northwestern University.
+        I am interested in building software tools that helpe people create, learn, and connect.
       </div>
       <div className={styles.paragraph}>
-        I study CS and Physics at Northwestern University.
+        Previously, I worked at The Boring Company, Workiva, and Northwestern Tiilt Lab. 
       </div>
     </main>
   )
