@@ -1,6 +1,7 @@
 :root {
-  --max-width: 1100px;
+  --max-width: 1200px;
   --border-radius: 12px;
+  --mobile-width: 700px;
 
   --foreground-rgb: 102, 102, 102;
   --background-rgb: 245, 245, 244;
@@ -40,6 +41,8 @@
   --project-card-text-rgb: 85, 85, 85;
   --project-card-border: 1px solid #eee;
   --project-card-light-text-rgb: 153, 153, 153;
+
+
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,

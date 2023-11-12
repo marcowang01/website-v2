@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import styles from './navbar.module.css'
 export default function TimeItem() {
   // useState hook to store the current time
-  const [currentTime, setCurrentTime] = useState(new Date());
+  const [currentTime, setCurrentTime] = useState(null);
 
   // Function to update the current time
   const updateTime = () => {
@@ -15,23 +15,21 @@ export default function TimeItem() {
 
   // useEffect hook to set the interval for updating the time
   useEffect(() => {
+    updateTime(); // Set current time on initial render (needed for client-side hydration
     const intervalId = setInterval(updateTime, 1000); // Update time every second
 
     // Clean up the interval on component unmount
     return () => clearInterval(intervalId);
   }, []);
-
-  // Format the time as a string
-  const timeString = currentTime.toLocaleTimeString('en-US', {
-    hour: 'numeric',
-    minute: '2-digit',
-    hour12: true,
-  });
   
 
   return (
     <div className={`${styles.navbarItems} ${styles.hideOnMobile}  ${styles.tight}`}>
-      {timeString.toUpperCase()}
+      {currentTime.toLocaleTimeString('en-US', {
+        hour: 'numeric',
+        minute: '2-digit',
+        hour12: true,
+      }).toUpperCase()}
     </div>
   )
 }
