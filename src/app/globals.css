@@ -43,8 +43,6 @@
   --project-card-border: 1px solid #eee;
   --project-card-light-text-rgb: 153, 153, 153;
 
-
-
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
     #16abff33 0deg,
@@ -74,6 +72,30 @@
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
+}
+
+/* scroll bar color for desktop */
+@media (min-width: 768px) {
+  /* For the scrollbar itself */
+  ::-webkit-scrollbar {
+    width: 8px; /* width of the entire scrollbar */
+  }
+
+  /* For the scrollbar track (the part the scrollbar "slides" on) */
+  ::-webkit-scrollbar-track {
+    background: rgb(var(--background-rgb)); /* color of the tracking area */
+  }
+
+  /* For the scrollbar handle (the part you click on and drag) */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(var(--light-btn-bg-rgb)); /* color of the scroll thumb */
+    border-radius: 6px; /* roundness of the scroll thumb */
+  }
+
+  /* For the scrollbar handle when it's being hovered or clicked */
+  ::-webkit-scrollbar-thumb:vertical:hover {
+    background: rgb(var(--foreground-light-rgb)); /* color when hovering over the scroll thumb */
+  }
 }
 
 /* @media (prefers-color-scheme: dark) {
