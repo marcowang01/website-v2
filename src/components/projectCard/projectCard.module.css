@@ -72,3 +72,23 @@
   align-items: center;
   width: 100%;
 }
+
+
+@media (max-width: 768px) {
+  .container{
+    width: auto;
+    margin-right: calc(11px + 1rem);
+  }
+
+  .description {
+    width: 100%;
+  }
+
+  .footerContainer {
+    justify-content: flex-end;
+  }
+
+  .skills {
+    display: none;
+  }
+}
