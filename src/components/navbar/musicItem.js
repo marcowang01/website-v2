@@ -1,20 +1,14 @@
 'use client'
 import { useState, useEffect } from 'react';
-
+import { GetCurrentSong } from '@/actions/spotify';
 import styles from './navbar.module.css'
 export default function MusicItem() {
   // useState hook to store the current time
   const [currentTrack, setCurrentTrack] = useState('');
 
   const fetchTrack = async () => {
-    const response = await fetch('/api/spotify', { cache: 'no-cache', next: { revalidate: 0 } });
-    if (response.status !== 200) {
-      console.error('Error fetching current track');
-      return;
-    }
-    const json = await response.json();
-    console.log('Fetched current track: ', json.track);
-    setCurrentTrack(json.track);
+    const track = await GetCurrentSong();
+    setCurrentTrack(track);
   }
 
   useEffect(() => {
@@ -27,7 +21,7 @@ export default function MusicItem() {
 
   return (
     <>
-      {currentTrack && (
+      {currentTrack && currentTrack.length > 0 && (
         <div className={`${styles.navbarItems} ${styles.hideOnMobile} ${styles.tight}`}>
           LISTENING TO: 
           <span className={styles.horizontalScrollContainer}>
