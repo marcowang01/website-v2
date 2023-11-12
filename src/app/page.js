@@ -11,3 +11,7 @@ export default function Home() {
 
 // Todo:
 // add load in and exit animations with framer motion
+// archives page: tetris, conway, news analyzer, unity games, glide paper pipeline
+// create pages for conway, unity game, glide paper pipeline
+// for fun page: manga covers page, f1, squash? 
+// 
