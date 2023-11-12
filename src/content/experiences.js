@@ -36,7 +36,7 @@ work: [
       ],
       date: "Jun. 2023 - Aug. 2023",
       location: "Las Vegas, NV",
-      skills: ["Go", "C#", "ReactJS", "PostgresSQL", "NodeJS"]
+      skills: ["Go", "C#", "ReactJS", "PostgresSQL", "NodeJS", "Bazel"]
     }),
     new Experience({
       company: "Workiva",
@@ -63,7 +63,7 @@ work: [
       ],
       date: "Sep. 2021 - May. 2022",
       location: "Evanston, IL",
-      skills: ["PyTorch", "Audio Processing", "Speech Recognition"]
+      skills: ["PyTorch", "Javascript", "Audio Processing", "Speech Recognition"]
     })
   ]
 }

@@ -29,6 +29,9 @@ export default function ResumeCard(experience) {
             <span className={styles.dot}>•</span>{bulletpoint}
           </div>
         ))}
+        <div className={`${styles.bulletpoint} ${styles.skills}`}>
+          <span className={styles.dot}>•</span>{`Skills: ${skills.join(', ')}`}
+        </div>
       </section>}
     </div>
   )

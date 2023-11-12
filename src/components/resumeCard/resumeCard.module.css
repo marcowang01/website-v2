@@ -54,6 +54,10 @@
   align-items: flex-start;
 }
 
+.skills {
+  font-weight: var(--font-light);
+}
+
 .dot {
   margin: 0 7px 0 2px;
 }
