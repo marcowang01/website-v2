@@ -1,5 +1,5 @@
 'use client'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 // List of greetings
 const greetings = [
   "Hi there!",
@@ -9,7 +9,6 @@ const greetings = [
   "Hello!",
   "What's up!",
   "Aloha!",
-  "Salutations!",
   "Hello there!",
   "Hi!",
   "Nice to meet you!",
@@ -38,7 +37,11 @@ const getRandomGreeting = () => {
 };
 
 export default function RandomGreeter() {
-  const [randomGreeting, setRandomGreeting] = useState(getRandomGreeting());
+  const [randomGreeting, setRandomGreeting] = useState(' ');
+
+  useEffect(() => {
+    setRandomGreeting(getRandomGreeting());
+  }, []);
 
   return (
     <>

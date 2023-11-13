@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import styles from './page.module.css';
-// import RandomGreeter from '@/components/randomGreeter/greeter';
+import RandomGreeter from '@/components/randomGreeter/greeter';
 
 // Define URLs as constants
 const URLs = {
@@ -18,10 +18,10 @@ export default function About() {
   return (
     <main className={styles.main}>
       <div className={styles.title}>
-        ABOUT
+        <RandomGreeter />
       </div>
       <div className={styles.paragraph}>
-        Hello! I&apos;m Marco. I am a software engineer studying CS and Physics at Northwestern University.
+        I&apos;m Marco. I am a software engineer studying CS and Physics at Northwestern University.
       </div>
       <div className={styles.paragraph}>
         Currently, I am building tools at Hellsegga that help people create, learn, and connect.

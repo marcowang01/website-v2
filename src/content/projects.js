@@ -27,7 +27,7 @@ const projects = [
   new Project({
     title: "Tomo",
     description: "Tomo is a real-time audio-based companion aimed at enhancing children’s learning through story‑driven dialogues.",
-    tagline: "Bringing story-driven dialogues to life with story-driven dialogues",
+    tagline: "Bringing story-driven dialogues to children's learning",
     link: "https://tomo-git-mw-new-controls-yulilith.vercel.app/",
     github: "",
     date: "Summer, 2023",
@@ -47,17 +47,6 @@ const projects = [
     starred: false
   }),
   new Project({
-    title: "Conway",
-    description: "Conway is a CUDA-accelerated implementation of Conway's Game of Life, a cellular automaton that simulates the evolution of a grid of cells based on a set of rules.",
-    tagline: "CUDA-Accelerated implementation of Conway's Game of Life",
-    link: "/files/conway.pdf",
-    github: "https://github.com/marcowang01/conway-gpu",
-    date: "Spring, 2023",
-    skills: ["C++", "CUDA"],
-    category: "GPU Programming",
-    starred: false
-  }),
-  new Project({
     title: "PlatzUI",
     description: "Platz is an open-source personal website template for creatives, with a focus on streamlining the design-to-implementation process.",
     tagline: "Open-source personal website template for creatives",
@@ -67,6 +56,17 @@ const projects = [
     skills: ["Typescript", "Next.js"],
     category: "UI Library",
     starred: true
+  }),
+  new Project({
+    title: "Conway",
+    description: "Conway is a CUDA-accelerated implementation of Conway's Game of Life, a cellular automaton that simulates the evolution of a grid of cells based on a set of rules.",
+    tagline: "CUDA-Accelerated Conway's Game of Life",
+    link: "/files/conway.pdf",
+    github: "https://github.com/marcowang01/conway-gpu",
+    date: "Spring, 2023",
+    skills: ["C++", "CUDA"],
+    category: "GPU Programming",
+    starred: false
   }),
   new Project({
     title: "Igloo",
@@ -82,7 +82,7 @@ const projects = [
   new Project({
     title: "Dash",
     description: "Dash is a full-stack telemetry dashboard built for the NU Formula Racing team to visualize, persist and analyze data from the car's sensors in real-time.",
-    tagline: "Empowering FSAE Racing with real-time telemtry insights",
+    tagline: "Real-time telemtry insights for NU Formula Racing",
     link: "",
     github: "https://github.com/NU-Formula-Racing/telemetry-remote-23",
     date: "Winter, 2022",
@@ -104,7 +104,7 @@ const projects = [
   new Project({
     title: "News Analyzer",
     description: "Bias is a web app that uses machine learning to detect bias in news articles. The model is trained on a dataset of 1.3k news articles.",
-    tagline: "Bias detection in news articles",
+    tagline: "Detection and classification of bias in news articles",
     link: "https://www.youtube.com/watch?v=2kNVx36dPOM&t=1s",
     github: "https://github.com/marcowang01/Article-Analyzer-Web/tree/master",
     date: "Winter, 2021",
@@ -115,12 +115,12 @@ const projects = [
   new Project({
     title: "Tetris",
     description: "Tetris is an implementation of the classic game Tetris, built in C++.",
-    tagline: "Classic Tetris game in C++",
+    tagline: "Clone of classic Tetris in C++",
     link: "",
     github: "https://github.com/marcowang01/Tetris_in_C",
     date: "Fall, 2021",
     skills: ["C", "C++"],
-    category: "first steps",
+    category: "C++ Programming",
     starred: false
   }),
 ];
