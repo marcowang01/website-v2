@@ -1,9 +1,9 @@
 
 export const metadata = {
-  title: 'Marco Wang - Projects',
+  title: 'Marco Wang - Showcase',
 }
 
-export default function ProjectsLayout({
+export default function Layout({
   children,
 }) {
   return (

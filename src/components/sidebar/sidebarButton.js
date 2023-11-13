@@ -5,11 +5,10 @@ import { useRouter, usePathname } from 'next/navigation';
 import styles from './sidebar.module.css';
 import Link from 'next/link';
 
-export default function SidebarButton({ name, link }) {
+export default function SidebarButton({ name, link, shortcut }) {
   const router = useRouter();
   const pathname = usePathname()
   const isExternalLink = link.includes('http');
-  const startingChar = name.charAt(0);
   const [isSelected, setIsSelected] = useState(false);
 
   // change the color of the button when selected
@@ -25,7 +24,7 @@ export default function SidebarButton({ name, link }) {
 
   // Function to handle key press
   const handleKeyPress = (event) => {
-    if (event.key.toLowerCase() === startingChar.toLowerCase()) {
+    if (event.key.toLowerCase() === shortcut.toLowerCase()) {
       if (isExternalLink) {
         window.open(link, '_blank', 'noopener,noreferrer');
       } else {
@@ -53,7 +52,7 @@ export default function SidebarButton({ name, link }) {
           {name}
         </div>
         <div className={isSelected ? `${styles.sidebarKey} ${styles.selected}` : styles.sidebarKey}>
-          {startingChar}
+          {shortcut}
         </div>
       </Link>
     );

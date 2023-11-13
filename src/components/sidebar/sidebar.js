@@ -6,26 +6,37 @@ export const buttonList = [
   {
     name: 'About',
     link: '/about',
+    shortcut: 'A',
   },
   {
-    name: 'Projects',
-    link: '/projects',
+    name: 'Spotlight',
+    link: '/spotlight',
+    shortcut: 'S',
+  },
+  {
+    name: 'Collection',
+    link: '/collection',
+    shortcut: 'C',
   },
   {
     name: 'Resume',
     link: '/resume',
+    shortcut: 'R',
   },
   {
     name: 'Github',
     link: 'https://github.com/marcowang01',
+    shortcut: 'G',
   },
   {
     name: 'Email',
     link: 'mailto:marcowang0101@gmail.com',
+    shortcut: 'E',
   },
   {
     name: 'LinkedIn',
     link: 'https://www.linkedin.com/in/marco-01/',
+    shortcut: 'L',
   },
 ]
 
@@ -36,6 +47,7 @@ export default function Sidebar() {
         <SidebarButton 
           name={button.name}
           link={button.link}
+          shortcut={button.shortcut}
           key={`button_${index}`}
         />
       ))}

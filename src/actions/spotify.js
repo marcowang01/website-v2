@@ -25,7 +25,7 @@ import SpotifyWebApi from "spotify-web-api-node";
 //   console.log(authorizeURL);
 // }
  
-export async function GetCurrentSong() {
+export async function GetSongInfo() {
   const spotifyApi = new SpotifyWebApi({
     clientId: process.env.SPOTIFY_CLIENT_ID,
     clientSecret: process.env.SPOTIFY_CLIENT_SECRET,
@@ -51,7 +51,10 @@ export async function GetCurrentSong() {
       console.log(`listening to ${trackBody.item.name}`);
     }
   
-    return trackBody.item.name
+    return {
+      track: trackBody.item.name,
+      url: trackBody.item.external_urls.spotify,
+    }
   } catch (error) {
     console.error('Error in GET:', error.message);
     return ''
