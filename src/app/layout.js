@@ -1,9 +1,11 @@
-import { Analytics } from '@vercel/analytics/react';
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/navbar/navbar'
 import Sidebar from '@/components/sidebar/sidebar'
 import styles from './page.module.css'
+
+import GoogleAnalytics from '@/analytics/google'
+import ClarityAnalytics from '@/analytics/clarity'
 
 const inter = Inter({ 
   weight: ['400', '600', '300', '700', '500'],
@@ -29,13 +31,18 @@ export default function RootLayout({ children }) {
             </div>
             <div className={styles.content}>
               {children}
-              <Analytics />
             </div>
           </main>
         </div>
         <div className={styles.showOnMobile}>
           <Navbar />
         </div>
+        {process.env.NODE_ENV === 'production' && (
+          <>
+            <GoogleAnalytics ga_id={process.env.GOOGLE_ANALYTICS} />
+            <ClarityAnalytics />
+          </>
+        )}
       </body>
     </html>
   )

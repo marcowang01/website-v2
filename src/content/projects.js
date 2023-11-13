@@ -49,7 +49,7 @@ const projects = [
   new Project({
     title: "Conway",
     description: "Conway is a CUDA-accelerated implementation of Conway's Game of Life, a cellular automaton that simulates the evolution of a grid of cells based on a set of rules.",
-    tagline: "High-Speed Evolution with CUDA-Accelerated Cellular Automaton",
+    tagline: "CUDA-Accelerated implementation of Conway's Game of Life",
     link: "/files/conway.pdf",
     github: "https://github.com/marcowang01/conway-gpu",
     date: "Spring, 2023",
