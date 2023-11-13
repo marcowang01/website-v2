@@ -4,6 +4,7 @@ import Script from 'next/script';
 const ClarityAnalytics = () => {
   return (
     <Script 
+      id="msft-analytics"
       strategy="afterInteractive"
       dangerouslySetInnerHTML={{
         __html: `

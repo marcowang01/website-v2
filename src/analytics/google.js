@@ -3,6 +3,7 @@ import Script from "next/script";
 const GoogleAnalytics = ({ ga_id }) => (
   <>
     <Script
+      id="goog-analytics"
       async
       src={`https://www.googletagmanager.com/gtag/js? 
       id=${ga_id}`}
