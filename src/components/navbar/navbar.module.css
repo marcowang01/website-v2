@@ -92,6 +92,20 @@
   padding: 0px 6px;
 }
 
+
+.button {
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.button:hover {
+  color: rgb(var(--blue-highlight-rgb));
+}
+
+.button:active {
+  color: rgba(var(--blue-highlight-rgb), 0.8);
+}
+
 .hideOnTablet {
   display: flex;
 }
