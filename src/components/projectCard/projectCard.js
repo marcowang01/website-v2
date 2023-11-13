@@ -8,20 +8,20 @@ export default function ProjectCard(project) {
 
   const priorityLink = link || github
 
-  // const handleOnClick = (e) => {
-  //   e.preventDefault();
-  //   e.stopPropagation();
-  //   console.log(priorityLink)
-  //   window.open(priorityLink, '_blank', 'noopener,noreferrer');
-  // }
+  const handleOnClick = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    console.log(priorityLink)
+    window.open(priorityLink, '_blank', 'noopener,noreferrer');
+  }
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} onClick={handleOnClick}>
       <div>
         <section className={styles.headerContainer}>
-          <Link href={priorityLink} target="_blank" rel="noopener noreferrer" className={styles.title}>
+          <div className={styles.title}>
             {title}
-          </Link>
+          </div>
           <div className={styles.date}>
             {date}
           </div>
