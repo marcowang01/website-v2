@@ -2,33 +2,29 @@
 import { useState } from "react";
 // List of greetings
 const greetings = [
-  "Hi there!",
-  "Hey!",
-  "Greetings!",
-  "Howdy!",
-  "Hello!",
-  "What's up?",
-  "Good to see you!",
-  "Aloha!",
-  "Ahoy!",
-  "Salutations!",
-  "How's it going?",
-  "Hello there!",
-  "Hi!",
-  "Good day!",
-  "Nice to meet you!",
-  "Welcome!",
+  "Hi there",
+  "Hey",
+  "Greetings",
+  "Howdy",
+  "Hello",
+  "What's up",
+  "Aloha",
+  "Salutations",
+  "Hello there",
+  "Hi",
+  "Nice to meet you",
+  "Welcome",
 ];
 
 // Function to add a time-specific greeting
 const addTimeSpecificGreeting = () => {
   const hour = new Date().getHours();
   if (hour < 12) {
-    return "Good morning!";
+    return "Good morning";
   } else if (hour < 18) {
-    return "Good afternoon!";
+    return "Good afternoon";
   } else {
-    return "Good evening!";
+    return "Good evening";
   }
 };
 
