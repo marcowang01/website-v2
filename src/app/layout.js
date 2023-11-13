@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/navbar/navbar'
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
             </div>
             <div className={styles.content}>
               {children}
+              <Analytics />
             </div>
           </main>
         </div>
