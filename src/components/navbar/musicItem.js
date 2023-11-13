@@ -6,6 +6,11 @@ export default function MusicItem() {
   // useState hook to store the current time
   const [currentTrack, setCurrentTrack] = useState('');
 
+  // if on mobile return null
+  if (typeof window !== 'undefined' && window.innerWidth < 768) {
+    return null;
+  }
+
   const fetchTrack = async () => {
     const track = await GetCurrentSong();
     setCurrentTrack(track);
