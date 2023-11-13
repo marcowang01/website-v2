@@ -21,7 +21,7 @@ const projects = [
   new Project({
     title: "Tomo",
     description: "Tomo is a real-time audio-based chatbot aimed at enhancing children’s learning through story‑driven dialogues.",
-    link: "https://tomo-66jl0up1p-yulilith.vercel.app/",
+    link: "https://tomo-git-mw-new-controls-yulilith.vercel.app/",
     github: "",
     date: "Summer, 2023",
     skills: ["Python", "Typescript", "Next.js"]
