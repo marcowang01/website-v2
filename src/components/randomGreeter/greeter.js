@@ -2,18 +2,18 @@
 import { useState } from "react";
 // List of greetings
 const greetings = [
-  "Hi there",
-  "Hey",
-  "Greetings",
-  "Howdy",
-  "Hello",
-  "What's up",
-  "Aloha",
-  "Salutations",
-  "Hello there",
-  "Hi",
-  "Nice to meet you",
-  "Welcome",
+  "Hi there!",
+  "Hey!",
+  "Greetings!",
+  "Howdy!",
+  "Hello!",
+  "What's up!",
+  "Aloha!",
+  "Salutations!",
+  "Hello there!",
+  "Hi!",
+  "Nice to meet you!",
+  "Welcome!",
 ];
 
 // Function to add a time-specific greeting
