@@ -1,5 +1,5 @@
 class Project {
-  constructor({title, description, tagline, link, github, date, skills, starred}) {
+  constructor({title, description, tagline, link, github, date, skills, category, starred}) {
     this.title = title;
     this.description = description;
     this.tagline = tagline;
@@ -7,6 +7,7 @@ class Project {
     this.github = github;
     this.date = date;
     this.skills = skills;
+    this.category = category;
     this.starred = starred;
   }
 }
@@ -15,31 +16,45 @@ const projects = [
   new Project({
     title: "Scribe",
     description: "Scribe is an AI-powered wep app that can create lecture notes and study guides in real-time from live lectures.",
-    tagline: "AI-powered lecture notes",
+    tagline: "AI-powered study tool for students",
     link: "https://notetaker-git-master-marcowang01.vercel.app/",
     github: "https://github.com/marcowang01/notetaker",
     date: "Fall, 2023",
     skills: ["Typescript", "Next.js", "Supabase"],
+    category: "AI Web App",
     starred: true
   }),
   new Project({
     title: "Tomo",
-    description: "Tomo is a real-time audio-based chatbot aimed at enhancing children’s learning through story‑driven dialogues.",
-    tagline: "Real-time audio-based chatbot",
+    description: "Tomo is a real-time audio-based companion aimed at enhancing children’s learning through story‑driven dialogues.",
+    tagline: "Real-time audio-based companion for children",
     link: "https://tomo-git-mw-new-controls-yulilith.vercel.app/",
     github: "",
     date: "Summer, 2023",
     skills: ["Python", "Typescript", "Next.js"],
+    category: "AI Web App",
     starred: true
   }),
   new Project({
     title: "Realm",
     description: "Realm (Retrieval Augmented Language Model) is an LLM pipeline that leverages vector databases to improve performance and reduce costs for question answering tasks.",
-    tagline: "LLM pipeline",
+    tagline: "Retrival Augmented LLM pipeline",
     link: "https://www.boboland.xyz/llm",
     github: "https://github.com/marcowang01/realm",
     date: "Spring, 2023",
     skills: ["Python", "Modal", "Langchain", "ChromaDB"],
+    category: "AI Tools",
+    starred: false
+  }),
+  new Project({
+    title: "Conway",
+    description: "Cuda Conway is a CUDA-accelerated implementation of Conway's Game of Life, a cellular automaton that simulates the evolution of a grid of cells based on a set of rules.",
+    tagline: "CUDA-accelerated Conway's Game of Life",
+    link: "",
+    github: "https://github.com/marcowang01/conway-gpu",
+    date: "Spring, 2023",
+    skills: ["C++", "CUDA"],
+    category: "GPU Programming",
     starred: false
   }),
   new Project({
@@ -50,26 +65,62 @@ const projects = [
     github: "https://github.com/szgbo/platz",
     date: "Winter, 2023",
     skills: ["Typescript", "Next.js"],
+    category: "UI Library",
     starred: true
   }),
   new Project({
     title: "Igloo",
     description: "Igloo is a reimagination of social tools, driven by organic interpersonal relationships. Currently, a prototype tested within a small community of 20+ users.",
-    tagline: "Social tools for small communities",
+    tagline: "A reimagination of social tools",
     link: "https://www.igloo.place/",
     github: "https://github.com/marcowang01/Igloo",
     date: "Summer, 2022",
     skills: ["PHP", "Javascript", "Laravel", "React Native"],
+    category: "X-platform App",
     starred: true
   }),
   new Project({
     title: "Dash",
     description: "Dash is a full-stack telemetry dashboard built for the NU Formula Racing team to visualize, persist and analyze data from the car's sensors in real-time.",
-    tagline: "Full-stack telemetry dashboard",
+    tagline: "Telemetry dashboard for racing teams",
     link: "",
     github: "https://github.com/NU-Formula-Racing/telemetry-remote-23",
     date: "Winter, 2022",
     skills: ["React", "Next.js", "JavaScript", "HTML", "CSS"],
+    category: "Data Pipeline",
+    starred: false
+  }),
+  new Project({
+    title: "Bounce Knight",
+    description: "Bounce Knight is a 2D fighting game built in Unity. The game features a fully animated characters and 3 unique stages.",
+    tagline: "2D fighter built in Unity",
+    link: "",
+    github: "https://github.com/marcowang01/Bounce-Knight-Unity2D/tree/master",
+    date: "Winter, 2021",
+    skills: ["C#", "Unity"],
+    category: "Game Dev",
+    starred: false
+  }),
+  new Project({
+    title: "News Analyzer",
+    description: "Bias is a web app that uses machine learning to detect bias in news articles. The model is trained on a dataset of 1.3k news articles.",
+    tagline: "Bias detection in news articles",
+    link: "https://www.youtube.com/watch?v=2kNVx36dPOM&t=1s",
+    github: "https://github.com/marcowang01/Article-Analyzer-Web/tree/master",
+    date: "Winter, 2021",
+    skills: ["Python", "Scikit-Learn", "Flask"],
+    category: "Machine Learning",
+    starred: false
+  }),
+  new Project({
+    title: "Tetris",
+    description: "Tetris is an implementation of the classic game Tetris, built in C++.",
+    tagline: "Classic Tetris game in C++",
+    link: "",
+    github: "https://github.com/marcowang01/Tetris_in_C",
+    date: "Fall, 2021",
+    skills: ["C", "C++"],
+    category: "first steps",
     starred: false
   }),
 ];

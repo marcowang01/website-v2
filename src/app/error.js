@@ -12,12 +12,13 @@ export default function Error({ error, reset }) {
     <div>
       <div className={styles.title}>Something went wrong!</div>
       <div className={styles.paragraph}
+        style={{ cursor: 'pointer' }}
         onClick={
           // Attempt to recover by trying to re-render the segment
           () => reset()
         }
       >
-        Try again
+        Click to try again
       </div>
     </div>
   )

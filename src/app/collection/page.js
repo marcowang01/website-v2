@@ -1,12 +1,12 @@
 import styles from './page.module.css'
-import ProjectCard from '@/components/projectCard/projectCard'
+import ProjectRecord from '@/components/projectRecord/projectRecord'
 import projects from '@/content/projects'
 
 export default function Page() {
   return (
     <main className={styles.main}>
       {projects.map((showcase, index) => (
-        <ProjectCard {...showcase} key={`${showcase.title}-${index}`} />
+        <ProjectRecord {...showcase} key={`${showcase.title}-${index}`} />
       ))}
     </main>
   )

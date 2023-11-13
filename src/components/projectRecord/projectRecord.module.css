@@ -1,0 +1,120 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px 12px;
+  width: 87%;
+  border-radius: 10px;
+  color: rgb(var(--project-card-text-rgb));
+  transition: background-color 0.2s ease-in-out, transform 0.25s ease-in-out;
+  transform-origin: center;
+  cursor: pointer;
+}
+
+.container:hover {
+  background-color: rgb(var(--project-card-hover-bg-rgb));
+  transform: scale(1.02);
+}
+
+.container:hover svg {
+  transform: translate(2px, -2px);
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.title {
+  font-weight: var(--font-medium);
+  font-size: 16px;
+  letter-spacing: -0.005em;
+  transition:0.2s;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 7px;
+}
+
+.title svg {
+  width: 12px;
+  height: 12px;
+  fill: rgb(var(--project-card-text-rgb));
+  transition: transform 0.15s ease-in-out;
+}
+
+.date {
+  font-weight: var(--font-light);
+  color: rgb(var(--project-card-light-text-rgb));
+  font-size: 12px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.tagline {
+  width: fit-content;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.category {
+  width: fit-content;
+  color: rgb(var(--project-card-light-text-rgb));
+  font-size: 13px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+}
+
+.links .icon{
+  z-index: 100;
+}
+
+.links svg {
+  transition: fill 0.15s ease-in-out;
+  fill: #777777;
+  z-index: 100;
+}
+
+.links svg:hover {
+  fill: #444444;
+}
+
+.footerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    min-width: calc(100vw - 22px - 2rem);
+    margin-right: calc(11px + 1rem);
+    padding: 8px 10px;
+  }
+
+  .footerContainer {
+    justify-content: flex-start;
+  }
+
+  .category {
+    display: none;
+  }
+}
