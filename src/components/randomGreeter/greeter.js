@@ -11,6 +11,7 @@ const greetings = [
   "Aloha!",
   "Hello there!",
   "Hi!",
+  "Salutations",
   "Nice to meet you!",
   "Welcome!",
 ];
