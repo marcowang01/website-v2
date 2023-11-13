@@ -21,7 +21,7 @@ export default function About() {
         <RandomGreeter />
       </div>
       <div className={styles.paragraph}>
-        I'm Marco. I am a software engineer studying CS and Physics at Northwestern University.
+        I&apos;m Marco. I am a software engineer studying CS and Physics at Northwestern University.
       </div>
       <div className={styles.paragraph}>
         Currently, I am building tools at Hellsegga that help people create, learn, and connect.
