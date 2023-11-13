@@ -7,9 +7,7 @@ export default function MusicItem() {
   const [currentTrack, setCurrentTrack] = useState('');
 
   // if on mobile return null
-  if (typeof window !== 'undefined' && window.innerWidth < 768) {
-    return null;
-  }
+
 
   const fetchTrack = async () => {
     const track = await GetCurrentSong();
@@ -17,10 +15,14 @@ export default function MusicItem() {
   }
 
   useEffect(() => {
-    const intervalId = setInterval(fetchTrack, 1000 * 10); 
-    fetchTrack();
-    // Clean up the interval on component unmount
-    return () => clearInterval(intervalId);
+    if (typeof window !== 'undefined' && window.innerWidth < 768) {
+      return;
+    } else {
+      const intervalId = setInterval(fetchTrack, 1000 * 10); 
+      fetchTrack();
+      // Clean up the interval on component unmount
+      return () => clearInterval(intervalId);
+    }
   }, []);
 
 
