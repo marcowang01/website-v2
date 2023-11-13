@@ -28,6 +28,50 @@
   display: none;
 }
 
+.title {
+  font-size: 24px;
+  font-weight: var(--font-semibold);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.paragraph {
+  font-size: 16px;
+  font-weight: var(--font-regular);
+  line-height: 1.2;
+  margin-bottom: 20px;
+  width: 60%;
+  letter-spacing: -0.005em;
+}
+
+.paragraph:hover {
+  opacity: 1;
+  color: #444;
+}
+
+.paragraph a {
+  color: rgb(var(--foreground-rgb));
+  opacity: 0.7;
+  font-weight: var(--font-light);
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, opacity 0.15s ease-in-out;
+}
+
+.paragraph a:hover {
+  opacity: 1;
+  color: #444;
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding-top: calc(11px + 1rem);
+  }
+
+  .paragraph {
+    width: 90%;
+  }
+}
+
 @media (max-width: 768px) {
 
   .content {

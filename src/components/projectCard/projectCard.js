@@ -1,7 +1,6 @@
 'use client'
 import styles from './projectCard.module.css'
 import LinkIcon from './linkIcon'
-import Link from 'next/link'
 
 export default function ProjectCard(project) {
   const {title, description, link, github, date, skills} = project
