@@ -16,11 +16,11 @@
 
 .container:hover {
   background-color: rgb(var(--project-card-hover-bg-rgb));
-  transform: scale(1.01);
+  /* transform: scale(1.01); */
 }
 
 .container:active {
-  transform: scale(1);
+  transform: scale(0.99);
 }
 
 .headerContainer {
