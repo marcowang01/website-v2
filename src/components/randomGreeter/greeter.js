@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 // List of greetings
 const greetings = [
   "Hi there!",
-  "Hey!",
+  "Hey there!",
   "Greetings!",
   "Howdy!",
   "Hello!",
