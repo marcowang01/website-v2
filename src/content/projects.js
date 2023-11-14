@@ -15,7 +15,7 @@ class Project {
 const projects = [
   new Project({
     title: "Scribe",
-    description: "Scribe is an AI-powered wep app that can create lecture notes and study guides in real-time from live lectures.",
+    description: "An AI-powered wep app that can create lecture notes and study guides in real-time from live lectures.",
     tagline: "Transforming live lectures into interactive notes and study guides",
     link: "https://notetaker-git-master-marcowang01.vercel.app/",
     github: "https://github.com/marcowang01/notetaker",
@@ -26,7 +26,7 @@ const projects = [
   }),
   new Project({
     title: "Tomo",
-    description: "Tomo is a real-time audio-based companion aimed at enhancing children’s learning through story‑driven dialogues.",
+    description: "A real-time audio-based companion aimed at enhancing children’s learning through story‑driven dialogues.",
     tagline: "Bringing story-driven dialogues to children's learning",
     link: "https://tomo-git-mw-new-controls-yulilith.vercel.app/",
     github: "",
@@ -48,7 +48,7 @@ const projects = [
   }),
   new Project({
     title: "PlatzUI",
-    description: "Platz is an open-source personal website template for creatives, with a focus on streamlining the design-to-implementation process.",
+    description: "An open-source personal website template for creatives, with a focus on streamlining the design-to-implementation process.",
     tagline: "Open-source personal website template for creatives",
     link: "https://platz.ooo/",
     github: "https://github.com/szgbo/platz",
@@ -59,7 +59,7 @@ const projects = [
   }),
   new Project({
     title: "Conway",
-    description: "Conway is a CUDA-accelerated implementation of Conway's Game of Life, a cellular automaton that simulates the evolution of a grid of cells based on a set of rules.",
+    description: "A CUDA-accelerated implementation of Conway's Game of Life, a cellular automaton that simulates the evolution of a grid of cells based on a set of rules.",
     tagline: "CUDA-Accelerated Conway's Game of Life",
     link: "/files/conway.pdf",
     github: "https://github.com/marcowang01/conway-gpu",
@@ -70,7 +70,7 @@ const projects = [
   }),
   new Project({
     title: "Igloo",
-    description: "Igloo is a reimagination of social tools, driven by organic interpersonal relationships. Currently, a prototype tested within a small community of 20+ users.",
+    description: "A reimagination of social tools, driven by organic interpersonal relationships. Currently, a prototype tested within a small community of 20+ users.",
     tagline: "Reimagination of social connections in the digital age",
     link: "https://www.igloo.place/",
     github: "https://github.com/marcowang01/Igloo",
@@ -81,7 +81,7 @@ const projects = [
   }),
   new Project({
     title: "Dash",
-    description: "Dash is a full-stack telemetry dashboard built for the NU Formula Racing team to visualize, persist and analyze data from the car's sensors in real-time.",
+    description: "A full-stack telemetry dashboard built for the NU Formula Racing team to visualize, persist and analyze data from the car's sensors in real-time.",
     tagline: "Real-time telemtry insights for NU Formula Racing",
     link: "",
     github: "https://github.com/NU-Formula-Racing/telemetry-remote-23",
@@ -92,7 +92,7 @@ const projects = [
   }),
   new Project({
     title: "Bounce Knight",
-    description: "Bounce Knight is a 2D fighting game built in Unity. The game features a fully animated characters and 3 unique stages.",
+    description: "A 2D fighting game built in Unity. The game features a fully animated characters and 3 unique stages.",
     tagline: "Dynamic 2D fighter with animated characters",
     link: "",
     github: "https://github.com/marcowang01/Bounce-Knight-Unity2D/tree/master",
@@ -103,7 +103,7 @@ const projects = [
   }),
   new Project({
     title: "News Analyzer",
-    description: "Bias is a web app that uses machine learning to detect bias in news articles. The model is trained on a dataset of 1.3k news articles.",
+    description: "A web app that uses machine learning to detect bias in news articles. The model is trained on a dataset of 1.3k news articles.",
     tagline: "Detection and classification of bias in news articles",
     link: "https://www.youtube.com/watch?v=2kNVx36dPOM&t=1s",
     github: "https://github.com/marcowang01/Article-Analyzer-Web/tree/master",
@@ -114,7 +114,7 @@ const projects = [
   }),
   new Project({
     title: "Tetris",
-    description: "Tetris is an implementation of the classic game Tetris, built in C++.",
+    description: "An implementation of the classic game Tetris, built in C++.",
     tagline: "Clone of classic Tetris in C++",
     link: "",
     github: "https://github.com/marcowang01/Tetris_in_C",
