@@ -7,6 +7,7 @@ const URLs = {
   BoringCompany: "https://www.boringcompany.com/",
   Workiva: "https://www.workiva.com/",
   TiiltLab: "https://tiilt.northwestern.edu/",
+  Hellsegga: "https://hellsegga.xyz/",
 };
 
 const linkProps = {
@@ -24,7 +25,7 @@ export default function About() {
         I&apos;m Marco. I am a software engineer studying CS and Physics at Northwestern University.
       </div>
       <div className={styles.paragraph}>
-        Currently, I am building tools at Hellsegga that help people create, learn, and connect.
+        Currently, I am building tools at <Link href={URLs.Hellsegga} {...linkProps}>Hellsegga</Link> that help people create, learn, and connect.
       </div>
       <div className={styles.paragraph}>
         Previously, I worked at 

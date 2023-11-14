@@ -7,14 +7,14 @@
   width: 87%;
   border-radius: 10px;
   color: rgb(var(--project-card-text-rgb));
-  transition: background-color 0.2s ease-in-out, transform 0.25s ease-in-out;
+  transition: background-color 0.1s ease-in-out, transform 0.25s ease-in-out;
   transform-origin: center;
   cursor: pointer;
 }
 
 .container:hover {
   background-color: rgb(var(--project-card-hover-bg-rgb));
-  transform: scale(1.02);
+  /* transform: scale(1.02); */
 }
 
 .container:hover svg {
