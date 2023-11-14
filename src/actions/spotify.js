@@ -18,7 +18,7 @@ import SpotifyWebApi from "spotify-web-api-node";
 
 // const getAuthCodeFromManualAuth = async () => {
 //   // get link for manual authorization
-//   const scopes = ['user-read-currently-playing']
+//   const scopes = ['user-read-currently-playing', 'user-read-recently-played]
 //   const state = process.env.SPOTIFY_STATE
 
 //   const authorizeURL = spotifyApi.createAuthorizeURL(scopes, state);
@@ -46,15 +46,32 @@ export async function GetSongInfo() {
     if (!trackBody.item) {
       console.log(trackBody);
       console.log('No track found or not playing');
-      return ''
     } else {
       // console.log(trackBody);
       console.log(`listening to ${trackBody.item.name}`);
+      return {
+        track: trackBody.item.name,
+        url: trackBody.item.external_urls.spotify,
+      }  
     }
   
+    const { body: recentlyPlayed } = await spotifyApi.getMyRecentlyPlayedTracks({
+      limit : 1
+    });
+
+    if (!recentlyPlayed.items || recentlyPlayed.items.length == 0) {
+      console.log(recentlyPlayed);
+      console.log('No recently played tracks found');
+      return ''
+    } else {
+      // console.log(trackBody);
+      // console.log(recentlyPlayed.items[0].track);
+      console.log(`Recently listened to ${recentlyPlayed.items[0].track.name}`);
+    }
+
     return {
-      track: trackBody.item.name,
-      url: trackBody.item.external_urls.spotify,
+      track: recentlyPlayed.items[0].track.name,
+      url: recentlyPlayed.items[0].track.external_urls.spotify,
     }
   } catch (error) {
     console.error('Error in GET:', error.message);

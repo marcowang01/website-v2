@@ -20,7 +20,7 @@ export default function MusicItem() {
     if (typeof window !== 'undefined' && window.innerWidth < 768) {
       return;
     } else {
-      const intervalId = setInterval(fetchTrack, 1000 * 10); 
+      const intervalId = setInterval(fetchTrack, 1000 * 5); 
       fetchTrack();
       // Clean up the interval on component unmount
       return () => clearInterval(intervalId);
