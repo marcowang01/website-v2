@@ -12,7 +12,7 @@ const greetings = [
   "Hello there!",
   "Hi!",
   "Salutations",
-  "Nice to meet you!",
+  // "Nice to meet you!",
   "Welcome!",
 ];
 

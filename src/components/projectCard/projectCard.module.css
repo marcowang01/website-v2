@@ -19,6 +19,10 @@
   transform: scale(1.01);
 }
 
+.container:active {
+  transform: scale(1);
+}
+
 .headerContainer {
   display: flex;
   flex-direction: row;

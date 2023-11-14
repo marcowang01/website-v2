@@ -15,7 +15,7 @@ export default function Navbar() {
           <Breadcrumbs />
         </div>
         <div className={styles.navbarRightContainer}>
-          <TimeItem />
+          {/* <TimeItem /> */}
           <MusicItem />
           <MenuItem />
         </div>

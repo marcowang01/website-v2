@@ -17,6 +17,10 @@
   /* transform: scale(1.02); */
 }
 
+.container:active {
+  transform: scale(0.99);
+}
+
 .container:hover svg {
   transform: translate(2px, -2px);
 }

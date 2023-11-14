@@ -7,7 +7,7 @@ export default function Breadcrumbs() {
 
   return (
     <div className={`${styles.navbarItems} ${styles.hideOnMobile} ${styles.semiBold} ${styles.tight}`}>
-      {pathname.toUpperCase()}
+      {pathname.toUpperCase().substring(1)}
     </div>
   )
 }
