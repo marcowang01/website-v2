@@ -17,24 +17,29 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  gap: 7px;
+  gap: 8px;
   transition: color 0.15s ease-in-out;
 }
 
 .title svg {
   transition: fill 0.15s ease-in-out, transform 0.15s ease-in-out;
-  width: 17px;
-  height: 17px;
+  width: 18px;
+  height: 18px;
   fill: rgb(var(--foreground-rgb));
+  transform: translate(0, -0px);
+  /* stroke: rgb(var(--foreground-rgb)); */
 }
 
 .title:hover {
-  color: #444;
+  /* color: #444; */
+  opacity: 0.7;
 }
 
 .title:hover svg {
-  fill: #444;
-  transform: translate(2px, -2px);
+  /* fill: #444; */
+  /* stroke: #444; */
+  /* transform: translate(0px, 1px); */
+  opacity: 0.7;  
 }
 
 .section {

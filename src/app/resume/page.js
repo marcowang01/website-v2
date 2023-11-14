@@ -3,13 +3,14 @@ import styles from './page.module.css'
 import expericences from '@/content/experiences'
 import ResumeCard from '@/components/resumeCard/resumeCard'
 import ArrowIcon from '@/svg/arrow'
+import DownlaodIcon from '@/svg/download'
 
 export default function Resume() {
   return (
     <main className={styles.main}>
       <Link className={styles.title} href="/files/marco_wang_resume.pdf" target="_blank" rel="noopener noreferrer">
         Resume
-        <ArrowIcon className={styles.icon}/>
+        <DownlaodIcon className={styles.icon}/>
       </Link>
       <div className={styles.section}>
         <div className={styles.sectionTitle}>

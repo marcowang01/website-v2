@@ -14,6 +14,7 @@ export default function MusicItem() {
     const info = await GetSongInfo();
     setCurrentTrack(info.track);
     setCurrentUrl(info.url);
+    // console.log(info);
   }
 
   useEffect(() => {
