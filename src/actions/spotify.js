@@ -42,7 +42,8 @@ export async function GetSongInfo() {
   
     // Fetch the current playing track.
     const { body: trackBody } = await spotifyApi.getMyCurrentPlayingTrack();
-    if (!trackBody.item || trackBody.is_playing === false) {
+    // if (!trackBody.item || trackBody.is_playing === false) {
+    if (!trackBody.item) {
       console.log(trackBody);
       console.log('No track found or not playing');
       return ''
