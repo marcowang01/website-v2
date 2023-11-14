@@ -7,7 +7,7 @@ const URLs = {
   BoringCompany: "https://www.boringcompany.com/",
   Workiva: "https://www.workiva.com/",
   TiiltLab: "https://tiilt.northwestern.edu/",
-  Hellsegga: "https://hellsegga.xyz/",
+  Hellsegga: "https://www.hellsegga.site/",
 };
 
 const linkProps = {
