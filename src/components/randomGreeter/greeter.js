@@ -1,5 +1,6 @@
 'use client'
 import { useState, useEffect } from "react";
+
 // List of greetings
 const greetings = [
   "Hi there!",
@@ -12,7 +13,6 @@ const greetings = [
   "Hello there!",
   "Hi!",
   "Salutations",
-  // "Nice to meet you!",
   "Welcome!",
 ];
 
@@ -38,15 +38,27 @@ const getRandomGreeting = () => {
 };
 
 export default function RandomGreeter() {
-  const [randomGreeting, setRandomGreeting] = useState(' ');
+  const [randomGreeting, setRandomGreeting] = useState('');
 
   useEffect(() => {
+    // Set initial greeting
     setRandomGreeting(getRandomGreeting());
+    // Define click handler
+    const handlePageClick = () => {
+      setRandomGreeting(getRandomGreeting());
+    };
+    // Add click event listener to the whole document
+    document.addEventListener('click', handlePageClick);
+
+    // Clean up event listener
+    return () => {
+      document.removeEventListener('click', handlePageClick);
+    };
   }, []);
 
   return (
-    <>
+    <div>
       {randomGreeting}
-    </>
+    </div>
   );
 }
