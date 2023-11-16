@@ -55,7 +55,7 @@ const projects = [
     date: "Winter, 2023",
     skills: ["Typescript", "Next.js"],
     category: "UI Library",
-    starred: true
+    starred: false
   }),
   new Project({
     title: "Conway",
