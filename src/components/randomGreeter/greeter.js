@@ -12,7 +12,7 @@ const greetings = [
   "Aloha!",
   "Hello there!",
   "Hi!",
-  "Salutations",
+  "Salutations!",
   "Welcome!",
 ];
 
@@ -20,11 +20,11 @@ const greetings = [
 const addTimeSpecificGreeting = () => {
   const hour = new Date().getHours();
   if (hour < 12) {
-    return "Good morning";
+    return "Good morning!";
   } else if (hour < 18) {
-    return "Good afternoon";
+    return "Good afternoon!";
   } else {
-    return "Good evening";
+    return "Good evening!";
   }
 };
 
@@ -38,14 +38,21 @@ const getRandomGreeting = () => {
 };
 
 export default function RandomGreeter() {
-  const [randomGreeting, setRandomGreeting] = useState('');
+  const [randomGreeting, setRandomGreeting] = useState('!');
 
   useEffect(() => {
     // Set initial greeting
     setRandomGreeting(getRandomGreeting());
     // Define click handler
     const handlePageClick = () => {
-      setRandomGreeting(getRandomGreeting());
+      setRandomGreeting(prev => {
+        const newGreeting = getRandomGreeting();
+        // Make sure the new greeting is different from the old one
+        while (newGreeting === prev) {
+          newGreeting = getRandomGreeting();
+        }
+        return newGreeting;
+      });
     };
     // Add click event listener to the whole document
     document.addEventListener('click', handlePageClick);
