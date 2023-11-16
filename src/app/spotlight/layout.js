@@ -1,6 +1,6 @@
 
 export const metadata = {
-  title: 'Marco Wang - Showcase',
+  title: 'Marco Wang - Spotlight',
 }
 
 export default function Layout({
