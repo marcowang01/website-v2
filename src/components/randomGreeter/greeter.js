@@ -46,7 +46,7 @@ export default function RandomGreeter() {
     // Define click handler
     const handlePageClick = () => {
       setRandomGreeting(prev => {
-        const newGreeting = getRandomGreeting();
+        let newGreeting = getRandomGreeting();
         // Make sure the new greeting is different from the old one
         while (newGreeting === prev) {
           newGreeting = getRandomGreeting();
