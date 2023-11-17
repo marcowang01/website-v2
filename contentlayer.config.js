@@ -1,4 +1,4 @@
-import { defineDocumentType, makeSource } from 'contentlayer/source-files'
+import { defineNestedType, defineDocumentType, makeSource } from 'contentlayer/source-files'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings' 
 import rehypePrettyCode from 'rehype-pretty-code'
 import rehypeSlug from 'rehype-slug'
@@ -15,6 +15,22 @@ const computedFields = {
     resolve: (doc) => doc._raw.flattenedPath.split('/').slice(1).join('/'),
   },
 }
+
+const Collaborators = defineNestedType(() => ({
+  name: 'Collaborators',
+  fields: {
+    names: {
+      type: 'list',
+      of: { type: 'string' },
+      required: true,
+    },
+    urls: {
+      type: 'list',
+      of: { type: 'string' },
+      required: true,
+    },
+  },
+}));
 
 export const Project = defineDocumentType(() => ({
   name: 'Project',
@@ -33,15 +49,18 @@ export const Project = defineDocumentType(() => ({
       type: 'string',
       required: true,
     },
-    contributors: {
-      type: 'list',
-      of: { type: 'string' },
-      required: true,
+    collaborators: {
+      type: 'nested',
+      of: Collaborators,
+      required: false,
     },
-    urls: {
-      type: 'list',
-      of: { type: 'string' },
-      required: true,
+    externalUrl: {
+      type: 'string',
+      required: false,
+    },
+    githubUrl: {
+      type: 'string',
+      required: false,
     },
   },
   computedFields,

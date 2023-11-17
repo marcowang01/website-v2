@@ -1,25 +1,35 @@
 ---
-title: Realm
-description: A GPU-Accelerated Conway's Game of Life
+title: Conway
+description: A GPU-Accelerated Conway's Game of Life using CUDA
 date: Spring, 2023
-contributors: 
-  - Marco Wang
-  - Yuxuan Huang
-urls:
-  - https://marcowang.me/
-  - https://marcowang.me/
+collaborators: 
+  names:
+    - Shaobo Zhang
+  urls:
+    - https://boboland.xyz/
+githubUrl: https://github.com/marcowang01/conway-gpu.git
 ---
 
-## Section 1
-Content 
+## Introduction
+In this report, we explore CUDA implementations that speed up Conway's Game of Life, a well-known cellular automaton simulation. The Game of Life is a simple yet fascinating simulation that exhibits complex emergent behaviors, making it a popular choice for exploring the dynamics of complex systems. The sheer number of computations required to simulate a moderately sized world with CPU can be a significant bottleneck in either speed or memory needed. In this context, we want to leverage the power of parallel computing capabilities of CUDA to potentially provide significant performance gains and enable faster / more extensive simulations. We present a detailed analysis of our implementation and provide insights into the key factors that impact performance. Lastly, our experiment revolve around comparing different levels of optimization with different CUDA-based implementation and the traditional CPU-based implementations
+ 
+## Background
+Conway's Game of Life (GoL) is a type of Cellular automata (CA), discrete mathematical models that exhibit complex behaviors through simple local interactions between cells arranged in a regular grid. Game of Life was first introduced by John Conway in 1970. The game consists of a grid of cells that can be either "alive" or "dead," and the state of each cell evolves over time according to a set of rules based on the states of its neighboring cells. Despite its simplicity, the Game of Life has been a topic of study in diverse fields, such as physics, mathematics, biology, and computer science. It has been used to model various phenomena, including population dynamics, disease spread, and self-organization in complex systems.
 
+There are four rules in Conway’s Game of Life. At each generation, we update all cell state according to these rules:
 
-## Section 2
-Content 
+- A dead cell with exactly three live neighbors becomes a live cell (birth)
+- A live cell with two or three live neighbors survives to the next generation (survival)
+- A live cell with fewer than two live neighbors dies of loneliness (underpopulation)
+- A live cell with more than three live neighbors dies of overcrowding (overpopulation)
+
+In this context, we will introduce some basic patterns of Conway’s Game of Life to familiarize you with the rules.
+
 It's probably important that images look okay here by default as well:
+
 <Image
   src="/images/conway/bitRepresentation1.svg"
-  width="718"
-  height="404"
+  width="300"
+  height="120"
   alt="Image"
 />

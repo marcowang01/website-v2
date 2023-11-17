@@ -1,26 +1,56 @@
 ---
 title: Realm
-description: A GPU-Accelerated Conway's Game of Life
+description: A Retrieval Augmented Language Model pipeline built for QA tasks.
 date: Spring, 2023
-contributors: 
-  - Marco Wang
-  - Yuxuan Huang
-urls:
-  - https://marcowang.me/
-  - https://marcowang.me/
+collaborators: 
+  names:
+    - Shaobo Zhang
+  urls:
+    - https://boboland.xyz/
+githubUrl: https://github.com/marcowang01/realm
 ---
 
 
-## Section 1
-Content 
+## Motivation
+We both wanted to experiment with Large Language Models (LLMs) and their capabilities to interact with our own custom datasets. Some ideas we had were to create
+a virtual representation of ourselves using a LLM-based conversation agent, or to create a LLM-augmented knowledge base for our private notes and documents. 
+While [retrieval-augmented LLMs](https://mattboegner.com/knowledge-retrieval-architecture-for-llms/) are not new, there are very few exisiting implementations that are practical for our uses cases and are cost-effective.
+<br /> <br />
+On a practical note, retrieval-augmented LLMs allow LLMs to generate responses based on custom domain-specific data without the need to perform
+parameter finetuning, which can often be expensive. This is particularly beneficial for cases where the data is private or is updated frequently. Overall, through
+this project we hope to learn more about the knowledge retrieval using LLMs, in-context question answering and prompt engineering.
 
 
-## Section 2
-Content 
-It's probably important that images look okay here by default as well:
+## Vector Database
+
+A core part of our pipeline is the vector database (vectorDB), which we will introduce here breifly. In short, A vectorDB is a type of databse that specializes 
+in handling embeddings. Embeddings, in the context of language models, are mathematical representations of text where words or phrases with similar meanings are
+mapped to similar positions in a high-dimensional space. VectorDB are simply databases provide optimized storage and querying capabilities for embeddings. There
+are many use cases of vectorDBs such as semantic search and long term memory for conversation agents. In our case, we use it for knowledge retrieval. For a more
+in depth explanation of vectorDBs, check out this [article](https://www.pinecone.io/learn/vector-database/) by Pinecone. 
+
+### Architecture
+
+Our pipeline consists of three main components: a vectorDB, an LLM, and the client interface. For the vectorDB, we use [chromaDB](https://www.trychroma.com/), which is an open-source vectorDB. The database is hosted on a serverless container using [modal](https://modal.com/docs/guide). For the embedding model, we are using [instructor-xl](https://huggingface.co/hkunlp/instructor-xl), which is an instruction fine-tuned embedding model based on a [GTR model](https://arxiv.org/pdf/2112.07899.pdf). The embedding model is also hosted on modal alongside the database. For the LLM, we use a proxy-based [API](https://github.com/PawanOsman/ChatGPT) of OpenAI's ChatGPT 3.5 turbo model. This API essentially allows us to use ChatGPT for free with a daily rate limit. The rate limit is similar to using ChatGPT directly through the browser, which is more than enough for our use case.
+
+For ingestion, we first use document loaders from [langchain](https://python.langchain.com/en/latest/index.html) to turn files stored on disk into text. The text is then split into chunks of 1000-4000 characters (depending on the specific use case) with 200 characters of overlap. These chunks of text are then fed into the embedding model to generate embeddings. The embeddings are then stored in the vectorDB.
+
+For querying:
+
+1. We first pass the query to the LLM to generate a more concise structured query that is more suitable for the vectorDB.
+2. The structured query is then passed to the embedding model to generate an embedding of the query.
+3. The embedding is then passed to the vectorDB to retrieve the top k most relevant documents.
+4. Our pipeline will also generate k-random examples from the training data to be used as few-shot examples.
+5. The documents are then combined with the few-shot examples and original query to form a large prompt.
+6. This prompt is then passed into the LLM for the final time to generate the final response.
+
+Our architecture and data flow is illustrated in the diagrams below.
+
 <Image
   src="/images/realm/architecture.svg"
-  width="718"
-  height="404"
-  alt="Image"
+  width="200"
+  height="200"
+  alt="architecture img"
 />
+
+
