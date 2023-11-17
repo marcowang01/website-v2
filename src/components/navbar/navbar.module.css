@@ -54,6 +54,10 @@
   white-space: nowrap;
 }
 
+.navbarItems svg {
+  fill: rgb(var(--navbar-text-rgb));
+}
+
 /* uncomment for a scrolling effect on long song names */
 /* will need to stack the song name twice in the js file for continuous scrolling */
 /* 
@@ -98,12 +102,24 @@
   transition: color 0.2s ease-in-out;
 }
 
+.button svg {
+  transition: fill 0.2s ease-in-out;
+}
+
 .button:hover {
-  color: rgb(var(--blue-highlight-rgb));
+  color: rgb(var(--blue-highlight-rgb)) !important;
+}
+
+.button:hover svg{
+  fill: rgb(var(--blue-highlight-rgb)) !important;
 }
 
 .button:active {
-  color: rgba(var(--blue-highlight-rgb), 0.8);
+  color: rgba(var(--blue-highlight-rgb), 0.8) !important;
+}
+
+.button:active svg{
+  fill: rgba(var(--blue-highlight-rgb), 0.8) !important;
 }
 
 .hideOnTablet {

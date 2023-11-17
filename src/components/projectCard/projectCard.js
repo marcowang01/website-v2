@@ -1,17 +1,25 @@
 'use client'
+import { useRouter } from 'next/navigation'
 import styles from './projectCard.module.css'
 import LinkIcon from './linkIcon'
 
 export default function ProjectCard(project) {
   const {title, description, link, github, date, skills} = project
 
+  const router = useRouter()
+
   const priorityLink = link || github
 
   const handleOnClick = (e) => {
     e.preventDefault();
     e.stopPropagation();
-    console.log(priorityLink)
-    window.open(priorityLink, '_blank', 'noopener,noreferrer');
+    // console.log(priorityLink)
+    // check if link is external
+    if (priorityLink.includes('http')) {
+      window.open(priorityLink, '_blank', 'noopener,noreferrer');
+    } else {
+      router.push(priorityLink);
+    }
   }
 
   return (

@@ -1,12 +1,13 @@
 import styles from './navbar.module.css'
-import Image from 'next/image'
+import DotIcon from '@/svg/dot'
+import Link from 'next/link'
 export default function NameItem() {
   const name = "Marco Wang"
 
   return (
-    <div className={`${styles.navbarItems} ${styles.semiBold}`}>
-      <Image src={'/images/dot.svg'} width={6} height={6} alt='dot' unoptimized />
+    <Link href={'/'} className={`${styles.navbarItems} ${styles.semiBold} ${styles.button}`}>
+      <DotIcon width={6} height={6}/>
       {name.toUpperCase()}
-    </div>
+    </Link>
   )
 }

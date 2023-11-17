@@ -1,5 +1,3 @@
-'use client'
-import ArrowIcon from '@/svg/arrow'
 import styles from './projectRecord.module.css'
 import Link from 'next/link'
 
@@ -7,16 +5,12 @@ export default function ProjectRecord(project) {
   const {title, tagline, link, github, date, category, starred} = project
 
   const priorityLink = link || github
-
-  // const handleOnClick = (e) => {
-  //   e.preventDefault();
-  //   e.stopPropagation();
-  //   console.log(priorityLink)
-  //   window.open(priorityLink, '_blank', 'noopener,noreferrer');
-  // }
+  const linkProps = priorityLink.includes('http')
+    ? { target: '_blank', rel: 'noopener noreferrer' }
+    : {};
 
   return (
-    <Link href={priorityLink} target="_blank" rel="noopener noreferrer" className={styles.container}>
+    <Link href={priorityLink} {...linkProps} className={styles.container}>
       <section className={styles.headerContainer}>
         <div className={styles.title}>
           {title}

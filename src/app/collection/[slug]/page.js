@@ -8,8 +8,8 @@ async function getProjectFromParams(slug) {
   // console.log('slug ' + slug)
   // allProjects.map((project) => console.log('param slug ' + project.slugAsParams))
 
-  if (!project) {
-    notFound
+  if (!project || !project.body) {
+    notFound()
   }
 
   return project
