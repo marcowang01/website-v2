@@ -25,13 +25,13 @@ export default function About() {
         I&apos;m Marco. I am a software engineer studying CS and Physics at Northwestern University.
       </div>
       <div className={styles.paragraph}>
-        Currently, I am building tools at <Link href={URLs.Hellsegga} {...linkProps}>Hellsegga</Link> that help people create, learn, and connect.
+        Currently, I am building tools to help people create, learn, and connect at <Link href={URLs.Hellsegga} {...linkProps}>Hellsegga</Link>.
       </div>
       <div className={styles.paragraph}>
-        Previously, I worked at 
-        <Link href={URLs.BoringCompany} {...linkProps}> The Boring Company</Link>, 
-        <Link href={URLs.Workiva} {...linkProps}> Workiva</Link>, and 
-        <Link href={URLs.TiiltLab} {...linkProps}> Northwestern Tiilt Lab</Link>.
+        {`Previously, I worked at `} 
+        <Link href={URLs.BoringCompany} {...linkProps}>The Boring Company</Link>{`, `} 
+        <Link href={URLs.Workiva} {...linkProps}>Workiva</Link>{`, and `} 
+        <Link href={URLs.TiiltLab} {...linkProps}>NU Tiilt Lab</Link>.
       </div>
     </main>
   );
