@@ -28,6 +28,7 @@ export async function logIP(ip) {
   // console.log(url)
   const response = await fetch(url);
   if (!response.ok) {
+    console.log('IP not logged. IPInfo.io API error');
     return;
   }
 
@@ -39,6 +40,7 @@ export async function logIP(ip) {
       VALUES (${ip})
       RETURNING *;
     `;
+    console.log('IP logged without location data' + ip);
     return result;
   }
 
@@ -52,6 +54,12 @@ export async function logIP(ip) {
     VALUES (${ip}, ${location}, ${lat}, ${lon})
     RETURNING *;
   `;
+  console.log('IP logged with location data' + ip);
+
+  if (!result) {
+    console.log('IP not logged. SQL error');
+    return;
+  }
 
   return result;
 }
