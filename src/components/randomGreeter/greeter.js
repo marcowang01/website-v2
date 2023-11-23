@@ -1,24 +1,6 @@
 'use client'
 import { useState, useEffect } from "react";
-
-// List of greetings
-const greetings = [
-  "Hi there!",
-  "Hey there!",
-  "Greetings!",
-  "Howdy!",
-  "Hello!",
-  "What's up!",
-  "Aloha!",
-  "Hello there!",
-  "Hi!",
-  "Salutations!",
-  "Welcome!",
-  "Knock knock!",
-  "Bonjour!",
-  "Hola!",
-  "Ciao!",
-];
+import { greetings } from "./greetings";
 
 // Function to add a time-specific greeting
 const addTimeSpecificGreeting = () => {
@@ -41,12 +23,19 @@ const getRandomGreeting = () => {
   return greetings[randomIndex];
 };
 
-export default function RandomGreeter() {
-  const [randomGreeting, setRandomGreeting] = useState('!');
+export default function RandomGreeter({greeting}) {
+  const [randomGreeting, setRandomGreeting] = useState(greeting || "!");
 
   useEffect(() => {
     // Set initial greeting
-    setRandomGreeting(getRandomGreeting());
+    setRandomGreeting(prev => {
+      if (!prev || prev === "!") {
+        return getRandomGreeting();
+      } else {
+        return prev;
+      }
+    });
+
     // Define click handler
     const handlePageClick = () => {
       setRandomGreeting(prev => {

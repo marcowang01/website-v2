@@ -1,0 +1,18 @@
+// List of greetings
+export const greetings = [
+  "Hello there!",
+  "Hi there!",
+  "Hey there!",
+  "Hello!",
+  "Greetings!",
+  "Howdy!",
+  "What's up!",
+  "Aloha!",
+  "Hi!",
+  "Salutations!",
+  "Welcome!",
+  "Knock knock!",
+  "Bonjour!",
+  "Hola!",
+  "Ciao!",
+];

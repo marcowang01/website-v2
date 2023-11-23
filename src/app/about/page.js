@@ -8,7 +8,7 @@ const URLs = {
   Workiva: "https://www.workiva.com/",
   TiiltLab: "https://tiilt.northwestern.edu/",
   Hellsegga: "https://www.hellsegga.site/",
-};
+}; 
 
 const linkProps = {
   target: "_blank",
@@ -19,7 +19,7 @@ export default function About() {
   return (
     <main className={styles.main}>
       <div className={styles.title}>
-        <RandomGreeter />
+        <RandomGreeter/>
       </div>
       <div className={styles.paragraph}>
         I&apos;m Marco. I am a software engineer studying CS and Physics at Northwestern University.
