@@ -14,14 +14,18 @@ const greetings = [
   "Hi!",
   "Salutations!",
   "Welcome!",
+  "Knock knock!",
+  "Bonjour!",
+  "Hola!",
+  "Ciao!",
 ];
 
 // Function to add a time-specific greeting
 const addTimeSpecificGreeting = () => {
   const hour = new Date().getHours();
-  if (hour < 12 && hour > 5) {
+  if (hour < 12) {
     return "Good morning!";
-  } else if (hour < 18 && hour > 12) {
+  } else if (hour < 18) {
     return "Good afternoon!";
   } else {
     return "Good evening!";
