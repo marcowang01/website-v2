@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import styles from './page.module.css';
 import RandomGreeter from '@/components/randomGreeter/greeter';
+import { headers } from "next/headers";
+import { logIP } from '@/actions/ip';
 
 // Define URLs as constants
 const URLs = {
@@ -15,7 +17,14 @@ const linkProps = {
   rel: "noopener noreferrer",
 };
 
+
 export default function About() {
+  const headersList = headers();
+  const ip = headersList.get("x-forwarded-for")
+  if (process.env.NODE_ENV === 'production') {
+    logIP(ip);
+  }
+
   return (
     <main className={styles.main}>
       <div className={styles.title}>
