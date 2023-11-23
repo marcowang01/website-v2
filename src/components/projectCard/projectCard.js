@@ -10,7 +10,7 @@ export default function ProjectCard(project) {
   const handleOnClick = (e) => {
     e.preventDefault();
     e.stopPropagation();
-    console.log(priorityLink)
+    // console.log(priorityLink)
     window.open(priorityLink, '_blank', 'noopener,noreferrer');
   }
 

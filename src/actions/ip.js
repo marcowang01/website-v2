@@ -25,7 +25,7 @@ export async function logIP(ip) {
 
   // fetch location from ipinfo.io
   const url = `https://ipinfo.io/${ip}/json?token=${process.env.IPINFO_TOKEN}`;
-  console.log(url)
+  // console.log(url)
   const response = await fetch(url);
   if (!response.ok) {
     return;
