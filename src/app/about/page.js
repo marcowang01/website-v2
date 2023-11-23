@@ -21,8 +21,15 @@ const linkProps = {
 export default function About() {
   const headersList = headers();
   const ip = headersList.get("x-forwarded-for")
-  if (process.env.NODE_ENV === 'production') {
-    logIP(ip);
+  if (process.env.VERCEL_ENV === 'production') {
+    const result = logIP(ip);
+    if (result) {
+      console.log('IP logged', result);
+    } else {
+      console.log('IP not logged');
+    }
+  } else {
+    console.log('IP not logged. Not in production');
   }
 
   return (

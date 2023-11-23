@@ -55,7 +55,7 @@ export default function RootLayout({ children }) {
         <div className={styles.showOnMobile}>
           <Navbar />
         </div>
-        {process.env.NODE_ENV === 'production' && (
+        {process.env.VERCEL_ENV === 'production' && (
           <>
             <GoogleAnalytics ga_id={process.env.GOOGLE_ANALYTICS} />
             <ClarityAnalytics />
