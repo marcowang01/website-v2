@@ -24,7 +24,7 @@ export const metadata = {
     canonical: '/',
   },
   openGraph: {
-    images: '/iamges/og.png',
+    images: '/images/og.png',
     url: 'https://marcowang.xyz',
     siteName: 'Marco Wang',
     locale: 'en_US',
