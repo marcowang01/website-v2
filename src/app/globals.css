@@ -7,6 +7,7 @@
   --foreground-rgb: 102, 102, 102;
   --background-rgb: 245, 245, 244;
   --blue-highlight-rgb: 163, 209, 236;
+  --dark-blue-highlight-rgb: calc(163 * 0.9), calc(209 * 0.9), calc(236 * 0.9);
 
   --font-semibold: 600;
   --font-light: 300;

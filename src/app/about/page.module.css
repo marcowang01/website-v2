@@ -25,6 +25,7 @@
 .paragraph a:hover {
   opacity: 1;
   /* color: #444; */
+  /* color: rgb(var(--dark-blue-highlight-rgb)); */
 }
 
 @media (max-width: 768px) {
