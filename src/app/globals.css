@@ -28,8 +28,8 @@
   --light-key-pressed-bg-rgba: 233, 233, 233, 0.3;
   --light-key-selected-bg-rgba: 255, 255, 255, 1;
 
-  --short-transition: background-color 0.2s ease, color 0.2s ease, background-image 0.2s ease, scale 0.2s ease;
-  --long-transition: background-color 0.5s ease, color 0.5s ease, background-image 0.5s ease, scale 0.5s ease;
+  --short-transition: background-color 0.2s ease, color 0.2s ease, background-image 0.2s ease, scale 0.2s ease, opacity 0.2s ease;
+  --long-transition: background-color 0.5s ease, color 0.5s ease, background-image 0.5s ease, scale 0.5s ease, opacity 0.5s ease;
 
   /* nav bar */
   --navbar-text-rgb: 218, 220, 222;

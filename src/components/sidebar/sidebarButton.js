@@ -4,11 +4,12 @@ import { useEffect, useState } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import styles from './sidebar.module.css';
 import Link from 'next/link';
+import ArrowIcon from '@/svg/arrow';
 
 export default function SidebarButton({ name, link, shortcut }) {
   const router = useRouter();
   const pathname = usePathname()
-  const isExternalLink = link.includes('http');
+  const isExternalLink = link.includes('http') || link.includes('mailto');
   const [isSelected, setIsSelected] = useState(false);
 
   // change the color of the button when selected
@@ -49,10 +50,10 @@ export default function SidebarButton({ name, link, shortcut }) {
     return (
       <Link href={link} {...linkProps} className={isSelected ? `${styles.sidebarButtonContainer} ${styles.selected}` : styles.sidebarButtonContainer}>
         <div>
-          {name}
+          {name} {isExternalLink && <ArrowIcon/>}
         </div>
         <div className={isSelected ? `${styles.sidebarKey} ${styles.selected}` : styles.sidebarKey}>
-          {shortcut}
+          {shortcut}  
         </div>
       </Link>
     );

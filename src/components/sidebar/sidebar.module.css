@@ -24,6 +24,7 @@
   color: rgba(var(--light-btn-text-rgb), 0.7);
   font-size: 16px;
   height: min-content;
+  white-space: nowrap;
 }
 
 .sidebarKey {
@@ -42,6 +43,11 @@
 .sidebarButtonContainer:hover {
   color: rgba(var(--light-btn-text-rgb), 1);
   transition: var(--short-transition);
+}
+
+.sidebarButtonContainer:hover svg{
+  display: inline;
+  opacity: 1;
 }
 
 .sidebarButtonContainer:hover .sidebarKey {
@@ -73,4 +79,14 @@
   color: rgba(var(--light-btn-text-rgb), 1);
   transition: var(--long-transition);
 }
+
+.sidebarButtonContainer svg {
+  fill: rgba(var(--light-btn-text-rgb), 0.7);
+  width: 12px;
+  display: none;
+  opacity: 0;
+  transition: var(--short-transition);
+}
+
+
 
