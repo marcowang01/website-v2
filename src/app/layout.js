@@ -15,16 +15,24 @@ const inter = Inter({
 export const metadata = {
   title: 'Marco Wang',
   description: 'Software Engineer. Creating tools to help people learn, create and connect.',
-  og: {
-    title: 'Marco Wang',
-    description: 'Software Engineer. Creating tools to help people learn, create and connect.',
-    image: 'https://marcowang.xyz/images/og.png',
+  keywords: ['Marco Wang', 'Software', 'Engineer', 'Personal Website'],
+  authors: [{ name: 'Marco Wang' }],
+  creator: 'Marco Wang',
+  publisher: 'Marco Wang',
+  metadataBase: new URL('https://marcowang.xyz'),
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    images: '/iamges/og.png',
     url: 'https://marcowang.xyz',
+    siteName: 'Marco Wang',
+    locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-  },
+  }
 }
 
 export default function RootLayout({ children }) {
