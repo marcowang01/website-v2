@@ -18,7 +18,7 @@ export const metadata = {
   og: {
     title: 'Marco Wang',
     description: 'Software Engineer. Creating tools to help people learn, create and connect.',
-    image: 'https://marcowang.xyz/images/og.jpg',
+    image: 'https://marcowang.xyz/images/og.png',
     url: 'https://marcowang.xyz',
     type: 'website',
   },
