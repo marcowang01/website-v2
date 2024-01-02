@@ -2,7 +2,7 @@ import Link from 'next/link';
 import styles from './page.module.css';
 import RandomGreeter from '@/components/randomGreeter/greeter';
 import { headers } from "next/headers";
-import { logIP } from '@/actions/ip';
+// import { logIP } from '@/actions/ip';
 
 // Define URLs as constants
 const URLs = {
@@ -22,9 +22,9 @@ export default function About() {
   const headersList = headers();
   const ip = headersList.get("x-forwarded-for")
 
-  if (process.env.VERCEL_ENV === 'production') {
-    logIP(ip);
-  }
+  // if (process.env.VERCEL_ENV === 'production') {
+  //   logIP(ip);
+  // }
 
   return (
     <main className={styles.main}>
