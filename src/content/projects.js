@@ -15,10 +15,10 @@ class Project {
 const projects = [
   new Project({
     title: "Scribe",
-    description: "An AI-powered wep app that can create lecture notes and study guides in real-time from live lectures.",
+    description: "An AI-powered app for creating and searching through notes for lectures, meetings and discussions.",
     tagline: "Transforming live lectures into interactive notes and study guides",
-    link: "https://notetaker-git-master-marcowang01.vercel.app/",
-    github: "https://github.com/marcowang01/notetaker",
+    link: "https://www.project-scribe.com/",
+    // github: "https://github.com/marcowang01/notetaker",
     date: "Fall, 2023",
     skills: ["Typescript", "Next.js", "Supabase"],
     category: "AI Web App",
