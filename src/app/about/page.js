@@ -6,6 +6,7 @@ import { headers } from "next/headers";
 
 // Define URLs as constants
 const URLs = {
+  rabbit: "https://www.rabbit.tech/",
   BoringCompany: "https://www.boringcompany.com/",
   Workiva: "https://www.workiva.com/",
   TiiltLab: "https://tiilt.northwestern.edu/",
@@ -20,7 +21,7 @@ const linkProps = {
 
 export default function About() {
   const headersList = headers();
-  const ip = headersList.get("x-forwarded-for")
+  // const ip = headersList.get("x-forwarded-for")
 
   // if (process.env.VERCEL_ENV === 'production') {
   //   logIP(ip);
@@ -32,10 +33,11 @@ export default function About() {
         <RandomGreeter/>
       </div>
       <div className={styles.paragraph}>
-        I&apos;m Marco. I am a software engineer studying CS and Physics at Northwestern University.
+        {`I'm Marco. I am a software engineer at `}
+        <Link href={URLs.rabbit} {...linkProps}>rabbit</Link>.
       </div>
       <div className={styles.paragraph}>
-        Currently, I am building tools to help people create, learn, and connect at <Link href={URLs.Hellsegga} {...linkProps}>Hellsegga</Link>.
+        Currently, I am also building tools to help people create, learn, and connect at <Link href={URLs.Hellsegga} {...linkProps}>Hellsegga</Link>.
       </div>
       <div className={styles.paragraph}>
         {`Previously, I worked at `} 
