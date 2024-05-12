@@ -36,9 +36,9 @@ export default function About() {
         {`I'm Marco. I am a software engineer at `}
         <Link href={URLs.rabbit} {...linkProps}>rabbit</Link>.
       </div>
-      <div className={styles.paragraph}>
+      {/* <div className={styles.paragraph}>
         Currently, I am also building tools to help people create, learn, and connect at <Link href={URLs.Hellsegga} {...linkProps}>Hellsegga</Link>.
-      </div>
+      </div> */}
       <div className={styles.paragraph}>
         {`Previously, I worked at `} 
         <Link href={URLs.BoringCompany} {...linkProps}>The Boring Company</Link>{`, `} 
