@@ -9,12 +9,13 @@ import ClarityAnalytics from '@/analytics/clarity'
 
 const inter = Inter({ 
   weight: ['400', '600', '300', '700', '500'],
-  subsets: ['latin'] 
+  subsets: ['latin'],
+  display: "swap"
 })
 
 export const metadata = {
   title: 'Marco Wang',
-  description: 'Software Engineer. Creating tools to help people learn, create and connect.',
+  description: 'Software Engineer at rabbit. Creating tools to help people learn, create and connect.',
   keywords: ['Marco Wang', 'Software', 'Engineer', 'Personal Website'],
   authors: [{ name: 'Marco Wang' }],
   creator: 'Marco Wang',

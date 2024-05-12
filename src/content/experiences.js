@@ -25,6 +25,14 @@ const expericences = {
   ],
 work: [
     new Experience({
+      company: "rabbit",
+      position: "Software Engineer",
+      bulletpoints: [],
+      date: "Feb. 2024 - Present",
+      location: "Los Angeles, CA",
+      skills: []
+    }),
+    new Experience({
       company: "The Boring Company",
       position: "Software Engineer Intern",
       bulletpoints: [
