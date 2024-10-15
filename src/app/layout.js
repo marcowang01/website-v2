@@ -3,6 +3,7 @@ import './globals.css'
 import Navbar from '@/components/navbar/navbar'
 import Sidebar from '@/components/sidebar/sidebar'
 import styles from './page.module.css'
+import MarcoPolo from '@/components/marcopolo'
 
 import GoogleAnalytics from '@/analytics/google'
 import ClarityAnalytics from '@/analytics/clarity'
@@ -62,6 +63,7 @@ export default function RootLayout({ children }) {
             <ClarityAnalytics />
           </>
         )}
+        <MarcoPolo />
       </body>
     </html>
   )
