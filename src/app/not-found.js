@@ -6,7 +6,7 @@ export default function NotFound() {
     <div>
       <div className={styles.title}>404 Not Found</div>
       <div className={styles.paragraph}>
-        <Link href="/about">Click to return Home</Link>
+        <Link href="/about">Return Home</Link>
       </div>
     </div>
   )
