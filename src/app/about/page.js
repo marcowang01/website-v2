@@ -20,12 +20,6 @@ const linkProps = {
 
 
 export default function About() {
-  const headersList = headers();
-  // const ip = headersList.get("x-forwarded-for")
-
-  // if (process.env.VERCEL_ENV === 'production') {
-  //   logIP(ip);
-  // }
 
   return (
     <main className={styles.main}>
@@ -33,12 +27,12 @@ export default function About() {
         <RandomGreeter/>
       </div>
       <div className={styles.paragraph}>
-        {`I'm Marco. I am a software engineer at `}
+        {`I'm Marco. I am currently building software for AI agents at `}
         <Link href={URLs.rabbit} {...linkProps}>rabbit</Link>.
       </div>
-      {/* <div className={styles.paragraph}>
-        Currently, I am also building tools to help people create, learn, and connect at <Link href={URLs.Hellsegga} {...linkProps}>Hellsegga</Link>.
-      </div> */}
+      <div className={styles.paragraph}>
+        I hope to build tools for people to create, learn, and connect.
+      </div>
       <div className={styles.paragraph}>
         {`Previously, I worked at `} 
         <Link href={URLs.BoringCompany} {...linkProps}>The Boring Company</Link>{`, `} 
