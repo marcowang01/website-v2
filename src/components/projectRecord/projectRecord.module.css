@@ -121,4 +121,17 @@
   .category {
     display: none;
   }
+
+  .container:hover {
+    background-color: initial; /* Remove hover background color */
+    transform: none; /* Remove hover scale effect */
+  }
+
+  .container:hover svg {
+    transform: none; /* Disable hover effect on SVG */
+  }
+
+  .links svg:hover {
+    fill: #777777; /* Keep the initial color */
+  }
 }

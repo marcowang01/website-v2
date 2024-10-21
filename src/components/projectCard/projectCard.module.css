@@ -124,4 +124,13 @@
   .skills {
     display: none;
   }
+
+  .container:hover {
+    background-color: initial; /* Remove hover background color */
+    transform: none; /* Remove hover scaling */
+  }
+
+  .links svg:hover {
+    fill: #777777; /* Keep the original fill color */
+  }
 }
