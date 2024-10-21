@@ -1,8 +1,10 @@
 .title {
+  margin-bottom: 14px;
   font-size: 24px;
   font-weight: var(--font-semibold);
-  /* text-transform: uppercase; */
-  margin-bottom: 20px;
+  color: var(--foreground-rgb);
+  text-transform: capitalize;
+  letter-spacing: -0.01em;
 }
 
 
@@ -21,7 +23,7 @@
 .sectionTitle {
   margin-bottom: 10px;
   font-size: 18px;
-  font-weight: var(--font-semibold);
+  font-weight: var(--font-medium);
   color: var(--foreground-rgb);
   text-transform: capitalize;
   letter-spacing: -0.01em;
@@ -32,6 +34,7 @@
 }
 
 .listItem {
+  font-weight: var(--font-regular);
   margin-bottom: 4px;
   list-style-type: none;
 }

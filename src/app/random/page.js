@@ -9,7 +9,6 @@ export default function Random() {
         '神鵰俠侶 (Return of the Condor Heroes)',
         'Alice in Borderland',
         'The Three Body Problem: Dark Forest',
-        'Chainsaw Man',
         'Character of Physical Law',
         'Almost Buddhist',
       ],
@@ -20,6 +19,7 @@ export default function Random() {
         'Ping Pong The Animation',
         'Vinland Saga',
         'Cowboy Bebop',
+        'Frieren: Beyond Journey\'s End',
         'The Three Idiots',
         'Interstellar',
         'The God of Gamblers II',
@@ -45,9 +45,9 @@ export default function Random() {
 
   return (
     <main className={styles.main}>
-      <h2 className={styles.title}>
-        Miscellaneous
-      </h2>
+      <p className={styles.title}>
+        random things I do for fun
+      </p>
       {sections.map((section, index) => (
         <section key={index} className={styles.section}>
           <h3 className={styles.sectionTitle}>{section.title}</h3>
