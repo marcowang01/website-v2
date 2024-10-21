@@ -11,11 +11,11 @@ export const greetings = [
   "Hi!",
   "Salutations!",
   "Welcome!",
-  "Knock knock!",
+  // "Knock knock!",
   "Bonjour!",
   "Hola!",
   "Ciao!",
   "G'day mate!",
   "Yo!",
-  "Sup?",
+  // "Sup?",
 ];
