@@ -1,11 +1,12 @@
 class Experience {
-    constructor({company, position, bulletpoints, date, location, skills}) {
+    constructor({company, position, bulletpoints, date, location, skills, url}) {
         this.company = company;
         this.position = position;
         this.bulletpoints = bulletpoints;
         this.date = date;
         this.location = location;
         this.skills = skills;
+        this.url = url;
     }
 }
 
@@ -25,12 +26,13 @@ const expericences = {
   ],
 work: [
     new Experience({
-      company: "rabbit",
+      company: "rabbit, inc.",
       position: "Software Engineer",
       bulletpoints: [],
       date: "Feb. 2024 - Present",
       location: "Los Angeles, CA",
-      skills: []
+      skills: [],
+      url: "https://www.rabbit.tech/",
     }),
     new Experience({
       company: "The Boring Company",
@@ -44,7 +46,8 @@ work: [
       ],
       date: "Jun. 2023 - Aug. 2023",
       location: "Las Vegas, NV",
-      skills: ["Go", "C#", "ReactJS", "PostgresSQL", "NodeJS", "Bazel"]
+      skills: ["Go", "C#", "ReactJS", "PostgresSQL", "NodeJS", "Bazel"],
+      url: "https://www.boringcompany.com/",
     }),
     new Experience({
       company: "Workiva",
@@ -58,7 +61,8 @@ work: [
       ],
       date: "Jun. 2022 - Aug. 2022",
       location: "Chicago, IL",
-      skills: ["Java", "Go", "PHP", "Bash", "Puppeteer"]
+      skills: ["Java", "Go", "PHP", "Bash", "Puppeteer"],
+      url: "https://www.workiva.com/",
     }),
     new Experience({
       company: "Northwestern Tiilt Lab",
@@ -71,7 +75,8 @@ work: [
       ],
       date: "Sep. 2021 - May. 2022",
       location: "Evanston, IL",
-      skills: ["PyTorch", "Javascript", "Audio Processing", "Speech Recognition"]
+      skills: ["PyTorch", "Javascript", "Audio Processing", "Speech Recognition"],
+      url: "https://tiilt.northwestern.edu/",
     })
   ]
 }

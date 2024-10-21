@@ -3,14 +3,20 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 export default function ResumeCard(experience) {
-  const { company, position, bulletpoints, date, location, skills } = experience
+  const { company, position, bulletpoints, date, location, skills, url } = experience
 
   return (
     <div className={styles.container}>
       <section className={styles.topHeader}>
-        <div className={styles.company}>
-          {company}
-        </div>
+          <div className={styles.company}>
+            {url ? (
+              <Link href={url} className={styles.companyLink} target="_blank" rel="noopener noreferrer">
+                {company}
+              </Link>
+            ) : (
+              company
+            )}
+          </div>
         <div className={styles.location}>
           {location}
         </div>
