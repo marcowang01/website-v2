@@ -38,11 +38,9 @@ work: [
       company: "The Boring Company",
       position: "Software Engineer Intern",
       bulletpoints: [
-        "Led the development of a simulator for the Vegas Tunnel Loop to validate software systems and architectural designs using Go and C#",
-        "Centralized maintenance for the vehicle fleet by building an issue tracker using ReactJS/PostgresSQL, saving 30+ man-hours monthly",
+        "Led the development of a simulator for the Vegas Tunnel Loop to validate software systems and architectural designs",
+        "Centralized maintenance for the vehicle fleet by building an issue tracker using ReactJS/PostgresSQL",
         "Built a physics engine and an automated testing pipeline for simulating vehicles and passengers with ≥ 90% accuracy",
-        "Decreased simulator runtimes by 80% by implementing a cache-based path-finding algorithm and optimizing a backend graph search algorithm",
-        "Boosted regulatory tests completion by 15% over 2 months by building data visualization UIs and automating alerts using React and NodeJS"
       ],
       date: "Jun. 2023 - Aug. 2023",
       location: "Las Vegas, NV",
@@ -55,9 +53,8 @@ work: [
       bulletpoints: [
         "Contributed to backend services for font management and file I/O in an online document editor using Java and Go",
         "Automated a weekly font upload task using a browser-based client with PHP and Bash, reducing time spent by 90%",
-        "Improved color accuracy by 40% on PDF export for charts, fonts, and images by integrating API endpoints with open-source software",
-        "Designed and built a smoke testing suite using Puppeteer, improving code coverage and efficiency in detecting breaking changes",
-        "Developed a custom Java package for dynamic test data generation, removing dependency on legacy data and boosting code reliability"
+        "Improved color accuracy on PDF export for charts, fonts, and images",
+        "Designed and built a smoke testing suite using Puppeteer",
       ],
       date: "Jun. 2022 - Aug. 2022",
       location: "Chicago, IL",
@@ -76,7 +73,7 @@ work: [
       date: "Sep. 2021 - May. 2022",
       location: "Evanston, IL",
       skills: ["PyTorch", "Javascript", "Audio Processing", "Speech Recognition"],
-      url: "https://tiilt.northwestern.edu/",
+      url: "https://tiilt.northwestern.edu/projects/blinc/index.html",
     })
   ]
 }
