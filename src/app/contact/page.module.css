@@ -5,7 +5,7 @@
   align-items: flex-start;
   margin-bottom: 40px;
   gap: 1rem;
-  width: 100%;
+  width: calc(100% - (11px + 1rem));
 }
 
 .link {

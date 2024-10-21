@@ -7,9 +7,9 @@ import ArrowIcon from '@/svg/arrow'
 function ContactLink({name, link, text}) {
   return (
     <div className={styles.linkContainer}>
-    <Link href={link} target="_blank" rel="noopener noreferrer" className={styles.link}>
-      {name} 
-      <ArrowIcon className={styles.arrow} />
+      <Link href={link} target="_blank" rel="noopener noreferrer" className={styles.link}>
+        {name} 
+        <ArrowIcon className={styles.arrow} />
       </Link>
       <div className={styles.linkText}>
         {text}

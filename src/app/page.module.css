@@ -84,7 +84,6 @@
   }
 
   .paddingContainer {
-    position: fixed;
     bottom: calc(3% + 50px);
     height: calc(97% - 50px);
     padding: 0 0 0 calc(11px + 1rem);

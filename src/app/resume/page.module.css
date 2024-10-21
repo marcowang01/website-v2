@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 87%;
+  width: calc(100% - (11px + 1rem));
   margin-bottom: 40px;
 }
 
