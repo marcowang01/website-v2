@@ -23,26 +23,31 @@ export const buttonList = [
     link: '/resume',
     shortcut: 'R',
   },
+  // {
+  //   name: 'Random',
+  //   link: '/random',
+  //   shortcut: 'D',
+  // },
   {
-    name: 'Github',
-    link: 'https://github.com/marcowang01',
-    shortcut: 'G',
-  },
-  {
-    name: 'Email',
-    link: 'mailto:marcowang0101@gmail.com',
-    shortcut: 'E',
-  },
-  {
-    name: 'LinkedIn',
-    link: 'https://www.linkedin.com/in/marco-01/',
-    shortcut: 'L',
-  },
-  {
-    name: 'Random',
-    link: '/random',
-    shortcut: 'D',
-  },
+    name: 'Contact',
+    link: '/contact',
+    shortcut: 'T',
+  }
+  // {
+  //   name: 'Github',
+  //   link: 'https://github.com/marcowang01',
+  //   shortcut: 'G',
+  // },
+  // {
+  //   name: 'Email',
+  //   link: 'mailto:marcowang0101@gmail.com',
+  //   shortcut: 'E',
+  // },
+  // {
+  //   name: 'LinkedIn',
+  //   link: 'https://www.linkedin.com/in/marco-01/',
+  //   shortcut: 'L',
+  // },
 ]
 
 export default function Sidebar() {

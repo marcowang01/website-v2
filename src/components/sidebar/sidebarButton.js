@@ -47,12 +47,26 @@ export default function SidebarButton({ name, link, shortcut }) {
     ? { target: '_blank', rel: 'noopener noreferrer' }
     : {};
 
+    let containerClass = styles.sidebarButtonContainer
+    if (isExternalLink) {
+      containerClass = styles.sidebarButtonContainer
+    }
+    if (isSelected) {
+      containerClass += ` ${styles.selected}`
+    }
+
+    let keyClass = styles.sidebarKey
+    if (isSelected) {
+      keyClass += ` ${styles.selected}`
+    }
+
+
     return (
-      <Link href={link} {...linkProps} className={isSelected ? `${styles.sidebarButtonContainer} ${styles.selected}` : styles.sidebarButtonContainer}>
+      <Link href={link} {...linkProps} className={containerClass}>
         <div>
           {name} {isExternalLink && <ArrowIcon/>}
         </div>
-        <div className={isSelected ? `${styles.sidebarKey} ${styles.selected}` : styles.sidebarKey}>
+        <div className={keyClass}>
           {shortcut}  
         </div>
       </Link>
