@@ -5,7 +5,7 @@ import ResumeCard from '@/components/resumeCard/resumeCard'
 import ArrowIcon from '@/svg/arrow'
 import DownlaodIcon from '@/svg/download'
 
-export default function Experience() {
+export default function Resume() {
   return (
     <main className={styles.main}>
       <Link className={styles.title} href="/files/marco_wang_resume.pdf" target="_blank" rel="noopener noreferrer">

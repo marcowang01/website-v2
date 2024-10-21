@@ -19,13 +19,8 @@ export const buttonList = [
     shortcut: 'C',
   },
   {
-    name: 'Experience',
-    link: '/experience',
-    shortcut: 'E',
-  },
-  {
-    name: 'Random',
-    link: '/random',
+    name: 'Resume',
+    link: '/resume',
     shortcut: 'R',
   },
   {
@@ -36,12 +31,17 @@ export const buttonList = [
   {
     name: 'Email',
     link: 'mailto:marcowang0101@gmail.com',
-    shortcut: 'M',
+    shortcut: 'E',
   },
   {
     name: 'LinkedIn',
     link: 'https://www.linkedin.com/in/marco-01/',
     shortcut: 'L',
+  },
+  {
+    name: 'Random',
+    link: '/random',
+    shortcut: 'D',
   },
 ]
 
