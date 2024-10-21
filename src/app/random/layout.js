@@ -1,8 +1,8 @@
 export const metadata = {
-  title: 'Marco Wang - Experience',
+  title: 'Marco Wang - Random',
 }
 
-export default function ExperienceLayout({
+export default function RandomLayout({
   children,
 }) {
   return (

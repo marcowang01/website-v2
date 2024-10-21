@@ -19,8 +19,13 @@ export const buttonList = [
     shortcut: 'C',
   },
   {
-    name: 'Resume',
-    link: '/resume',
+    name: 'Experience',
+    link: '/experience',
+    shortcut: 'E',
+  },
+  {
+    name: 'Random',
+    link: '/random',
     shortcut: 'R',
   },
   {
@@ -31,7 +36,7 @@ export const buttonList = [
   {
     name: 'Email',
     link: 'mailto:marcowang0101@gmail.com',
-    shortcut: 'E',
+    shortcut: 'M',
   },
   {
     name: 'LinkedIn',
