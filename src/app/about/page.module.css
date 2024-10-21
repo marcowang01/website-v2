@@ -28,6 +28,16 @@
   /* color: rgb(var(--dark-blue-highlight-rgb)); */
 }
 
+.easter {
+  opacity: 0;
+  transition: none;
+}
+
+.easter:hover {
+  opacity: 1;
+  transition: 2s;
+}
+
 @media (max-width: 768px) {
   .main {
     padding-top: calc(11px + 1rem);
