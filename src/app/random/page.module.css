@@ -31,3 +31,10 @@
 .list {
   padding-left: 0;
 }
+
+@media (max-width: 768px) {
+  .main {
+    padding-top: calc(11px + 1rem);
+    width: 100%;
+  }
+}
