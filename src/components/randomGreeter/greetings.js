@@ -15,4 +15,7 @@ export const greetings = [
   "Bonjour!",
   "Hola!",
   "Ciao!",
+  "G'day mate!",
+  "Yo!",
+  "Sup?",
 ];
