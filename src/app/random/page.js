@@ -45,9 +45,6 @@ export default function Random() {
 
   return (
     <main className={styles.main}>
-      <p className={styles.title}>
-        random things I do for fun
-      </p>
       {sections.map((section, index) => (
         <section key={index} className={styles.section}>
           <h3 className={styles.sectionTitle}>{section.title}</h3>
