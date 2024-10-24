@@ -5,7 +5,7 @@ export default function NameItem() {
   const name = 'Marco Wang'
 
   return (
-    <div className={`${styles.navbarItems} ${styles.semiBold}`}>
+    <div className={`${styles.navbarItems} ${styles.semiBold} ${styles.button}`}>
         <Image
           src={'/images/dot.svg'}
           width={6}
