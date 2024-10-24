@@ -13,7 +13,7 @@ class Experience {
 const expericences = {
   education : [
     new Experience({
-      company: "Northwetsern University",
+      company: "Northwestern University",
       position: "B.A. in Physics, M.S. in Computer Science",
       bulletpoints: [
         // "GPA: 3.97/4.00",
