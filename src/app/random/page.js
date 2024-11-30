@@ -17,13 +17,13 @@ export default function Random() {
       title: 'Watches/Watching/Watched',
       items: [
         'Ping Pong The Animation',
-        'Vinland Saga',
         'Cowboy Bebop',
         'Frieren: Beyond Journey\'s End',
         'The Three Idiots',
         'Interstellar',
         'The God of Gamblers II',
         'The Boy and the Heron',
+        'Arcane',
       ],
     },
     {
