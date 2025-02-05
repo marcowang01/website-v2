@@ -2,8 +2,9 @@
 import { useState, useEffect, useCallback } from 'react'
 import { greetings } from './greetings'
 
-const SCRAMBLE_CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!'"
-const SCRAMBLE_DURATION = 1000 // Duration in milliseconds
+const SCRAMBLE_CHARS_UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+const SCRAMBLE_CHARS_LOWER = 'abcdefghijklmnopqrstuvwxyz'
+const SCRAMBLE_DURATION = 1000
 const FRAMES_PER_SECOND = 30
 
 const addTimeSpecificGreeting = () => {
@@ -20,13 +21,22 @@ const getRandomGreeting = () => {
   return greetings[randomIndex]
 }
 
-const getRandomChar = () => {
-  return SCRAMBLE_CHARS[Math.floor(Math.random() * SCRAMBLE_CHARS.length)]
+const getRandomChar = (char) => {
+  let charPool = []
+  if (SCRAMBLE_CHARS_UPPER.includes(char)) {
+    charPool = SCRAMBLE_CHARS_UPPER
+  } else {
+    charPool = SCRAMBLE_CHARS_LOWER
+  }
+
+  return charPool[Math.floor(Math.random() * charPool.length)]
 }
 
 export default function RandomGreeter() {
-  const [displayText, setDisplayText] = useState('!')
-  const [isAnimating, setIsAnimating] = useState(false)
+  // Store initial greeting in state so it persists across re-renders
+  const [initialGreeting] = useState(getRandomGreeting)
+  const [displayText, setDisplayText] = useState(' ')
+  const [isAnimating, setIsAnimating] = useState(true)
   const [targetText, setTargetText] = useState('')
 
   const scrambleText = useCallback((greetingText) => {
@@ -34,32 +44,36 @@ export default function RandomGreeter() {
     setTargetText(greetingText)
 
     const originalLength = greetingText.length
-    const framesCount = Math.floor(
+    const totalFrames = Math.floor(
       SCRAMBLE_DURATION / (1000 / FRAMES_PER_SECOND)
     )
     let frame = 0
 
     const animationInterval = setInterval(() => {
       frame++
-      const progress = frame / framesCount
+      const frameProgress = frame / totalFrames
 
-      // Generate scrambled text
       let scrambled = ''
       for (let i = 0; i < originalLength; i++) {
-        // Keep original character if we've passed its position in the progress
-        if (i / originalLength < progress) {
+        const charProgress = i / originalLength
+        const nextCharProgress = (i + 1) / originalLength
+
+        if (charProgress < frameProgress) {
           scrambled += greetingText[i]
-        } else if ((i + 1) / originalLength > progress) {
-          scrambled += getRandomChar()
+        } else if (nextCharProgress > frameProgress) {
+          scrambled += getRandomChar(greetingText[i])
         } else {
-          // Transition character
-          scrambled += Math.random() > 0.5 ? greetingText[i] : getRandomChar()
+          // charProgress is exactly at the frameProgress
+          scrambled +=
+            Math.random() > 0.5
+              ? greetingText[i]
+              : getRandomChar(greetingText[i])
         }
       }
 
       setDisplayText(scrambled)
 
-      if (frame >= framesCount) {
+      if (frame >= totalFrames) {
         clearInterval(animationInterval)
         setDisplayText(greetingText)
         setIsAnimating(false)
@@ -70,12 +84,14 @@ export default function RandomGreeter() {
   }, [])
 
   useEffect(() => {
-    scrambleText(getRandomGreeting())
-  }, [])
+    scrambleText(initialGreeting)
+  }, [initialGreeting, scrambleText])
 
   useEffect(() => {
     const handlePageClick = () => {
-      if (isAnimating) return
+      if (isAnimating) {
+        return
+      }
 
       let newGreeting = getRandomGreeting()
       while (newGreeting === targetText) {
@@ -86,7 +102,15 @@ export default function RandomGreeter() {
 
     document.addEventListener('click', handlePageClick)
     return () => document.removeEventListener('click', handlePageClick)
-  }, [isAnimating, targetText, displayText, scrambleText])
+  }, [isAnimating, targetText, scrambleText])
 
-  return <div>{displayText}</div>
+  return (
+    <div
+      style={{
+        whiteSpace: 'pre-wrap',
+      }}
+    >
+      {displayText}
+    </div>
+  )
 }
