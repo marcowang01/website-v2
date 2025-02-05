@@ -56,13 +56,13 @@
 .sidebarButtonContainer:active .sidebarKey {
   background: rgba(var(--light-key-pressed-bg-rgba));
   scale: 0.95;
-  transition: var(--long-transition);
+  transition: var(--short-transition);
 }
 
 .sidebarButtonContainer:active {
   color: rgba(var(--light-btn-text-rgb), 0.9);
   scale: 0.95;
-  transition: var(--long-transition);
+  transition: var(--short-transition);
 }
 
 .sidebarButtonContainer.selected {
