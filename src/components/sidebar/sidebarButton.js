@@ -23,7 +23,7 @@ export default function SidebarButton({ name, link, shortcut }) {
     }
   }, [pathname, link])
 
-  const simulateActiveState = () => {
+  const applyActiveStyles = () => {
     if (buttonRef.current) {
       buttonRef.current.style.scale = '0.97'
       buttonRef.current.querySelector(`.${styles.sidebarKey}`).style.scale =
@@ -31,25 +31,30 @@ export default function SidebarButton({ name, link, shortcut }) {
       buttonRef.current.style.color = 'rgba(var(--light-btn-text-rgb), 0.9)'
       buttonRef.current.querySelector(
         `.${styles.sidebarKey}`
-      ).style.background = 'rgba(var(--light-key-pressed-bg-rgba))'
-
-      // Reset after transition duration
-      setTimeout(() => {
-        buttonRef.current.style.scale = ''
-        buttonRef.current.querySelector(`.${styles.sidebarKey}`).style.scale =
-          ''
-        buttonRef.current.style.color = ''
-        buttonRef.current.querySelector(
-          `.${styles.sidebarKey}`
-        ).style.background = ''
-      }, 150) // Match your --short-transition duration
+      ).style.background = 'rgba(var(--light-key-hover-bg-rgba))'
     }
   }
 
-  const handleKeyPress = (event) => {
-    if (event.key.toLowerCase() === shortcut.toLowerCase()) {
-      simulateActiveState()
+  const removeActiveStyles = () => {
+    if (buttonRef.current) {
+      buttonRef.current.style.scale = ''
+      buttonRef.current.querySelector(`.${styles.sidebarKey}`).style.scale = ''
+      buttonRef.current.style.color = ''
+      buttonRef.current.querySelector(
+        `.${styles.sidebarKey}`
+      ).style.background = ''
+    }
+  }
 
+  const handleKeyDown = (event) => {
+    if (event.key.toLowerCase() === shortcut.toLowerCase() && !event.repeat) {
+      applyActiveStyles()
+    }
+  }
+
+  const handleKeyUp = (event) => {
+    if (event.key.toLowerCase() === shortcut.toLowerCase()) {
+      removeActiveStyles()
       if (isExternalLink) {
         window.open(link, '_blank', 'noopener,noreferrer')
       } else {
@@ -59,9 +64,11 @@ export default function SidebarButton({ name, link, shortcut }) {
   }
 
   useEffect(() => {
-    window.addEventListener('keypress', handleKeyPress)
+    window.addEventListener('keydown', handleKeyDown)
+    window.addEventListener('keyup', handleKeyUp)
     return () => {
-      window.removeEventListener('keypress', handleKeyPress)
+      window.removeEventListener('keydown', handleKeyDown)
+      window.removeEventListener('keyup', handleKeyUp)
     }
   }, [])
 
