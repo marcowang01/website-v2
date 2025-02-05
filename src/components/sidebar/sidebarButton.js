@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { useRouter, usePathname } from 'next/navigation'
 import styles from './sidebar.module.css'
 import Link from 'next/link'
@@ -11,8 +11,8 @@ export default function SidebarButton({ name, link, shortcut }) {
   const pathname = usePathname()
   const isExternalLink = link.includes('http') || link.includes('mailto')
   const [isSelected, setIsSelected] = useState(false)
+  const buttonRef = useRef(null)
 
-  // change the color of the button when selected
   useEffect(() => {
     if (pathname && link) {
       if (pathname.toLowerCase() === link.toLowerCase()) {
@@ -21,11 +21,35 @@ export default function SidebarButton({ name, link, shortcut }) {
         setIsSelected(false)
       }
     }
-  }, [pathname])
+  }, [pathname, link])
 
-  // Function to handle key press
+  const simulateActiveState = () => {
+    if (buttonRef.current) {
+      buttonRef.current.style.scale = '0.97'
+      buttonRef.current.querySelector(`.${styles.sidebarKey}`).style.scale =
+        '0.97'
+      buttonRef.current.style.color = 'rgba(var(--light-btn-text-rgb), 0.9)'
+      buttonRef.current.querySelector(
+        `.${styles.sidebarKey}`
+      ).style.background = 'rgba(var(--light-key-pressed-bg-rgba))'
+
+      // Reset after transition duration
+      setTimeout(() => {
+        buttonRef.current.style.scale = ''
+        buttonRef.current.querySelector(`.${styles.sidebarKey}`).style.scale =
+          ''
+        buttonRef.current.style.color = ''
+        buttonRef.current.querySelector(
+          `.${styles.sidebarKey}`
+        ).style.background = ''
+      }, 150) // Match your --short-transition duration
+    }
+  }
+
   const handleKeyPress = (event) => {
     if (event.key.toLowerCase() === shortcut.toLowerCase()) {
+      simulateActiveState()
+
       if (isExternalLink) {
         window.open(link, '_blank', 'noopener,noreferrer')
       } else {
@@ -36,8 +60,6 @@ export default function SidebarButton({ name, link, shortcut }) {
 
   useEffect(() => {
     window.addEventListener('keypress', handleKeyPress)
-
-    // Cleanup the event listener
     return () => {
       window.removeEventListener('keypress', handleKeyPress)
     }
@@ -48,20 +70,14 @@ export default function SidebarButton({ name, link, shortcut }) {
     : {}
 
   let containerClass = styles.sidebarButtonContainer
-  if (isExternalLink) {
-    containerClass = styles.sidebarButtonContainer
-  }
   if (isSelected) {
     containerClass += ` ${styles.selected}`
   }
 
   let keyClass = styles.sidebarKey
-  if (isSelected) {
-    keyClass += ` ${styles.selected}`
-  }
 
   return (
-    <Link href={link} {...linkProps} className={containerClass}>
+    <Link href={link} {...linkProps} className={containerClass} ref={buttonRef}>
       <div>
         {name} {isExternalLink && <ArrowIcon />}
       </div>

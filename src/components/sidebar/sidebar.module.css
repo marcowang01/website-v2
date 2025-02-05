@@ -43,7 +43,7 @@
   transition: var(--short-transition);
 }
 
-.sidebarButtonContainer:hover svg{
+.sidebarButtonContainer:hover svg {
   display: inline;
   opacity: 1;
 }
@@ -69,13 +69,13 @@
   background-image: linear-gradient(#f3f3f336, #f4f4f4b3);
   background-color: rgb(var(--light-btn-white-rgb));
   color: rgba(var(--light-btn-text-rgb), 0.9);
-  transition: var(--long-transition);
+  transition: var(--short-transition);
 }
 
 .sidebarButtonContainer.selected .sidebarKey {
   background: rgba(var(--light-key-selected-bg-rgba));
   color: rgba(var(--light-btn-text-rgb), 1);
-  transition: var(--long-transition);
+  transition: var(--short-transition);
 }
 
 .sidebarButtonContainer svg {
@@ -85,6 +85,3 @@
   opacity: 0;
   transition: var(--short-transition);
 }
-
-
-
