@@ -7,6 +7,7 @@ const GoogleAnalytics = ({ ga_id }) => (
       async
       src={`https://www.googletagmanager.com/gtag/js? 
       id=${ga_id}`}
+      strategy="afterInteractive"
     ></Script>
     <Script
       id="google-analytics"
@@ -19,6 +20,7 @@ const GoogleAnalytics = ({ ga_id }) => (
           gtag('config', '${ga_id}');
         `,
       }}
+      strategy="afterInteractive"
     ></Script>
   </>
 );
