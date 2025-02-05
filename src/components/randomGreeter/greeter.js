@@ -1,64 +1,92 @@
 'use client'
-import { useState, useEffect } from "react";
-import { greetings } from "./greetings";
+import { useState, useEffect, useCallback } from 'react'
+import { greetings } from './greetings'
 
-// Function to add a time-specific greeting
+const SCRAMBLE_CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!'
+const SCRAMBLE_DURATION = 1000 // Duration in milliseconds
+const FRAMES_PER_SECOND = 30
+
 const addTimeSpecificGreeting = () => {
-  const hour = new Date().getHours();
-  if (hour < 12) {
-    return "Good morning!";
-  } else if (hour < 18) {
-    return "Good afternoon!";
-  } else {
-    return "Good evening!";
-  }
-};
+  const hour = new Date().getHours()
+  if (hour < 12) return 'Good morning!'
+  if (hour < 18) return 'Good afternoon!'
+  return 'Good evening!'
+}
 
-// Add the time-specific greeting to the greetings array
-greetings.push(addTimeSpecificGreeting());
+greetings.push(addTimeSpecificGreeting())
 
-// Function to get a random greeting
 const getRandomGreeting = () => {
-  const randomIndex = Math.floor(Math.random() * greetings.length);
-  return greetings[randomIndex];
-};
+  const randomIndex = Math.floor(Math.random() * greetings.length)
+  return greetings[randomIndex]
+}
 
-export default function RandomGreeter({greeting}) {
-  const [randomGreeting, setRandomGreeting] = useState(greeting || "!");
+const getRandomChar = () => {
+  return SCRAMBLE_CHARS[Math.floor(Math.random() * SCRAMBLE_CHARS.length)]
+}
+
+export default function RandomGreeter({ greeting }) {
+  const [displayText, setDisplayText] = useState(greeting || '!')
+  const [isAnimating, setIsAnimating] = useState(false)
+  const [targetText, setTargetText] = useState('')
+
+  const scrambleText = useCallback((finalText) => {
+    setIsAnimating(true)
+    setTargetText(finalText)
+
+    const originalLength = finalText.length
+    const framesCount = Math.floor(
+      SCRAMBLE_DURATION / (1000 / FRAMES_PER_SECOND)
+    )
+    let frame = 0
+
+    const animationInterval = setInterval(() => {
+      frame++
+      const progress = frame / framesCount
+
+      // Generate scrambled text
+      let scrambled = ''
+      for (let i = 0; i < originalLength; i++) {
+        // Keep original character if we've passed its position in the progress
+        if (i / originalLength < progress) {
+          scrambled += finalText[i]
+        } else if ((i + 1) / originalLength > progress) {
+          scrambled += getRandomChar()
+        } else {
+          // Transition character
+          scrambled += Math.random() > 0.5 ? finalText[i] : getRandomChar()
+        }
+      }
+
+      setDisplayText(scrambled)
+
+      if (frame >= framesCount) {
+        clearInterval(animationInterval)
+        setDisplayText(finalText)
+        setIsAnimating(false)
+      }
+    }, 1000 / FRAMES_PER_SECOND)
+
+    return () => clearInterval(animationInterval)
+  }, [])
 
   useEffect(() => {
-    // Set initial greeting
-    setRandomGreeting(prev => {
-      if (!prev || prev === "!") {
-        return getRandomGreeting();
-      } else {
-        return prev;
-      }
-    });
+    if (!displayText || displayText === '!') {
+      scrambleText(getRandomGreeting())
+    }
 
-    // Define click handler
     const handlePageClick = () => {
-      setRandomGreeting(prev => {
-        let newGreeting = getRandomGreeting();
-        // Make sure the new greeting is different from the old one
-        while (newGreeting === prev) {
-          newGreeting = getRandomGreeting();
-        }
-        return newGreeting;
-      });
-    };
-    // Add click event listener to the whole document
-    document.addEventListener('click', handlePageClick);
+      if (isAnimating) return
 
-    // Clean up event listener
-    return () => {
-      document.removeEventListener('click', handlePageClick);
-    };
-  }, []);
+      let newGreeting = getRandomGreeting()
+      while (newGreeting === targetText) {
+        newGreeting = getRandomGreeting()
+      }
+      scrambleText(newGreeting)
+    }
 
-  return (
-    <div>
-      {randomGreeting}
-    </div>
-  );
+    document.addEventListener('click', handlePageClick)
+    return () => document.removeEventListener('click', handlePageClick)
+  }, [isAnimating, targetText, displayText, scrambleText])
+
+  return <div>{displayText}</div>
 }
