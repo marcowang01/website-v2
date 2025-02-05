@@ -19,20 +19,6 @@ class Experience {
 }
 
 const expericences = {
-  education: [
-    new Experience({
-      company: 'Northwestern University',
-      position: 'B.A. in Physics, M.S. in Computer Science',
-      bulletpoints: [
-        // "GPA: 3.97/4.00",
-        // "Relevant Coursework: Data Structures, Algorithms, Computer Systems, Machine Learning, Computer Vision, Quantum Mechanics, Electromagnetism, Statistical Mechanics, Linear Algebra, Differential Equations, Multivariable Calculus",
-      ],
-      date: '2020-2024',
-      location: 'Evanston, IL',
-      skills: [],
-      url: 'https://www.northwestern.edu/',
-    }),
-  ],
   work: [
     new Experience({
       company: 'rabbit, inc.',
@@ -88,6 +74,20 @@ const expericences = {
         'Speech Recognition',
       ],
       url: 'https://tiilt.northwestern.edu/projects/blinc/index.html',
+    }),
+  ],
+  education: [
+    new Experience({
+      company: 'Northwestern University',
+      position: 'B.A. in Physics, M.S. in Computer Science',
+      bulletpoints: [
+        // "GPA: 3.97/4.00",
+        // "Relevant Coursework: Data Structures, Algorithms, Computer Systems, Machine Learning, Computer Vision, Quantum Mechanics, Electromagnetism, Statistical Mechanics, Linear Algebra, Differential Equations, Multivariable Calculus",
+      ],
+      date: '2020-2024',
+      location: 'Evanston, IL',
+      skills: [],
+      url: 'https://www.northwestern.edu/',
     }),
   ],
 }

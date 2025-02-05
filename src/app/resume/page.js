@@ -6,9 +6,9 @@ export default function Resume() {
   return (
     <main className={styles.main}>
       <div className={styles.section}>
-        <div className={styles.sectionTitle}>education</div>
+        <div className={styles.sectionTitle}>work experience</div>
         <div className={styles.experiencesContainer}>
-          {expericences.education.map((experience, index) => (
+          {expericences.work.map((experience, index) => (
             <ResumeCard
               {...experience}
               key={`${experience.company}-${index}`}
@@ -17,9 +17,9 @@ export default function Resume() {
         </div>
       </div>
       <div className={styles.section}>
-        <div className={styles.sectionTitle}>work experience</div>
+        <div className={styles.sectionTitle}>education</div>
         <div className={styles.experiencesContainer}>
-          {expericences.work.map((experience, index) => (
+          {expericences.education.map((experience, index) => (
             <ResumeCard
               {...experience}
               key={`${experience.company}-${index}`}
