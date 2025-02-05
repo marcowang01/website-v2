@@ -7,7 +7,9 @@
   width: 87%;
   border-radius: 10px;
   color: rgb(var(--project-card-text-rgb));
-  transition: background-color 0.1s ease-in-out, transform 0.25s ease-in-out;
+  transition:
+    background-color 0.1s ease-in-out,
+    transform 0.25s ease-in-out;
   transform-origin: center;
   cursor: pointer;
 }
@@ -38,7 +40,7 @@
   font-weight: var(--font-medium);
   font-size: 16px;
   letter-spacing: -0.005em;
-  transition:0.2s;
+  transition: 0.2s;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -84,7 +86,7 @@
   gap: 12px;
 }
 
-.links .icon{
+.links .icon {
   z-index: 100;
 }
 
@@ -105,7 +107,6 @@
   align-items: center;
   width: 100%;
 }
-
 
 @media (max-width: 768px) {
   .container {
