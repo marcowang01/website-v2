@@ -53,7 +53,7 @@ const projects = [
     description:
       'Realm (Retrieval Augmented Language Model) is an LLM pipeline that leverages vector databases to improve performance and reduce costs for question answering tasks.',
     tagline: 'Retrieval augmented generation pipeline for question answering',
-    link: 'https://www.shaobo.co/llm',
+    link: '/files/realm.pdf',
     github: 'https://github.com/marcowang01/realm',
     date: 'Spring, 2023',
     skills: ['Python', 'Modal', 'Langchain', 'ChromaDB'],

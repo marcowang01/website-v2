@@ -21,13 +21,13 @@ export const metadata = {
   authors: [{ name: 'Marco Wang' }],
   creator: 'Marco Wang',
   publisher: 'Marco Wang',
-  metadataBase: new URL('https://marcowang.xyz'),
+  metadataBase: new URL('https://marcowang.me'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     images: '/images/og.png',
-    url: 'https://marcowang.xyz',
+    url: 'https://marcowang.me',
     siteName: 'Marco Wang',
     locale: 'en_US',
     type: 'website',
