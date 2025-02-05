@@ -8,15 +8,16 @@ import MarcoPolo from '@/components/marcopolo'
 import GoogleAnalytics from '@/analytics/google'
 import ClarityAnalytics from '@/analytics/clarity'
 
-const inter = Inter({ 
+const inter = Inter({
   weight: ['400', '600', '300', '700', '500'],
   subsets: ['latin'],
-  display: "swap"
+  display: 'swap',
 })
 
 export const metadata = {
   title: 'Marco Wang',
-  description: 'Software Engineer at rabbit. Creating tools to help people learn, create and connect.',
+  description:
+    'Software Engineer at rabbit. Creating tools to help people learn, create and connect.',
   keywords: ['Marco Wang', 'Software', 'Engineer', 'Personal Website'],
   authors: [{ name: 'Marco Wang' }],
   creator: 'Marco Wang',
@@ -34,7 +35,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-  }
+  },
 }
 
 export default function RootLayout({ children }) {
@@ -49,9 +50,7 @@ export default function RootLayout({ children }) {
             <div className={styles.hideOnMobile}>
               <Sidebar />
             </div>
-            <div className={styles.content}>
-              {children}
-            </div>
+            <div className={styles.content}>{children}</div>
           </main>
         </div>
         <div className={styles.showOnMobile}>
@@ -61,6 +60,7 @@ export default function RootLayout({ children }) {
           <>
             <GoogleAnalytics ga_id={process.env.GOOGLE_ANALYTICS} />
             <ClarityAnalytics />
+            <UmamiAnalytics />
           </>
         )}
         <MarcoPolo />
