@@ -19,7 +19,9 @@
   opacity: 0.7;
   /* font-weight: var(--font-light); */
   text-decoration: underline;
-  transition: color 0.15s ease-in-out, opacity 0.15s ease-in-out;
+  transition:
+    color 0.15s ease-in-out,
+    opacity 0.15s ease-in-out;
 }
 
 .paragraph a:hover {
@@ -31,6 +33,7 @@
 .easter {
   opacity: 0;
   transition: none;
+  width: fit-content;
 }
 
 .easter:hover {
