@@ -7,6 +7,7 @@ import MarcoPolo from '@/components/marcopolo'
 
 import GoogleAnalytics from '@/analytics/google'
 import ClarityAnalytics from '@/analytics/clarity'
+import UmamiAnalytics from '@/analytics/umami'
 
 const inter = Inter({
   weight: ['400', '600', '300', '700', '500'],
