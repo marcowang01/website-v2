@@ -2,7 +2,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import { greetings } from './greetings'
 
-const SCRAMBLE_CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!'
+const SCRAMBLE_CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!'"
 const SCRAMBLE_DURATION = 1000 // Duration in milliseconds
 const FRAMES_PER_SECOND = 30
 
@@ -24,16 +24,16 @@ const getRandomChar = () => {
   return SCRAMBLE_CHARS[Math.floor(Math.random() * SCRAMBLE_CHARS.length)]
 }
 
-export default function RandomGreeter({ greeting }) {
-  const [displayText, setDisplayText] = useState(greeting || '!')
+export default function RandomGreeter() {
+  const [displayText, setDisplayText] = useState('!')
   const [isAnimating, setIsAnimating] = useState(false)
   const [targetText, setTargetText] = useState('')
 
-  const scrambleText = useCallback((finalText) => {
+  const scrambleText = useCallback((greetingText) => {
     setIsAnimating(true)
-    setTargetText(finalText)
+    setTargetText(greetingText)
 
-    const originalLength = finalText.length
+    const originalLength = greetingText.length
     const framesCount = Math.floor(
       SCRAMBLE_DURATION / (1000 / FRAMES_PER_SECOND)
     )
@@ -48,12 +48,12 @@ export default function RandomGreeter({ greeting }) {
       for (let i = 0; i < originalLength; i++) {
         // Keep original character if we've passed its position in the progress
         if (i / originalLength < progress) {
-          scrambled += finalText[i]
+          scrambled += greetingText[i]
         } else if ((i + 1) / originalLength > progress) {
           scrambled += getRandomChar()
         } else {
           // Transition character
-          scrambled += Math.random() > 0.5 ? finalText[i] : getRandomChar()
+          scrambled += Math.random() > 0.5 ? greetingText[i] : getRandomChar()
         }
       }
 
@@ -61,7 +61,7 @@ export default function RandomGreeter({ greeting }) {
 
       if (frame >= framesCount) {
         clearInterval(animationInterval)
-        setDisplayText(finalText)
+        setDisplayText(greetingText)
         setIsAnimating(false)
       }
     }, 1000 / FRAMES_PER_SECOND)
@@ -70,10 +70,10 @@ export default function RandomGreeter({ greeting }) {
   }, [])
 
   useEffect(() => {
-    if (!displayText || displayText === '!') {
-      scrambleText(getRandomGreeting())
-    }
+    scrambleText(getRandomGreeting())
+  }, [])
 
+  useEffect(() => {
     const handlePageClick = () => {
       if (isAnimating) return
 

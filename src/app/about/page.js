@@ -1,8 +1,6 @@
 import Link from 'next/link'
 import styles from './page.module.css'
 import RandomGreeter from '@/components/randomGreeter/greeter'
-import { headers } from 'next/headers'
-// import { logIP } from '@/actions/ip';
 
 // Define URLs as constants
 const URLs = {
