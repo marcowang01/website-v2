@@ -5,10 +5,17 @@ const nextConfig = {
       {
         source: '/',
         destination: '/about',
-        permanent: true,
+        permanent: false,
       },
     ]
-  }
+  },
+  images: {
+    remotePatterns: [
+      {
+        hostname: 'placehold.co',
+      },
+    ],
+  },
 }
 
 module.exports = nextConfig
