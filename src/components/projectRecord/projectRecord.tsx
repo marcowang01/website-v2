@@ -20,7 +20,9 @@ export function ProjectRecord({ project }: { project: Project }) {
           {date}
         </div>
       </section>
-
+      <div className="text-red-400">
+        <p>hello</p>
+      </div>
       <section className="flex flex-row justify-between items-center w-full md:justify-start">
         <div className="w-fit text-sm tracking-tight leading-tight">
           {tagline}
