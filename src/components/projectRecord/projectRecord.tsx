@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { Project } from '@/content/projects'
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { CaretDownIcon } from '@/svg/caret'
 import { cn } from '@/lib/util'
 
@@ -16,6 +16,16 @@ export function ProjectRecord({
   onClick: () => void
 }) {
   const { title, tagline, link, date, category } = project
+  const expandedContentRef = useRef<HTMLDivElement>(null)
+  const [contentHeight, setContentHeight] = useState(0)
+
+  useEffect(() => {
+    if (expandedContentRef.current) {
+      // scrollHeight accounts for non-visible content
+      // including height, padding, and border (but not margin)
+      setContentHeight(expandedContentRef.current.scrollHeight)
+    }
+  }, [setContentHeight])
 
   return (
     <div
@@ -26,7 +36,7 @@ export function ProjectRecord({
         'rounded-[10px]',
         'text-[color:rgb(var(--project-card-text-rgb))]',
         'cursor-pointer',
-        'transition-[background-color_0.1s_ease-in-out,transform_0.3s_ease-in-out]',
+        'transition-all duration-300 ease-in-out',
         'origin-center',
         'group',
         'md:w-[87%] md:min-w-0 md:mr-0',
@@ -36,13 +46,8 @@ export function ProjectRecord({
       onClick={onClick}
     >
       <section className="flex flex-row justify-between items-center gap-[10px] w-full">
-        <div className="flex flex-row items-center gap-[7px] font-medium text-base tracking-[-0.005em] leading-[1.25] transition duration-200">
+        <div className="flex flex-row items-center gap-[7px] font-medium text-base tracking-[-0.005em] leading-[1.25]">
           {title}
-          {/*
-            If you include an SVG icon here you can apply the following classes
-            so that on desktop (md+) the icon translates on container hover:
-            className="w-[12px] h-[12px] fill-[color:rgb(var(--project-card-text-rgb))] transition-transform duration-[150ms] ease-in-out md:group-hover:translate-x-[2px] md:group-hover:-translate-y-[2px]"
-          */}
         </div>
         <div className="font-light text-xs tracking-[-0.02em] uppercase text-[color:rgb(var(--project-card-light-text-rgb))]">
           {date}
@@ -57,18 +62,29 @@ export function ProjectRecord({
           {category}
         </div>
       </section>
+
       <CaretDownIcon
-        className={cn('transform transition-transform duration-300', {
-          'rotate-180': isExpanded,
-        })}
+        className={cn(
+          'transform transition-transform duration-300 ease-in-out',
+          {
+            'rotate-180': isExpanded,
+          }
+        )}
       />
       <section
-        className={cn(`
-            transition-[opacity_0.1s_ease-in-out,max-height_0.3s_ease-in-out]
-            ${isExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}
-          `)}
+        ref={expandedContentRef}
+        style={{
+          height: isExpanded ? `${contentHeight}px` : '0px',
+        }}
+        className={cn(
+          'transition-all duration-300 ease-in-out overflow-hidden',
+          {
+            'opacity-100': isExpanded,
+            'opacity-0': !isExpanded,
+          }
+        )}
       >
-        expandable content
+        <div className="py-4">expandable content</div>
       </section>
     </div>
   )
