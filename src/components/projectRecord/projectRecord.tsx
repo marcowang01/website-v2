@@ -6,6 +6,7 @@ import { useState, useRef, useEffect } from 'react'
 import { CaretDownIcon } from '@/svg/caret'
 import { cn } from '@/lib/util'
 import Image from 'next/image'
+import ArrowIcon from '@/svg/arrow'
 
 export function ProjectRecord({
   project,
@@ -16,7 +17,7 @@ export function ProjectRecord({
   isExpanded: boolean
   onClick: () => void
 }) {
-  const { title, tagline, link, date, category } = project
+  const { title, tagline, link, date, category, github } = project
   const expandedContentRef = useRef<HTMLDivElement>(null)
   const [contentHeight, setContentHeight] = useState(0)
 
@@ -56,7 +57,7 @@ export function ProjectRecord({
         <section className="flex flex-row justify-between items-center gap-[10px] w-full">
           <div className="flex flex-row items-baseline gap-3 font-medium text-base tracking-[-0.005em] leading-[1.25]">
             {title}
-            <div className="w-fit text-[13px] tracking-[-0.02em] font-light uppercase text-[color:rgb(var(--project-card-light-text-rgb))] hidden md:block">
+            <div className="w-fit text-[13px] tracking-[-0.02em] font-normal uppercase text-[color:rgb(var(--project-card-light-text-rgb))] hidden md:block">
               {category}
             </div>
           </div>
@@ -108,16 +109,31 @@ export function ProjectRecord({
                 accusantium optio fuga repellat amet, velit dolores asperiores.
               </p>
               {/* links to website and github */}
-              <div className="flex flex-row justify-between gap-[10px] pt-2">
-                {/* TODO: add arrow icons for links and also potentially a github text */}
-                <Link
-                  href={link}
-                  className="text-sm tracking-[-0.02em] leading-[1.2] hover:underline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Website
-                </Link>
+              <div className="flex flex-row items-baseline gap-4 justify-start pt-2 text-[color:rgb(var(--project-card-light-text-rgb))]">
+                <div className="flex flex-row items-baseline gap-1 justify-start hover:text-[color:rgb(var(--project-card-text-rgb))] transition-color duration-300 ease-in-out">
+                  <Link
+                    href={link}
+                    className="text-xs tracking-[-0.02em] leading-[1.2] min-w-content"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    WEBSITE
+                  </Link>
+                  <ArrowIcon className="w-[9px] h-[9px]" />
+                </div>
+                {github && (
+                  <div className="flex flex-row items-baseline gap-1 justify-start hover:text-[color:rgb(var(--project-card-text-rgb))] transition-color duration-300 ease-in-out">
+                    <Link
+                      href={github}
+                      className="text-xs tracking-[-0.02em] leading-[1.2] min-w-content"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      GITHUB
+                    </Link>
+                    <ArrowIcon className="w-[9px] h-[9px]" />
+                  </div>
+                )}
               </div>
             </div>
             <Image
