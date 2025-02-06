@@ -29,6 +29,8 @@ export function ProjectRecord({
   }, [setContentHeight])
 
   // TODO: extract title, paragraph styles into reusable css in global stylesheet
+  // TODO: fix this for mobile
+  // TODO: get rid of scroll bar entirely everywhere
   return (
     <div
       className={cn(
