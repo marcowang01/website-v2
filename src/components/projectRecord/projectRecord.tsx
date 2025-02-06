@@ -67,17 +67,18 @@ export function ProjectRecord({
           <div className="w-fit text-sm tracking-[-0.02em] leading-[1.2]">
             {tagline}
           </div>
-
-          <CaretDownIcon
-            className={cn(
-              'transform transition-transform duration-500 ease-in-out shrink-0',
-              {
-                'rotate-180': isExpanded,
-              }
-            )}
-            width={20}
-            height={20}
-          />
+          <div className="text-[color:rgb(var(--project-card-light-text-rgb))]">
+            <CaretDownIcon
+              className={cn(
+                'transform transition-transform duration-500 ease-in-out shrink-0',
+                {
+                  'rotate-180': isExpanded,
+                }
+              )}
+              width={20}
+              height={20}
+            />
+          </div>
         </section>
         <section
           ref={expandedContentRef}
@@ -94,19 +95,33 @@ export function ProjectRecord({
           )}
         >
           <div className="flex flex-row justify-between gap-[10px] pt-2">
-            <p className="text-sm leading-[1.2] w-[50%]">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore
-              recusandae odit quo quas corrupti facilis animi ut, et laborum
-              iste provident non accusantium optio fuga repellat amet, velit
-              dolores asperiores. Lorem, ipsum dolor sit amet consectetur
-              adipisicing elit. Tempore recusandae odit quo quas corrupti
-              facilis animi ut, et laborum iste provident non accusantium optio
-              fuga repellat amet, velit dolores asperiores.
-            </p>
+            <div className="flex flex-col gap-[10px] w-[50%]">
+              <p className="text-sm leading-[1.2]">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Tempore recusandae odit quo quas corrupti facilis animi ut, et
+                laborum iste provident non accusantium optio fuga repellat amet,
+                velit dolores asperiores. Lorem, ipsum dolor sit amet
+                consectetur adipisicing elit. Tempore recusandae odit quo quas
+                corrupti facilis animi ut, et laborum iste provident non
+                accusantium optio fuga repellat amet, velit dolores asperiores.
+              </p>
+              {/* links to website and github */}
+              <div className="flex flex-row justify-between gap-[10px] pt-2">
+                {/* TODO: add arrow icons for links and also potentially a github text */}
+                <Link
+                  href={link}
+                  className="text-sm tracking-[-0.02em] leading-[1.2] hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Website
+                </Link>
+              </div>
+            </div>
             <Image
-              src={'https://placehold.co/150x100.png'}
+              src={'https://placehold.co/200x100.png'}
               alt={'project iamge'}
-              width={150}
+              width={200}
               height={100}
               className="rounded-md object-cover shrink-0"
             />
