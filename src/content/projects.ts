@@ -1,29 +1,17 @@
-class Project {
-  constructor({
-    title,
-    description,
-    tagline,
-    link,
-    github,
-    date,
-    skills,
-    category,
-    starred,
-  }) {
-    this.title = title
-    this.description = description
-    this.tagline = tagline
-    this.link = link
-    this.github = github
-    this.date = date
-    this.skills = skills
-    this.category = category
-    this.starred = starred
-  }
+export interface Project {
+  title: string
+  description: string
+  tagline: string
+  link: string
+  github?: string
+  date: string
+  skills: string[]
+  category: string
+  starred: boolean
 }
 
-const projects = [
-  new Project({
+export const projects: Project[] = [
+  {
     title: 'Scribe',
     description:
       'An AI-powered app for creating and searching through notes for lectures, meetings and discussions.',
@@ -35,8 +23,8 @@ const projects = [
     skills: ['Typescript', 'Next.js', 'Supabase'],
     category: 'AI Web App',
     starred: true,
-  }),
-  new Project({
+  },
+  {
     title: 'Tomo',
     description:
       'A real-time audio-based companion aimed at enhancing children’s learning through story‑driven dialogues.',
@@ -47,8 +35,8 @@ const projects = [
     skills: ['Python', 'Typescript', 'Next.js'],
     category: 'AI Web App',
     starred: true,
-  }),
-  new Project({
+  },
+  {
     title: 'Realm',
     description:
       'Realm (Retrieval Augmented Language Model) is an LLM pipeline that leverages vector databases to improve performance and reduce costs for question answering tasks.',
@@ -59,8 +47,8 @@ const projects = [
     skills: ['Python', 'Modal', 'Langchain', 'ChromaDB'],
     category: 'LLM Pipeline',
     starred: false,
-  }),
-  new Project({
+  },
+  {
     title: 'PlatzUI',
     description:
       'An open-source personal website template for creatives, with a focus on streamlining the design-to-implementation process.',
@@ -71,8 +59,8 @@ const projects = [
     skills: ['Typescript', 'Next.js'],
     category: 'UI Library',
     starred: false,
-  }),
-  new Project({
+  },
+  {
     title: 'Conway',
     description:
       "A CUDA-accelerated implementation of Conway's Game of Life, a cellular automaton that simulates the evolution of a grid of cells based on a set of rules.",
@@ -83,8 +71,8 @@ const projects = [
     skills: ['C++', 'CUDA'],
     category: 'GPU Programming',
     starred: false,
-  }),
-  new Project({
+  },
+  {
     title: 'Igloo',
     description:
       'A reimagination of social tools, driven by organic interpersonal relationships. Currently, a prototype tested within a small community of 20+ users.',
@@ -95,8 +83,8 @@ const projects = [
     skills: ['PHP', 'Javascript', 'Laravel', 'React Native'],
     category: 'cross-platform App',
     starred: true,
-  }),
-  new Project({
+  },
+  {
     title: 'Formula Telemetry',
     description:
       "A full-stack telemetry dashboard built for the NU Formula Racing team to visualize, persist and analyze data from the car's sensors in real-time.",
@@ -107,8 +95,8 @@ const projects = [
     skills: ['React', 'Next.js', 'JavaScript', 'HTML', 'CSS'],
     category: 'Data Pipeline',
     starred: false,
-  }),
-  new Project({
+  },
+  {
     title: 'Bounce Knight',
     description:
       'A 2D fighting game built in Unity. The game features a fully animated characters and 3 unique stages.',
@@ -119,8 +107,8 @@ const projects = [
     skills: ['C#', 'Unity'],
     category: 'unity game',
     starred: false,
-  }),
-  new Project({
+  },
+  {
     title: 'News Classifier',
     description:
       'A web app that uses machine learning to detect bias in news articles. The model is trained on a dataset of 1.3k news articles.',
@@ -131,8 +119,8 @@ const projects = [
     skills: ['Python', 'Scikit-Learn', 'Flask'],
     category: 'Machine Learning',
     starred: false,
-  }),
-  new Project({
+  },
+  {
     title: 'Tetris',
     description: 'An implementation of the classic game Tetris, built in C++.',
     tagline: 'Clone of classic Tetris in C++',
@@ -142,7 +130,5 @@ const projects = [
     skills: ['C', 'C++'],
     category: 'C++ Programming',
     starred: false,
-  }),
+  },
 ]
-
-export default projects
