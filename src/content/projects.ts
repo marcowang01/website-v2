@@ -7,7 +7,7 @@ export interface Project {
   date: string
   skills: string[]
   category: string
-  starred: boolean
+  showInSpotlight: boolean
 }
 
 export const projects: Project[] = [
@@ -22,7 +22,7 @@ export const projects: Project[] = [
     date: 'Fall, 2023',
     skills: ['Typescript', 'Next.js', 'Supabase'],
     category: 'AI Web App',
-    starred: true,
+    showInSpotlight: true,
   },
   {
     title: 'Tomo',
@@ -34,7 +34,7 @@ export const projects: Project[] = [
     date: 'Summer, 2023',
     skills: ['Python', 'Typescript', 'Next.js'],
     category: 'AI Web App',
-    starred: true,
+    showInSpotlight: true,
   },
   {
     title: 'Realm',
@@ -46,7 +46,7 @@ export const projects: Project[] = [
     date: 'Spring, 2023',
     skills: ['Python', 'Modal', 'Langchain', 'ChromaDB'],
     category: 'LLM Pipeline',
-    starred: false,
+    showInSpotlight: false,
   },
   {
     title: 'PlatzUI',
@@ -58,7 +58,7 @@ export const projects: Project[] = [
     date: 'Winter, 2023',
     skills: ['Typescript', 'Next.js'],
     category: 'UI Library',
-    starred: false,
+    showInSpotlight: false,
   },
   {
     title: 'Conway',
@@ -70,7 +70,7 @@ export const projects: Project[] = [
     date: 'Spring, 2023',
     skills: ['C++', 'CUDA'],
     category: 'GPU Programming',
-    starred: false,
+    showInSpotlight: false,
   },
   {
     title: 'Igloo',
@@ -82,7 +82,7 @@ export const projects: Project[] = [
     date: 'Summer, 2022',
     skills: ['PHP', 'Javascript', 'Laravel', 'React Native'],
     category: 'cross-platform App',
-    starred: true,
+    showInSpotlight: true,
   },
   {
     title: 'Formula Telemetry',
@@ -94,7 +94,7 @@ export const projects: Project[] = [
     date: 'Winter, 2022',
     skills: ['React', 'Next.js', 'JavaScript', 'HTML', 'CSS'],
     category: 'Data Pipeline',
-    starred: false,
+    showInSpotlight: false,
   },
   {
     title: 'Bounce Knight',
@@ -106,7 +106,7 @@ export const projects: Project[] = [
     date: 'Winter, 2021',
     skills: ['C#', 'Unity'],
     category: 'unity game',
-    starred: false,
+    showInSpotlight: false,
   },
   {
     title: 'News Classifier',
@@ -118,7 +118,7 @@ export const projects: Project[] = [
     date: 'Winter, 2021',
     skills: ['Python', 'Scikit-Learn', 'Flask'],
     category: 'Machine Learning',
-    starred: false,
+    showInSpotlight: false,
   },
   {
     title: 'Tetris',
@@ -129,6 +129,6 @@ export const projects: Project[] = [
     date: 'Fall, 2021',
     skills: ['C', 'C++'],
     category: 'C++ Programming',
-    starred: false,
+    showInSpotlight: false,
   },
 ]
