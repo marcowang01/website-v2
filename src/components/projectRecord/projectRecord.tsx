@@ -52,10 +52,13 @@ export function ProjectRecord({
     >
       <div className="flex flex-col justify-between items-start">
         <section className="flex flex-row justify-between items-center gap-[10px] w-full">
-          <div className="flex flex-row items-center gap-[7px] font-medium text-base tracking-[-0.005em] leading-[1.25]">
+          <div className="flex flex-row items-baseline gap-3 font-medium text-base tracking-[-0.005em] leading-[1.25]">
             {title}
+            <div className="w-fit text-[13px] tracking-[-0.02em] font-light uppercase text-[color:rgb(var(--project-card-light-text-rgb))] hidden md:block">
+              {category}
+            </div>
           </div>
-          <div className="flex font-light text-xs tracking-[-0.02em] uppercase text-[color:rgb(var(--project-card-light-text-rgb))]">
+          <div className="font-light text-xs tracking-[-0.02em] uppercase text-[color:rgb(var(--project-card-light-text-rgb))]">
             {date}
           </div>
         </section>
@@ -64,17 +67,26 @@ export function ProjectRecord({
           <div className="w-fit text-sm tracking-[-0.02em] leading-[1.2]">
             {tagline}
           </div>
-          <div className="w-fit text-[13px] tracking-[-0.02em] uppercase text-[color:rgb(var(--project-card-light-text-rgb))] hidden md:block">
-            {category}
-          </div>
+
+          <CaretDownIcon
+            className={cn(
+              'transform transition-transform duration-500 ease-in-out shrink-0',
+              {
+                'rotate-180': isExpanded,
+              }
+            )}
+            width={20}
+            height={20}
+          />
         </section>
         <section
           ref={expandedContentRef}
           style={{
             height: isExpanded ? `${contentHeight}px` : '0px',
+            scrollbarGutter: 'auto',
           }}
           className={cn(
-            'transition-all duration-300 ease-in-out overflow-hidden',
+            'transition-all duration-300 ease-in-out overflow-hidden w-full',
             {
               'opacity-100': isExpanded,
               'opacity-0': !isExpanded,
