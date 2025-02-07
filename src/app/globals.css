@@ -81,18 +81,21 @@
     --card-border-rgb: 131, 134, 135;
   }
 
-  /* * {
-    scrollbar-gutter: stable;
-  } */
+  /* For the scrollbar itself */
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  * {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 }
 
 /* scroll bar color for desktop */
 @media (min-width: 768px) {
-  /* For the scrollbar itself */
-  ::-webkit-scrollbar {
-    width: 0px; /* width of the entire scrollbar */
-  }
-
   /* For the scrollbar track (the part the scrollbar "slides" on) */
   ::-webkit-scrollbar-track {
     background: rgb(var(--background-rgb)); /* color of the tracking area */
