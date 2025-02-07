@@ -2,6 +2,7 @@
 import LinkIcon from './linkIcon'
 import { Project } from '@/content/projects'
 import { cn } from '@/lib/util'
+import ArrowIcon from '@/svg/arrow'
 
 export function ProjectCard({ project }: { project: Project }) {
   const { title, description, link, github, date, skills } = project
@@ -17,7 +18,7 @@ export function ProjectCard({ project }: { project: Project }) {
   return (
     <div
       className={cn(
-        'flex flex-col items-start justify-between',
+        'group flex flex-col items-start justify-between',
         'md:min-h-[220px] md:w-[87%] md:p-10',
         'bg-project-gray-150 rounded-[20px]',
         'text-project-gray-400 cursor-pointer',
@@ -32,8 +33,9 @@ export function ProjectCard({ project }: { project: Project }) {
     >
       <div>
         <section className="mb-4 flex w-full flex-row items-center justify-between gap-[10px]">
-          <div className="text-xl font-medium tracking-[-0.005em] transition-all duration-200">
+          <div className="flex flex-row items-center justify-start gap-1 text-xl font-medium tracking-[-0.005em]">
             {title}
+            <ArrowIcon className="h-[14px] w-[14px] opacity-0 transition-opacity duration-200 ease-in-out md:group-hover:opacity-100" />
           </div>
           <div className="text-xs font-light uppercase tracking-[-0.02em]">
             {date}
