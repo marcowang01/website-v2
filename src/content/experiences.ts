@@ -13,10 +13,12 @@ const expericences = {
     {
       company: 'rabbit, inc.',
       position: 'Software Engineer',
-      bulletpoints: [],
+      bulletpoints: [
+        'Building software for LLM agents to interact with the world',
+      ],
       date: 'Feb. 2024 - Present',
       location: 'Los Angeles, CA',
-      skills: [],
+      skills: ['NodeJS', 'NextJS', 'MongoDB'],
       url: 'https://www.rabbit.tech/',
     },
     {
