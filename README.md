@@ -6,6 +6,5 @@ Personal Website Version 2.0
 - [ ] add click image to open modal
 - [ ] support and optimized for gifs
 - [ ] think of a way to add description
-- [ ] add arrow icon on spotlight
 - [ ] fix build error
 - [ ] add empty div behind image for placeholder height

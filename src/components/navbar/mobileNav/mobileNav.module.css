@@ -22,26 +22,3 @@
 .marginContainer {
   margin-bottom: 5%;
 }
-
-.button {
-  font-size: 24px;
-  text-transform: uppercase;
-  letter-spacing: -0.02em;
-  font-weight: var(--font-semibold);
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  margin-right: calc(1rem + 11px);
-  gap: 6px;
-}
-
-.button.active {
-  color: rgb(var(--foreground-rgb));
-}
-
-.arrow {
-  width: 17px;
-  height: 17px;
-  fill: #666;
-}
