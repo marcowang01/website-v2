@@ -45,6 +45,7 @@ export function ProjectRecord({
   // TODO: potentially add more info to the card on mobile
   // TODO: add click image to open modal
   // TODO: support and optimized for gifs
+  // TODO: make color into gray-something
   return (
     <div
       className={cn(
@@ -111,35 +112,8 @@ export function ProjectRecord({
           )}
         >
           <div className="flex w-full flex-col justify-between gap-[10px] pt-4 md:flex-row">
-            <div className="flex w-full flex-col justify-end gap-5 md:w-[50%]">
-              <div>
-                {/* <p className="hidden text-sm leading-[1.2] md:block">
-                  {description}
-                </p> */}
-                <div className="flex flex-row items-center gap-3 text-sm tracking-[-0.02em]">
-                  <span className="font-normal">Collaborated with</span>
-                  {collaborators?.map((collaborator, index) => (
-                    <span
-                      key={`${collaborator}-${index}-${title}`}
-                      className="font-light text-[color:rgb(var(--project-card-light-text-rgb))]"
-                    >
-                      {collaborator}
-                    </span>
-                  ))}
-                </div>
-                <div className="flex flex-row items-center gap-3 text-sm tracking-[-0.02em]">
-                  <span className="font-normal">Built using</span>
-                  {skills?.map((skill, index) => (
-                    <span
-                      key={`${skill}-${index}-${title}`}
-                      className="font-light text-[color:rgb(var(--project-card-light-text-rgb))]"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              <div className="flex flex-row items-baseline justify-start gap-4 text-[color:rgb(var(--project-card-light-text-rgb))]">
+            <div className="flex w-full flex-col justify-between gap-5 md:w-[60%]">
+              <div className="flex flex-row items-baseline justify-start gap-4 font-normal text-[color:rgb(var(--project-card-light-text-rgb))]">
                 <Link
                   href={link}
                   className="transition-color flex flex-row items-baseline justify-start gap-1 duration-300 ease-in-out hover:text-[color:rgb(var(--project-card-text-rgb))]"
@@ -169,6 +143,49 @@ export function ProjectRecord({
                     </div>
                     <ArrowIcon className="h-[9px] w-[9px]" />
                   </Link>
+                )}
+              </div>
+              <div>
+                {/* <p className="hidden text-sm leading-[1.2] md:block">
+                  {description}
+                </p> */}
+                <div className="flex flex-row items-start gap-3 text-sm tracking-[-0.02em]">
+                  <span className="w-[120px] shrink-0 font-normal">
+                    Implemented as
+                  </span>
+                  <span className="font-light text-[color:rgb(var(--project-card-light-text-rgb))]">
+                    {description}
+                  </span>
+                </div>
+                {collaborators && (
+                  <div className="flex flex-row items-center gap-3 text-sm tracking-[-0.02em]">
+                    <span className="w-[120px] shrink-0 font-normal">
+                      Collaborated with
+                    </span>
+                    {collaborators?.map((collaborator, index) => (
+                      <span
+                        key={`${collaborator}-${index}-${title}`}
+                        className="font-light text-[color:rgb(var(--project-card-light-text-rgb))]"
+                      >
+                        {collaborator}
+                      </span>
+                    ))}
+                  </div>
+                )}
+                {skills && (
+                  <div className="flex flex-row items-center gap-3 text-sm tracking-[-0.02em]">
+                    <span className="w-[120px] shrink-0 font-normal">
+                      Built using
+                    </span>
+                    {skills?.map((skill, index) => (
+                      <span
+                        key={`${skill}-${index}-${title}`}
+                        className="text-nowrap font-light text-[color:rgb(var(--project-card-light-text-rgb))]"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
                 )}
               </div>
             </div>
