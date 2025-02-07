@@ -4,10 +4,10 @@ import ResumeCard from '@/components/resumeCard/resumeCard'
 
 export default function Resume() {
   return (
-    <main className={styles.main}>
-      <div className={styles.section}>
-        <div className={styles.sectionTitle}>work experience</div>
-        <div className={styles.experiencesContainer}>
+    <main className={styles['main']}>
+      <div className={styles['section']}>
+        <div className={styles['sectionTitle']}>work experience</div>
+        <div className={styles['experiencesContainer']}>
           {expericences.work.map((experience, index) => (
             <ResumeCard
               {...experience}
@@ -16,9 +16,9 @@ export default function Resume() {
           ))}
         </div>
       </div>
-      <div className={styles.section}>
-        <div className={styles.sectionTitle}>education</div>
-        <div className={styles.experiencesContainer}>
+      <div className={styles['section']}>
+        <div className={styles['sectionTitle']}>education</div>
+        <div className={styles['experiencesContainer']}>
           {expericences.education.map((experience, index) => (
             <ResumeCard
               {...experience}

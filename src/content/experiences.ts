@@ -1,26 +1,16 @@
-class Experience {
-  constructor({
-    company,
-    position,
-    bulletpoints,
-    date,
-    location,
-    skills,
-    url,
-  }) {
-    this.company = company
-    this.position = position
-    this.bulletpoints = bulletpoints
-    this.date = date
-    this.location = location
-    this.skills = skills
-    this.url = url
-  }
+export interface Experience {
+  company: string
+  position: string
+  bulletpoints: string[]
+  date: string
+  location: string
+  skills: string[]
+  url: string
 }
 
 const expericences = {
   work: [
-    new Experience({
+    {
       company: 'rabbit, inc.',
       position: 'Software Engineer',
       bulletpoints: [],
@@ -28,8 +18,8 @@ const expericences = {
       location: 'Los Angeles, CA',
       skills: [],
       url: 'https://www.rabbit.tech/',
-    }),
-    new Experience({
+    },
+    {
       company: 'The Boring Company',
       position: 'Software Engineer Intern',
       bulletpoints: [
@@ -41,8 +31,8 @@ const expericences = {
       location: 'Las Vegas, NV',
       skills: ['Go', 'C#', 'ReactJS', 'PostgresSQL', 'NodeJS', 'Bazel'],
       url: 'https://www.boringcompany.com/',
-    }),
-    new Experience({
+    },
+    {
       company: 'Workiva',
       position: 'Software Engineer Intern',
       bulletpoints: [
@@ -55,8 +45,8 @@ const expericences = {
       location: 'Chicago, IL',
       skills: ['Java', 'Go', 'PHP', 'Bash', 'Puppeteer'],
       url: 'https://www.workiva.com/',
-    }),
-    new Experience({
+    },
+    {
       company: 'Northwestern Tiilt Lab',
       position: 'Research Intern',
       bulletpoints: [
@@ -74,10 +64,10 @@ const expericences = {
         'Speech Recognition',
       ],
       url: 'https://tiilt.northwestern.edu/projects/blinc/index.html',
-    }),
+    },
   ],
   education: [
-    new Experience({
+    {
       company: 'Northwestern University',
       position: 'B.A. in Physics, M.S. in Computer Science',
       bulletpoints: [
@@ -88,7 +78,7 @@ const expericences = {
       location: 'Evanston, IL',
       skills: [],
       url: 'https://www.northwestern.edu/',
-    }),
+    },
   ],
 }
 
