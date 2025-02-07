@@ -14,6 +14,9 @@ const nextConfig = {
       {
         hostname: 'placehold.co',
       },
+      {
+        hostname: '*',
+      },
     ],
   },
 }

@@ -6,6 +6,8 @@ export interface Project {
   github?: string
   date: string
   skills: string[]
+  collaborators?: string[]
+  image?: string
   category: string
   showInSpotlight: boolean
 }
@@ -21,6 +23,7 @@ export const projects: Project[] = [
     // github: "https://github.com/marcowang01/notetaker",
     date: 'Fall, 2023',
     skills: ['Typescript', 'Next.js', 'Supabase'],
+    collaborators: ['Shaobo Z.'],
     category: 'AI Web App',
     showInSpotlight: true,
   },
@@ -33,6 +36,7 @@ export const projects: Project[] = [
     github: '',
     date: 'Summer, 2023',
     skills: ['Python', 'Typescript', 'Next.js'],
+    collaborators: ['Lilith Y.'],
     category: 'AI Web App',
     showInSpotlight: true,
   },
@@ -45,6 +49,7 @@ export const projects: Project[] = [
     github: 'https://github.com/marcowang01/realm',
     date: 'Spring, 2023',
     skills: ['Python', 'Modal', 'Langchain', 'ChromaDB'],
+    collaborators: ['Shaobo Z.'],
     category: 'LLM Pipeline',
     showInSpotlight: false,
   },
@@ -57,6 +62,7 @@ export const projects: Project[] = [
     github: 'https://github.com/szgbo/platz',
     date: 'Winter, 2023',
     skills: ['Typescript', 'Next.js'],
+    collaborators: ['Shaobo Z.', 'Marco Y.', 'Dalu L.'],
     category: 'UI Library',
     showInSpotlight: false,
   },
@@ -69,6 +75,7 @@ export const projects: Project[] = [
     github: 'https://github.com/marcowang01/conway-gpu',
     date: 'Spring, 2023',
     skills: ['C++', 'CUDA'],
+    collaborators: ['Shaobo Z.'],
     category: 'GPU Programming',
     showInSpotlight: false,
   },
@@ -81,6 +88,7 @@ export const projects: Project[] = [
     github: 'https://github.com/marcowang01/Igloo',
     date: 'Summer, 2022',
     skills: ['PHP', 'Javascript', 'Laravel', 'React Native'],
+    collaborators: ['Shaobo Z.', 'Sherry X.'],
     category: 'cross-platform App',
     showInSpotlight: true,
   },

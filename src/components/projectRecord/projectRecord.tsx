@@ -7,6 +7,7 @@ import { CaretDownIcon } from '@/svg/caret'
 import { cn } from '@/lib/util'
 import Image from 'next/image'
 import ArrowIcon from '@/svg/arrow'
+import ProgressiveImage from '../projectCard/progressiveImage'
 
 export function ProjectRecord({
   project,
@@ -17,7 +18,18 @@ export function ProjectRecord({
   isExpanded: boolean
   onClick: () => void
 }) {
-  const { title, tagline, link, date, category, github } = project
+  const {
+    title,
+    tagline,
+    link,
+    date,
+    category,
+    github,
+    collaborators,
+    image,
+    skills,
+    description,
+  } = project
   const expandedContentRef = useRef<HTMLDivElement>(null)
   const [contentHeight, setContentHeight] = useState(0)
 
@@ -30,8 +42,9 @@ export function ProjectRecord({
   }, [setContentHeight])
 
   // TODO: extract title, paragraph styles into reusable css in global stylesheet
-  // TODO: fix this for mobile
-  // TODO: get rid of scroll bar entirely everywhere
+  // TODO: potentially add more info to the card on mobile
+  // TODO: add click image to open modal
+  // TODO: support and optimized for gifs
   return (
     <div
       className={cn(
@@ -53,7 +66,7 @@ export function ProjectRecord({
       )}
       onClick={onClick}
     >
-      <div className="flex flex-col items-start justify-between">
+      <div className="flex w-full flex-col items-start justify-between">
         <section className="flex w-full flex-row items-center justify-between gap-[10px]">
           <div className="flex flex-row items-baseline gap-3 text-base font-medium leading-[1.25] tracking-[-0.005em]">
             {title}
@@ -97,17 +110,35 @@ export function ProjectRecord({
             }
           )}
         >
-          <div className="flex flex-row justify-between gap-[10px] pt-4">
-            <div className="flex w-[50%] flex-col gap-5">
-              <p className="text-sm leading-[1.2]">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Tempore recusandae odit quo quas corrupti facilis animi ut, et
-                laborum iste provident non accusantium optio fuga repellat amet,
-                velit dolores asperiores. Lorem, ipsum dolor sit amet
-                consectetur adipisicing elit. Tempore recusandae odit quo quas
-                corrupti facilis animi ut, et laborum iste provident non
-                accusantium optio fuga repellat amet, velit dolores asperiores.
-              </p>
+          <div className="flex w-full flex-col justify-between gap-[10px] pt-4 md:flex-row">
+            <div className="flex w-full flex-col justify-end gap-5 md:w-[50%]">
+              <div>
+                {/* <p className="hidden text-sm leading-[1.2] md:block">
+                  {description}
+                </p> */}
+                <div className="flex flex-row items-center gap-3 text-sm tracking-[-0.02em]">
+                  <span className="font-normal">Collaborated with</span>
+                  {collaborators?.map((collaborator, index) => (
+                    <span
+                      key={`${collaborator}-${index}-${title}`}
+                      className="font-light text-[color:rgb(var(--project-card-light-text-rgb))]"
+                    >
+                      {collaborator}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex flex-row items-center gap-3 text-sm tracking-[-0.02em]">
+                  <span className="font-normal">Built using</span>
+                  {skills?.map((skill, index) => (
+                    <span
+                      key={`${skill}-${index}-${title}`}
+                      className="font-light text-[color:rgb(var(--project-card-light-text-rgb))]"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
               <div className="flex flex-row items-baseline justify-start gap-4 text-[color:rgb(var(--project-card-light-text-rgb))]">
                 <Link
                   href={link}
@@ -142,11 +173,12 @@ export function ProjectRecord({
               </div>
             </div>
             <Image
-              src={'https://placehold.co/200x100.png'}
+              src={`/images/projects/igloo.png`}
               alt={'project iamge'}
               width={200}
               height={100}
-              className="shrink-0 rounded-md object-cover"
+              quality={100}
+              className="w-full shrink-0 rounded-md object-cover md:w-auto"
             />
           </div>
         </section>
