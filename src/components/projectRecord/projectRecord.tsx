@@ -46,16 +46,16 @@ export function ProjectRecord({
         'mr-[calc(11px+1rem)] min-w-[calc(100vw-22px-2rem)]',
         'px-[10px] py-[8px]',
         'rounded-[10px]',
-        'text-[color:rgb(var(--project-card-text-rgb))]',
+        'text-project-gray-700',
         'cursor-pointer',
         'transition-all duration-300 ease-in-out',
         'origin-center',
         'group',
         'md:mr-0 md:w-[87%] md:min-w-0',
         'md:px-[12px] md:py-[10px]',
-        'md:hover:bg-[color:rgb(var(--project-card-hover-bg-rgb))]',
+        'md:hover:bg-project-gray-150',
         {
-          'bg-[color:rgb(var(--project-card-hover-bg-rgb))]': isExpanded,
+          'bg-project-gray-150': isExpanded,
         }
       )}
       onClick={onClick}
@@ -64,11 +64,11 @@ export function ProjectRecord({
         <section className="flex w-full flex-row items-center justify-between gap-[10px]">
           <div className="flex flex-row items-baseline gap-3 text-base font-medium leading-[1.25] tracking-[-0.005em]">
             {title}
-            <div className="hidden w-fit text-sm font-normal uppercase tracking-[-0.02em] text-[color:rgb(var(--project-card-light-text-rgb))] md:block">
+            <div className="text-project-gray-300 hidden w-fit text-sm font-normal uppercase tracking-[-0.02em] md:block">
               {category}
             </div>
           </div>
-          <div className="text-xs font-light uppercase tracking-[-0.02em] text-[color:rgb(var(--project-card-light-text-rgb))]">
+          <div className="text-project-gray-300 text-xs font-light uppercase tracking-[-0.02em]">
             {date}
           </div>
         </section>
@@ -77,7 +77,7 @@ export function ProjectRecord({
           <div className="w-fit text-sm leading-[1.2] tracking-[-0.02em]">
             {tagline}
           </div>
-          <div className="text-[color:rgb(var(--project-card-light-text-rgb))]">
+          <div className="text-project-gray-300">
             <CaretDownIcon
               className={cn(
                 'shrink-0 transform transition-transform duration-500 ease-in-out',
