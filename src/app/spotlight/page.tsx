@@ -1,5 +1,5 @@
-import { ProjectCard } from '@/components/projectCard/projectCard'
 import { projects } from '@/content/projects'
+import { SpotlightCard } from '@/components/spotlightCard/spotlightCard'
 
 export default function Page() {
   // only show starred projects
@@ -8,7 +8,7 @@ export default function Page() {
       {projects
         .filter((project) => project.showInSpotlight)
         .map((project, index) => (
-          <ProjectCard project={project} key={`${project.title}-${index}`} />
+          <SpotlightCard project={project} key={`${project.title}-${index}`} />
         ))}
     </main>
   )

@@ -6,7 +6,7 @@ import { CaretDownIcon } from '@/svg/caret'
 import { cn } from '@/lib/util'
 import { ProjectDetails } from './projectDetails'
 
-export function ProjectRecord({
+export function CollectionItem({
   project,
   isExpanded,
   onClick,

@@ -1,7 +1,7 @@
 'use client'
 
 import styles from './page.module.css'
-import { ProjectRecord } from '@/components/projectRecord/projectRecord'
+import { CollectionItem } from '@/components/CollectionItem/collectionItem'
 import { projects } from '@/content/projects'
 import { useState } from 'react'
 import { cn } from '@/lib/util'
@@ -18,7 +18,7 @@ export default function Page() {
       )}
     >
       {projects.map((project, index) => (
-        <ProjectRecord
+        <CollectionItem
           project={project}
           key={`${project.title}-${index}`}
           isExpanded={index === expandedIndex}

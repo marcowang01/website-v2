@@ -6,5 +6,6 @@ Personal Website Version 2.0
 - [ ] add click image to open modal
 - [ ] support and optimized for gifs
 - [ ] think of a way to add description
-- [ ] fix build error
 - [ ] add empty div behind image for placeholder height
+- [ ] add LOUR
+- [ ] add Lemma

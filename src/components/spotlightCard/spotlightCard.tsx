@@ -4,7 +4,7 @@ import { Project } from '@/content/projects'
 import { cn } from '@/lib/util'
 import ArrowIcon from '@/svg/arrow'
 
-export function ProjectCard({ project }: { project: Project }) {
+export function SpotlightCard({ project }: { project: Project }) {
   const { title, description, link, github, date, skills } = project
 
   const priorityLink = link || github
