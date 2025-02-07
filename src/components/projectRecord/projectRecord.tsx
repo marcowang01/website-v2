@@ -47,6 +47,8 @@ export function ProjectRecord({
   // TODO: support and optimized for gifs
   // TODO: make color into gray-something
   // TODO: think of a way to add description
+  // TODO: add images
+  // TODO: add arrow icon on spotlight
   return (
     <div
       className={cn(
