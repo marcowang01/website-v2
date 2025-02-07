@@ -98,7 +98,7 @@ export const projects: Project[] = [
       "A full-stack telemetry dashboard built for the NU Formula Racing team to visualize, persist and analyze data from the car's sensors in real-time.",
     tagline: 'Real-time telemtry insights for NU Formula Racing',
     link: '',
-    github: 'https://github.com/NU-Formula-Racing/telemetry-remote-23',
+    github: 'https://github.com/marcowang01/telemetry-remote-23',
     date: 'Winter, 2022',
     skills: ['React', 'Next.js', 'JavaScript', 'HTML', 'CSS'],
     category: 'Data Pipeline',

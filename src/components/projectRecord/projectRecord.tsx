@@ -83,7 +83,7 @@ export function ProjectRecord({
           </div>
         </section>
 
-        <section className="flex w-full flex-row items-center justify-start md:justify-between">
+        <section className="flex w-full flex-row items-center justify-between">
           <div className="w-fit text-sm leading-[1.2] tracking-[-0.02em]">
             {tagline}
           </div>
@@ -117,20 +117,22 @@ export function ProjectRecord({
           <div className="flex w-full flex-col justify-between gap-[10px] pt-4 md:flex-row">
             <div className="flex w-full flex-col justify-between gap-5 md:w-[60%]">
               <div className="flex flex-row items-baseline justify-start gap-4 font-normal text-[color:rgb(var(--project-card-light-text-rgb))]">
-                <Link
-                  href={link}
-                  className="transition-color flex flex-row items-baseline justify-start gap-1 duration-300 ease-in-out hover:text-[color:rgb(var(--project-card-text-rgb))]"
-                  onClick={(e) => {
-                    e.stopPropagation()
-                    e.preventDefault()
-                    window.open(link, '_blank', 'noopener,noreferrer')
-                  }}
-                >
-                  <div className="min-w-content text-xs leading-[1.2] tracking-[-0.02em]">
-                    {link.endsWith('.pdf') ? 'PAPER' : 'WEBSITE'}
-                  </div>
-                  <ArrowIcon className="h-[9px] w-[9px]" />
-                </Link>
+                {link && (
+                  <Link
+                    href={link}
+                    className="transition-color flex flex-row items-baseline justify-start gap-1 duration-300 ease-in-out hover:text-[color:rgb(var(--project-card-text-rgb))]"
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      e.preventDefault()
+                      window.open(link, '_blank', 'noopener,noreferrer')
+                    }}
+                  >
+                    <div className="min-w-content text-xs leading-[1.2] tracking-[-0.02em]">
+                      {link.endsWith('.pdf') ? 'PAPER' : 'WEBSITE'}
+                    </div>
+                    <ArrowIcon className="h-[9px] w-[9px]" />
+                  </Link>
+                )}
                 {github && (
                   <Link
                     href={github}
@@ -154,7 +156,7 @@ export function ProjectRecord({
                     {description}
                   </span>
                 </div> */}
-                <div>
+                <div className="flex flex-col gap-0">
                   {collaborators && (
                     <div className="flex flex-row items-center gap-3 text-sm tracking-[-0.02em]">
                       <span className="w-[120px] shrink-0 font-normal">
