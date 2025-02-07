@@ -78,8 +78,8 @@ export function ProjectRecord({
                   'rotate-180': isExpanded,
                 }
               )}
-              width={20}
-              height={20}
+              width={18}
+              height={18}
             />
           </div>
         </section>
@@ -97,7 +97,7 @@ export function ProjectRecord({
             }
           )}
         >
-          <div className="flex flex-row justify-between gap-[10px] pt-2">
+          <div className="flex flex-row justify-between gap-[10px] pt-4">
             <div className="flex flex-col gap-[10px] w-[50%]">
               <p className="text-sm leading-[1.2]">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -117,7 +117,7 @@ export function ProjectRecord({
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    WEBSITE
+                    {link.endsWith('.pdf') ? 'PAPER' : 'WEBSITE'}
                   </Link>
                   <ArrowIcon className="w-[9px] h-[9px]" />
                 </div>
