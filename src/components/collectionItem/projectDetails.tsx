@@ -32,7 +32,7 @@ export function ProjectDetails({
           {link && (
             <ProjectLink
               href={link}
-              label={link.endsWith('.pdf') ? 'PAPER' : 'WEBSITE'}
+              label={link.endsWith('.pdf') ? 'PDF' : 'WEBSITE'}
             />
           )}
           {github && <ProjectLink href={github} label="GITHUB" />}
