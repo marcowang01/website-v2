@@ -5,6 +5,7 @@
   align-items: flex-start;
   width: 87%;
   margin: 0 12px 40px 12px;
+  gap: 40px;
 }
 
 .title {
@@ -45,7 +46,6 @@
 }
 
 .section {
-  margin: 20px 0px;
   width: 100%;
 }
 
