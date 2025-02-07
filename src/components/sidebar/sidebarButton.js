@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useState, useRef, useCallback } from 'react'
 import { useRouter, usePathname } from 'next/navigation'
 import styles from './sidebar.module.css'
 import Link from 'next/link'
@@ -23,45 +23,45 @@ export default function SidebarButton({ name, link, shortcut }) {
     }
   }, [pathname, link])
 
-  const applyActiveStyles = () => {
+  const applyActiveStyles = useCallback(() => {
     if (buttonRef.current) {
       buttonRef.current.style.scale = '0.97'
       buttonRef.current.querySelector(`.${styles.sidebarKey}`).style.scale =
         '0.97'
       buttonRef.current.style.color = 'rgba(var(--light-btn-text-rgb), 0.9)'
-      buttonRef.current.querySelector(
-        `.${styles.sidebarKey}`
-      ).style.background = 'rgba(var(--light-key-hover-bg-rgba))'
     }
-  }
+  }, [])
 
-  const removeActiveStyles = () => {
+  const removeActiveStyles = useCallback(() => {
     if (buttonRef.current) {
       buttonRef.current.style.scale = ''
       buttonRef.current.querySelector(`.${styles.sidebarKey}`).style.scale = ''
       buttonRef.current.style.color = ''
-      buttonRef.current.querySelector(
-        `.${styles.sidebarKey}`
-      ).style.background = ''
     }
-  }
+  }, [])
 
-  const handleKeyDown = (event) => {
-    if (event.key.toLowerCase() === shortcut.toLowerCase() && !event.repeat) {
-      applyActiveStyles()
-    }
-  }
-
-  const handleKeyUp = (event) => {
-    if (event.key.toLowerCase() === shortcut.toLowerCase()) {
-      removeActiveStyles()
-      if (isExternalLink) {
-        window.open(link, '_blank', 'noopener,noreferrer')
-      } else {
-        router.push(link)
+  const handleKeyDown = useCallback(
+    (event) => {
+      if (event.key.toLowerCase() === shortcut.toLowerCase() && !event.repeat) {
+        applyActiveStyles()
       }
-    }
-  }
+    },
+    [shortcut, applyActiveStyles]
+  )
+
+  const handleKeyUp = useCallback(
+    (event) => {
+      if (event.key.toLowerCase() === shortcut.toLowerCase()) {
+        removeActiveStyles()
+        if (isExternalLink) {
+          window.open(link, '_blank', 'noopener,noreferrer')
+        } else {
+          router.push(link)
+        }
+      }
+    },
+    [shortcut, isExternalLink, link, router, removeActiveStyles]
+  )
 
   useEffect(() => {
     window.addEventListener('keydown', handleKeyDown)
@@ -70,7 +70,7 @@ export default function SidebarButton({ name, link, shortcut }) {
       window.removeEventListener('keydown', handleKeyDown)
       window.removeEventListener('keyup', handleKeyUp)
     }
-  }, [])
+  }, [handleKeyDown, handleKeyUp])
 
   const linkProps = isExternalLink
     ? { target: '_blank', rel: 'noopener noreferrer' }

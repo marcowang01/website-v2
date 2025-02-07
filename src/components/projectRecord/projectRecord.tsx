@@ -46,6 +46,7 @@ export function ProjectRecord({
   // TODO: add click image to open modal
   // TODO: support and optimized for gifs
   // TODO: make color into gray-something
+  // TODO: think of a way to add description
   return (
     <div
       className={cn(
