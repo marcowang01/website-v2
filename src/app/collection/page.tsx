@@ -1,7 +1,7 @@
 'use client'
 
 import styles from './page.module.css'
-import { CollectionItem } from '@/components/CollectionItem/collectionItem'
+import { CollectionItem } from '@/components/collectionItem/collectionItem'
 import { projects } from '@/content/projects'
 import { useState } from 'react'
 import { cn } from '@/lib/util'
