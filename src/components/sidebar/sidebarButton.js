@@ -42,7 +42,11 @@ export default function SidebarButton({ name, link, shortcut }) {
 
   const handleKeyDown = useCallback(
     (event) => {
-      if (event.key.toLowerCase() === shortcut.toLowerCase() && !event.repeat) {
+      if (
+        event.key.toLowerCase() === shortcut.toLowerCase() &&
+        !event.repeat &&
+        !event.metaKey
+      ) {
         applyActiveStyles()
       }
     },
