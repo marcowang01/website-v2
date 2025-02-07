@@ -145,48 +145,44 @@ export function ProjectRecord({
                   </Link>
                 )}
               </div>
-              <div>
-                {/* <p className="hidden text-sm leading-[1.2] md:block">
-                  {description}
-                </p> */}
-                <div className="flex flex-row items-start gap-3 text-sm tracking-[-0.02em]">
-                  <span className="w-[120px] shrink-0 font-normal">
-                    Implemented as
-                  </span>
+              <div className="hidden flex-col gap-5 md:flex">
+                {/* <div className="flex flex-row items-start gap-3 text-sm tracking-[-0.02em]">
                   <span className="font-light text-[color:rgb(var(--project-card-light-text-rgb))]">
                     {description}
                   </span>
+                </div> */}
+                <div>
+                  {collaborators && (
+                    <div className="flex flex-row items-center gap-3 text-sm tracking-[-0.02em]">
+                      <span className="w-[120px] shrink-0 font-normal">
+                        Collaborated with
+                      </span>
+                      {collaborators?.map((collaborator, index) => (
+                        <span
+                          key={`${collaborator}-${index}-${title}`}
+                          className="font-light text-[color:rgb(var(--project-card-light-text-rgb))]"
+                        >
+                          {collaborator}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                  {skills && (
+                    <div className="flex flex-row items-center gap-3 text-sm tracking-[-0.02em]">
+                      <span className="w-[120px] shrink-0 font-normal">
+                        Built using
+                      </span>
+                      {skills?.map((skill, index) => (
+                        <span
+                          key={`${skill}-${index}-${title}`}
+                          className="text-nowrap font-light text-[color:rgb(var(--project-card-light-text-rgb))]"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </div>
-                {collaborators && (
-                  <div className="flex flex-row items-center gap-3 text-sm tracking-[-0.02em]">
-                    <span className="w-[120px] shrink-0 font-normal">
-                      Collaborated with
-                    </span>
-                    {collaborators?.map((collaborator, index) => (
-                      <span
-                        key={`${collaborator}-${index}-${title}`}
-                        className="font-light text-[color:rgb(var(--project-card-light-text-rgb))]"
-                      >
-                        {collaborator}
-                      </span>
-                    ))}
-                  </div>
-                )}
-                {skills && (
-                  <div className="flex flex-row items-center gap-3 text-sm tracking-[-0.02em]">
-                    <span className="w-[120px] shrink-0 font-normal">
-                      Built using
-                    </span>
-                    {skills?.map((skill, index) => (
-                      <span
-                        key={`${skill}-${index}-${title}`}
-                        className="text-nowrap font-light text-[color:rgb(var(--project-card-light-text-rgb))]"
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                )}
               </div>
             </div>
             <Image
