@@ -11,9 +11,11 @@ export type IconName = 'github' | 'browser'
 export default function LinkIcon({
   iconName,
   link,
+  className,
 }: {
   iconName: IconName
   link: string
+  className: string
 }) {
   const iconNameToComponent: Record<IconName, React.ElementType> = {
     github: GithubIcon,
@@ -34,6 +36,7 @@ export default function LinkIcon({
       target="_blank"
       rel="noopener noreferrer"
       onClick={handleOnClick}
+      className={className}
     >
       <div className={styles['icon']}>
         <IconComponent className={styles['icon']} />

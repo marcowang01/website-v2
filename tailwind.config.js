@@ -9,8 +9,18 @@ export default {
           150: '#F9F9F7', // bg
           200: '#EEE', // border
           300: '#999999', // light text
-          700: '#555555', // text
+          400: '#555555', // text
         },
+        'icon-gray': {
+          300: '#777777',
+          400: '#444444',
+        },
+      },
+      fontWeight: {
+        light: 300,
+        regular: 400,
+        medium: 500,
+        semibold: 600,
       },
     },
   },

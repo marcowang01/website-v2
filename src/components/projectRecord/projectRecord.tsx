@@ -35,7 +35,7 @@ export function ProjectRecord({
         'mr-[calc(11px+1rem)] min-w-[calc(100vw-22px-2rem)]',
         'px-[10px] py-[8px]',
         'rounded-[10px]',
-        'text-project-gray-700',
+        'text-project-gray-400',
         'cursor-pointer',
         'transition-all duration-300 ease-in-out',
         'origin-center',
