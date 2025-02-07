@@ -3,7 +3,6 @@
 import GithubIcon from '@/svg/github'
 import BrowserIcon from '@/svg/browser'
 import React from 'react'
-import styles from './projectCard.module.css'
 import Link from 'next/link'
 
 export type IconName = 'github' | 'browser'
@@ -38,8 +37,8 @@ export default function LinkIcon({
       onClick={handleOnClick}
       className={className}
     >
-      <div className={styles['icon']}>
-        <IconComponent className={styles['icon']} />
+      <div className="z-50">
+        <IconComponent />
       </div>
     </Link>
   )

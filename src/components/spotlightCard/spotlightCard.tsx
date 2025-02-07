@@ -33,9 +33,9 @@ export function SpotlightCard({ project }: { project: Project }) {
     >
       <div>
         <section className="mb-4 flex w-full flex-row items-center justify-between gap-[10px]">
-          <div className="flex flex-row items-center justify-start gap-1 text-xl font-medium tracking-[-0.005em]">
+          <div className="flex flex-row items-baseline justify-start gap-1 text-xl font-medium tracking-[-0.005em]">
             {title}
-            <ArrowIcon className="h-[14px] w-[14px] opacity-0 transition-opacity duration-200 ease-in-out md:group-hover:opacity-100" />
+            <ArrowIcon className="h-[13px] w-[13px] opacity-0 transition-opacity duration-200 ease-in-out md:group-hover:opacity-100" />
           </div>
           <div className="text-xs font-light uppercase tracking-[-0.02em]">
             {date}
