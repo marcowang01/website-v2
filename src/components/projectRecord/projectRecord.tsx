@@ -29,13 +29,10 @@ export function ProjectRecord({
   }, [setContentHeight, updateHeight])
 
   // TODO: extract title, paragraph styles into reusable css in global stylesheet
-  // TODO: potentially add more info to the card on mobile
   // TODO: add click image to open modal
   // TODO: support and optimized for gifs
-  // TODO: make color into gray-something
   // TODO: think of a way to add description
   // TODO: add arrow icon on spotlight
-  // TODO: update images
   // TODO: fix build error
   // TODO: add empty div behind image for placeholder height
 
@@ -64,7 +61,7 @@ export function ProjectRecord({
         <section className="flex w-full flex-row items-center justify-between gap-[10px]">
           <div className="flex flex-row items-baseline gap-3 text-base font-medium leading-[1.25] tracking-[-0.005em]">
             {title}
-            <div className="text-project-gray-300 hidden w-fit text-sm font-normal uppercase tracking-[-0.02em] md:block">
+            <div className="text-project-gray-300 hidden w-fit text-sm font-normal uppercase tracking-[-0.025em] md:block">
               {category}
             </div>
           </div>
