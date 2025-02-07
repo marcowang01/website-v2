@@ -26,6 +26,7 @@ export const projects: Project[] = [
     collaborators: ['Shaobo Z.'],
     category: 'AI Web App',
     showInSpotlight: true,
+    image: '/images/projects/scribe.png',
   },
   {
     title: 'Tomo',
@@ -39,6 +40,7 @@ export const projects: Project[] = [
     collaborators: ['Lilith Y.'],
     category: 'AI Web App',
     showInSpotlight: true,
+    image: '/images/projects/tomo.png',
   },
   {
     title: 'Realm',
@@ -52,6 +54,7 @@ export const projects: Project[] = [
     collaborators: ['Shaobo Z.'],
     category: 'LLM Pipeline',
     showInSpotlight: false,
+    image: '/images/projects/realm.png',
   },
   {
     title: 'PlatzUI',
@@ -65,6 +68,7 @@ export const projects: Project[] = [
     collaborators: ['Shaobo Z.', 'Marco Y.', 'Dalu L.'],
     category: 'UI Library',
     showInSpotlight: false,
+    image: '/images/projects/platz.png',
   },
   {
     title: 'Conway',
@@ -78,6 +82,7 @@ export const projects: Project[] = [
     collaborators: ['Shaobo Z.'],
     category: 'GPU Programming',
     showInSpotlight: false,
+    image: '/images/projects/conway.png',
   },
   {
     title: 'Igloo',
@@ -91,6 +96,7 @@ export const projects: Project[] = [
     collaborators: ['Shaobo Z.', 'Sherry X.'],
     category: 'cross-platform App',
     showInSpotlight: true,
+    image: '/images/projects/igloo.png',
   },
   {
     title: 'Formula Telemetry',
@@ -103,6 +109,7 @@ export const projects: Project[] = [
     skills: ['React', 'Next.js', 'JavaScript', 'HTML', 'CSS'],
     category: 'Data Pipeline',
     showInSpotlight: false,
+    image: '/images/projects/formula.png',
   },
   {
     title: 'Bounce Knight',
@@ -115,6 +122,7 @@ export const projects: Project[] = [
     skills: ['C#', 'Unity'],
     category: 'unity game',
     showInSpotlight: false,
+    image: '/images/projects/bounce.png',
   },
   {
     title: 'News Classifier',
@@ -127,6 +135,7 @@ export const projects: Project[] = [
     skills: ['Python', 'Scikit-Learn', 'Flask'],
     category: 'Machine Learning',
     showInSpotlight: false,
+    image: '/images/projects/news.png',
   },
   {
     title: 'Tetris',
@@ -138,5 +147,6 @@ export const projects: Project[] = [
     skills: ['C', 'C++'],
     category: 'C++ Programming',
     showInSpotlight: false,
+    image: '/images/projects/tetris.png',
   },
 ]

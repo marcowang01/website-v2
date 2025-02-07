@@ -47,8 +47,9 @@ export function ProjectRecord({
   // TODO: support and optimized for gifs
   // TODO: make color into gray-something
   // TODO: think of a way to add description
-  // TODO: add images
   // TODO: add arrow icon on spotlight
+  // TODO: add images
+
   return (
     <div
       className={cn(
@@ -191,7 +192,7 @@ export function ProjectRecord({
               </div>
             </div>
             <Image
-              src={`/images/projects/igloo.png`}
+              src={image || ''}
               alt={'project iamge'}
               width={200}
               height={100}
