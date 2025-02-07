@@ -1,29 +1,19 @@
-class Project {
-  constructor({
-    title,
-    description,
-    tagline,
-    link,
-    github,
-    date,
-    skills,
-    category,
-    starred,
-  }) {
-    this.title = title
-    this.description = description
-    this.tagline = tagline
-    this.link = link
-    this.github = github
-    this.date = date
-    this.skills = skills
-    this.category = category
-    this.starred = starred
-  }
+export interface Project {
+  title: string
+  description: string
+  tagline: string
+  link: string
+  github?: string
+  date: string
+  skills: string[]
+  collaborators?: string[]
+  image?: string
+  category: string
+  showInSpotlight: boolean
 }
 
-const projects = [
-  new Project({
+export const projects: Project[] = [
+  {
     title: 'Scribe',
     description:
       'An AI-powered app for creating and searching through notes for lectures, meetings and discussions.',
@@ -33,10 +23,12 @@ const projects = [
     // github: "https://github.com/marcowang01/notetaker",
     date: 'Fall, 2023',
     skills: ['Typescript', 'Next.js', 'Supabase'],
+    collaborators: ['Shaobo Z.'],
     category: 'AI Web App',
-    starred: true,
-  }),
-  new Project({
+    showInSpotlight: true,
+    image: '/images/projects/scribe.png',
+  },
+  {
     title: 'Tomo',
     description:
       'A real-time audio-based companion aimed at enhancing children’s learning through story‑driven dialogues.',
@@ -45,10 +37,12 @@ const projects = [
     github: '',
     date: 'Summer, 2023',
     skills: ['Python', 'Typescript', 'Next.js'],
+    collaborators: ['Lilith Y.'],
     category: 'AI Web App',
-    starred: true,
-  }),
-  new Project({
+    showInSpotlight: true,
+    image: '/images/projects/tomo.png',
+  },
+  {
     title: 'Realm',
     description:
       'Realm (Retrieval Augmented Language Model) is an LLM pipeline that leverages vector databases to improve performance and reduce costs for question answering tasks.',
@@ -57,10 +51,12 @@ const projects = [
     github: 'https://github.com/marcowang01/realm',
     date: 'Spring, 2023',
     skills: ['Python', 'Modal', 'Langchain', 'ChromaDB'],
+    collaborators: ['Shaobo Z.'],
     category: 'LLM Pipeline',
-    starred: false,
-  }),
-  new Project({
+    showInSpotlight: false,
+    image: '/images/projects/realm.png',
+  },
+  {
     title: 'PlatzUI',
     description:
       'An open-source personal website template for creatives, with a focus on streamlining the design-to-implementation process.',
@@ -69,10 +65,12 @@ const projects = [
     github: 'https://github.com/szgbo/platz',
     date: 'Winter, 2023',
     skills: ['Typescript', 'Next.js'],
+    collaborators: ['Shaobo Z.', 'Marco Y.', 'Dalu L.'],
     category: 'UI Library',
-    starred: false,
-  }),
-  new Project({
+    showInSpotlight: false,
+    image: '/images/projects/platz.png',
+  },
+  {
     title: 'Conway',
     description:
       "A CUDA-accelerated implementation of Conway's Game of Life, a cellular automaton that simulates the evolution of a grid of cells based on a set of rules.",
@@ -81,10 +79,12 @@ const projects = [
     github: 'https://github.com/marcowang01/conway-gpu',
     date: 'Spring, 2023',
     skills: ['C++', 'CUDA'],
+    collaborators: ['Shaobo Z.'],
     category: 'GPU Programming',
-    starred: false,
-  }),
-  new Project({
+    showInSpotlight: false,
+    image: '/images/projects/conway.png',
+  },
+  {
     title: 'Igloo',
     description:
       'A reimagination of social tools, driven by organic interpersonal relationships. Currently, a prototype tested within a small community of 20+ users.',
@@ -93,22 +93,25 @@ const projects = [
     github: 'https://github.com/marcowang01/Igloo',
     date: 'Summer, 2022',
     skills: ['PHP', 'Javascript', 'Laravel', 'React Native'],
+    collaborators: ['Shaobo Z.', 'Sherry X.'],
     category: 'cross-platform App',
-    starred: true,
-  }),
-  new Project({
+    showInSpotlight: true,
+    image: '/images/projects/igloo.png',
+  },
+  {
     title: 'Formula Telemetry',
     description:
       "A full-stack telemetry dashboard built for the NU Formula Racing team to visualize, persist and analyze data from the car's sensors in real-time.",
     tagline: 'Real-time telemtry insights for NU Formula Racing',
     link: '',
-    github: 'https://github.com/NU-Formula-Racing/telemetry-remote-23',
+    github: 'https://github.com/marcowang01/telemetry-remote-23',
     date: 'Winter, 2022',
     skills: ['React', 'Next.js', 'JavaScript', 'HTML', 'CSS'],
     category: 'Data Pipeline',
-    starred: false,
-  }),
-  new Project({
+    showInSpotlight: false,
+    image: '/images/projects/formula.png',
+  },
+  {
     title: 'Bounce Knight',
     description:
       'A 2D fighting game built in Unity. The game features a fully animated characters and 3 unique stages.',
@@ -118,9 +121,10 @@ const projects = [
     date: 'Winter, 2021',
     skills: ['C#', 'Unity'],
     category: 'unity game',
-    starred: false,
-  }),
-  new Project({
+    showInSpotlight: false,
+    image: '/images/projects/bounce.png',
+  },
+  {
     title: 'News Classifier',
     description:
       'A web app that uses machine learning to detect bias in news articles. The model is trained on a dataset of 1.3k news articles.',
@@ -130,9 +134,10 @@ const projects = [
     date: 'Winter, 2021',
     skills: ['Python', 'Scikit-Learn', 'Flask'],
     category: 'Machine Learning',
-    starred: false,
-  }),
-  new Project({
+    showInSpotlight: false,
+    image: '/images/projects/news.png',
+  },
+  {
     title: 'Tetris',
     description: 'An implementation of the classic game Tetris, built in C++.',
     tagline: 'Clone of classic Tetris in C++',
@@ -141,8 +146,7 @@ const projects = [
     date: 'Fall, 2021',
     skills: ['C', 'C++'],
     category: 'C++ Programming',
-    starred: false,
-  }),
+    showInSpotlight: false,
+    image: '/images/projects/tetris.png',
+  },
 ]
-
-export default projects

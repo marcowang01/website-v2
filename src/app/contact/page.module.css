@@ -27,7 +27,6 @@
   text-transform: none;
 }
 
-
 .arrow {
   width: 14px;
   height: 14px;
@@ -35,7 +34,7 @@
 }
 
 .linkContainer {
-  width: 60%;
+  width: 87%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
