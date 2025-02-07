@@ -28,14 +28,6 @@ export function ProjectRecord({
     }
   }, [setContentHeight, updateHeight])
 
-  // TODO: extract title, paragraph styles into reusable css in global stylesheet
-  // TODO: add click image to open modal
-  // TODO: support and optimized for gifs
-  // TODO: think of a way to add description
-  // TODO: add arrow icon on spotlight
-  // TODO: fix build error
-  // TODO: add empty div behind image for placeholder height
-
   return (
     <div
       className={cn(
