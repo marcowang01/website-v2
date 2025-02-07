@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <main
       className={cn(
-        'flex flex-col justify-start items-start gap-[10px]',
+        'flex flex-col items-start justify-start gap-[10px]',
         'mb-[40px]',
         'pt-[calc(11px+1rem)] md:pt-0'
       )}

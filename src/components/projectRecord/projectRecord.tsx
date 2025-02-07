@@ -61,15 +61,7 @@ export function ProjectRecord({
               {category}
             </div>
           </div>
-          <div className="text-xs font-light uppercase tracking-[-0.02em] text-[color:rgb(var(--project-card-light-text-rgb))]">
-            {date}
-          </div>
-        </section>
 
-        <section className="flex w-full flex-row items-center justify-start md:justify-between">
-          <div className="w-fit text-sm leading-[1.2] tracking-[-0.02em]">
-            {tagline}
-          </div>
           <div className="text-[color:rgb(var(--project-card-light-text-rgb))]">
             <CaretDownIcon
               className={cn(
@@ -81,6 +73,15 @@ export function ProjectRecord({
               width={18}
               height={18}
             />
+          </div>
+        </section>
+
+        <section className="flex w-full flex-row items-center justify-start md:justify-between">
+          <div className="w-fit text-sm leading-[1.2] tracking-[-0.02em]">
+            {tagline}
+          </div>
+          <div className="text-xs font-light uppercase tracking-[-0.02em] text-[color:rgb(var(--project-card-light-text-rgb))]">
+            {date}
           </div>
         </section>
         <section
@@ -98,8 +99,17 @@ export function ProjectRecord({
           )}
         >
           <div className="flex flex-row justify-between gap-[10px] pt-4">
-            <div className="flex w-[50%] flex-col gap-[10px]">
-              <div className="flex flex-row items-baseline justify-start gap-4 pt-2 text-[color:rgb(var(--project-card-light-text-rgb))]">
+            <div className="flex w-[50%] flex-col gap-5">
+              <p className="text-sm leading-[1.2]">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Tempore recusandae odit quo quas corrupti facilis animi ut, et
+                laborum iste provident non accusantium optio fuga repellat amet,
+                velit dolores asperiores. Lorem, ipsum dolor sit amet
+                consectetur adipisicing elit. Tempore recusandae odit quo quas
+                corrupti facilis animi ut, et laborum iste provident non
+                accusantium optio fuga repellat amet, velit dolores asperiores.
+              </p>
+              <div className="flex flex-row items-baseline justify-start gap-4 text-[color:rgb(var(--project-card-light-text-rgb))]">
                 <div className="transition-color flex flex-row items-baseline justify-start gap-1 duration-300 ease-in-out hover:text-[color:rgb(var(--project-card-text-rgb))]">
                   <Link
                     href={link}
@@ -125,15 +135,6 @@ export function ProjectRecord({
                   </div>
                 )}
               </div>
-              <p className="pl-2 text-sm leading-[1.2]">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Tempore recusandae odit quo quas corrupti facilis animi ut, et
-                laborum iste provident non accusantium optio fuga repellat amet,
-                velit dolores asperiores. Lorem, ipsum dolor sit amet
-                consectetur adipisicing elit. Tempore recusandae odit quo quas
-                corrupti facilis animi ut, et laborum iste provident non
-                accusantium optio fuga repellat amet, velit dolores asperiores.
-              </p>
             </div>
             <Image
               src={'https://placehold.co/200x100.png'}
