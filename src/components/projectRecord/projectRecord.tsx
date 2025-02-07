@@ -32,6 +32,7 @@ export function ProjectRecord({
   } = project
   const expandedContentRef = useRef<HTMLDivElement>(null)
   const [contentHeight, setContentHeight] = useState(0)
+  const [updateHeight, setUpdateHeight] = useState(false)
 
   useEffect(() => {
     if (expandedContentRef.current) {
@@ -39,7 +40,7 @@ export function ProjectRecord({
       // including height, padding, and border (but not margin)
       setContentHeight(expandedContentRef.current.scrollHeight)
     }
-  }, [setContentHeight])
+  }, [setContentHeight, updateHeight])
 
   // TODO: extract title, paragraph styles into reusable css in global stylesheet
   // TODO: potentially add more info to the card on mobile
@@ -48,7 +49,8 @@ export function ProjectRecord({
   // TODO: make color into gray-something
   // TODO: think of a way to add description
   // TODO: add arrow icon on spotlight
-  // TODO: add images
+  // TODO: update images
+  // TODO: fix build error
 
   return (
     <div
@@ -197,7 +199,11 @@ export function ProjectRecord({
               width={200}
               height={100}
               quality={100}
+              placeholder="empty"
               className="w-full shrink-0 rounded-md object-cover md:w-auto"
+              onLoad={() => {
+                setUpdateHeight(!updateHeight)
+              }}
             />
           </div>
         </section>
