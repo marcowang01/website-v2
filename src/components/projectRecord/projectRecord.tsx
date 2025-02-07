@@ -51,7 +51,7 @@ export function ProjectRecord({
   // TODO: add arrow icon on spotlight
   // TODO: update images
   // TODO: fix build error
-  // TODO: pixelate image for placeholder
+  // TODO: add empty div behind image for placeholder height
 
   return (
     <div
@@ -119,7 +119,19 @@ export function ProjectRecord({
           )}
         >
           <div className="flex w-full flex-col justify-between gap-[10px] pt-4 md:flex-row">
-            <div className="flex w-full flex-col justify-between gap-5 md:w-[60%]">
+            <Image
+              src={image || ''}
+              alt={'project iamge'}
+              width={200}
+              height={100}
+              quality={100}
+              placeholder="empty"
+              className="hidden w-full shrink-0 rounded-md object-cover md:block md:w-auto"
+              onLoad={() => {
+                setUpdateHeight(!updateHeight)
+              }}
+            />
+            <div className="flex w-full flex-col justify-end gap-8 md:w-[60%]">
               <div className="flex flex-row items-baseline justify-start gap-4 font-normal text-[color:rgb(var(--project-card-light-text-rgb))]">
                 {link && (
                   <Link
@@ -194,18 +206,6 @@ export function ProjectRecord({
                 </div>
               </div>
             </div>
-            <Image
-              src={image || ''}
-              alt={'project iamge'}
-              width={200}
-              height={100}
-              quality={100}
-              placeholder="blur"
-              className="w-full shrink-0 rounded-md object-cover md:w-auto"
-              onLoad={() => {
-                setUpdateHeight(!updateHeight)
-              }}
-            />
           </div>
         </section>
       </div>
