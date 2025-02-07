@@ -57,11 +57,19 @@ export function ProjectRecord({
         <section className="flex w-full flex-row items-center justify-between gap-[10px]">
           <div className="flex flex-row items-baseline gap-3 text-base font-medium leading-[1.25] tracking-[-0.005em]">
             {title}
-            <div className="hidden w-fit text-[13px] font-normal uppercase tracking-[-0.02em] text-[color:rgb(var(--project-card-light-text-rgb))] md:block">
+            <div className="hidden w-fit text-sm font-normal uppercase tracking-[-0.02em] text-[color:rgb(var(--project-card-light-text-rgb))] md:block">
               {category}
             </div>
           </div>
+          <div className="text-xs font-light uppercase tracking-[-0.02em] text-[color:rgb(var(--project-card-light-text-rgb))]">
+            {date}
+          </div>
+        </section>
 
+        <section className="flex w-full flex-row items-center justify-start md:justify-between">
+          <div className="w-fit text-sm leading-[1.2] tracking-[-0.02em]">
+            {tagline}
+          </div>
           <div className="text-[color:rgb(var(--project-card-light-text-rgb))]">
             <CaretDownIcon
               className={cn(
@@ -73,15 +81,6 @@ export function ProjectRecord({
               width={18}
               height={18}
             />
-          </div>
-        </section>
-
-        <section className="flex w-full flex-row items-center justify-start md:justify-between">
-          <div className="w-fit text-sm leading-[1.2] tracking-[-0.02em]">
-            {tagline}
-          </div>
-          <div className="text-xs font-light uppercase tracking-[-0.02em] text-[color:rgb(var(--project-card-light-text-rgb))]">
-            {date}
           </div>
         </section>
         <section
@@ -110,29 +109,35 @@ export function ProjectRecord({
                 accusantium optio fuga repellat amet, velit dolores asperiores.
               </p>
               <div className="flex flex-row items-baseline justify-start gap-4 text-[color:rgb(var(--project-card-light-text-rgb))]">
-                <div className="transition-color flex flex-row items-baseline justify-start gap-1 duration-300 ease-in-out hover:text-[color:rgb(var(--project-card-text-rgb))]">
-                  <Link
-                    href={link}
-                    className="min-w-content text-xs leading-[1.2] tracking-[-0.02em]"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                <Link
+                  href={link}
+                  className="transition-color flex flex-row items-baseline justify-start gap-1 duration-300 ease-in-out hover:text-[color:rgb(var(--project-card-text-rgb))]"
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    e.preventDefault()
+                    window.open(link, '_blank', 'noopener,noreferrer')
+                  }}
+                >
+                  <div className="min-w-content text-xs leading-[1.2] tracking-[-0.02em]">
                     {link.endsWith('.pdf') ? 'PAPER' : 'WEBSITE'}
-                  </Link>
-                  <ArrowIcon className="h-[9px] w-[9px]" />
-                </div>
-                {github && (
-                  <div className="transition-color flex flex-row items-baseline justify-start gap-1 duration-300 ease-in-out hover:text-[color:rgb(var(--project-card-text-rgb))]">
-                    <Link
-                      href={github}
-                      className="min-w-content text-xs leading-[1.2] tracking-[-0.02em]"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      GITHUB
-                    </Link>
-                    <ArrowIcon className="h-[9px] w-[9px]" />
                   </div>
+                  <ArrowIcon className="h-[9px] w-[9px]" />
+                </Link>
+                {github && (
+                  <Link
+                    href={github}
+                    className="transition-color flex flex-row items-baseline justify-start gap-1 duration-300 ease-in-out hover:text-[color:rgb(var(--project-card-text-rgb))]"
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      e.preventDefault()
+                      window.open(github, '_blank', 'noopener,noreferrer')
+                    }}
+                  >
+                    <div className="min-w-content text-xs leading-[1.2] tracking-[-0.02em]">
+                      GITHUB
+                    </div>
+                    <ArrowIcon className="h-[9px] w-[9px]" />
+                  </Link>
                 )}
               </div>
             </div>
