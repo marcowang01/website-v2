@@ -23,6 +23,9 @@ export function ProjectDetails({
     if (link.includes('demo')) {
       return 'LIVE DEMO'
     }
+    if (link.includes('youtube')) {
+      return 'VIDEO'
+    }
     return 'WEBSITE'
   }, [link])
 
