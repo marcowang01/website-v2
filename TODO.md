@@ -1,66 +1,65 @@
 # TODO
 
-### Project Updates
-- LOUR
-  - deploy site
-  - postgres + index (supabase)
-- Lemma (WIP)
-  - no user
-  - record gif
-  - no website
-  - provide github
-- Scribe
-  - create gif
-  - inspect situation
-    - supabase setup?
-    - next auth setup?
-    - azure stt?
-    - next auth, supabase
-  - blitz
-    - supabase to store user table
-    - simple notes + transcript table
-    - (optional) vector search using modal?
-    - next auth using supabase without using google
-- Engine (WIP)
-  - add readme
-  - make github public
-  - take screenshot
-- Tomo
-  - see how viable a serverless websocket python backend using modal
-  - if not blitz remake using vercel ai sdk
-  - ask lilith for access to tomo github
+## Project Updates
+### LOUR
+- deploy site
+- postgres + index (supabase)
+### Lemma (WIP)
+- no user
+- record gif
+- no website
+- provide github
+### Scribe
+- create gif
+- inspect situation
+  - supabase setup?
+  - next auth setup?
+  - azure stt?
+  - next auth, supabase
+- blitz
+  - supabase to store user table
+  - simple notes + transcript table
+  - (optional) vector search using modal?
+  - next auth using supabase without using google
+### Engine (WIP)
+- add readme
+- make github public
+- take screenshot
+### Tomo
+- see how viable a serverless websocket python backend using modal
+- if not blitz remake using vercel ai sdk
+- ask lilith for access to tomo github
 
-### Website Updates
-- Spotlight
-  - Update Tomo -> Math helper
-- Collections
-  - Add new projects
-    - Engine
-    - Lemma
-    - LOUR
-  - Add descriptions
-    - tomo mention ARS
-  - Add WIP indicator
-  - Create blur urls for image placeholders
-  - update categories to be more eye catching
-  - Create gifs for relevant projects
-    - scribe
-    - igloo
-    - platz
-    - bounce knight
-    - news analyzer (optional)
-    - tetris (optional)
-- if no mobile don't run spotify requests
+## Website Updates
+### Spotlight
+- Update Tomo -> Math helper
+### Collections
+- Add new projects
+  - Engine
+  - Lemma
+  - LOUR
+- Add descriptions
+  - tomo mention ARS
+- Add WIP indicator
+- Create blur urls for image placeholders
+- update categories to be more eye catching
+- Create gifs for relevant projects
+  - scribe
+  - igloo
+  - platz
+  - bounce knight
+  - news analyzer (optional)
+  - tetris (optional)
 
-
-### Resume Updates
+## Resume Updates
 - Reduce bullet points on 
-- 
 
-### Leetcode Updates
+## Leetcode Updates
 - 3 per day
 
-### Future updates
+## Future updates
+- make sure spotify not running on mobile
+  - check user agent and maybe also window size
 - make resume bullet points react components
   - allow links to ARS electronica
   - allow links to rabbit blog posts
