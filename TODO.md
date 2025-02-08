@@ -64,7 +64,10 @@
   - allow links to ARS electronica
   - allow links to rabbit blog posts
   - link to boring vegas loop even
-  -
+- add more bullet points to TODO
+- make about a bit longer and informative of what kind of engineer I am
+- make website responsive for mid size screens
+  - keep main content the same but move side nav to mobile mode
 
 
 
