@@ -2,10 +2,33 @@
 
 ### Project Updates
 - LOUR
-- Lemma
+  - deploy site
+  - postgres + index (supabase)
+- Lemma (WIP)
+  - no user
+  - record gif
+  - no website
+  - provide github
 - Scribe
-- Engine
+  - create gif
+  - inspect situation
+    - supabase setup?
+    - next auth setup?
+    - azure stt?
+    - next auth, supabase
+  - blitz
+    - supabase to store user table
+    - simple notes + transcript table
+    - (optional) vector search using modal?
+    - next auth using supabase without using google
+- Engine (WIP)
+  - add readme
+  - make github public
+  - take screenshot
 - Tomo
+  - see how viable a serverless websocket python backend using modal
+  - if not blitz remake using vercel ai sdk
+  - ask lilith for access to tomo github
 
 ### Website Updates
 - Spotlight
@@ -15,7 +38,6 @@
     - Engine
     - Lemma
     - LOUR
-    - 
   - Add descriptions
     - tomo mention ARS
   - Add WIP indicator
