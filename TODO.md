@@ -11,8 +11,23 @@
 - Spotlight
   - Update Tomo -> Math helper
 - Collections
+  - Add new projects
+    - Engine
+    - Lemma
+    - LOUR
+    - 
   - Add descriptions
+    - tomo mention ARS
   - Add WIP indicator
+  - Create blur urls for image placeholders
+  - update categories to be more eye catching
+  - Create gifs for relevant projects
+    - scribe
+    - igloo
+    - platz
+    - bounce knight
+    - news analyzer (optional)
+    - tetris (optional)
 
 
 ### Resume Updates
@@ -21,6 +36,13 @@
 
 ### Leetcode Updates
 - 3 per day
+
+### Future updates
+- make resume bullet points react components
+  - allow links to ARS electronica
+  - allow links to rabbit blog posts
+  - link to boring vegas loop even
+  -
 
 
 

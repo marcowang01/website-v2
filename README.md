@@ -1,5 +1,5 @@
 # Personal Website Version 2.0
-Built using NextJS, tailwind, Typescript
+Built using NextJS. Currently in the process of migrating to TS + tailwind.
 
 Initial Design by Shaobo Z.
 

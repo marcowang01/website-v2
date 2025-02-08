@@ -26,7 +26,7 @@ const expericences = {
       position: 'Software Engineer Intern',
       bulletpoints: [
         'Led the development of a simulator for the Vegas Tunnel Loop to validate software systems and architectural designs',
-        'Centralized maintenance for the vehicle fleet by building an issue tracker using ReactJS/PostgresSQL',
+        'Centralized maintenance for the vehicle fleet by building a full stack issue tracker using ReactJS/PostgresSQL',
         'Built a physics engine and an automated testing pipeline for simulating vehicles and passengers with ≥ 90% accuracy',
       ],
       date: 'Jun. 2023 - Aug. 2023',
