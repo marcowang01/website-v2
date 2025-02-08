@@ -1,6 +1,6 @@
 export interface Project {
   title: string
-  description: string
+  description?: string
   tagline: string
   link: string
   github?: string
@@ -102,7 +102,7 @@ export const projects: Project[] = [
     title: 'Formula Telemetry',
     description:
       "A full-stack telemetry dashboard built for the NU Formula Racing team to visualize, persist and analyze data from the car's sensors in real-time.",
-    tagline: 'Real-time telemtry insights for NU\'s Formula Racing team',
+    tagline: "Real-time telemtry insights for NU's Formula Racing team",
     link: '',
     github: 'https://github.com/marcowang01/telemetry-remote-23',
     date: 'Winter, 2022',
@@ -113,8 +113,8 @@ export const projects: Project[] = [
   },
   {
     title: 'Bounce Knight',
-    description:
-      'A 2D fighting game built in Unity. The game features a fully animated characters and 3 unique stages.',
+    // description:
+    //   'A 2D fighting game built in Unity. The game features a fully animated characters and 3 unique stages.',
     tagline: 'Dynamic 2D fighter with animated characters',
     link: '',
     github: 'https://github.com/marcowang01/Bounce-Knight-Unity2D/tree/master',
@@ -138,7 +138,7 @@ export const projects: Project[] = [
     image: '/images/projects/news.png',
   },
   {
-    title: 'Tetris',
+    title: 'CPP Tetris',
     description: '',
     tagline: 'A simple implementation of the classic game Tetris',
     link: '',

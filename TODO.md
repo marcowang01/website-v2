@@ -42,6 +42,7 @@
 - Add descriptions
   - tomo mention ARS
   - Formula mention CAN BUS data
+  - try justify evenly
 - Add WIP indicator
 - Create blur urls for image placeholders
 - update categories to be more eye catching
