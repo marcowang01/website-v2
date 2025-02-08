@@ -33,7 +33,7 @@ export const projects: Project[] = [
     description:
       'A real-time audio-based companion aimed at enhancing children’s learning through story‑driven dialogues.',
     tagline: "Bringing story-driven dialogues to children's learning",
-    link: 'https://tomo-git-mw-new-controls-yulilith.vercel.app/',
+    link: 'https://tomo-git-mw-new-controls-yulilith.vercel.app/?demo',
     github: '',
     date: 'Summer, 2023',
     skills: ['Python', 'Typescript', 'Next.js'],
@@ -102,7 +102,7 @@ export const projects: Project[] = [
     title: 'Formula Telemetry',
     description:
       "A full-stack telemetry dashboard built for the NU Formula Racing team to visualize, persist and analyze data from the car's sensors in real-time.",
-    tagline: 'Real-time telemtry insights for NU\'s Formula Racing team',
+    tagline: "Real-time telemtry insights for NU's Formula Racing team",
     link: '',
     github: 'https://github.com/marcowang01/telemetry-remote-23',
     date: 'Winter, 2022',
