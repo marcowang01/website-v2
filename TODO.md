@@ -29,6 +29,7 @@
 - see how viable a serverless websocket python backend using modal
 - if not blitz remake using vercel ai sdk
 - ask lilith for access to tomo github
+- (optional) create Three.JS 3D model
 
 ## Website Updates
 ### Spotlight
@@ -40,6 +41,7 @@
   - LOUR
 - Add descriptions
   - tomo mention ARS
+  - Formula mention CAN BUS data
 - Add WIP indicator
 - Create blur urls for image placeholders
 - update categories to be more eye catching
