@@ -28,6 +28,7 @@
     - bounce knight
     - news analyzer (optional)
     - tetris (optional)
+- if no mobile don't run spotify requests
 
 
 ### Resume Updates

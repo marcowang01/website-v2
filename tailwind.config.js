@@ -11,10 +11,6 @@ export default {
           300: '#999999', // light text
           400: '#555555', // text
         },
-        'icon-gray': {
-          300: '#777777',
-          400: '#444444',
-        },
       },
       fontWeight: {
         light: 300,
