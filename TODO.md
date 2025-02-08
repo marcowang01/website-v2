@@ -64,10 +64,14 @@
   - allow links to ARS electronica
   - allow links to rabbit blog posts
   - link to boring vegas loop even
+  - alternatively use `markdown` as tsx for projects and experiences
 - add more bullet points to TODO
-- make about a bit longer and informative of what kind of engineer I am
+- make `about` a bit longer and informative of what kind of engineer I am
 - make website responsive for mid size screens
   - keep main content the same but move side nav to mobile mode
+  - the 87% width and padding right can be abstracted into a shared layout
+    - and used to help with centralizing how to make it responsive
+
 
 
 
