@@ -1,11 +1,18 @@
-Personal Website Version 2.0
+# Personal Website Version 2.0
+Built using NextJS, tailwind, Typescript
 
-# TODO
+Initial Design by Shaobo Z.
 
-- [ ] extract title, paragraph styles into reusable css in global stylesheet
-- [ ] add click image to open modal
-- [ ] support and optimized for gifs
-- [ ] think of a way to add description
-- [ ] add empty div behind image for placeholder height
-- [ ] add LOUR
-- [ ] add Lemma
+# How to use the repo
+Running the development server
+```
+npm run dev
+```
+
+Create a production build
+```
+npm run build
+```
+
+## Requirements
+- Spotify API access tokens

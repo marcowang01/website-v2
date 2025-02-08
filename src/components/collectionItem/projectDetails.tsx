@@ -12,7 +12,8 @@ export function ProjectDetails({
   project: Project
   onImageLoad: () => void
 }) {
-  const { title, image, link, github, collaborators, skills } = project
+  const { title, image, link, github, collaborators, skills, description } =
+    project
 
   return (
     <div className="flex w-full flex-col justify-between gap-[10px] pt-4 md:flex-row">
@@ -37,6 +38,9 @@ export function ProjectDetails({
           )}
           {github && <ProjectLink href={github} label="GITHUB" />}
         </div>
+        {/* <p className="text-sm leading-[1.2] tracking-[-0.02em]">
+          {description}
+        </p> */}
         <div className="hidden flex-col md:flex">
           <ProjectInfoList
             label="Collaborated with"
