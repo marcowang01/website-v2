@@ -37,7 +37,7 @@ export interface Project {
   collaborators?: Collaborators
   image: ProjectImage
   category: string
-  showInSpotlight: boolean
+  showInSpotlight?: boolean
 }
 
 export const projects: Project[] = [
@@ -100,7 +100,6 @@ export const projects: Project[] = [
       items: [{ name: 'Shaobo Z.', link: 'https://shaobo.co/' }],
     },
     category: 'LLM Pipeline',
-    showInSpotlight: false,
     image: {
       src: '/images/projects/realm.png',
       placeholder: realmPlaceholder,
@@ -127,7 +126,6 @@ export const projects: Project[] = [
       ],
     },
     category: 'UI Library',
-    showInSpotlight: false,
     image: {
       src: '/images/projects/platz.png',
       placeholder: platzPlaceholder,
@@ -147,7 +145,6 @@ export const projects: Project[] = [
       items: [{ name: 'Shaobo Z.', link: 'https://shaobo.co/' }],
     },
     category: 'GPU Programming',
-    showInSpotlight: false,
     image: {
       src: '/images/projects/conway.png',
       placeholder: conwayPlaceholder,
@@ -198,7 +195,6 @@ export const projects: Project[] = [
     },
     skills: ['Next.js', 'Node.js', 'Socket.io', 'DynamoDB'],
     category: 'Data Dashboard',
-    showInSpotlight: false,
     image: {
       src: '/images/projects/formula.png',
       placeholder: formulaPlaceholder,
@@ -214,7 +210,6 @@ export const projects: Project[] = [
     date: 'Winter, 2021',
     skills: ['C#', 'Unity'],
     category: 'unity game',
-    showInSpotlight: false,
     image: {
       src: '/images/projects/bounce.png',
       placeholder: bouncePlaceholder,
@@ -231,7 +226,6 @@ export const projects: Project[] = [
     date: 'Winter, 2021',
     skills: ['Python', 'Scikit-Learn', 'Flask'],
     category: 'Machine Learning',
-    showInSpotlight: false,
     image: {
       src: '/images/projects/news.png',
       placeholder: newsPlaceholder,
@@ -246,7 +240,6 @@ export const projects: Project[] = [
     date: 'Fall, 2021',
     skills: ['C', 'C++'],
     category: 'C++ Porgramming',
-    showInSpotlight: false,
     image: {
       src: '/images/projects/tetris.png',
       placeholder: tetrisPlaceholder,
