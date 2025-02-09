@@ -41,12 +41,12 @@ export function ProjectDetails({
   return (
     <div className="flex w-full flex-col justify-between gap-[10px] pt-4 md:flex-row">
       <Image
-        src={image || ''}
+        src={image?.src || ''}
         alt={'project image'}
         width={200}
         height={150}
         quality={100}
-        placeholder="empty"
+        placeholder={image?.placeholder || 'empty'}
         style={{ objectFit: 'cover' }}
         className="hidden w-full shrink-0 rounded-md md:block md:h-[150px] md:w-auto"
         onLoad={onImageLoad}
