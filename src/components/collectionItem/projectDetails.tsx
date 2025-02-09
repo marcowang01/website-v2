@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { ProjectLink } from './projectLink'
 import { ProjectInfoList } from './projectInfoList'
 import { cn } from '@/lib/util'
+import { useCallback } from 'react'
 
 export function ProjectDetails({
   project,
@@ -15,6 +16,19 @@ export function ProjectDetails({
 }) {
   const { title, image, link, github, collaborators, skills, description } =
     project
+
+  const getLinkLabel = useCallback(() => {
+    if (link.endsWith('.pdf')) {
+      return 'PDF'
+    }
+    if (link.includes('demo')) {
+      return 'LIVE DEMO'
+    }
+    if (link.includes('youtube')) {
+      return 'VIDEO'
+    }
+    return 'WEBSITE'
+  }, [link])
 
   return (
     <div className="flex w-full flex-col justify-between gap-[10px] pt-4 md:flex-row">
@@ -37,12 +51,7 @@ export function ProjectDetails({
       >
         <div className="flex flex-col gap-2">
           <div className="flex flex-row items-baseline justify-start gap-4 font-normal text-[color:rgb(var(--project-card-light-text-rgb))]">
-            {link && (
-              <ProjectLink
-                href={link}
-                label={link.endsWith('.pdf') ? 'PDF' : 'WEBSITE'}
-              />
-            )}
+            {link && <ProjectLink href={link} label={getLinkLabel()} />}
             {github && <ProjectLink href={github} label="GITHUB" />}
           </div>
           {description && (

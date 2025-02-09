@@ -35,7 +35,7 @@ export const projects: Project[] = [
       'helping them learn through interactive dialogue. ' +
       'Featured at Ars Electronica Festival 2023.',
     tagline: "Bringing story-driven dialogue to children's learning",
-    link: 'https://tomo-git-mw-new-controls-yulilith.vercel.app/',
+    link: 'https://tomo-git-mw-new-controls-yulilith.vercel.app/?demo',
     github: '',
     date: 'Summer, 2023',
     skills: ['Python', 'Typescript', 'Next.js'],
