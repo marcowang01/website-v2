@@ -32,7 +32,6 @@ export interface Project {
   description?: string
   tagline: string
   links: string[]
-  github?: string
   date: string
   skills: string[]
   collaborators?: Collaborators
@@ -74,7 +73,6 @@ export const projects: Project[] = [
       'https://tomo-git-mw-new-controls-yulilith.vercel.app/?demo',
       'https://www.flickr.com/photos/arselectronica/53182961043/in/photostream/?ars-electronica',
     ],
-    github: '',
     date: 'Summer, 2023',
     skills: ['Next.js', 'Socket.io'],
     collaborators: {
@@ -92,8 +90,7 @@ export const projects: Project[] = [
     description:
       'An LLM pipeline that uses vector stores to improve accuracy and reduce costs for Q&A tasks over domain-specific knowledge bases.',
     tagline: 'Retrieval augmented generation pipeline for question answering',
-    links: ['/files/realm.pdf'],
-    github: 'https://github.com/marcowang01/realm',
+    links: ['/files/realm.pdf', 'https://github.com/marcowang01/realm'],
     date: 'Spring, 2023',
     skills: ['Python', 'Modal', 'Langchain', 'ChromaDB'],
     collaborators: {
@@ -112,8 +109,7 @@ export const projects: Project[] = [
       'A Next.js template for creating infinite canvas-based interfaces. ' +
       'Streamlines the design-to-implementation for personal websites.',
     tagline: 'Open-source personal website template for creatives',
-    links: ['https://platz.ooo/'],
-    github: 'https://github.com/szgbo/platz',
+    links: ['https://platz.ooo/', 'https://github.com/szgbo/platz'],
     date: 'Winter, 2023',
     skills: ['Next.js', 'Framer Motion', 'tldraw'],
     collaborators: {
@@ -131,8 +127,7 @@ export const projects: Project[] = [
       "A parallel implementation of Conway's Game of Life. " +
       'Achieved 1000x speedup through shared memory and bit-level optimization.',
     tagline: "CUDA-Accelerated Conway's Game of Life",
-    links: ['/files/conway.pdf'],
-    github: 'https://github.com/marcowang01/conway-gpu',
+    links: ['/files/conway.pdf', 'https://github.com/marcowang01/conway-gpu'],
     date: 'Spring, 2023',
     skills: ['C++', 'CUDA'],
     collaborators: {
@@ -151,8 +146,7 @@ export const projects: Project[] = [
       'allowing users to communicate naturally across channels. ',
     // 'Pilot tested with 20+ users.',
     tagline: 'Connecting people through context-aware digital spaces',
-    links: ['https://www.igloo.place/'],
-    github: 'https://github.com/marcowang01/Igloo',
+    links: ['https://www.igloo.place/', 'https://github.com/marcowang01/Igloo'],
     date: 'Summer, 2022',
     skills: ['Laravel', 'React Native'],
     collaborators: {
@@ -172,8 +166,7 @@ export const projects: Project[] = [
       'A real-time dashboard that collects and visualizes sensor data from the NU Formula Racing car. ' +
       'Monitored performance metrics for race day.',
     tagline: 'Real-time telemetry insights for racing performance',
-    links: [],
-    github: 'https://github.com/marcowang01/telemetry-remote-23',
+    links: ['https://github.com/marcowang01/telemetry-remote-23'],
     date: 'Winter, 2022',
     collaborators: {
       label: 'Collaborated with',
@@ -191,8 +184,7 @@ export const projects: Project[] = [
     description:
       'A 2D fighting game featuring custom-animated characters and three unique stages.',
     tagline: 'Dynamic 2D fighter with animated characters',
-    links: [],
-    github: 'https://github.com/marcowang01/Bounce-Knight-Unity2D/tree/master',
+    links: ['https://github.com/marcowang01/Bounce-Knight-Unity2D'],
     date: 'Winter, 2021',
     skills: ['C#', 'Unity'],
     category: 'unity game',
@@ -207,8 +199,10 @@ export const projects: Project[] = [
       'A machine learning web app that analyzes news articles for political bias. ' +
       'Trained on a dataset of 1,300 labeled articles.',
     tagline: 'Detection and classification of political bias in news articles',
-    links: ['https://www.youtube.com/watch?v=2kNVx36dPOM&t=1s'],
-    github: 'https://github.com/marcowang01/Article-Analyzer-Web/tree/master',
+    links: [
+      'https://www.youtube.com/watch?v=2kNVx36dPOM&t=1s',
+      'https://github.com/marcowang01/Article-Analyzer-Web',
+    ],
     date: 'Winter, 2021',
     skills: ['Python', 'Scikit-Learn', 'Flask'],
     category: 'Machine Learning',
@@ -221,8 +215,7 @@ export const projects: Project[] = [
     title: 'CPP Tetris',
     description: '',
     tagline: 'A simple implementation of the classic game Tetris',
-    links: [],
-    github: 'https://github.com/marcowang01/Tetris_in_C',
+    links: ['https://github.com/marcowang01/Tetris_in_C'],
     date: 'Fall, 2021',
     skills: ['C', 'C++'],
     category: 'C++ Porgramming',

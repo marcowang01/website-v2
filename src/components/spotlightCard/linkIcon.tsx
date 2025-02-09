@@ -2,32 +2,32 @@
 
 import GithubIcon from '@/svg/github'
 import BrowserIcon from '@/svg/browser'
-import React from 'react'
+import React, { useCallback } from 'react'
 import Link from 'next/link'
-
-export type IconName = 'github' | 'browser'
+import { ArsElectronicaIcon } from '@/svg/ars-electronica'
 
 export default function LinkIcon({
-  iconName,
   link,
   className,
 }: {
-  iconName: IconName
   link: string
   className: string
 }) {
-  const iconNameToComponent: Record<IconName, React.ElementType> = {
-    github: GithubIcon,
-    browser: BrowserIcon,
-  }
+  const getLinkLabel = useCallback(() => {
+    if (link.includes('github')) {
+      return 'GITHUB'
+    }
+    if (link.includes('?')) {
+      return link.split('?')[1]?.replace(/-/g, ' ').toUpperCase() || 'WEBSITE'
+    }
+    return 'WEBSITE'
+  }, [link])
 
   const handleOnClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
     e.stopPropagation()
     window.open(link, '_blank', 'noopener,noreferrer')
   }
-
-  const IconComponent = iconNameToComponent[iconName]
 
   return (
     <Link
@@ -38,8 +38,19 @@ export default function LinkIcon({
       className={className}
     >
       <div className="z-50">
-        <IconComponent />
+        <LinkIconSvg iconName={getLinkLabel()} />
       </div>
     </Link>
   )
+}
+
+function LinkIconSvg({ iconName }: { iconName: string }) {
+  if (iconName === 'GITHUB') {
+    return <GithubIcon />
+  }
+  if (iconName === 'ARS ELECTRONICA') {
+    return <ArsElectronicaIcon />
+  }
+  // default to browser icon
+  return <BrowserIcon />
 }

@@ -14,8 +14,7 @@ export function ProjectDetails({
   project: Project
   onImageLoad: () => void
 }) {
-  const { title, image, links, github, collaborators, skills, description } =
-    project
+  const { title, image, links, collaborators, skills, description } = project
 
   const skillItems = skills.map((skill) => ({ name: skill }))
 
@@ -28,6 +27,9 @@ export function ProjectDetails({
     }
     if (link.includes('youtube')) {
       return 'VIDEO'
+    }
+    if (link.includes('github')) {
+      return 'GITHUB'
     }
     if (link.includes('?')) {
       return link.split('?')[1]?.replace(/-/g, ' ').toUpperCase() || 'WEBSITE'
@@ -64,7 +66,6 @@ export function ProjectDetails({
                   label={getLinkLabel(link)}
                 />
               ))}
-              {github && <ProjectLink href={github} label="GITHUB" />}
             </div>
             {description && (
               <p className="mb-2 text-sm font-light leading-[1.2] tracking-[-0.02em] text-project-gray-400">

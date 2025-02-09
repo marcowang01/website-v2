@@ -6,9 +6,9 @@ import ArrowIcon from '@/svg/arrow'
 import Image from 'next/image'
 
 export function SpotlightCard({ project }: { project: Project }) {
-  const { title, description, links, github, date, skills, image } = project
+  const { title, description, links, date, skills, image } = project
 
-  const priorityLink = links[0] || github
+  const priorityLink = links[0]
 
   const handleOnClick = (e: React.MouseEvent<HTMLDivElement>) => {
     e.preventDefault()
@@ -64,24 +64,14 @@ export function SpotlightCard({ project }: { project: Project }) {
             ))}
           </div>
           <div className="relative z-10 flex flex-row items-center justify-end gap-3">
-            {github && github.length > 0 && (
-              <div className="relative z-10">
+            {links.map((link, index) => (
+              <div key={`${link}-${index}`}>
                 <LinkIcon
-                  iconName="github"
-                  link={github}
+                  link={link}
                   className="text-project-gray-300 transition-colors duration-150 ease-in-out md:hover:text-project-gray-400"
                 />
               </div>
-            )}
-            {priorityLink && priorityLink.length > 0 && (
-              <div className="relative z-10">
-                <LinkIcon
-                  iconName="browser"
-                  link={priorityLink}
-                  className="text-project-gray-300 transition-colors duration-150 ease-in-out md:hover:text-project-gray-400"
-                />
-              </div>
-            )}
+            ))}
           </div>
         </section>
       </div>
