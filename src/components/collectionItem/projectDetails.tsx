@@ -14,8 +14,7 @@ export function ProjectDetails({
   project: Project
   onImageLoad: () => void
 }) {
-  const { title, image, links, github, collaborators, skills, description } =
-    project
+  const { title, image, links, collaborators, skills, description } = project
 
   const skillItems = skills.map((skill) => ({ name: skill }))
 
@@ -23,11 +22,11 @@ export function ProjectDetails({
     if (link.endsWith('.pdf')) {
       return 'PDF'
     }
-    if (link.includes('demo')) {
-      return 'LIVE DEMO'
-    }
     if (link.includes('youtube')) {
       return 'VIDEO'
+    }
+    if (link.includes('github')) {
+      return 'GITHUB'
     }
     if (link.includes('?')) {
       return link.split('?')[1]?.replace(/-/g, ' ').toUpperCase() || 'WEBSITE'
@@ -38,7 +37,7 @@ export function ProjectDetails({
   return (
     <>
       {/* <div className="mt-3 h-[1px] w-full bg-project-gray-200" /> */}
-      <div className="flex w-full flex-col justify-between gap-[10px] pt-4 md:flex-row">
+      <div className="flex w-full flex-col justify-between gap-[10px] pt-4 lg:flex-row">
         <Image
           src={image.src}
           alt={'project image'}
@@ -47,17 +46,16 @@ export function ProjectDetails({
           quality={100}
           placeholder={image.placeholder}
           style={{ objectFit: 'cover' }}
-          className="aspect-5/3 block w-full shrink-0 rounded-md md:h-[150px] md:w-auto"
+          className="aspect-5/3 block w-full shrink-0 rounded-md md:w-[60%] lg:h-[150px] lg:w-auto"
           onLoad={onImageLoad}
         />
         <div
-          className={cn('flex w-full flex-col md:w-[60%]', {
-            'justify-between gap-0 pt-1': description,
-            'justify-end gap-8': !description,
-          })}
+          className={cn(
+            'flex w-full flex-col justify-between gap-0 pt-1 md:w-[80%] lg:w-[60%]'
+          )}
         >
           <div className="flex flex-col gap-4">
-            <div className="mt-2 flex flex-row items-baseline justify-start gap-4 font-normal text-[color:rgb(var(--project-card-light-text-rgb))] md:mt-0">
+            <div className="mt-2 flex flex-row items-baseline justify-start gap-4 font-normal text-project-gray-300 md:mt-0">
               {links.map((link) => (
                 <ProjectLink
                   key={link}
@@ -65,7 +63,6 @@ export function ProjectDetails({
                   label={getLinkLabel(link)}
                 />
               ))}
-              {github && <ProjectLink href={github} label="GITHUB" />}
             </div>
             {description && (
               <p className="mb-2 text-sm font-light leading-[1.2] tracking-[-0.02em] text-project-gray-400">
@@ -74,15 +71,15 @@ export function ProjectDetails({
             )}
           </div>
 
-          <div className="hidden flex-col md:flex">
-            <ProjectInfoList
-              label={collaborators?.label || 'Collaborated with'}
-              items={collaborators?.items || []}
-              title={title}
-            />
+          <div className="hidden flex-col lg:flex">
             <ProjectInfoList
               label="Built using"
               items={skillItems}
+              title={title}
+            />
+            <ProjectInfoList
+              label={collaborators?.label || 'Collaborated with'}
+              items={collaborators?.items || []}
               title={title}
             />
           </div>

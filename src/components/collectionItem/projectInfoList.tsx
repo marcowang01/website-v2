@@ -13,14 +13,16 @@ export function ProjectInfoList({ label, items, title }: ProjectInfoListProps) {
   if (!items?.length) return null
 
   return (
-    <div className="flex flex-row items-center gap-3 text-sm tracking-[-0.02em]">
-      <span className="w-[120px] shrink-0 font-normal text-project-gray-400">
-        {label}
-      </span>
+    <div className="flex flex-row items-center gap-3 text-[13px]">
+      {label && (
+        <span className="w-[120px] shrink-0 font-light tracking-[-0.02em] text-project-gray-400">
+          {label}
+        </span>
+      )}
       {items.map((item, index) => (
         <span
           key={`${item}-${index}-${title}`}
-          className="text-nowrap font-light text-project-gray-300"
+          className="text-nowrap font-light tracking-[-0.02em] text-project-gray-300"
         >
           {item.link ? (
             <Link
