@@ -91,8 +91,10 @@ export const projects: Project[] = [
   {
     title: 'Igloo',
     description:
-      'A reimagination of social tools, driven by organic interpersonal relationships. Currently, a prototype tested within a small community of 20+ users.',
-    tagline: 'Reimagination of social connections in the digital age',
+      'A social platform that organizes interactions into context-aware spaces, ' +
+      'allowing users to communicate naturally across channels. ' +
+      'Launched to a community of 20+ users.',
+    tagline: 'Connecting people through context-aware digital spaces',
     link: 'https://www.igloo.place/',
     github: 'https://github.com/marcowang01/Igloo',
     date: 'Summer, 2022',
@@ -117,8 +119,8 @@ export const projects: Project[] = [
   },
   {
     title: 'Bounce Knight',
-    // description:
-    //   'A 2D fighting game built in Unity. The game features a fully animated characters and 3 unique stages.',
+    description:
+      'A 2D fighting game built in Unity. The game features a fully animated characters and 3 unique stages.',
     tagline: 'Dynamic 2D fighter with animated characters',
     link: '',
     github: 'https://github.com/marcowang01/Bounce-Knight-Unity2D/tree/master',
