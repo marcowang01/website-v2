@@ -47,7 +47,7 @@ export const projects: Project[] = [
   {
     title: 'Realm',
     description:
-      "An LLM pipeline that leverages vector DB's to improve performance and reduce costs for question answering tasks over domain-specific knowledge bases.",
+      'An LLM pipeline that leverages vector stores to improve accuracy and reduce costs for Q&A tasks over domain-specific knowledge bases.',
     tagline: 'Retrieval augmented generation pipeline for question answering',
     link: '/files/realm.pdf',
     github: 'https://github.com/marcowang01/realm',
@@ -61,12 +61,13 @@ export const projects: Project[] = [
   {
     title: 'PlatzUI',
     description:
-      'An open-source personal website template for creatives, with a focus on streamlining the design-to-implementation process.',
+      'A Next.js template for creating infinite canvas-based interfaces for personal websites, ' +
+      'designed to simplify the design-to-implementation process.',
     tagline: 'Open-source personal website template for creatives',
     link: 'https://platz.ooo/',
     github: 'https://github.com/szgbo/platz',
     date: 'Winter, 2023',
-    skills: ['Typescript', 'Next.js'],
+    skills: ['Typescript', 'Next.js', 'Framer Motion'],
     collaborators: ['Shaobo Z.', 'Marco Y.', 'Dalu L.'],
     category: 'UI Library',
     showInSpotlight: false,
@@ -75,7 +76,8 @@ export const projects: Project[] = [
   {
     title: 'Conway',
     description:
-      "A CUDA-accelerated implementation of Conway's Game of Life, a cellular automaton that simulates the evolution of a grid of cells based on a set of rules.",
+      "A parallel implementation of Conway's Game of Life using CUDA, " +
+      'achieving 1000x speedup through shared memory and bit-level optimization.',
     tagline: "CUDA-Accelerated Conway's Game of Life",
     link: '/files/conway.pdf',
     github: 'https://github.com/marcowang01/conway-gpu',
