@@ -11,26 +11,25 @@ export function SpotlightCard({ project }: { project: Project }) {
 
   const priorityLink = links[0]
 
-  const handleOnClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const handleOnClick = (e: React.MouseEvent<HTMLDivElement>) => {
     e.preventDefault()
     e.stopPropagation()
     window.open(priorityLink, '_blank', 'noopener,noreferrer')
   }
 
   return (
-    <Link
-      href={priorityLink ?? ''}
+    <div
       className={cn(
-        'group flex flex-row items-start justify-start gap-4',
+        'group flex flex-col-reverse items-start justify-start gap-4 md:flex-row',
         'md:min-h-[220px] md:w-[87%] md:p-10',
         'rounded-[20px] bg-project-gray-150',
         'cursor-pointer text-project-gray-400',
         'origin-center',
         'transition-all duration-200 ease-in-out',
-        'md:hover:scale-[1.01] md:hover:bg-project-gray-100',
+        'md:hover:scale-[1.01]',
         'md:active:scale-100',
         'min-h-[110px] w-full px-5 py-6',
-        'hover:transform-none hover:bg-transparent'
+        'hover:transform-none hover:bg-project-gray-100'
       )}
       onClick={handleOnClick}
     >
@@ -42,7 +41,7 @@ export function SpotlightCard({ project }: { project: Project }) {
         quality={100}
         placeholder={image.placeholder}
         style={{ objectFit: 'cover' }}
-        className="aspect-5/3 hidden w-full shrink-0 rounded-md lg:block lg:h-[140px] lg:w-auto"
+        className="aspect-5/3 w-full shrink-0 rounded-md lg:h-[140px] lg:w-auto"
       />
       <div className="flex flex-col items-start justify-between">
         <div>
@@ -55,7 +54,7 @@ export function SpotlightCard({ project }: { project: Project }) {
               {date}
             </div>
           </section>
-          <section className="w-full text-base leading-[1.2] tracking-[-0.02em] md:w-4/5">
+          <section className="w-full text-base leading-[1.2] tracking-[-0.02em] md:w-[90%]">
             {description}
           </section>
         </div>
@@ -77,6 +76,6 @@ export function SpotlightCard({ project }: { project: Project }) {
           </div>
         </section>
       </div>
-    </Link>
+    </div>
   )
 }
