@@ -20,7 +20,7 @@ export function SpotlightCard({ project }: { project: Project }) {
   return (
     <div
       className={cn(
-        'group flex flex-col-reverse items-start justify-start gap-4 md:flex-row',
+        'group flex flex-col-reverse items-start justify-start gap-8 md:flex-row',
         'md:min-h-[220px] md:w-[87%] md:p-10',
         'rounded-[20px] bg-project-gray-150',
         'cursor-pointer text-project-gray-400',
@@ -54,7 +54,7 @@ export function SpotlightCard({ project }: { project: Project }) {
               {date}
             </div>
           </section>
-          <section className="w-full text-base leading-[1.2] tracking-[-0.02em] md:w-[90%]">
+          <section className="w-full text-base leading-[1.2] tracking-[-0.02em]">
             {description}
           </section>
         </div>
