@@ -14,21 +14,27 @@ export function ProjectDetails({
   project: Project
   onImageLoad: () => void
 }) {
-  const { title, image, link, github, collaborators, skills, description } =
+  const { title, image, links, github, collaborators, skills, description } =
     project
 
-  const getLinkLabel = useCallback(() => {
-    if (link.endsWith('.pdf')) {
-      return 'PDF'
-    }
-    if (link.includes('demo')) {
-      return 'LIVE DEMO'
-    }
-    if (link.includes('youtube')) {
-      return 'VIDEO'
-    }
-    return 'WEBSITE'
-  }, [link])
+  const getLinkLabel = useCallback(
+    (link: string) => {
+      if (link.endsWith('.pdf')) {
+        return 'PDF'
+      }
+      if (link.includes('demo')) {
+        return 'LIVE DEMO'
+      }
+      if (link.includes('youtube')) {
+        return 'VIDEO'
+      }
+      if (link.includes('?')) {
+        return link.split('?')[1]?.replace(/-/g, ' ').toUpperCase()
+      }
+      return 'WEBSITE'
+    },
+    [links]
+  )
 
   return (
     <div className="flex w-full flex-col justify-between gap-[10px] pt-4 md:flex-row">
@@ -51,7 +57,9 @@ export function ProjectDetails({
       >
         <div className="flex flex-col gap-4">
           <div className="flex flex-row items-baseline justify-start gap-4 font-normal text-[color:rgb(var(--project-card-light-text-rgb))]">
-            {link && <ProjectLink href={link} label={getLinkLabel()} />}
+            {links.map((link) => (
+              <ProjectLink key={link} href={link} label={getLinkLabel(link)} />
+            ))}
             {github && <ProjectLink href={github} label="GITHUB" />}
           </div>
           {description && (
