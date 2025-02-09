@@ -29,7 +29,7 @@ export function ProjectDetails({
         return 'VIDEO'
       }
       if (link.includes('?')) {
-        return link.split('?')[1]?.replace(/-/g, ' ').toUpperCase()
+        return link.split('?')[1]?.replace(/-/g, ' ').toUpperCase() || 'WEBSITE'
       }
       return 'WEBSITE'
     },

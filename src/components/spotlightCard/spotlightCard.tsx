@@ -5,9 +5,9 @@ import { cn } from '@/lib/util'
 import ArrowIcon from '@/svg/arrow'
 
 export function SpotlightCard({ project }: { project: Project }) {
-  const { title, description, link, github, date, skills } = project
+  const { title, description, links, github, date, skills } = project
 
-  const priorityLink = link || github
+  const priorityLink = links[0] || github
 
   const handleOnClick = (e: React.MouseEvent<HTMLDivElement>) => {
     e.preventDefault()
@@ -61,11 +61,11 @@ export function SpotlightCard({ project }: { project: Project }) {
               />
             </div>
           )}
-          {link && link.length > 0 && (
+          {priorityLink && priorityLink.length > 0 && (
             <div className="relative z-10">
               <LinkIcon
                 iconName="browser"
-                link={link}
+                link={priorityLink}
                 className="text-project-gray-300 md:hover:text-project-gray-400 transition-colors duration-150 ease-in-out"
               />
             </div>
