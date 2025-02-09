@@ -1,6 +1,6 @@
 export interface Project {
   title: string
-  description: string
+  description?: string
   tagline: string
   link: string
   github?: string
@@ -16,9 +16,9 @@ export const projects: Project[] = [
   {
     title: 'Scribe',
     description:
-      'An AI-powered app for creating and searching through notes for lectures, meetings and discussions.',
-    tagline:
-      'Transforming live lectures into interactive notes and study guides',
+      'An AI note-taking app that transcribes lectures and meetings in real-time, ' +
+      'with a chat interface to search and query across all your notes.',
+    tagline: 'Transforming live lectures and meetings into interactive notes',
     link: 'https://www.project-scribe.com/',
     // github: "https://github.com/marcowang01/notetaker",
     date: 'Fall, 2023',
@@ -31,8 +31,10 @@ export const projects: Project[] = [
   {
     title: 'Tomo',
     description:
-      'A real-time audio-based companion aimed at enhancing children’s learning through story‑driven dialogues.',
-    tagline: "Bringing story-driven dialogues to children's learning",
+      'A physical AI toy that engages children in real-time conversation and adaptive storytelling, ' +
+      'helping them learn through interactive dialogue. ' +
+      'Featured at Ars Electronica Festival 2023.',
+    tagline: "Bringing story-driven dialogue to children's learning",
     link: 'https://tomo-git-mw-new-controls-yulilith.vercel.app/?demo',
     github: '',
     date: 'Summer, 2023',
@@ -45,7 +47,7 @@ export const projects: Project[] = [
   {
     title: 'Realm',
     description:
-      'Realm (Retrieval Augmented Language Model) is an LLM pipeline that leverages vector databases to improve performance and reduce costs for question answering tasks.',
+      'An LLM pipeline that leverages vector stores to improve accuracy and reduce costs for Q&A tasks over domain-specific knowledge bases.',
     tagline: 'Retrieval augmented generation pipeline for question answering',
     link: '/files/realm.pdf',
     github: 'https://github.com/marcowang01/realm',
@@ -59,12 +61,13 @@ export const projects: Project[] = [
   {
     title: 'PlatzUI',
     description:
-      'An open-source personal website template for creatives, with a focus on streamlining the design-to-implementation process.',
+      'A Next.js template for creating infinite canvas-based interfaces for personal websites, ' +
+      'designed to simplify the design-to-implementation process.',
     tagline: 'Open-source personal website template for creatives',
     link: 'https://platz.ooo/',
     github: 'https://github.com/szgbo/platz',
     date: 'Winter, 2023',
-    skills: ['Typescript', 'Next.js'],
+    skills: ['Typescript', 'Next.js', 'Framer Motion'],
     collaborators: ['Shaobo Z.', 'Marco Y.', 'Dalu L.'],
     category: 'UI Library',
     showInSpotlight: false,
@@ -73,7 +76,8 @@ export const projects: Project[] = [
   {
     title: 'Conway',
     description:
-      "A CUDA-accelerated implementation of Conway's Game of Life, a cellular automaton that simulates the evolution of a grid of cells based on a set of rules.",
+      "A parallel implementation of Conway's Game of Life using CUDA. " +
+      'Achieved 1000x speedup through shared memory and bit-level optimization.',
     tagline: "CUDA-Accelerated Conway's Game of Life",
     link: '/files/conway.pdf',
     github: 'https://github.com/marcowang01/conway-gpu',
@@ -87,8 +91,10 @@ export const projects: Project[] = [
   {
     title: 'Igloo',
     description:
-      'A reimagination of social tools, driven by organic interpersonal relationships. Currently, a prototype tested within a small community of 20+ users.',
-    tagline: 'Reimagination of social connections in the digital age',
+      'A social platform that organizes interactions into context-aware spaces, ' +
+      'allowing users to communicate naturally across channels. ' +
+      'Pilot tested with 20+ users.',
+    tagline: 'Connecting people through context-aware digital spaces',
     link: 'https://www.igloo.place/',
     github: 'https://github.com/marcowang01/Igloo',
     date: 'Summer, 2022',
@@ -101,12 +107,14 @@ export const projects: Project[] = [
   {
     title: 'Formula Telemetry',
     description:
-      "A full-stack telemetry dashboard built for the NU Formula Racing team to visualize, persist and analyze data from the car's sensors in real-time.",
-    tagline: "Real-time telemtry insights for NU's Formula Racing team",
+      'A real-time dashboard that collects and visualizes sensor data from the NU Formula Racing car. ' +
+      'Monitored performance metrics for race day.',
+    tagline: 'Real-time telemetry insights for racing performance',
     link: '',
     github: 'https://github.com/marcowang01/telemetry-remote-23',
     date: 'Winter, 2022',
-    skills: ['Javascript', 'Next.js', 'Node.js'],
+    collaborators: ['Zihan Y.'],
+    skills: ['Next.js', 'Node.js', 'Socket.io', 'DynamoDB'],
     category: 'Data Dashboard',
     showInSpotlight: false,
     image: '/images/projects/formula.png',
@@ -114,7 +122,7 @@ export const projects: Project[] = [
   {
     title: 'Bounce Knight',
     description:
-      'A 2D fighting game built in Unity. The game features a fully animated characters and 3 unique stages.',
+      'A 2D fighting game featuring custom-animated characters and three unique stages.',
     tagline: 'Dynamic 2D fighter with animated characters',
     link: '',
     github: 'https://github.com/marcowang01/Bounce-Knight-Unity2D/tree/master',
@@ -127,7 +135,8 @@ export const projects: Project[] = [
   {
     title: 'News Classifier',
     description:
-      'A web app that uses machine learning to detect bias in news articles. The model is trained on a dataset of 1.3k news articles.',
+      'A machine learning web app that analyzes news articles for political bias. ' +
+      'Trained on a dataset of 1,300 labeled articles.',
     tagline: 'Detection and classification of political bias in news articles',
     link: 'https://www.youtube.com/watch?v=2kNVx36dPOM&t=1s',
     github: 'https://github.com/marcowang01/Article-Analyzer-Web/tree/master',
@@ -138,7 +147,7 @@ export const projects: Project[] = [
     image: '/images/projects/news.png',
   },
   {
-    title: 'Tetris',
+    title: 'CPP Tetris',
     description: '',
     tagline: 'A simple implementation of the classic game Tetris',
     link: '',

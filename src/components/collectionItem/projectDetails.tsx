@@ -4,6 +4,7 @@ import { Project } from '@/content/projects'
 import Image from 'next/image'
 import { ProjectLink } from './projectLink'
 import { ProjectInfoList } from './projectInfoList'
+import { cn } from '@/lib/util'
 import { useCallback } from 'react'
 
 export function ProjectDetails({
@@ -39,17 +40,27 @@ export function ProjectDetails({
         quality={100}
         placeholder="empty"
         style={{ objectFit: 'cover' }}
-        className="hidden h-[150px] shrink-0 rounded-md md:block md:w-auto"
+        className="hidden w-full shrink-0 rounded-md md:block md:h-[150px] md:w-auto"
         onLoad={onImageLoad}
       />
-      <div className="flex w-full flex-col justify-end gap-8 md:w-[60%]">
-        <div className="flex flex-row items-baseline justify-start gap-4 font-normal text-[color:rgb(var(--project-card-light-text-rgb))]">
-          {link && <ProjectLink href={link} label={getLinkLabel()} />}
-          {github && <ProjectLink href={github} label="GITHUB" />}
+      <div
+        className={cn('flex w-full flex-col md:w-[60%]', {
+          'justify-between gap-0 pt-1': description,
+          'justify-end gap-8': !description,
+        })}
+      >
+        <div className="flex flex-col gap-2">
+          <div className="flex flex-row items-baseline justify-start gap-4 font-normal text-[color:rgb(var(--project-card-light-text-rgb))]">
+            {link && <ProjectLink href={link} label={getLinkLabel()} />}
+            {github && <ProjectLink href={github} label="GITHUB" />}
+          </div>
+          {description && (
+            <p className="text-project-gray-400 mb-2 text-sm font-light leading-[1.2] tracking-[-0.02em]">
+              {description}
+            </p>
+          )}
         </div>
-        {/* <p className="text-sm leading-[1.2] tracking-[-0.02em]">
-          {description}
-        </p> */}
+
         <div className="hidden flex-col md:flex">
           <ProjectInfoList
             label="Collaborated with"
