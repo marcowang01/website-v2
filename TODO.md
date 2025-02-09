@@ -1,26 +1,11 @@
 # TODO
 
 ## Project Updates
-### LOUR
-- deploy site
-- postgres + index (supabase)
 
 ### Lemma (WIP)
 - no user
 - no website
 - provide github
-
-### Scribe
-- inspect situation
-  - supabase setup?
-  - next auth setup?
-  - azure stt?
-  - next auth, supabase
-- blitz
-  - supabase to store user table
-  - simple notes + transcript table
-  - (optional) vector search using modal?
-  - next auth using supabase without using google
 
 ### Engine (WIP)
 - add readme
@@ -32,6 +17,23 @@
 - if not blitz remake using vercel ai sdk
 - ask lilith for access to tomo github
 - (optional) create Three.JS 3D model
+
+### Scribe
+- inspect situation
+  - supabase setup?
+  - next auth setup?
+  - azure stt?
+  - next auth, supabase
+
+- blitz
+  - supabase to store user table
+  - simple notes + transcript table
+  - (optional) vector search using modal?
+  - next auth using supabase without using google
+
+### LOUR
+- deploy site
+- postgres + index (supabase)
 
 ## Website Updates
 ### Spotlight
