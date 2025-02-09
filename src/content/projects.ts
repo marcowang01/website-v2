@@ -53,8 +53,8 @@ export const projects: Project[] = [
   {
     title: 'Tomo',
     description:
-      'A physical AI toy that engages children in real-time conversation and adaptive storytelling, ' +
-      'helping them learn through interactive dialogue. ' +
+      'A physical AI toy that engages children in real-time conversation and adaptive storytelling. ' +
+      // 'helping them learn through interactive dialogue. ' +
       'Featured at Ars Electronica Festival 2023.',
     tagline: "Bringing story-driven dialogue to children's learning",
     links: [
@@ -65,7 +65,6 @@ export const projects: Project[] = [
     date: 'Summer, 2023',
     skills: ['Python', 'Typescript', 'Next.js'],
     collaborators: {
-      label: 'UI designed by',
       items: [{ name: 'Lilith Y.', link: 'https://lilithyu.com/' }],
     },
     category: 'AI Powered Toy',
@@ -87,7 +86,7 @@ export const projects: Project[] = [
     skills: ['Python', 'Modal', 'Langchain', 'ChromaDB'],
     collaborators: {
       label: 'Collaborated with',
-      items: [{ name: 'Shaobo Z.' }],
+      items: [{ name: 'Shaobo Z.', link: 'https://shaobo.co/' }],
     },
     category: 'LLM Pipeline',
     showInSpotlight: false,
@@ -101,7 +100,7 @@ export const projects: Project[] = [
     title: 'PlatzUI',
     description:
       'A Next.js template for creating infinite canvas-based interfaces. ' +
-      'Streamlines the design-to-implementation process for personal websites.',
+      'Streamlines the design-to-implementation for personal websites.',
     tagline: 'Open-source personal website template for creatives',
     links: ['https://platz.ooo/'],
     github: 'https://github.com/szgbo/platz',
@@ -152,8 +151,8 @@ export const projects: Project[] = [
     title: 'Igloo',
     description:
       'A social platform that organizes interactions into context-aware spaces, ' +
-      'allowing users to communicate naturally across channels. ' +
-      'Pilot tested with 20+ users.',
+      'allowing users to communicate naturally across channels. ',
+    // 'Pilot tested with 20+ users.',
     tagline: 'Connecting people through context-aware digital spaces',
     links: ['https://www.igloo.place/'],
     github: 'https://github.com/marcowang01/Igloo',
