@@ -22,7 +22,7 @@ export interface Project {
   date: string
   skills: string[]
   collaborators?: Collaborators
-  image?: ProjectImage
+  image: ProjectImage
   category: string
   showInSpotlight: boolean
 }

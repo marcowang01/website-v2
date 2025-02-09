@@ -38,14 +38,14 @@ export function ProjectDetails({
   return (
     <div className="flex w-full flex-col justify-between gap-[10px] pt-4 md:flex-row">
       <Image
-        src={image?.src || ''}
+        src={image.src}
         alt={'project image'}
-        width={200}
+        width={250}
         height={150}
         quality={100}
-        placeholder={image?.placeholder || 'empty'}
+        placeholder={image.placeholder}
         style={{ objectFit: 'cover' }}
-        className="block w-full shrink-0 rounded-md md:h-[150px] md:w-auto"
+        className="aspect-5/3 block w-full shrink-0 rounded-md md:h-[150px] md:w-auto"
         onLoad={onImageLoad}
       />
       <div
