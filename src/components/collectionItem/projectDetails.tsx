@@ -65,7 +65,7 @@ export function ProjectDetails({
               ))}
             </div>
             {description && (
-              <p className="mb-2 text-sm font-light leading-[1.2] tracking-[-0.02em] text-project-gray-400">
+              <p className="text-sm font-light leading-[1.2] tracking-[-0.02em] text-project-gray-400">
                 {description}
               </p>
             )}
@@ -76,6 +76,7 @@ export function ProjectDetails({
               label="Built using"
               items={skillItems}
               title={title}
+              // className="text-sm"
             />
             <ProjectInfoList
               label={collaborators?.label || 'Collaborated with'}

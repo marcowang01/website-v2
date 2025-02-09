@@ -50,7 +50,7 @@ export const projects: Project[] = [
     links: ['https://www.project-scribe.com/'],
     // github: "https://github.com/marcowang01/notetaker",
     date: 'Fall, 2023',
-    skills: ['Next.js', 'Supabase'],
+    skills: ['Next.js', 'Supabase', 'Azure'],
     collaborators: {
       label: 'UI designed by',
       items: [SHAOBO],
@@ -74,7 +74,7 @@ export const projects: Project[] = [
       'https://www.flickr.com/photos/arselectronica/53182961043/in/photostream/?ars-electronica',
     ],
     date: 'Summer, 2023',
-    skills: ['Next.js', 'Socket.io'],
+    skills: ['Next.js', 'Socket.io', 'Deepgram', 'ElevenLabs'],
     collaborators: {
       items: [LILITH],
     },

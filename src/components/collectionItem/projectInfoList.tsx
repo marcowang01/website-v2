@@ -1,21 +1,33 @@
 'use client'
 
 import { Item } from '@/content/projects'
+import { cn } from '@/lib/util'
 import Link from 'next/link'
 
 interface ProjectInfoListProps {
-  label: string
+  label?: string
   items?: Item[]
   title: string
+  className?: string
 }
 
-export function ProjectInfoList({ label, items, title }: ProjectInfoListProps) {
+export function ProjectInfoList({
+  label,
+  items,
+  title,
+  className,
+}: ProjectInfoListProps) {
   if (!items?.length) return null
 
   return (
-    <div className="flex flex-row items-center gap-3 text-[13px]">
+    <div
+      className={cn(
+        'flex flex-row items-center gap-3 text-[13px] font-light tracking-[-0.02em]',
+        className
+      )}
+    >
       {label && (
-        <span className="w-[120px] shrink-0 font-light tracking-[-0.02em] text-project-gray-400">
+        <span className="w-[120px] shrink-0 text-project-gray-400">
           {label}
         </span>
       )}
