@@ -52,7 +52,7 @@ export const projects: Project[] = [
     date: 'Fall, 2023',
     skills: ['Next.js', 'Supabase'],
     collaborators: {
-      label: 'UI design by',
+      label: 'UI designed by',
       items: [SHAOBO],
     },
     category: 'AI Notes App',
@@ -70,7 +70,7 @@ export const projects: Project[] = [
       'Featured at Ars Electronica Festival 2023.',
     tagline: "Bringing story-driven dialogue to children's learning",
     links: [
-      'https://tomo-git-mw-new-controls-yulilith.vercel.app/?demo',
+      'https://tomo-git-mw-new-controls-yulilith.vercel.app/?live-demo',
       'https://www.flickr.com/photos/arselectronica/53182961043/in/photostream/?ars-electronica',
     ],
     date: 'Summer, 2023',
@@ -150,7 +150,7 @@ export const projects: Project[] = [
     date: 'Summer, 2022',
     skills: ['Laravel', 'React Native'],
     collaborators: {
-      label: 'UI design by',
+      label: 'UI designed by',
       items: [SHAOBO, SHERRY],
     },
     category: 'cross-platform App',

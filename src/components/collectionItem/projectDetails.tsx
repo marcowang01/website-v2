@@ -22,9 +22,6 @@ export function ProjectDetails({
     if (link.endsWith('.pdf')) {
       return 'PDF'
     }
-    if (link.includes('demo')) {
-      return 'LIVE DEMO'
-    }
     if (link.includes('youtube')) {
       return 'VIDEO'
     }

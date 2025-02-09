@@ -64,7 +64,7 @@ export function SpotlightCard({ project }: { project: Project }) {
               <div key={`${skill}-${index}`}>{skill}</div>
             ))}
           </div>
-          <div className="relative z-10 flex flex-row-reverse items-center justify-end gap-3">
+          <div className="relative z-10 flex flex-row items-center justify-end gap-3 md:flex-row-reverse">
             {links.map((link, index) => (
               <div key={`${link}-${index}`}>
                 <LinkIcon

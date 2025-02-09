@@ -31,18 +31,27 @@ export default function LinkIcon({
   }
 
   return (
-    <Link
-      href={link}
-      target="_blank"
-      rel="noopener noreferrer"
-      onClick={handleOnClick}
-      className={className}
-    >
-      <div className="z-50">
-        <LinkIconSvg iconName={getLinkLabel()} className={'hidden md:block'} />
-        {/* <ProjectLink href={link} label={getLinkLabel()} className={'block md:hidden'} /> */}
-      </div>
-    </Link>
+    <>
+      <Link
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={handleOnClick}
+        className={className}
+      >
+        <div className="z-50">
+          <LinkIconSvg
+            iconName={getLinkLabel()}
+            className={'hidden md:block'}
+          />
+        </div>
+      </Link>
+      <ProjectLink
+        href={link}
+        label={getLinkLabel()}
+        className={'flex text-project-gray-300 md:hidden'}
+      />
+    </>
   )
 }
 

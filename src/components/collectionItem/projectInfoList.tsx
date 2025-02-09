@@ -14,9 +14,11 @@ export function ProjectInfoList({ label, items, title }: ProjectInfoListProps) {
 
   return (
     <div className="flex flex-row items-center gap-3 text-sm tracking-[-0.02em]">
-      <span className="w-[120px] shrink-0 font-normal text-project-gray-400">
-        {label}
-      </span>
+      {label && (
+        <span className="w-[120px] shrink-0 font-light text-project-gray-400">
+          {label}
+        </span>
+      )}
       {items.map((item, index) => (
         <span
           key={`${item}-${index}-${title}`}

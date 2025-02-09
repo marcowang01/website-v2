@@ -15,7 +15,7 @@ export function ProjectLink({ href, label, className }: ProjectLinkProps) {
     <Link
       href={href}
       className={cn(
-        'transition-color flex flex-row items-baseline justify-start gap-1 duration-300 ease-in-out hover:text-project-gray-400',
+        'transition-color flex flex-row flex-nowrap items-baseline justify-start gap-1 duration-300 ease-in-out hover:text-project-gray-400',
         className
       )}
       onClick={(e) => {
@@ -24,7 +24,7 @@ export function ProjectLink({ href, label, className }: ProjectLinkProps) {
         window.open(href, '_blank', 'noopener,noreferrer')
       }}
     >
-      <div className="min-w-content text-xs leading-[1.2] tracking-[-0.02em]">
+      <div className="min-w-content text-xs font-medium leading-[1.2] tracking-[-0.02em]">
         {label}
       </div>
       <ArrowIcon className="h-[9px] w-[9px]" />
