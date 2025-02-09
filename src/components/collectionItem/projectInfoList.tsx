@@ -14,16 +14,18 @@ export function ProjectInfoList({ label, items, title }: ProjectInfoListProps) {
 
   return (
     <div className="flex flex-row items-center gap-3 text-sm tracking-[-0.02em]">
-      <span className="w-[120px] shrink-0 font-normal">{label}</span>
+      <span className="w-[120px] shrink-0 font-normal text-project-gray-400">
+        {label}
+      </span>
       {items.map((item, index) => (
         <span
           key={`${item}-${index}-${title}`}
-          className="text-project-gray-300 text-nowrap font-light"
+          className="text-nowrap font-light text-project-gray-300"
         >
           {item.link ? (
             <Link
               href={item.link}
-              className="hover:text-project-gray-400 transition-colors duration-300 ease-in-out"
+              className="transition-colors duration-300 ease-in-out hover:text-project-gray-400"
               onClick={(e) => {
                 e.stopPropagation()
                 e.preventDefault()

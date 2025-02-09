@@ -11,6 +11,10 @@ export default {
           300: '#999999', // light text
           400: '#555555', // text
         },
+        'blue': {
+          300: '#a3d1ec', // blue highlight
+          400: '#93bcd4', // dark blue highlight
+        },
       },
       fontWeight: {
         light: 300,

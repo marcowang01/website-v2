@@ -89,7 +89,7 @@ export const projects: Project[] = [
   {
     title: 'Realm',
     description:
-      'An LLM pipeline that leverages vector stores to improve accuracy and reduce costs for Q&A tasks over domain-specific knowledge bases.',
+      'An LLM pipeline that uses vector stores to improve accuracy and reduce costs for Q&A tasks over domain-specific knowledge bases.',
     tagline: 'Retrieval augmented generation pipeline for question answering',
     links: ['/files/realm.pdf'],
     github: 'https://github.com/marcowang01/realm',

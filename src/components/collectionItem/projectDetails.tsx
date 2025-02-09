@@ -62,7 +62,7 @@ export function ProjectDetails({
             {github && <ProjectLink href={github} label="GITHUB" />}
           </div>
           {description && (
-            <p className="text-project-gray-400 mb-2 text-sm font-light leading-[1.2] tracking-[-0.02em]">
+            <p className="mb-2 text-sm font-light leading-[1.2] tracking-[-0.02em] text-project-gray-400">
               {description}
             </p>
           )}
