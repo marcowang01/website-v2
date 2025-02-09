@@ -10,6 +10,7 @@ import {
   newsPlaceholder,
   tetrisPlaceholder,
 } from './placeholders'
+import { SHAOBO, LILITH, DALU, MARCO_Y, SHERRY, ZIHAN } from './people'
 
 export interface Item {
   name: string
@@ -53,7 +54,7 @@ export const projects: Project[] = [
     skills: ['Next.js', 'Supabase'],
     collaborators: {
       label: 'UI designed by',
-      items: [{ name: 'Shaobo Z.', link: 'https://shaobo.co/' }],
+      items: [SHAOBO],
     },
     category: 'AI Notes App',
     showInSpotlight: true,
@@ -77,7 +78,7 @@ export const projects: Project[] = [
     date: 'Summer, 2023',
     skills: ['Socket.io', 'Next.js'],
     collaborators: {
-      items: [{ name: 'Lilith Y.', link: 'https://lilithyu.com/' }],
+      items: [LILITH],
     },
     category: 'AI Powered Toy',
     showInSpotlight: true,
@@ -97,7 +98,7 @@ export const projects: Project[] = [
     skills: ['Python', 'Modal', 'Langchain', 'ChromaDB'],
     collaborators: {
       label: 'Collaborated with',
-      items: [{ name: 'Shaobo Z.', link: 'https://shaobo.co/' }],
+      items: [SHAOBO],
     },
     category: 'LLM Pipeline',
     image: {
@@ -116,14 +117,7 @@ export const projects: Project[] = [
     date: 'Winter, 2023',
     skills: ['Next.js', 'Framer Motion'],
     collaborators: {
-      items: [
-        { name: 'Shaobo Z.', link: 'https://shaobo.co/' },
-        { name: 'Dalu L.', link: 'https://www.daluliu.com/' },
-        {
-          name: 'Marco Y.',
-          link: 'https://www.linkedin.com/in/marco-yu-ba21661ab/',
-        },
-      ],
+      items: [SHAOBO, DALU, MARCO_Y],
     },
     category: 'UI Library',
     image: {
@@ -142,7 +136,7 @@ export const projects: Project[] = [
     date: 'Spring, 2023',
     skills: ['C++', 'CUDA'],
     collaborators: {
-      items: [{ name: 'Shaobo Z.', link: 'https://shaobo.co/' }],
+      items: [SHAOBO],
     },
     category: 'GPU Programming',
     image: {
@@ -163,10 +157,7 @@ export const projects: Project[] = [
     skills: ['Laravel', 'React Native'],
     collaborators: {
       label: 'UI designed by',
-      items: [
-        { name: 'Shaobo Z.', link: 'https://shaobo.co/' },
-        { name: 'Sherry X.', link: 'https://sherryx.com/' },
-      ],
+      items: [SHAOBO, SHERRY],
     },
     category: 'cross-platform App',
     showInSpotlight: true,
@@ -186,12 +177,7 @@ export const projects: Project[] = [
     date: 'Winter, 2022',
     collaborators: {
       label: 'Collaborated with',
-      items: [
-        {
-          name: 'Zihan Y.',
-          link: 'https://www.linkedin.com/in/billyin2002/',
-        },
-      ],
+      items: [ZIHAN],
     },
     skills: ['Next.js', 'Node.js', 'Socket.io', 'DynamoDB'],
     category: 'Data Dashboard',
