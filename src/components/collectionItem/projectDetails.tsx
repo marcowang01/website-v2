@@ -19,24 +19,21 @@ export function ProjectDetails({
 
   const skillItems = skills.map((skill) => ({ name: skill }))
 
-  const getLinkLabel = useCallback(
-    (link: string) => {
-      if (link.endsWith('.pdf')) {
-        return 'PDF'
-      }
-      if (link.includes('demo')) {
-        return 'LIVE DEMO'
-      }
-      if (link.includes('youtube')) {
-        return 'VIDEO'
-      }
-      if (link.includes('?')) {
-        return link.split('?')[1]?.replace(/-/g, ' ').toUpperCase() || 'WEBSITE'
-      }
-      return 'WEBSITE'
-    },
-    [links]
-  )
+  const getLinkLabel = useCallback((link: string) => {
+    if (link.endsWith('.pdf')) {
+      return 'PDF'
+    }
+    if (link.includes('demo')) {
+      return 'LIVE DEMO'
+    }
+    if (link.includes('youtube')) {
+      return 'VIDEO'
+    }
+    if (link.includes('?')) {
+      return link.split('?')[1]?.replace(/-/g, ' ').toUpperCase() || 'WEBSITE'
+    }
+    return 'WEBSITE'
+  }, [])
 
   return (
     <div className="flex w-full flex-col justify-between gap-[10px] pt-4 md:flex-row">
@@ -48,7 +45,7 @@ export function ProjectDetails({
         quality={100}
         placeholder={image?.placeholder || 'empty'}
         style={{ objectFit: 'cover' }}
-        className="hidden w-full shrink-0 rounded-md md:block md:h-[150px] md:w-auto"
+        className="block w-full shrink-0 rounded-md md:h-[150px] md:w-auto"
         onLoad={onImageLoad}
       />
       <div
@@ -58,7 +55,7 @@ export function ProjectDetails({
         })}
       >
         <div className="flex flex-col gap-4">
-          <div className="flex flex-row items-baseline justify-start gap-4 font-normal text-[color:rgb(var(--project-card-light-text-rgb))]">
+          <div className="mt-2 flex flex-row items-baseline justify-start gap-4 font-normal text-[color:rgb(var(--project-card-light-text-rgb))] md:mt-0">
             {links.map((link) => (
               <ProjectLink key={link} href={link} label={getLinkLabel(link)} />
             ))}

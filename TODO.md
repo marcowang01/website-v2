@@ -70,6 +70,7 @@
   - keep main content the same but move side nav to mobile mode
   - the 87% width and padding right can be abstracted into a shared layout
     - and used to help with centralizing how to make it responsive
+- make github also into the link array and just at a github thing
 
 
 
