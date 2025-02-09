@@ -3,9 +3,10 @@ import LinkIcon from './linkIcon'
 import { Project } from '@/content/projects'
 import { cn } from '@/lib/util'
 import ArrowIcon from '@/svg/arrow'
+import Image from 'next/image'
 
 export function SpotlightCard({ project }: { project: Project }) {
-  const { title, description, links, github, date, skills } = project
+  const { title, description, links, github, date, skills, image } = project
 
   const priorityLink = links[0] || github
 
@@ -18,7 +19,7 @@ export function SpotlightCard({ project }: { project: Project }) {
   return (
     <div
       className={cn(
-        'group',
+        'group flex flex-row items-start justify-start gap-4',
         'md:min-h-[220px] md:w-[87%] md:p-10',
         'rounded-[20px] bg-project-gray-150',
         'cursor-pointer text-project-gray-400',
@@ -31,6 +32,16 @@ export function SpotlightCard({ project }: { project: Project }) {
       )}
       onClick={handleOnClick}
     >
+      <Image
+        src={image.src}
+        alt={'project image'}
+        width={250}
+        height={150}
+        quality={100}
+        placeholder={image.placeholder}
+        style={{ objectFit: 'cover' }}
+        className="aspect-5/3 block w-full shrink-0 rounded-md md:w-[60%] lg:h-[150px] lg:w-auto"
+      />
       <div className="flex flex-col items-start justify-between">
         <div>
           <section className="mb-4 flex w-full flex-row items-center justify-between gap-[10px]">
