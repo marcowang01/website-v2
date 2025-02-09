@@ -117,7 +117,6 @@ export const projects: Project[] = [
     date: 'Winter, 2023',
     skills: ['Typescript', 'Next.js', 'Framer Motion'],
     collaborators: {
-      label: 'Designed with',
       items: [
         { name: 'Shaobo Z.', link: 'https://shaobo.co/' },
         { name: 'Dalu L.', link: 'https://www.daluliu.com/' },
@@ -145,7 +144,6 @@ export const projects: Project[] = [
     date: 'Spring, 2023',
     skills: ['C++', 'CUDA'],
     collaborators: {
-      label: 'Designed with',
       items: [{ name: 'Shaobo Z.', link: 'https://shaobo.co/' }],
     },
     category: 'GPU Programming',
@@ -167,7 +165,7 @@ export const projects: Project[] = [
     date: 'Summer, 2022',
     skills: ['PHP', 'Javascript', 'Laravel', 'React Native'],
     collaborators: {
-      label: 'Designed with',
+      label: 'UI designed by',
       items: [
         { name: 'Shaobo Z.', link: 'https://shaobo.co/' },
         { name: 'Sherry X.', link: 'https://sherryx.com/' },
