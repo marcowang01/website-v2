@@ -18,7 +18,7 @@ const expericences = {
       ],
       date: 'Feb. 2024 - Present',
       location: 'Los Angeles, CA',
-      skills: ['NodeJS', 'NextJS', 'MongoDB'],
+      skills: ['Node.js', 'Next.js', 'MongoDB'],
       url: 'https://www.rabbit.tech/',
     },
     {
@@ -31,7 +31,7 @@ const expericences = {
       ],
       date: 'Jun. 2023 - Aug. 2023',
       location: 'Las Vegas, NV',
-      skills: ['Go', 'C#', 'ReactJS', 'PostgresSQL', 'NodeJS', 'Bazel'],
+      skills: ['Go', 'C#', 'ReactJS', 'PostgresSQL', 'Node.js', 'Bazel'],
       url: 'https://www.boringcompany.com/',
     },
     {

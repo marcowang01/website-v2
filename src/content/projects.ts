@@ -50,7 +50,7 @@ export const projects: Project[] = [
     links: ['https://www.project-scribe.com/'],
     // github: "https://github.com/marcowang01/notetaker",
     date: 'Fall, 2023',
-    skills: ['Typescript', 'Next.js', 'Supabase'],
+    skills: ['Next.js', 'Supabase'],
     collaborators: {
       label: 'UI designed by',
       items: [{ name: 'Shaobo Z.', link: 'https://shaobo.co/' }],
@@ -75,7 +75,7 @@ export const projects: Project[] = [
     ],
     github: '',
     date: 'Summer, 2023',
-    skills: ['Python', 'Typescript', 'Next.js'],
+    skills: ['Socket.io', 'Next.js'],
     collaborators: {
       items: [{ name: 'Lilith Y.', link: 'https://lilithyu.com/' }],
     },
@@ -115,7 +115,7 @@ export const projects: Project[] = [
     links: ['https://platz.ooo/'],
     github: 'https://github.com/szgbo/platz',
     date: 'Winter, 2023',
-    skills: ['Typescript', 'Next.js', 'Framer Motion'],
+    skills: ['Next.js', 'Framer Motion'],
     collaborators: {
       items: [
         { name: 'Shaobo Z.', link: 'https://shaobo.co/' },
@@ -163,7 +163,7 @@ export const projects: Project[] = [
     links: ['https://www.igloo.place/'],
     github: 'https://github.com/marcowang01/Igloo',
     date: 'Summer, 2022',
-    skills: ['PHP', 'Javascript', 'Laravel', 'React Native'],
+    skills: ['Laravel', 'React Native'],
     collaborators: {
       label: 'UI designed by',
       items: [
