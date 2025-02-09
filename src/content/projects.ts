@@ -53,7 +53,7 @@ export const projects: Project[] = [
     date: 'Fall, 2023',
     skills: ['Next.js', 'Supabase'],
     collaborators: {
-      label: 'UI designed by',
+      label: 'UI design by',
       items: [SHAOBO],
     },
     category: 'AI Notes App',
@@ -76,7 +76,7 @@ export const projects: Project[] = [
     ],
     github: '',
     date: 'Summer, 2023',
-    skills: ['Socket.io', 'Next.js'],
+    skills: ['Next.js', 'Socket.io'],
     collaborators: {
       items: [LILITH],
     },
@@ -115,7 +115,7 @@ export const projects: Project[] = [
     links: ['https://platz.ooo/'],
     github: 'https://github.com/szgbo/platz',
     date: 'Winter, 2023',
-    skills: ['Next.js', 'Framer Motion'],
+    skills: ['Next.js', 'Framer Motion', 'tldraw'],
     collaborators: {
       items: [SHAOBO, DALU, MARCO_Y],
     },
@@ -156,7 +156,7 @@ export const projects: Project[] = [
     date: 'Summer, 2022',
     skills: ['Laravel', 'React Native'],
     collaborators: {
-      label: 'UI designed by',
+      label: 'UI design by',
       items: [SHAOBO, SHERRY],
     },
     category: 'cross-platform App',

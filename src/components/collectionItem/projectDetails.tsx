@@ -51,10 +51,9 @@ export function ProjectDetails({
           onLoad={onImageLoad}
         />
         <div
-          className={cn('flex w-full flex-col md:w-[80%] lg:w-[60%]', {
-            'justify-between gap-0 pt-1': description,
-            'justify-end gap-8': !description,
-          })}
+          className={cn(
+            'flex w-full flex-col justify-between gap-0 pt-1 md:w-[80%] lg:w-[60%]'
+          )}
         >
           <div className="flex flex-col gap-4">
             <div className="mt-2 flex flex-row items-baseline justify-start gap-4 font-normal text-project-gray-300 md:mt-0">
@@ -76,13 +75,13 @@ export function ProjectDetails({
 
           <div className="hidden flex-col lg:flex">
             <ProjectInfoList
-              label={collaborators?.label || 'Collaborated with'}
-              items={collaborators?.items || []}
+              label="Built using"
+              items={skillItems}
               title={title}
             />
             <ProjectInfoList
-              label="Built using"
-              items={skillItems}
+              label={collaborators?.label || 'Collaborated with'}
+              items={collaborators?.items || []}
               title={title}
             />
           </div>
