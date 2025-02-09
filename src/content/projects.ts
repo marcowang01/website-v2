@@ -76,8 +76,8 @@ export const projects: Project[] = [
   {
     title: 'Conway',
     description:
-      "A parallel implementation of Conway's Game of Life using CUDA, " +
-      'achieving 1000x speedup through shared memory and bit-level optimization.',
+      "A parallel implementation of Conway's Game of Life using CUDA. " +
+      'Achieved 1000x speedup through shared memory and bit-level optimization.',
     tagline: "CUDA-Accelerated Conway's Game of Life",
     link: '/files/conway.pdf',
     github: 'https://github.com/marcowang01/conway-gpu',
@@ -93,7 +93,7 @@ export const projects: Project[] = [
     description:
       'A social platform that organizes interactions into context-aware spaces, ' +
       'allowing users to communicate naturally across channels. ' +
-      'Launched to a community of 20+ users.',
+      'Pilot tested with 20+ users.',
     tagline: 'Connecting people through context-aware digital spaces',
     link: 'https://www.igloo.place/',
     github: 'https://github.com/marcowang01/Igloo',
@@ -107,12 +107,14 @@ export const projects: Project[] = [
   {
     title: 'Formula Telemetry',
     description:
-      "A full-stack telemetry dashboard built for the NU Formula Racing team to visualize, persist and analyze data from the car's sensors in real-time.",
-    tagline: "Real-time telemtry insights for NU's Formula Racing team",
+      'A real-time dashboard that collects and visualizes sensor data from the NU Formula Racing car. ' +
+      'Monitored performance metrics for race day.',
+    tagline: 'Real-time telemetry insights for racing performance',
     link: '',
     github: 'https://github.com/marcowang01/telemetry-remote-23',
     date: 'Winter, 2022',
-    skills: ['Javascript', 'Next.js', 'Node.js'],
+    collaborators: ['Zihan Y.'],
+    skills: ['Next.js', 'Node.js', 'Socket.io', 'DynamoDB'],
     category: 'Data Dashboard',
     showInSpotlight: false,
     image: '/images/projects/formula.png',
@@ -120,7 +122,7 @@ export const projects: Project[] = [
   {
     title: 'Bounce Knight',
     description:
-      'A 2D fighting game built in Unity. The game features a fully animated characters and 3 unique stages.',
+      'A 2D fighting game featuring custom-animated characters and three unique stages.',
     tagline: 'Dynamic 2D fighter with animated characters',
     link: '',
     github: 'https://github.com/marcowang01/Bounce-Knight-Unity2D/tree/master',
@@ -133,7 +135,8 @@ export const projects: Project[] = [
   {
     title: 'News Classifier',
     description:
-      'A web app that uses machine learning to detect bias in news articles. The model is trained on a dataset of 1.3k news articles.',
+      'A machine learning web app that analyzes news articles for political bias. ' +
+      'Trained on a dataset of 1,300 labeled articles.',
     tagline: 'Detection and classification of political bias in news articles',
     link: 'https://www.youtube.com/watch?v=2kNVx36dPOM&t=1s',
     github: 'https://github.com/marcowang01/Article-Analyzer-Web/tree/master',
