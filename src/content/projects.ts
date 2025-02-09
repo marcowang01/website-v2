@@ -16,9 +16,9 @@ export const projects: Project[] = [
   {
     title: 'Scribe',
     description:
-      'An AI-powered app for creating and searching through notes for lectures, meetings and discussions.',
-    tagline:
-      'Transforming live lectures into interactive notes and study guides',
+      'An AI note-taking app that transcribes lectures and meetings in real-time, ' +
+      'with a chat interface to search and query across all your notes.',
+    tagline: 'Transforming live lectures and meetings into interactive notes',
     link: 'https://www.project-scribe.com/',
     // github: "https://github.com/marcowang01/notetaker",
     date: 'Fall, 2023',
@@ -31,8 +31,10 @@ export const projects: Project[] = [
   {
     title: 'Tomo',
     description:
-      'A real-time audio-based companion aimed at enhancing children’s learning through story‑driven dialogues.',
-    tagline: "Bringing story-driven dialogues to children's learning",
+      'A physical AI toy that engages children in real-time conversation and adaptive storytelling, ' +
+      'helping them learn through interactive dialogue. ' +
+      'Featured at Ars Electronica Festival 2023.',
+    tagline: "Bringing story-driven dialogue to children's learning",
     link: 'https://tomo-git-mw-new-controls-yulilith.vercel.app/',
     github: '',
     date: 'Summer, 2023',
@@ -45,7 +47,7 @@ export const projects: Project[] = [
   {
     title: 'Realm',
     description:
-      'Realm (Retrieval Augmented Language Model) is an LLM pipeline that leverages vector databases to improve performance and reduce costs for question answering tasks.',
+      "An LLM pipeline that leverages vector DB's to improve performance and reduce costs for question answering tasks over domain-specific knowledge bases.",
     tagline: 'Retrieval augmented generation pipeline for question answering',
     link: '/files/realm.pdf',
     github: 'https://github.com/marcowang01/realm',
