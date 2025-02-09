@@ -38,7 +38,7 @@ export function ProjectDetails({
   return (
     <>
       {/* <div className="mt-3 h-[1px] w-full bg-project-gray-200" /> */}
-      <div className="flex w-full flex-col justify-between gap-[10px] pt-4 md:flex-row">
+      <div className="flex w-full flex-col justify-between gap-[10px] pt-4 lg:flex-row">
         <Image
           src={image.src}
           alt={'project image'}
@@ -47,17 +47,17 @@ export function ProjectDetails({
           quality={100}
           placeholder={image.placeholder}
           style={{ objectFit: 'cover' }}
-          className="aspect-5/3 block w-full shrink-0 rounded-md md:h-[150px] md:w-auto"
+          className="aspect-5/3 block w-full shrink-0 rounded-md md:w-[60%] lg:h-[150px] lg:w-auto"
           onLoad={onImageLoad}
         />
         <div
-          className={cn('flex w-full flex-col md:w-[60%]', {
+          className={cn('flex w-full flex-col md:w-[80%] lg:w-[60%]', {
             'justify-between gap-0 pt-1': description,
             'justify-end gap-8': !description,
           })}
         >
           <div className="flex flex-col gap-4">
-            <div className="mt-2 flex flex-row items-baseline justify-start gap-4 font-normal text-[color:rgb(var(--project-card-light-text-rgb))] md:mt-0">
+            <div className="mt-2 flex flex-row items-baseline justify-start gap-4 font-normal text-project-gray-300 md:mt-0">
               {links.map((link) => (
                 <ProjectLink
                   key={link}
@@ -74,7 +74,7 @@ export function ProjectDetails({
             )}
           </div>
 
-          <div className="hidden flex-col md:flex">
+          <div className="hidden flex-col lg:flex">
             <ProjectInfoList
               label={collaborators?.label || 'Collaborated with'}
               items={collaborators?.items || []}
