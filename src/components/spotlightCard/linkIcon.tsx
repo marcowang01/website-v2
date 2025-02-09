@@ -5,6 +5,7 @@ import BrowserIcon from '@/svg/browser'
 import React, { useCallback } from 'react'
 import Link from 'next/link'
 import { ArsElectronicaIcon } from '@/svg/ars-electronica'
+import { ProjectLink } from '../collectionItem/projectLink'
 
 export default function LinkIcon({
   link,
@@ -38,19 +39,26 @@ export default function LinkIcon({
       className={className}
     >
       <div className="z-50">
-        <LinkIconSvg iconName={getLinkLabel()} />
+        <LinkIconSvg iconName={getLinkLabel()} className={'hidden md:block'} />
+        {/* <ProjectLink href={link} label={getLinkLabel()} className={'block md:hidden'} /> */}
       </div>
     </Link>
   )
 }
 
-function LinkIconSvg({ iconName }: { iconName: string }) {
+function LinkIconSvg({
+  iconName,
+  className,
+}: {
+  iconName: string
+  className?: string
+}) {
   if (iconName === 'GITHUB') {
-    return <GithubIcon />
+    return <GithubIcon className={className} />
   }
   if (iconName === 'ARS ELECTRONICA') {
-    return <ArsElectronicaIcon width={18} height={18} />
+    return <ArsElectronicaIcon width={18} height={18} className={className} />
   }
   // default to browser icon
-  return <BrowserIcon />
+  return <BrowserIcon className={className} />
 }

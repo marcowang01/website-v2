@@ -2,17 +2,22 @@
 
 import Link from 'next/link'
 import ArrowIcon from '@/svg/arrow'
+import { cn } from '@/lib/util'
 
 interface ProjectLinkProps {
   href: string
   label: string
+  className?: string
 }
 
-export function ProjectLink({ href, label }: ProjectLinkProps) {
+export function ProjectLink({ href, label, className }: ProjectLinkProps) {
   return (
     <Link
       href={href}
-      className="transition-color hover:text-project-gray-400 flex flex-row items-baseline justify-start gap-1 duration-300 ease-in-out"
+      className={cn(
+        'transition-color flex flex-row items-baseline justify-start gap-1 duration-300 ease-in-out hover:text-project-gray-400',
+        className
+      )}
       onClick={(e) => {
         e.stopPropagation()
         e.preventDefault()

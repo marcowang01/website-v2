@@ -58,7 +58,7 @@ export function SpotlightCard({ project }: { project: Project }) {
             {description}
           </section>
         </div>
-        <section className="flex w-full flex-row items-center justify-end pt-5 md:justify-between">
+        <section className="flex w-full flex-row items-center justify-start pt-5 md:justify-between">
           <div className="hidden flex-row items-center justify-start gap-5 text-[13px] tracking-[-0.02em] text-project-gray-300 md:flex">
             {skills.map((skill, index) => (
               <div key={`${skill}-${index}`}>{skill}</div>
