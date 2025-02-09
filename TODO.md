@@ -4,13 +4,13 @@
 ### LOUR
 - deploy site
 - postgres + index (supabase)
+
 ### Lemma (WIP)
 - no user
-- record gif
 - no website
 - provide github
+
 ### Scribe
-- create gif
 - inspect situation
   - supabase setup?
   - next auth setup?
@@ -21,10 +21,12 @@
   - simple notes + transcript table
   - (optional) vector search using modal?
   - next auth using supabase without using google
+
 ### Engine (WIP)
 - add readme
 - make github public
 - take screenshot
+
 ### Tomo
 - see how viable a serverless websocket python backend using modal
 - if not blitz remake using vercel ai sdk
@@ -40,9 +42,8 @@
   - Lemma
   - LOUR
 - Add WIP indicator
-- Create blur urls for image placeholders
-- update categories to be more eye catching
-- Create gifs for relevant projects
+
+- (optional) Create gifs for relevant projects
   - scribe
   - igloo
   - platz

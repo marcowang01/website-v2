@@ -59,7 +59,7 @@ export const projects: Project[] = [
     tagline: "Bringing story-driven dialogue to children's learning",
     links: [
       'https://tomo-git-mw-new-controls-yulilith.vercel.app/?demo',
-      'https://www.flickr.com/photos/arselectronica/53076841259/in/photostream/?ars-electronica',
+      'https://www.flickr.com/photos/arselectronica/53182961043/in/photostream/?ars-electronica',
     ],
     github: '',
     date: 'Summer, 2023',
