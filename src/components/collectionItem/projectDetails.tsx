@@ -49,7 +49,7 @@ export function ProjectDetails({
           'justify-end gap-8': !description,
         })}
       >
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-4">
           <div className="flex flex-row items-baseline justify-start gap-4 font-normal text-[color:rgb(var(--project-card-light-text-rgb))]">
             {link && <ProjectLink href={link} label={getLinkLabel()} />}
             {github && <ProjectLink href={github} label="GITHUB" />}
