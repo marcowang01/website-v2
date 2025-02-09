@@ -1,8 +1,11 @@
 'use client'
 
+import { Item } from '@/content/projects'
+import Link from 'next/link'
+
 interface ProjectInfoListProps {
   label: string
-  items?: string[]
+  items?: Item[]
   title: string
 }
 
@@ -15,9 +18,23 @@ export function ProjectInfoList({ label, items, title }: ProjectInfoListProps) {
       {items.map((item, index) => (
         <span
           key={`${item}-${index}-${title}`}
-          className="text-nowrap font-light text-[color:rgb(var(--project-card-light-text-rgb))]"
+          className="text-project-gray-300 text-nowrap font-light"
         >
-          {item}
+          {item.link ? (
+            <Link
+              href={item.link}
+              className="hover:text-project-gray-400 transition-colors duration-300 ease-in-out"
+              onClick={(e) => {
+                e.stopPropagation()
+                e.preventDefault()
+                window.open(item.link, '_blank', 'noopener,noreferrer')
+              }}
+            >
+              {item.name}
+            </Link>
+          ) : (
+            <>{item.name}</>
+          )}
         </span>
       ))}
     </div>

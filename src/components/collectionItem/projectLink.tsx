@@ -12,7 +12,7 @@ export function ProjectLink({ href, label }: ProjectLinkProps) {
   return (
     <Link
       href={href}
-      className="transition-color flex flex-row items-baseline justify-start gap-1 duration-300 ease-in-out hover:text-[color:rgb(var(--project-card-text-rgb))]"
+      className="transition-color hover:text-project-gray-400 flex flex-row items-baseline justify-start gap-1 duration-300 ease-in-out"
       onClick={(e) => {
         e.stopPropagation()
         e.preventDefault()

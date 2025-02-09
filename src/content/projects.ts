@@ -1,3 +1,13 @@
+export interface Item {
+  name: string
+  link?: string
+}
+
+export interface Collaborators {
+  label?: string
+  items: Item[]
+}
+
 export interface Project {
   title: string
   description?: string
@@ -6,7 +16,7 @@ export interface Project {
   github?: string
   date: string
   skills: string[]
-  collaborators?: string[]
+  collaborators?: Collaborators
   image?: string
   category: string
   showInSpotlight: boolean
@@ -23,7 +33,10 @@ export const projects: Project[] = [
     // github: "https://github.com/marcowang01/notetaker",
     date: 'Fall, 2023',
     skills: ['Typescript', 'Next.js', 'Supabase'],
-    collaborators: ['Shaobo Z.'],
+    collaborators: {
+      label: 'UI designed by',
+      items: [{ name: 'Shaobo Z.', link: 'https://shaobo.co/' }],
+    },
     category: 'AI Notes App',
     showInSpotlight: true,
     image: '/images/projects/scribe.png',
@@ -42,7 +55,10 @@ export const projects: Project[] = [
     github: '',
     date: 'Summer, 2023',
     skills: ['Python', 'Typescript', 'Next.js'],
-    collaborators: ['Lilith Y.'],
+    collaborators: {
+      label: 'UI designed by',
+      items: [{ name: 'Lilith Y.', link: 'https://lilithyu.com/' }],
+    },
     category: 'AI Powered Toy',
     showInSpotlight: true,
     image: '/images/projects/tomo.png',
@@ -56,7 +72,10 @@ export const projects: Project[] = [
     github: 'https://github.com/marcowang01/realm',
     date: 'Spring, 2023',
     skills: ['Python', 'Modal', 'Langchain', 'ChromaDB'],
-    collaborators: ['Shaobo Z.'],
+    collaborators: {
+      label: 'Collaborated with',
+      items: [{ name: 'Shaobo Z.' }],
+    },
     category: 'LLM Pipeline',
     showInSpotlight: false,
     image: '/images/projects/realm.png',
@@ -64,14 +83,24 @@ export const projects: Project[] = [
   {
     title: 'PlatzUI',
     description:
-      'A Next.js template for creating infinite canvas-based interfaces for personal websites, ' +
-      'designed to simplify the design-to-implementation process.',
+      'A Next.js template for creating infinite canvas-based interfaces. ' +
+      'Streamlines the design-to-implementation process for personal websites.',
     tagline: 'Open-source personal website template for creatives',
     links: ['https://platz.ooo/'],
     github: 'https://github.com/szgbo/platz',
     date: 'Winter, 2023',
     skills: ['Typescript', 'Next.js', 'Framer Motion'],
-    collaborators: ['Shaobo Z.', 'Marco Y.', 'Dalu L.'],
+    collaborators: {
+      label: 'Designed with',
+      items: [
+        { name: 'Shaobo Z.', link: 'https://shaobo.co/' },
+        { name: 'Dalu L.', link: 'https://www.daluliu.com/' },
+        {
+          name: 'Marco Y.',
+          link: 'https://www.linkedin.com/in/marco-yu-ba21661ab/',
+        },
+      ],
+    },
     category: 'UI Library',
     showInSpotlight: false,
     image: '/images/projects/platz.png',
@@ -79,14 +108,17 @@ export const projects: Project[] = [
   {
     title: 'Conway',
     description:
-      "A parallel implementation of Conway's Game of Life using CUDA. " +
+      "A parallel implementation of Conway's Game of Life. " +
       'Achieved 1000x speedup through shared memory and bit-level optimization.',
     tagline: "CUDA-Accelerated Conway's Game of Life",
     links: ['/files/conway.pdf'],
     github: 'https://github.com/marcowang01/conway-gpu',
     date: 'Spring, 2023',
     skills: ['C++', 'CUDA'],
-    collaborators: ['Shaobo Z.'],
+    collaborators: {
+      label: 'Designed with',
+      items: [{ name: 'Shaobo Z.', link: 'https://shaobo.co/' }],
+    },
     category: 'GPU Programming',
     showInSpotlight: false,
     image: '/images/projects/conway.png',
@@ -102,7 +134,13 @@ export const projects: Project[] = [
     github: 'https://github.com/marcowang01/Igloo',
     date: 'Summer, 2022',
     skills: ['PHP', 'Javascript', 'Laravel', 'React Native'],
-    collaborators: ['Shaobo Z.', 'Sherry X.'],
+    collaborators: {
+      label: 'Designed with',
+      items: [
+        { name: 'Shaobo Z.', link: 'https://shaobo.co/' },
+        { name: 'Sherry X.', link: 'https://sherryx.com/' },
+      ],
+    },
     category: 'cross-platform App',
     showInSpotlight: true,
     image: '/images/projects/igloo.png',
@@ -116,7 +154,15 @@ export const projects: Project[] = [
     links: [],
     github: 'https://github.com/marcowang01/telemetry-remote-23',
     date: 'Winter, 2022',
-    collaborators: ['Zihan Y.'],
+    collaborators: {
+      label: 'Collaborated with',
+      items: [
+        {
+          name: 'Zihan Y.',
+          link: 'https://www.linkedin.com/in/billyin2002/',
+        },
+      ],
+    },
     skills: ['Next.js', 'Node.js', 'Socket.io', 'DynamoDB'],
     category: 'Data Dashboard',
     showInSpotlight: false,

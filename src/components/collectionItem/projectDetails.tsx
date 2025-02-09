@@ -17,6 +17,8 @@ export function ProjectDetails({
   const { title, image, links, github, collaborators, skills, description } =
     project
 
+  const skillItems = skills.map((skill) => ({ name: skill }))
+
   const getLinkLabel = useCallback(
     (link: string) => {
       if (link.endsWith('.pdf')) {
@@ -71,13 +73,13 @@ export function ProjectDetails({
 
         <div className="hidden flex-col md:flex">
           <ProjectInfoList
-            label="Collaborated with"
-            items={collaborators || []}
+            label={collaborators?.label || 'Collaborated with'}
+            items={collaborators?.items || []}
             title={title}
           />
           <ProjectInfoList
             label="Built using"
-            items={skills || []}
+            items={skillItems}
             title={title}
           />
         </div>
