@@ -1,7 +1,7 @@
 // List of greetings
 export const greetings = [
   'Hello there!',
-  'Hi there!',
+  // 'Hi there!',
   'Hey there!',
   'Hello!',
   'Greetings!',
