@@ -4,20 +4,22 @@ import { Project } from '@/content/projects'
 import { cn } from '@/lib/util'
 import ArrowIcon from '@/svg/arrow'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export function SpotlightCard({ project }: { project: Project }) {
   const { title, description, links, date, skills, image } = project
 
   const priorityLink = links[0]
 
-  const handleOnClick = (e: React.MouseEvent<HTMLDivElement>) => {
+  const handleOnClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
     e.stopPropagation()
     window.open(priorityLink, '_blank', 'noopener,noreferrer')
   }
 
   return (
-    <div
+    <Link
+      href={priorityLink ?? ''}
       className={cn(
         'group flex flex-row items-start justify-start gap-4',
         'md:min-h-[220px] md:w-[87%] md:p-10',
@@ -40,7 +42,7 @@ export function SpotlightCard({ project }: { project: Project }) {
         quality={100}
         placeholder={image.placeholder}
         style={{ objectFit: 'cover' }}
-        className="aspect-5/3 block w-full shrink-0 rounded-md md:w-[60%] lg:h-[150px] lg:w-auto"
+        className="aspect-5/3 hidden w-full shrink-0 rounded-md lg:block lg:h-[140px] lg:w-auto"
       />
       <div className="flex flex-col items-start justify-between">
         <div>
@@ -63,7 +65,7 @@ export function SpotlightCard({ project }: { project: Project }) {
               <div key={`${skill}-${index}`}>{skill}</div>
             ))}
           </div>
-          <div className="relative z-10 flex flex-row items-center justify-end gap-3">
+          <div className="relative z-10 flex flex-row-reverse items-center justify-end gap-3">
             {links.map((link, index) => (
               <div key={`${link}-${index}`}>
                 <LinkIcon
@@ -75,6 +77,6 @@ export function SpotlightCard({ project }: { project: Project }) {
           </div>
         </section>
       </div>
-    </div>
+    </Link>
   )
 }

@@ -49,7 +49,7 @@ function LinkIconSvg({ iconName }: { iconName: string }) {
     return <GithubIcon />
   }
   if (iconName === 'ARS ELECTRONICA') {
-    return <ArsElectronicaIcon />
+    return <ArsElectronicaIcon width={18} height={18} />
   }
   // default to browser icon
   return <BrowserIcon />
