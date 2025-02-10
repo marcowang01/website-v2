@@ -9,6 +9,7 @@ import {
   bouncePlaceholder,
   newsPlaceholder,
   tetrisPlaceholder,
+  lemmaPlaceholder,
 } from './placeholders'
 import { SHAOBO, LILITH, DALU, MARCO_Y, SHERRY, ZIHAN } from './people'
 
@@ -38,9 +39,29 @@ export interface Project {
   image: ProjectImage
   category: string
   showInSpotlight?: boolean
+  wip?: boolean
 }
 
 export const projects: Project[] = [
+  {
+    title: 'Lemma',
+    description:
+      'An AI-assisted learning tool that scans homework problems and generates interactive step-by-step solutions.',
+    tagline: 'Generating dynamic solutions for math homework',
+    links: ['https://github.com/marcowang01/lemma'],
+    date: 'Winter, 2025',
+    skills: ['Next.js', 'Langchain', 'Wolfram'],
+    collaborators: {
+      label: 'UI designed by',
+      items: [LILITH],
+    },
+    category: 'AI Math Solver',
+    image: {
+      src: '/images/projects/lemma-2.png',
+      placeholder: lemmaPlaceholder,
+    },
+    wip: true,
+  },
   {
     title: 'Scribe',
     description:

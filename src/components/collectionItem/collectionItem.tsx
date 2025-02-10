@@ -15,7 +15,7 @@ export function CollectionItem({
   isExpanded: boolean
   onClick: () => void
 }) {
-  const { title, tagline, date, category } = project
+  const { title, tagline, date, category, wip } = project
   const expandedContentRef = useRef<HTMLDivElement>(null)
   const [contentHeight, setContentHeight] = useState(0)
   const [updateHeight, setUpdateHeight] = useState(false)
@@ -52,12 +52,17 @@ export function CollectionItem({
       <div className="flex w-full flex-col items-start justify-between">
         <section className="flex w-full flex-row items-center justify-between gap-[10px]">
           <div className="flex flex-row items-baseline gap-3 text-base font-medium leading-[1.25] tracking-[-0.005em]">
-            {title}
-            <div className="text-project-gray-300 hidden w-fit text-sm font-normal uppercase tracking-[-0.025em] md:block">
+            <p className="flex flex-row items-start gap-1">
+              {title}
+              {wip && (
+                <span className="text-xs font-light text-project-gray-300">{`WIP`}</span>
+              )}
+            </p>
+            <div className="hidden w-fit text-sm font-normal uppercase tracking-[-0.025em] text-project-gray-300 md:block">
               {category}
             </div>
           </div>
-          <div className="text-project-gray-300 text-xs font-light uppercase tracking-[-0.02em]">
+          <div className="text-xs font-light uppercase tracking-[-0.02em] text-project-gray-300">
             {date}
           </div>
         </section>

@@ -2,11 +2,6 @@
 
 ## Project Updates
 
-### Lemma (WIP)
-- no user
-- no website
-- provide github
-
 ### Engine (WIP)
 - add readme
 - make github public
