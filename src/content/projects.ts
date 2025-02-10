@@ -58,7 +58,7 @@ export const projects: Project[] = [
     },
     category: 'AI Math Solver',
     image: {
-      src: '/images/projects/lemma-2.png',
+      src: '/images/projects/lemma.png',
       placeholder: lemmaPlaceholder,
     },
     wip: true,
