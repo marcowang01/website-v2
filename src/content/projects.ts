@@ -48,7 +48,7 @@ export const projects: Project[] = [
     title: 'Lemma',
     description:
       'An AI-assisted learning tool that scans homework problems and generates interactive step-by-step solutions.',
-    tagline: 'Generating interactive learning experiences',
+    tagline: 'Generating interactive learning experiences for students',
     links: ['https://github.com/marcowang01/lemma'],
     date: 'Winter, 2025',
     skills: ['Next.js', 'Langchain', 'Wolfram'],
@@ -81,7 +81,7 @@ export const projects: Project[] = [
   {
     title: 'Scribe',
     description:
-      'An AI note-taking app that transcribes lectures and meetings in real-time, ' +
+      'A note-taking web app that transcribes lectures and meetings in real-time, ' +
       'with a chat interface to search and query across all your notes.',
     tagline: 'Transforming live lectures and meetings into interactive notes',
     links: ['https://www.project-scribe.com/'],
@@ -102,7 +102,7 @@ export const projects: Project[] = [
   {
     title: 'Tomo',
     description:
-      'A physical AI toy that engages children in real-time conversation and adaptive storytelling. ' +
+      'A physical toy that engages children in real-time conversation and adaptive storytelling. ' +
       // 'helping them learn through interactive dialogue. ' +
       'Featured at Ars Electronica Festival 2023.',
     tagline: "Bringing story-driven dialogue to children's learning",
