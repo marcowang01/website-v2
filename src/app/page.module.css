@@ -14,10 +14,10 @@
   overflow: hidden;
 }
 
-.content{
+.content {
   width: calc(100% - var(--sidebar-width));
-  overflow-y: auto; 
-  padding-left: 10vw;
+  overflow-y: auto;
+  padding-left: 120px;
 }
 
 .hideOnMobile {
@@ -54,7 +54,9 @@
   opacity: 0.7;
   font-weight: var(--font-light);
   text-decoration: none;
-  transition: color 0.15s ease-in-out, opacity 0.15s ease-in-out;
+  transition:
+    color 0.15s ease-in-out,
+    opacity 0.15s ease-in-out;
 }
 
 .paragraph a:hover {
@@ -73,7 +75,6 @@
 }
 
 @media (max-width: 768px) {
-
   .content {
     width: 100%;
     padding-left: 0;
