@@ -15,7 +15,7 @@ export function ProjectLink({ href, label, className }: ProjectLinkProps) {
     <Link
       href={href}
       className={cn(
-        'transition-color flex flex-row flex-nowrap items-baseline justify-start gap-1 duration-300 ease-in-out hover:text-project-gray-400',
+        'transition-color text-project-gray-400 flex flex-row flex-nowrap items-baseline justify-start gap-1 duration-300 ease-in-out hover:text-project-gray-300',
         className
       )}
       onClick={(e) => {
