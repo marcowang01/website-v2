@@ -47,7 +47,7 @@ export const projects: Project[] = [
     title: 'Lemma',
     description:
       'An AI-assisted learning tool that scans homework problems and generates interactive step-by-step solutions.',
-    tagline: 'Generating dynamic solutions for math homework',
+    tagline: 'Generating interactive learning experiences',
     links: ['https://github.com/marcowang01/lemma'],
     date: 'Winter, 2025',
     skills: ['Next.js', 'Langchain', 'Wolfram'],
@@ -59,6 +59,21 @@ export const projects: Project[] = [
     image: {
       src: '/images/projects/lemma-2.png',
       placeholder: lemmaPlaceholder,
+    },
+    wip: true,
+  },
+  {
+    title: 'Engine',
+    description:
+      'A platform to practice and learn data structures and algorithms more effectively.',
+    tagline: 'Building leetcode from scratch',
+    links: ['https://github.com/marcowang01/engine'],
+    date: 'Fall, 2024',
+    skills: ['Go', 'Next.js', 'MongoDB', 'Docker'],
+    category: 'Coding Platform',
+    image: {
+      src: '/images/projects/engine.png',
+      // placeholder: enginePlaceholder,
     },
     wip: true,
   },
@@ -95,7 +110,7 @@ export const projects: Project[] = [
       'https://www.flickr.com/photos/arselectronica/53182961043/in/photostream/?ars-electronica',
     ],
     date: 'Summer, 2023',
-    skills: ['Next.js', 'Socket.io', 'Deepgram', 'ElevenLabs'],
+    skills: ['Socket.io', 'Deepgram', 'ElevenLabs'],
     collaborators: {
       items: [LILITH],
     },
