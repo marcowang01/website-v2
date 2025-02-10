@@ -10,6 +10,7 @@ import {
   newsPlaceholder,
   tetrisPlaceholder,
   lemmaPlaceholder,
+  enginePlaceholder,
 } from './placeholders'
 import { SHAOBO, LILITH, DALU, MARCO_Y, SHERRY, ZIHAN } from './people'
 
@@ -73,7 +74,7 @@ export const projects: Project[] = [
     category: 'Coding Platform',
     image: {
       src: '/images/projects/engine.png',
-      // placeholder: enginePlaceholder,
+      placeholder: enginePlaceholder,
     },
     wip: true,
   },
