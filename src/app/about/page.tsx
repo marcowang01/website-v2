@@ -1,6 +1,10 @@
+'use client'
+
+import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import styles from './page.module.css'
 import RandomGreeter from '@/components/randomGreeter/greeter'
+import { CaretDownIcon } from '@/svg/caret'
 
 // Define URLs as constants
 const URLs = {
@@ -21,21 +25,86 @@ const linkProps = {
 }
 
 export default function About() {
+  const [isRabbitOpen, setIsRabbitOpen] = useState(false)
+  const contentRef = useRef<HTMLDivElement>(null)
+  const [contentHeight, setContentHeight] = useState(0)
+
+  // Update the height of the dropdown content when toggled
+  useEffect(() => {
+    if (contentRef.current) {
+      setContentHeight(contentRef.current.scrollHeight)
+    }
+  }, [isRabbitOpen])
+
+  const toggleRabbit = () => setIsRabbitOpen((prev) => !prev)
+
   return (
     <main className={styles['main']}>
       <div className={styles['title']}>
         <RandomGreeter />
       </div>
       <div className={styles['paragraph']}>
-        {`I'm Marco. I am currently building software for AI agents at `}
-        <Link href={URLs.rabbit} {...linkProps}>
-          rabbit
-        </Link>
-        .
+        I&apos;m Marco. I build tools for people to create, learn, and connect.
       </div>
-      <div className={styles['paragraph']}>
-        I hope to build tools for people to create, learn, and connect.
+      <div className="mb-5 w-[60%] text-base font-normal leading-[1.2] tracking-[-0.005em]">
+        Currently, I am building software for AI agents at{' '}
+        <span className="relative inline-block">
+          <span
+            onClick={toggleRabbit}
+            className="inline-flex cursor-pointer select-none items-center"
+          >
+            <span className="flex items-center underline opacity-70 transition-[color,opacity] duration-150 ease-in-out hover:opacity-100">
+              rabbit.
+              <CaretDownIcon
+                className={`transition-transform duration-300 ${
+                  isRabbitOpen ? 'rotate-180' : ''
+                }`}
+                width={20}
+                height={20}
+              />
+            </span>
+          </span>
+        </span>
+        <div
+          style={{ height: isRabbitOpen ? `${contentHeight}px` : '0px' }}
+          className="overflow-hidden transition-all duration-300"
+        >
+          <div ref={contentRef} className={`text-md w-full pt-2 text-gray-600`}>
+            Some of my projects include:
+            <ul className="mt-2 list-disc pl-6">
+              <li>
+                core conversational AI (
+                <Link
+                  href={URLs.betaRabbit}
+                  {...linkProps}
+                  className="about-link"
+                >
+                  beta rabbit
+                </Link>
+                )
+              </li>
+              <li>
+                general-purpose computer-using agent (
+                <Link
+                  href={URLs.lamPlayground}
+                  {...linkProps}
+                  className="about-link"
+                >
+                  LAM playground
+                </Link>
+                )
+              </li>
+              <li>
+                {`on-device `}
+                <Link href={URLs.genUI} {...linkProps} className="about-link">
+                  generative UI
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
+
       <div className={styles['paragraph']}>
         {`Previously, I worked at `}
         <Link href={URLs.BoringCompany} {...linkProps}>
