@@ -78,7 +78,7 @@ export default function About() {
           className="overflow-hidden transition-all duration-300"
         >
           <div ref={contentRef} className={`text-md w-full pt-2`}>
-            Some of my projects include:
+            Some projects I shipped:
             <ul className="mt-2 list-disc pl-6">
               <li>
                 {`A redesign of the `}
