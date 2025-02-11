@@ -2,11 +2,6 @@
 
 ## Project Updates
 
-### Engine (WIP)
-- add readme
-- make github public
-- take screenshot
-
 ### Tomo
 - see how viable a serverless websocket python backend using modal
 - if not blitz remake using vercel ai sdk
@@ -31,15 +26,11 @@
 - postgres + index (supabase)
 
 ## Website Updates
+- add custom analytics events for each project link and page
+
 ### Spotlight
 - Update Tomo -> Math helper
 ### Collections
-- Add new projects
-  - Engine
-  - Lemma
-  - LOUR
-- Add WIP indicator
-
 - (optional) Create gifs for relevant projects
   - scribe
   - igloo
@@ -71,12 +62,6 @@
 - make github also into the link array and just at a github thing
 
 
-
-
 - [ ] extract title, paragraph styles into reusable css in global stylesheet
 - [ ] add click image to open modal
 - [ ] support and optimized for gifs
-- [ ] think of a way to add description
-- [ ] add empty div behind image for placeholder height
-- [ ] add LOUR
-- [ ] add Lemma
