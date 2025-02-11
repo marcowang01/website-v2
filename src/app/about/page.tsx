@@ -46,7 +46,7 @@ export default function About() {
       <div className={styles['paragraph']}>
         I&apos;m Marco. I build tools for people to create, learn, and connect.
       </div>
-      <div className="mb-5 w-[60%] text-base font-normal leading-[1.2] tracking-[-0.005em]">
+      <div className="mb-5 w-full text-base font-normal leading-[1.2] tracking-[-0.005em] md:w-[60%]">
         Currently, I am building software for AI agents at{' '}
         <span className="relative inline-block">
           <span
@@ -69,11 +69,11 @@ export default function About() {
           style={{ height: isRabbitOpen ? `${contentHeight}px` : '0px' }}
           className="overflow-hidden transition-all duration-300"
         >
-          <div ref={contentRef} className={`text-md w-full pt-2 text-gray-600`}>
+          <div ref={contentRef} className={`text-md w-full pt-2`}>
             Some of my projects include:
             <ul className="mt-2 list-disc pl-6">
               <li>
-                core conversational AI (
+                The core conversational AI (
                 <Link
                   href={URLs.betaRabbit}
                   {...linkProps}
@@ -84,7 +84,7 @@ export default function About() {
                 )
               </li>
               <li>
-                general-purpose computer-using agent (
+                A computer-using agent (
                 <Link
                   href={URLs.lamPlayground}
                   {...linkProps}
@@ -95,7 +95,7 @@ export default function About() {
                 )
               </li>
               <li>
-                {`on-device `}
+                {`On-device `}
                 <Link href={URLs.genUI} {...linkProps} className="about-link">
                   generative UI
                 </Link>
