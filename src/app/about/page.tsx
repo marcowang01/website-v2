@@ -51,7 +51,8 @@ export default function About() {
         <RandomGreeter />
       </div>
       <div className={styles['paragraph']}>
-        I&apos;m Marco. I build tools for people to create, learn, and connect.
+        I&apos;m Marco. I hope to build tools for people to create, learn, and
+        connect.
       </div>
       <div className="mb-5 w-full text-base font-normal leading-[1.2] tracking-[-0.005em] md:w-[60%]">
         Currently, I am building software for AI agents at{' '}
