@@ -64,7 +64,7 @@ export default function About() {
             <span className="flex items-center underline opacity-70 transition-[color,opacity] duration-150 ease-in-out hover:opacity-100">
               rabbit.
               <CaretDownIcon
-                className={`transition-transform duration-300 ${
+                className={`-ml-[2px] transition-transform duration-300 ${
                   isRabbitOpen ? 'rotate-180' : ''
                 }`}
                 width={20}
@@ -78,7 +78,7 @@ export default function About() {
           className="overflow-hidden transition-all duration-300"
         >
           <div ref={contentRef} className={`text-md w-full pt-2`}>
-            Some of the projects I worked on:
+            Some of my projects include:
             <ul className="mt-2 list-disc pl-6">
               <li>
                 {`A redesign of the `}
@@ -101,9 +101,9 @@ export default function About() {
                 </Link>
               </li>
               <li>
-                {`Dynamically `}
+                {`Dynamic `}
                 <Link href={URLs.genUI} {...linkProps} className="about-link">
-                  generated UI
+                  generative UI
                 </Link>
                 {` for the `}
                 <Link href={URLs.r1} {...linkProps} className="about-link">
