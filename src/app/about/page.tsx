@@ -9,11 +9,13 @@ import { CaretDownIcon } from '@/svg/caret'
 // Define URLs as constants
 const URLs = {
   rabbit: 'https://www.rabbit.tech/',
+  r1: 'https://www.rabbit.tech/rabbit-r1',
   BoringCompany: 'https://www.boringcompany.com/',
   Workiva: 'https://www.workiva.com/',
   TiiltLab: 'https://tiilt.northwestern.edu/',
-  betaRabbit: 'https://www.youtube.com/watch?v=aun7pGATm7Q&t=507s',
-  lamPlayground: 'https://www.rabbit.tech/lam-playground',
+  betaRabbit: 'https://www.youtube.com/watch?v=aun7pGATm7Q&t=45s',
+  lamPlayground:
+    'https://www.rabbit.tech/research/a-peek-into-rabbit-s-progress-with-LAM-playground',
   genUI: 'https://www.rabbit.tech/support/article/gen-ui-rabbit-r1',
   magicCam: 'https://www.rabbit.tech/support/article/rabbit-r1-magic-camera',
   magicVoice: 'https://www.rabbit.tech/newsroom/elevenlabs-magic-voice',
@@ -36,7 +38,12 @@ export default function About() {
     }
   }, [isRabbitOpen])
 
-  const toggleRabbit = () => setIsRabbitOpen((prev) => !prev)
+  const toggleRabbit = (e: React.MouseEvent<HTMLSpanElement>) => {
+    e.stopPropagation()
+    e.preventDefault()
+
+    setIsRabbitOpen((prev) => !prev)
+  }
 
   return (
     <main className={styles['main']}>
@@ -70,34 +77,36 @@ export default function About() {
           className="overflow-hidden transition-all duration-300"
         >
           <div ref={contentRef} className={`text-md w-full pt-2`}>
-            Some of my projects include:
+            Some of the projects I worked on:
             <ul className="mt-2 list-disc pl-6">
               <li>
-                The core conversational AI (
+                {`A redesign of the `}
                 <Link
                   href={URLs.betaRabbit}
                   {...linkProps}
                   className="about-link"
                 >
-                  beta rabbit
+                  core AI assistant
                 </Link>
-                )
               </li>
               <li>
-                A computer-using agent (
+                {`A general-purpose `}
                 <Link
                   href={URLs.lamPlayground}
                   {...linkProps}
                   className="about-link"
                 >
-                  LAM playground
+                  computer-using agent
                 </Link>
-                )
               </li>
               <li>
-                {`On-device `}
+                {`Dynamically `}
                 <Link href={URLs.genUI} {...linkProps} className="about-link">
-                  generative UI
+                  generated UI
+                </Link>
+                {` for the `}
+                <Link href={URLs.r1} {...linkProps} className="about-link">
+                  r1 device
                 </Link>
               </li>
             </ul>

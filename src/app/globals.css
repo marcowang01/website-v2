@@ -110,5 +110,5 @@ a {
 }
 
 .about-link {
-  @apply underline opacity-70 transition-[color,opacity] duration-150 ease-in-out hover:opacity-100;
+  @apply cursor-pointer underline opacity-70 transition-[color,opacity] duration-150 ease-in-out hover:opacity-100;
 }
