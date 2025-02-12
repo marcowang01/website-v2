@@ -4,7 +4,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   gap: 1rem;
-  width: 100%;
+  width: 85%;
   margin: 0 12px 40px 12px;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .linkContainer {
-  width: 87%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -54,9 +54,6 @@
   .main {
     padding-top: calc(11px + 1rem);
     margin: 0 0px 40px 0px;
-  }
-
-  .linkContainer {
     width: 100%;
   }
 
