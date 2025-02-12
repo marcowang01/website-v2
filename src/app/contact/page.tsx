@@ -2,14 +2,22 @@ import Link from 'next/link'
 import styles from './page.module.css'
 import ArrowIcon from '@/svg/arrow'
 
-function ContactLink({ name, link, text }) {
+function ContactLink({
+  name,
+  link,
+  text,
+}: {
+  name: string
+  link: string
+  text: string
+}) {
   const Content = () => (
     <>
-      <div className={styles.link}>
+      <div className={styles['link']}>
         {name}
-        {link && <ArrowIcon className={styles.arrow} />}
+        {link && <ArrowIcon className={styles['arrow']} />}
       </div>
-      <div className={styles.linkText}>{text}</div>
+      <div className={styles['link-text']}>{text}</div>
     </>
   )
 
@@ -19,7 +27,7 @@ function ContactLink({ name, link, text }) {
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className={`${styles.linkContainer} ${styles.linkHover}`}
+        className={`${styles['link-container']} ${styles['link-hover']}`}
       >
         <Content />
       </Link>
@@ -27,7 +35,7 @@ function ContactLink({ name, link, text }) {
   }
 
   return (
-    <div className={styles.linkContainer}>
+    <div className={styles['link-container']}>
       <Content />
     </div>
   )
@@ -35,7 +43,7 @@ function ContactLink({ name, link, text }) {
 
 export default function Contact() {
   return (
-    <main className={styles.main}>
+    <main className={styles['main']}>
       <ContactLink
         name="LinkedIn"
         link="https://www.linkedin.com/in/marco-01/"
