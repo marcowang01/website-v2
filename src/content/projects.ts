@@ -92,7 +92,7 @@ export const projects: Project[] = [
       label: 'UI designed by',
       items: [SHAOBO],
     },
-    category: 'AI Notes App',
+    category: 'AI Note-taking',
     showInSpotlight: true,
     image: {
       src: '/images/projects/scribe.png',
@@ -190,7 +190,7 @@ export const projects: Project[] = [
       label: 'UI designed by',
       items: [SHAOBO, SHERRY],
     },
-    category: 'cross-platform App',
+    category: 'social platform App',
     showInSpotlight: true,
     image: {
       src: '/images/projects/igloo.png',

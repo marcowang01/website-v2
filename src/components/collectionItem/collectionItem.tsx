@@ -62,12 +62,22 @@ export function CollectionItem({
               {category}
             </div>
           </div>
-          <div className="text-xs font-light uppercase tracking-[-0.02em] text-project-gray-300">
+          <div className="flex items-end gap-2 text-xs font-light uppercase tracking-[-0.02em] text-project-gray-300">
             {date}
+            <CaretDownIcon
+              className={cn(
+                'shrink-0 transform -mr-1 transition-transform duration-500 ease-in-out',
+                {
+                  'rotate-180': isExpanded,
+                }
+              )}
+              width={18}
+              height={18}
+            />
           </div>
         </section>
 
-        <section className="flex w-full flex-row items-center justify-between">
+        {/* <section className="flex w-full flex-row items-center justify-between">
           <div className="w-fit text-sm leading-[1.2] tracking-[-0.02em]">
             {tagline}
           </div>
@@ -83,7 +93,7 @@ export function CollectionItem({
               height={18}
             />
           </div>
-        </section>
+        </section> */}
         <section
           ref={expandedContentRef}
           style={{
