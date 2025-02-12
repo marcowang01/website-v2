@@ -50,23 +50,23 @@ export function CollectionItem({
       onClick={onClick}
     >
       <div className="flex w-full flex-col items-start justify-between">
-        <section className="flex w-full flex-row items-center justify-between gap-[10px]">
-          <div className="flex flex-row items-baseline gap-3 text-base font-medium leading-[1.25] tracking-[-0.005em]">
+        <section className="flex w-full flex-row items-start justify-between gap-[10px] md:items-center">
+          <div className="flex flex-col items-baseline text-base font-medium leading-[1.25] tracking-[-0.005em] md:flex-row md:gap-3">
             <p className="flex flex-row items-start gap-1">
               {title}
               {wip && (
                 <span className="text-xs font-light text-project-gray-300">{`WIP`}</span>
               )}
             </p>
-            <div className="hidden w-fit text-sm font-normal uppercase tracking-[-0.025em] text-project-gray-300 md:block">
+            <div className="w-fit text-xs font-normal uppercase tracking-[-0.025em] text-project-gray-300 md:text-sm">
               {category}
             </div>
           </div>
-          <div className="flex items-end gap-2 text-xs font-light uppercase tracking-[-0.02em] text-project-gray-300">
+          <div className="flex flex-col items-end text-xs font-light uppercase tracking-[-0.02em] text-project-gray-300 md:flex-row md:gap-2">
             {date}
             <CaretDownIcon
               className={cn(
-                '-mr-2 shrink-0 transform transition-transform duration-500 ease-in-out',
+                '-mr-1.5 shrink-0 transform transition-transform duration-500 ease-in-out',
                 {
                   'rotate-180': isExpanded,
                 }
