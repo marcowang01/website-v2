@@ -66,7 +66,7 @@ export function CollectionItem({
             {date}
             <CaretDownIcon
               className={cn(
-                'shrink-0 transform -mr-1 transition-transform duration-500 ease-in-out',
+                '-mr-2 shrink-0 transform transition-transform duration-500 ease-in-out',
                 {
                   'rotate-180': isExpanded,
                 }

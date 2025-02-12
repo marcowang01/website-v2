@@ -198,7 +198,7 @@ export const projects: Project[] = [
     },
   },
   {
-    title: 'Formula Telemetry',
+    title: 'Formula',
     description:
       'A real-time dashboard that collects and visualizes sensor data from the NU Formula Racing car. ' +
       'Monitored performance metrics for race day.',
@@ -210,7 +210,7 @@ export const projects: Project[] = [
       items: [ZIHAN],
     },
     skills: ['Next.js', 'Node.js', 'Socket.io', 'DynamoDB'],
-    category: 'Data Dashboard',
+    category: 'Race Telemetry',
     image: {
       src: '/images/projects/formula.png',
       placeholder: formulaPlaceholder,
