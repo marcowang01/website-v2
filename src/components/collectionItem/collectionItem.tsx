@@ -76,24 +76,6 @@ export function CollectionItem({
             />
           </div>
         </section>
-
-        {/* <section className="flex w-full flex-row items-center justify-between">
-          <div className="w-fit text-sm leading-[1.2] tracking-[-0.02em]">
-            {tagline}
-          </div>
-          <div className="text-project-gray-300">
-            <CaretDownIcon
-              className={cn(
-                'shrink-0 transform transition-transform duration-500 ease-in-out',
-                {
-                  'rotate-180': isExpanded,
-                }
-              )}
-              width={18}
-              height={18}
-            />
-          </div>
-        </section> */}
         <section
           ref={expandedContentRef}
           style={{

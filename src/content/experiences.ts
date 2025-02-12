@@ -55,7 +55,6 @@ const expericences = {
         'Collaborated on building an audio processing server for real-time learning analytics for a data-capture device',
         'Engineered a real-time speaker diarization service using PyTorch, boosting accuracy by 25%',
         'Implemented a multi-threaded audio buffer, enhancing diarization runtime performance by 50%',
-        'Reverse-engineered legacy code to integrate advanced speech recognition models, improving accuracy by 50%',
       ],
       date: 'Sep. 2021 - May. 2022',
       location: 'Evanston, IL',
