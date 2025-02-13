@@ -55,7 +55,7 @@ export default function About() {
         connect.
       </div>
       <div className="mb-5 w-full text-base font-normal leading-[1.2] tracking-[-0.005em] md:w-[60%]">
-        Currently, I am building software for AI agents at{' '}
+        Currently, I am a software engineer building AI agents at{' '}
         <span className="relative inline-block">
           <span
             onClick={toggleRabbit}

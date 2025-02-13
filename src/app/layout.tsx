@@ -18,7 +18,7 @@ const inter = Inter({
 export const metadata = {
   title: 'Marco Wang',
   description:
-    'Building AI agents at rabbit. Creating tools to help people learn, create and connect.',
+    'Software Engineer. Building AI agents at rabbit. Creating tools to help people learn, create and connect.',
   keywords: ['Marco Wang', 'Software', 'Engineer', 'Personal Website'],
   authors: [{ name: 'Marco Wang' }],
   creator: 'Marco Wang',
