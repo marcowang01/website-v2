@@ -183,7 +183,10 @@ export const projects: Project[] = [
       'allowing users to communicate naturally across channels. ',
     // 'Pilot tested with 20+ users.',
     tagline: 'Connecting people through context-aware digital spaces',
-    links: ['https://www.igloo.place/', 'https://github.com/marcowang01/Igloo'],
+    links: [
+      'https://igloo-website.vercel.app/',
+      'https://github.com/marcowang01/Igloo',
+    ],
     date: 'Summer, 2022',
     skills: ['Laravel', 'React Native'],
     collaborators: {
