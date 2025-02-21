@@ -5,27 +5,25 @@
   align-items: flex-start;
   width: 85%;
   margin: 0 12px 40px 12px;
-  gap: 40px;
 }
 
 .title {
   font-size: 24px;
-  letter-spacing: -0.02em;
   font-weight: var(--font-semibold);
   color: var(--foreground-rgb);
-  text-transform: uppercase;
+  text-transform: capitalize;
+  letter-spacing: -0.01em;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   gap: 8px;
-  transition: color 0.15s ease-in-out;
+  transition: opacity 0.15s ease-in-out;
+  margin-bottom: 20px;
 }
 
 .title svg {
-  transition:
-    fill 0.15s ease-in-out,
-    transform 0.15s ease-in-out;
+  transition: opacity 0.15s ease-in-out;
   width: 18px;
   height: 18px;
   fill: rgb(var(--foreground-rgb));
@@ -46,6 +44,7 @@
 }
 
 .section {
+  margin-bottom: 40px;
   width: 100%;
 }
 

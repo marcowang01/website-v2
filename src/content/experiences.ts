@@ -53,9 +53,9 @@ const expericences = {
       company: 'Northwestern Tiilt Lab',
       position: 'Research Intern',
       bulletpoints: [
-        'Collaborated on building an audio processing server for real-time learning analytics for a data-capture device',
-        'Engineered a real-time speaker diarization service, boosting accuracy by 25%',
-        'Implemented a multi-threaded audio buffer, enhancing diarization runtime performance by 50%',
+        // 'Collaborated on building an audio processing server for real-time learning analytics for a data-capture device',
+        // 'Engineered a real-time speaker diarization service, boosting accuracy by 25%',
+        // 'Implemented a multi-threaded audio buffer, enhancing diarization runtime performance by 50%',
       ],
       date: 'Sep. 2021 - May. 2022',
       location: 'Evanston, IL',
