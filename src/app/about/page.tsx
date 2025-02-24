@@ -55,14 +55,14 @@ export default function About() {
         connect.
       </div>
       <div className="mb-5 w-full text-base font-normal leading-[1.2] tracking-[-0.005em] md:w-[60%]">
-        Currently, I am a software engineer building AI agents at{' '}
+        Currently, I am building {` `}
         <span className="relative inline-block">
           <span
             onClick={toggleRabbit}
             className="inline-flex cursor-pointer select-none items-center"
           >
             <span className="flex items-center underline opacity-70 transition-[color,opacity] duration-150 ease-in-out hover:opacity-100">
-              rabbit.
+              software
               <CaretDownIcon
                 className={`-ml-[2px] transition-transform duration-300 ${
                   isRabbitOpen ? 'rotate-180' : ''
@@ -73,6 +73,13 @@ export default function About() {
             </span>
           </span>
         </span>
+        for AI agents at{' '}
+        <span className={`${styles['paragraph']}`}>
+          <Link href={URLs.rabbit} {...linkProps}>
+            rabbit
+          </Link>
+        </span>
+        .
         <div
           style={{ height: isRabbitOpen ? `${contentHeight}px` : '0px' }}
           className="overflow-hidden transition-all duration-300"
