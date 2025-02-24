@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import styles from './navbar.module.css'
 import { GetSongInfo } from '@/actions/spotify'
 import Link from 'next/link'
+import { trackEvent } from '@/lib/util'
 export default function MusicItem() {
   // useState hook to store the current time
   const [currentTrack, setCurrentTrack] = useState('')
@@ -11,8 +12,10 @@ export default function MusicItem() {
 
   const fetchTrack = async () => {
     const info = await GetSongInfo()
-    setCurrentTrack(info.track)
-    setCurrentUrl(info.url)
+    if (typeof info !== 'string') {
+      setCurrentTrack(info.track)
+      setCurrentUrl(info.url)
+    }
     // console.log(info);
   }
 
@@ -37,10 +40,15 @@ export default function MusicItem() {
             href={currentUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className={`${styles.navbarItems} ${styles.hideOnMobile} ${styles.tight} ${styles.button}`}
+            className={`${styles['navbarItems']} ${styles['hideOnMobile']} ${styles['tight']} ${styles['button']}`}
+            onClick={() => {
+              trackEvent('navbar-music-item-click', {
+                track: currentTrack,
+              })
+            }}
           >
             LISTENING TO:
-            <span className={styles.horizontalScrollContainer}>
+            <span className={styles['horizontalScrollContainer']}>
               <span>
                 {currentTrack.length > 30
                   ? currentTrack.slice(0, 30) + '...'

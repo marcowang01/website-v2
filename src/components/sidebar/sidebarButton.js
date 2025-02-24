@@ -5,6 +5,7 @@ import { useRouter, usePathname } from 'next/navigation'
 import styles from './sidebar.module.css'
 import Link from 'next/link'
 import ArrowIcon from '@/svg/arrow'
+import { trackEvent } from '@/lib/util'
 
 export default function SidebarButton({ name, link, shortcut }) {
   const router = useRouter()
@@ -57,6 +58,9 @@ export default function SidebarButton({ name, link, shortcut }) {
     (event) => {
       if (event.key.toLowerCase() === shortcut.toLowerCase()) {
         removeActiveStyles()
+        trackEvent('sidebar-keyboard-shortcut', {
+          name,
+        })
         if (isExternalLink) {
           window.open(link, '_blank', 'noopener,noreferrer')
         } else {
@@ -88,7 +92,17 @@ export default function SidebarButton({ name, link, shortcut }) {
   let keyClass = styles.sidebarKey
 
   return (
-    <Link href={link} {...linkProps} className={containerClass} ref={buttonRef}>
+    <Link
+      href={link}
+      {...linkProps}
+      className={containerClass}
+      ref={buttonRef}
+      onClick={() => {
+        trackEvent('sidebar-keyboard-shortcut', {
+          name,
+        })
+      }}
+    >
       <div>
         {name} {isExternalLink && <ArrowIcon />}
       </div>
