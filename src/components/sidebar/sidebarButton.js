@@ -68,7 +68,7 @@ export default function SidebarButton({ name, link, shortcut }) {
         }
       }
     },
-    [shortcut, isExternalLink, link, router, removeActiveStyles]
+    [shortcut, isExternalLink, link, router, removeActiveStyles, name]
   )
 
   useEffect(() => {
