@@ -5,6 +5,7 @@ import Link from 'next/link'
 import styles from './page.module.css'
 import RandomGreeter from '@/components/randomGreeter/greeter'
 import { CaretDownIcon } from '@/svg/caret'
+import { trackEvent } from '@/lib/util'
 
 // Define URLs as constants
 const URLs = {
@@ -41,6 +42,9 @@ export default function About() {
   const toggleRabbit = (e: React.MouseEvent<HTMLSpanElement>) => {
     e.stopPropagation()
     e.preventDefault()
+    trackEvent('about-toggle', {
+      isOpen: isRabbitOpen,
+    })
 
     setIsRabbitOpen((prev) => !prev)
   }
@@ -93,6 +97,11 @@ export default function About() {
                   href={URLs.betaRabbit}
                   {...linkProps}
                   className="about-link"
+                  onClick={() => {
+                    trackEvent('about-link-click', {
+                      link: URLs.betaRabbit,
+                    })
+                  }}
                 >
                   core AI assistant
                 </Link>
@@ -103,17 +112,40 @@ export default function About() {
                   href={URLs.lamPlayground}
                   {...linkProps}
                   className="about-link"
+                  onClick={() => {
+                    trackEvent('about-link-click', {
+                      link: URLs.lamPlayground,
+                    })
+                  }}
                 >
                   computer-using agent
                 </Link>
               </li>
               <li>
                 {`Dynamic `}
-                <Link href={URLs.genUI} {...linkProps} className="about-link">
+                <Link
+                  href={URLs.genUI}
+                  {...linkProps}
+                  className="about-link"
+                  onClick={() => {
+                    trackEvent('about-link-click', {
+                      link: URLs.genUI,
+                    })
+                  }}
+                >
                   generative UI
                 </Link>
                 {` for the `}
-                <Link href={URLs.r1} {...linkProps} className="about-link">
+                <Link
+                  href={URLs.r1}
+                  {...linkProps}
+                  className="about-link"
+                  onClick={() => {
+                    trackEvent('about-link-click', {
+                      link: URLs.r1,
+                    })
+                  }}
+                >
                   r1 device
                 </Link>
               </li>
@@ -124,15 +156,39 @@ export default function About() {
 
       <div className={styles['paragraph']}>
         {`Previously, I worked at `}
-        <Link href={URLs.BoringCompany} {...linkProps}>
+        <Link
+          href={URLs.BoringCompany}
+          {...linkProps}
+          onClick={() => {
+            trackEvent('about-link-click', {
+              link: URLs.BoringCompany,
+            })
+          }}
+        >
           The Boring Company
         </Link>
         {`, `}
-        <Link href={URLs.Workiva} {...linkProps}>
+        <Link
+          href={URLs.Workiva}
+          {...linkProps}
+          onClick={() => {
+            trackEvent('about-link-click', {
+              link: URLs.Workiva,
+            })
+          }}
+        >
           Workiva
         </Link>
         {`, and `}
-        <Link href={URLs.TiiltLab} {...linkProps}>
+        <Link
+          href={URLs.TiiltLab}
+          {...linkProps}
+          onClick={() => {
+            trackEvent('about-link-click', {
+              link: URLs.TiiltLab,
+            })
+          }}
+        >
           NU Tiilt Lab
         </Link>
         .
