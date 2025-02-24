@@ -98,7 +98,7 @@ export default function SidebarButton({ name, link, shortcut }) {
       className={containerClass}
       ref={buttonRef}
       onClick={() => {
-        trackEvent('sidebar-keyboard-shortcut', {
+        trackEvent('sidebar-click', {
           name,
         })
       }}
