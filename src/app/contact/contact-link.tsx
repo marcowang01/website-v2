@@ -14,8 +14,8 @@ export function ContactLink({
   copy,
 }: {
   name: string
-  link: string
   text: string
+  link?: string
   copy?: boolean
 }) {
   const [copied, setCopied] = useState(false)
@@ -29,12 +29,12 @@ export function ContactLink({
     >
       <div className={styles['link']}>
         {name}
-        {link && !copy && (
+        {!copy && (
           <span className="">
             <ArrowIcon height={14} width={14} />
           </span>
         )}
-        {link && copy && (
+        {copy && (
           <span className="">
             {copied ? (
               <span className="text-sm font-light">copied</span>
@@ -49,7 +49,14 @@ export function ContactLink({
   )
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(text)
+    if (text.includes(' at gmail dot com')) {
+      navigator.clipboard.writeText(
+        text.replace(' at gmail dot com', '@gmail.com')
+      )
+    } else {
+      navigator.clipboard.writeText(text)
+    }
+
     setCopied((prev) => {
       if (!prev) {
         setTimeout(() => {
