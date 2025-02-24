@@ -1,7 +1,7 @@
 'use client'
 
 import { Item } from '@/content/projects'
-import { cn } from '@/lib/util'
+import { cn, trackEvent } from '@/lib/util'
 import Link from 'next/link'
 
 interface ProjectInfoListProps {
@@ -44,6 +44,9 @@ export function ProjectInfoList({
                 e.stopPropagation()
                 e.preventDefault()
                 window.open(item.link, '_blank', 'noopener,noreferrer')
+                trackEvent('project-info-list-link-click', {
+                  label: item.name,
+                })
               }}
             >
               {item.name}

@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import ArrowIcon from '@/svg/arrow'
-import { cn } from '@/lib/util'
+import { cn, trackEvent } from '@/lib/util'
 
 interface ProjectLinkProps {
   href: string
@@ -22,6 +22,9 @@ export function ProjectLink({ href, label, className }: ProjectLinkProps) {
         e.stopPropagation()
         e.preventDefault()
         window.open(href, '_blank', 'noopener,noreferrer')
+        trackEvent('project-link-click', {
+          label,
+        })
       }}
     >
       <div className="min-w-content text-xs font-medium leading-[1.2] tracking-[-0.02em]">

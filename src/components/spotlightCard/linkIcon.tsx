@@ -6,6 +6,7 @@ import React, { useCallback } from 'react'
 import Link from 'next/link'
 import { ArsElectronicaIcon } from '@/svg/ars-electronica'
 import { ProjectLink } from '../collectionItem/projectLink'
+import { trackEvent } from '@/lib/util'
 
 export default function LinkIcon({
   link,
@@ -28,6 +29,9 @@ export default function LinkIcon({
     e.preventDefault()
     e.stopPropagation()
     window.open(link, '_blank', 'noopener,noreferrer')
+    trackEvent('spotlight-card-link-click', {
+      link,
+    })
   }
 
   return (

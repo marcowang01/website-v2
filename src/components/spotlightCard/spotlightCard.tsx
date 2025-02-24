@@ -1,7 +1,7 @@
 'use client'
 import LinkIcon from './linkIcon'
 import { Project } from '@/content/projects'
-import { cn } from '@/lib/util'
+import { cn, trackEvent } from '@/lib/util'
 import ArrowIcon from '@/svg/arrow'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -15,6 +15,9 @@ export function SpotlightCard({ project }: { project: Project }) {
     e.preventDefault()
     e.stopPropagation()
     window.open(priorityLink, '_blank', 'noopener,noreferrer')
+    trackEvent('spotlight-card-click', {
+      title,
+    })
   }
 
   return (

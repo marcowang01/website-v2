@@ -4,7 +4,7 @@ import Link from 'next/link'
 import styles from './page.module.css'
 import ArrowIcon from '@/svg/arrow'
 import { CopyIcon } from '@/svg/copy'
-import { cn } from '@/lib/util'
+import { cn, trackEvent } from '@/lib/util'
 import { useState } from 'react'
 
 export function ContactLink({
@@ -57,6 +57,10 @@ export function ContactLink({
       navigator.clipboard.writeText(text)
     }
 
+    trackEvent('contact-link-copy', {
+      name,
+    })
+
     setCopied((prev) => {
       if (!prev) {
         setTimeout(() => {
@@ -82,6 +86,11 @@ export function ContactLink({
         target="_blank"
         rel="noopener noreferrer"
         className={`${styles['linkHover']} w-full`}
+        onClick={() => {
+          trackEvent('contact-link-click', {
+            name,
+          })
+        }}
       >
         <Content />
       </Link>

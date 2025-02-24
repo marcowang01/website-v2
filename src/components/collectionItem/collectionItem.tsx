@@ -3,7 +3,7 @@
 import { Project } from '@/content/projects'
 import { useState, useRef, useEffect } from 'react'
 import { CaretDownIcon } from '@/svg/caret'
-import { cn } from '@/lib/util'
+import { cn, trackEvent } from '@/lib/util'
 import { ProjectDetails } from './projectDetails'
 
 export function CollectionItem({
@@ -47,7 +47,12 @@ export function CollectionItem({
           'bg-project-gray-150': isExpanded,
         }
       )}
-      onClick={onClick}
+      onClick={() => {
+        onClick()
+        trackEvent('collection-item-click', {
+          title,
+        })
+      }}
     >
       <div className="flex w-full flex-col items-start justify-between">
         <section className="flex w-full flex-row items-start justify-between gap-[10px] md:items-center">
