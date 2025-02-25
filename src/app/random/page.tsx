@@ -14,7 +14,7 @@ export default function Random() {
     {
       title: 'Enjoys',
       items: [
-        'Badminton Doubles',
+        'Playing badminton doubles',
         'Skiing on fresh powder',
         'Getting three stars in Overcooked 2',
       ],
