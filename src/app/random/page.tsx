@@ -19,6 +19,14 @@ export default function Random() {
         'Getting three stars in Overcooked 2',
       ],
     },
+    {
+      title: 'Currently Learning',
+      items: [
+        'Wheel throwing',
+        'Driving 200+ in golf',
+        'Programming in Go',
+      ],
+    },
   ]
 
   return (
