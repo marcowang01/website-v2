@@ -18,7 +18,7 @@ export default function Random() {
       items: [
         'Ping Pong The Animation',
         'Cowboy Bebop',
-        'Frieren: Beyond Journey\'s End',
+        "Frieren: Beyond Journey's End",
         'The Three Idiots',
         'Interstellar',
         'The God of Gamblers II',
@@ -44,13 +44,13 @@ export default function Random() {
   ]
 
   return (
-    <main className={styles.main}>
+    <main className={styles['main']}>
       {sections.map((section, index) => (
-        <section key={index} className={styles.section}>
-          <h3 className={styles.sectionTitle}>{section.title}</h3>
-          <ul className={styles.list}>
+        <section key={index} className={styles['section']}>
+          <h3 className={styles['section-title']}>{section.title}</h3>
+          <ul className={styles['list']}>
             {section.items.map((item, itemIndex) => (
-              <li key={itemIndex} className={styles.listItem}>
+              <li key={itemIndex} className={styles['list-item']}>
                 {item}
               </li>
             ))}
