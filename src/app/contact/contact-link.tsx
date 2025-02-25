@@ -57,10 +57,6 @@ export function ContactLink({
       navigator.clipboard.writeText(text)
     }
 
-    trackEvent('contact-link-copy', {
-      name,
-    })
-
     setCopied((prev) => {
       if (!prev) {
         setTimeout(() => {
@@ -68,6 +64,10 @@ export function ContactLink({
         }, 2000)
       }
       return true
+    })
+
+    trackEvent('contact-link-copy', {
+      name,
     })
   }
 

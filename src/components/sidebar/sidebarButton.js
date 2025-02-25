@@ -58,14 +58,14 @@ export default function SidebarButton({ name, link, shortcut }) {
     (event) => {
       if (event.key.toLowerCase() === shortcut.toLowerCase()) {
         removeActiveStyles()
-        trackEvent('sidebar-keyboard-shortcut', {
-          name,
-        })
         if (isExternalLink) {
           window.open(link, '_blank', 'noopener,noreferrer')
         } else {
           router.push(link)
         }
+        trackEvent('sidebar-keyboard-shortcut', {
+          name,
+        })
       }
     },
     [shortcut, isExternalLink, link, router, removeActiveStyles, name]

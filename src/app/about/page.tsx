@@ -42,11 +42,11 @@ export default function About() {
   const toggleRabbit = (e: React.MouseEvent<HTMLSpanElement>) => {
     e.stopPropagation()
     e.preventDefault()
+    setIsRabbitOpen((prev) => !prev)
+    
     trackEvent('about-toggle', {
       isOpen: isRabbitOpen,
     })
-
-    setIsRabbitOpen((prev) => !prev)
   }
 
   return (
