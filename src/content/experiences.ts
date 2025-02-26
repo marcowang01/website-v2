@@ -11,7 +11,7 @@ export interface Experience {
 const expericences = {
   work: [
     {
-      company: 'rabbit, inc.',
+      company: 'rabbit inc.',
       position: 'Software Engineer',
       bulletpoints: [
         'Building personal AI assistants that can interact with the world',
@@ -36,7 +36,7 @@ const expericences = {
       url: 'https://www.boringcompany.com/',
     },
     {
-      company: 'Workiva',
+      company: 'Workiva Inc.',
       position: 'Software Engineer Intern',
       bulletpoints: [
         'Improved document processing efficiency and reliability for an online document editor, focusing on fonts and file I/O',
