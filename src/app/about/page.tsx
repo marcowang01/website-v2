@@ -43,9 +43,9 @@ export default function About() {
     e.stopPropagation()
     e.preventDefault()
     setIsRabbitOpen((prev) => !prev)
-    
+
     trackEvent('about-toggle', {
-      isOpen: isRabbitOpen,
+      isOpen: isRabbitOpen ? 'true' : 'false',
     })
   }
 

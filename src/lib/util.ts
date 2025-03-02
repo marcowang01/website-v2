@@ -8,7 +8,7 @@ export function cn(...inputs: ClassValue[]) {
 
 export function trackEvent(
   eventName: string,
-  eventData: Record<string, unknown> = {}
+  eventData: Record<string, string> = {}
 ) {
   if (
     process.env['NEXT_PUBLIC_NODE_ENV'] === 'production' &&
@@ -17,7 +17,12 @@ export function trackEvent(
     const gtag = (window as any).gtag || function () {}
     const umami = (window as any).umami || function () {}
 
-    if (gtag) gtag('event', eventName, eventData)
-    if (umami) umami.track(eventName, eventData)
+    if (gtag)
+      gtag('event', eventName, {
+        ...eventData,
+      })
+    if (umami) {
+      umami.track(eventName, eventData)
+    }
   }
 }

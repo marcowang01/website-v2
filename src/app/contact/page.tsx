@@ -15,7 +15,7 @@ export default function Contact() {
         link="https://github.com/marcowang01"
         text="@marcowang01"
       />
-      <ContactLink name="Email" text="marcowang0101 at gmail dot com" copy/>
+      <ContactLink name="Email" text="marcowang0101 at gmail dot com" copy />
     </main>
   )
 }
