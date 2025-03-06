@@ -77,7 +77,7 @@ export default function About() {
             </span>
           </span>
         </span>
-        for AI agents at{' '}
+        for AI assistants at{' '}
         <span className={`${styles['paragraph']}`}>
           <Link href={URLs.rabbit} {...linkProps}>
             rabbit
