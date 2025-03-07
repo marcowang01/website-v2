@@ -3,6 +3,7 @@ import expericences from '@/content/experiences'
 import ResumeCard from '@/components/resumeCard/resumeCard'
 import Link from 'next/link'
 import DownlaodIcon from '@/svg/download'
+import { trackEvent } from '@/lib/util'
 
 export default function Resume() {
   return (
@@ -12,6 +13,9 @@ export default function Resume() {
         href="/files/marco_wang_resume.pdf"
         target="_blank"
         rel="noopener noreferrer"
+        onClick={() => {
+          trackEvent('resume-download-click')
+        }}
       >
         Resume
         <DownlaodIcon className={styles['icon']} />
