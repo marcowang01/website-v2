@@ -1,3 +1,5 @@
+'use client'
+
 import styles from './page.module.css'
 import expericences from '@/content/experiences'
 import ResumeCard from '@/components/resumeCard/resumeCard'
