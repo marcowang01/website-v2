@@ -21,13 +21,14 @@
 }
 
 .companyLink {
-  text-decoration: none;
+  text-decoration: underline;
   color: inherit;
   cursor: pointer;
+  transition: opacity 0.1s ease-in-out;
 }
 
 .companyLink:hover {
-  text-decoration: underline;
+  opacity: 0.8;
 }
 
 .position {
