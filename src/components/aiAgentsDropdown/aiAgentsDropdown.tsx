@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { CaretDownIcon } from '@/svg/caret'
-import { trackEvent } from '@/lib/util'
+import { cn, trackEvent } from '@/lib/util'
 
 const URLs = {
   rabbit: 'https://www.rabbit.tech/',
@@ -54,7 +54,12 @@ export function AiAgentsDropdown({
           onClick={toggleDropdown}
           className="inline-flex cursor-pointer select-none items-center"
         >
-          <span className="flex items-center underline opacity-70 transition-[color,opacity] duration-150 ease-in-out hover:opacity-100">
+          <span
+            className={cn(
+              'flex items-center underline opacity-70 transition-[color,opacity] duration-150 ease-in-out hover:opacity-100',
+              isOpen && 'opacity-100',
+            )}
+          >
             AI agents
             <CaretDownIcon
               className={`-ml-[2px] transition-transform duration-300 ${
