@@ -5,6 +5,7 @@ import styles from './page.module.css'
 import RandomGreeter from '@/components/randomGreeter/greeter'
 import { AiAgentsDropdown } from '@/components/aiAgentsDropdown/aiAgentsDropdown'
 import { trackEvent } from '@/lib/util'
+import { ReactNode } from 'react'
 
 // Define URLs as constants
 const URLs = {
@@ -12,17 +13,38 @@ const URLs = {
   Workiva: 'https://www.workiva.com/',
   TiiltLab: 'https://tiilt.northwestern.edu/',
   exa: 'https://exa.ai/',
+  rabbit: 'https://www.rabbit.tech/',
 }
 
-const linkProps = {
-  target: '_blank',
-  rel: 'noopener noreferrer',
+// Helper component for external links
+function ExternalLink({
+  href,
+  children,
+  className = '',
+}: {
+  href: string
+  children: ReactNode
+  className?: string
+}) {
+  return (
+    <Link
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`underline opacity-70 transition-[color,opacity] duration-150 ease-in-out hover:opacity-100 ${className}`}
+      onClick={() => {
+        trackEvent('about-link-click', { link: href })
+      }}
+    >
+      {children}
+    </Link>
+  )
 }
 
 export default function About() {
   return (
     <main className={styles['main']}>
-      <div className={styles['title']}>
+      <div className="mb-5 text-2xl font-semibold">
         <RandomGreeter />
       </div>
       <div className={styles['paragraph']}>
@@ -30,56 +52,30 @@ export default function About() {
         connect.
       </div>
       <div className="mb-5 w-full text-base font-normal leading-[1.2] tracking-[-0.005em] md:w-[60%]">
-        Currently, I am building software for at{` `}
+        Currently, I am building the search engine for AI at{` `}
         <span className={`${styles['paragraph']}`}>
-          <Link href={URLs.exa} {...linkProps}>
-            Exa
-          </Link>
+          <ExternalLink href={URLs.exa}>Exa</ExternalLink>
         </span>
         .
       </div>
-      <div className="mb-5 w-full text-base font-normal leading-[1.2] tracking-[-0.005em] md:w-[60%]">
-        Previously, I worked on <AiAgentsDropdown />
-      </div>
-
-      <div className={styles['paragraph']}>
-        {`Previously, I worked at `}
-        <Link
-          href={URLs.BoringCompany}
-          {...linkProps}
-          onClick={() => {
-            trackEvent('about-link-click', {
-              link: URLs.BoringCompany,
-            })
-          }}
-        >
-          The Boring Company
-        </Link>
-        {`, `}
-        <Link
-          href={URLs.Workiva}
-          {...linkProps}
-          onClick={() => {
-            trackEvent('about-link-click', {
-              link: URLs.Workiva,
-            })
-          }}
-        >
-          Workiva
-        </Link>
-        {`, and `}
-        <Link
-          href={URLs.TiiltLab}
-          {...linkProps}
-          onClick={() => {
-            trackEvent('about-link-click', {
-              link: URLs.TiiltLab,
-            })
-          }}
-        >
-          NU Tiilt Lab
-        </Link>
-        .
+      <div className="mb-5 w-full text-base font-normal tracking-[-0.005em] md:w-[60%]">
+        <AiAgentsDropdown
+          prefix={`Previously, I worked on `}
+          suffix={
+            <>
+              {`for the r1 device at `}
+              <ExternalLink href={URLs.rabbit}>rabbit</ExternalLink>
+              {`. I also had the opportunity to work at `}
+              <ExternalLink href={URLs.BoringCompany}>
+                The Boring Company
+              </ExternalLink>
+              {`, `}
+              <ExternalLink href={URLs.Workiva}>Workiva</ExternalLink>
+              {`, and `}
+              <ExternalLink href={URLs.TiiltLab}>NU Tiilt Lab</ExternalLink>.
+            </>
+          }
+        />
       </div>
       <div className={styles['easter']}>
         <Link href="/random">👋</Link>

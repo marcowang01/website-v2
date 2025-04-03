@@ -19,7 +19,13 @@ const linkProps = {
   rel: 'noopener noreferrer',
 }
 
-export function AiAgentsDropdown() {
+export function AiAgentsDropdown({
+  prefix,
+  suffix,
+}: {
+  prefix: React.ReactNode
+  suffix: React.ReactNode
+}) {
   const [isOpen, setIsOpen] = useState(false)
   const contentRef = useRef<HTMLDivElement>(null)
   const [contentHeight, setContentHeight] = useState(0)
@@ -43,6 +49,7 @@ export function AiAgentsDropdown() {
   return (
     <>
       <span className="relative inline-block">
+        {prefix}
         <span
           onClick={toggleDropdown}
           className="inline-flex cursor-pointer select-none items-center"
@@ -59,13 +66,7 @@ export function AiAgentsDropdown() {
           </span>
         </span>
       </span>
-      at{' '}
-      <span>
-        <Link href={URLs.rabbit} {...linkProps}>
-          rabbit
-        </Link>
-      </span>
-      .
+      {suffix}
       <div
         style={{ height: isOpen ? `${contentHeight}px` : '0px' }}
         className="overflow-hidden transition-all duration-300"
