@@ -11,12 +11,21 @@ export interface Experience {
 const expericences = {
   work: [
     {
+      company: 'Exa',
+      position: 'Software Engineer',
+      bulletpoints: ['Building the search engine for AI'],
+      date: 'Apr. 2025 - Present',
+      location: 'San Francisco, CA',
+      skills: ['React', 'Typescript'],
+      url: 'https://www.exa.ai/',
+    },
+    {
       company: 'rabbit inc.',
       position: 'Software Engineer',
       bulletpoints: [
         'Building personal AI assistants that can interact with the world',
       ],
-      date: 'Feb. 2024 - Present',
+      date: 'Feb. 2024 - Mar. 2025',
       location: 'Los Angeles, CA',
       skills: ['Node.js', 'Next.js', 'MongoDB'],
       url: 'https://www.rabbit.tech/',
@@ -36,7 +45,7 @@ const expericences = {
       url: 'https://www.boringcompany.com/',
     },
     {
-      company: 'Workiva Inc.',
+      company: 'Workiva',
       position: 'Software Engineer Intern',
       bulletpoints: [
         'Improved document processing efficiency and reliability for an online document editor, focusing on fonts and file I/O',
