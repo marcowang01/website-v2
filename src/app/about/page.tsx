@@ -13,6 +13,7 @@ const URLs = {
   Workiva: 'https://www.workiva.com/',
   TiiltLab: 'https://tiilt.northwestern.edu/',
   exa: 'https://exa.ai/',
+  websets: 'https://websets.exa.ai/',
   rabbit: 'https://www.rabbit.tech/',
 }
 
@@ -52,7 +53,11 @@ export default function About() {
         connect.
       </div>
       <div className="mb-5 w-full text-base font-normal leading-[1.2] tracking-[-0.005em] md:w-[60%]">
-        Currently, I am building the search engine for AI at{` `}
+        {`Currently, I am building `}
+        <span className={`${styles['paragraph']}`}>
+          <ExternalLink href={URLs.websets}>websets</ExternalLink>
+        </span>
+        {` at `}
         <span className={`${styles['paragraph']}`}>
           <ExternalLink href={URLs.exa}>Exa</ExternalLink>
         </span>
