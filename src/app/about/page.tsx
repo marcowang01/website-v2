@@ -53,11 +53,7 @@ export default function About() {
         connect.
       </div>
       <div className="mb-5 w-full text-base font-normal leading-[1.2] tracking-[-0.005em] md:w-[60%]">
-        {`Currently, I am building `}
-        <span className={`${styles['paragraph']}`}>
-          <ExternalLink href={URLs.websets}>websets</ExternalLink>
-        </span>
-        {` at `}
+        {`Currently, I am building AI search at `}
         <span className={`${styles['paragraph']}`}>
           <ExternalLink href={URLs.exa}>Exa</ExternalLink>
         </span>
