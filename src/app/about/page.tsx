@@ -15,6 +15,7 @@ const URLs = {
   exa: 'https://exa.ai/',
   websets: 'https://websets.exa.ai/',
   rabbit: 'https://www.rabbit.tech/',
+  sierra: 'https://www.sierra.ai/',
 }
 
 // Helper component for external links
@@ -53,9 +54,9 @@ export default function About() {
         connect.
       </div>
       <div className="mb-5 w-full text-base font-normal leading-[1.2] tracking-[-0.005em] md:w-[60%]">
-        {`Currently, I am building AI search at `}
+        {`Currently, I am building AI agents at `}
         <span className={`${styles['paragraph']}`}>
-          <ExternalLink href={URLs.exa}>Exa</ExternalLink>
+          <ExternalLink href={URLs.sierra}>Sierra</ExternalLink>
         </span>
         .
       </div>
@@ -67,6 +68,8 @@ export default function About() {
               {`for the r1 device at `}
               <ExternalLink href={URLs.rabbit}>rabbit</ExternalLink>
               {`. I also had the opportunity to work at `}
+              <ExternalLink href={URLs.exa}>Exa</ExternalLink>
+              {`, `}
               <ExternalLink href={URLs.BoringCompany}>
                 The Boring Company
               </ExternalLink>

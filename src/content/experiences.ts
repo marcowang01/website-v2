@@ -11,12 +11,23 @@ export interface Experience {
 const expericences = {
   work: [
     {
-      company: 'Exa',
-      position: 'Software Engineer',
-      bulletpoints: [],
-      date: 'Apr. 2025 - Present',
+      company: 'Sierra',
+      position: 'Engineer',
+      bulletpoints: ['Building conversational agents'],
+      date: 'Jun. 2025 - Present',
       location: 'San Francisco, CA',
       skills: [],
+      url: 'https://sierra.ai/',
+    },
+    {
+      company: 'Exa',
+      position: 'Software Engineer',
+      bulletpoints: [
+        "Worked on websets, an agentic research tool powered by Exa's search engine",
+      ],
+      date: 'Apr. 2025 - Jun. 2025',
+      location: 'San Francisco, CA',
+      skills: ['Node.js', 'NestJS', 'Next.js', 'ClickHouse'],
       url: 'https://www.exa.ai/',
     },
     {
