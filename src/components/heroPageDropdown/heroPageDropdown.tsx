@@ -19,12 +19,14 @@ const linkProps = {
   rel: 'noopener noreferrer',
 }
 
-export function AiAgentsDropdown({
+export function HeroPageDropdown({
   prefix,
   suffix,
+  text,
 }: {
   prefix: React.ReactNode
   suffix: React.ReactNode
+  text: string
 }) {
   const [isOpen, setIsOpen] = useState(false)
   const contentRef = useRef<HTMLDivElement>(null)
@@ -57,10 +59,10 @@ export function AiAgentsDropdown({
           <span
             className={cn(
               'flex items-center underline opacity-70 transition-[color,opacity] duration-150 ease-in-out hover:opacity-100',
-              isOpen && 'opacity-100',
+              isOpen && 'opacity-100'
             )}
           >
-            AI agents
+            {text}
             <CaretDownIcon
               className={`-ml-[2px] transition-transform duration-300 ${
                 isOpen ? 'rotate-180' : ''

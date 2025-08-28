@@ -12,8 +12,8 @@ const expericences = {
   work: [
     {
       company: 'Sierra',
-      position: 'Engineer',
-      bulletpoints: ['Building conversational agents'],
+      position: 'Agent Engineer',
+      bulletpoints: ['Building conversational AI agents'],
       date: 'Jun. 2025 - Present',
       location: 'San Francisco, CA',
       skills: [],

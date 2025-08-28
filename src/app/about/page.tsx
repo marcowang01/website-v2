@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import styles from './page.module.css'
 import RandomGreeter from '@/components/randomGreeter/greeter'
-import { AiAgentsDropdown } from '@/components/aiAgentsDropdown/aiAgentsDropdown'
+import { HeroPageDropdown } from '@/components/heroPageDropdown/heroPageDropdown'
 import { trackEvent } from '@/lib/util'
 import { ReactNode } from 'react'
 
@@ -50,22 +50,22 @@ export default function About() {
         <RandomGreeter />
       </div>
       <div className={styles['paragraph']}>
-        I&apos;m Marco. I hope to build tools for people to create, learn, and
-        connect.
+        I&apos;m Marco. I&apos;m a software engineer based in SF.
       </div>
       <div className="mb-5 w-full text-base font-normal leading-[1.2] tracking-[-0.005em] md:w-[60%]">
-        {`Currently, I am building AI agents at `}
+        {`Currently, I am building conversational AI agents at `}
         <span className={`${styles['paragraph']}`}>
           <ExternalLink href={URLs.sierra}>Sierra</ExternalLink>
         </span>
         .
       </div>
       <div className="mb-5 w-full text-base font-normal tracking-[-0.005em] md:w-[60%]">
-        <AiAgentsDropdown
-          prefix={`Previously, I worked on `}
+        <HeroPageDropdown
+          prefix={`Previously, I worked on the `}
+          text={`r1 AI device`}
           suffix={
             <>
-              {`for the r1 device at `}
+              {`at `}
               <ExternalLink href={URLs.rabbit}>rabbit</ExternalLink>
               {`. I also had the opportunity to work at `}
               <ExternalLink href={URLs.exa}>Exa</ExternalLink>
