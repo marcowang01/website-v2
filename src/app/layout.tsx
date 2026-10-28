@@ -18,18 +18,19 @@ const inter = Inter({
 export const metadata = {
   title: 'Marco Wang',
   description:
-    'Software Engineer. Building AI assistants at rabbit. Creating tools to help people learn, create and connect. Physics/Computer Science at Northwestern University.',
+    'Marco Wang is a software engineer based in San Francisco, building conversational AI agents at Sierra. Explore his projects, experience, and contact information.',
+  robots: { index: true, follow: true },
   keywords: ['Marco Wang', 'Software', 'Engineer', 'Personal Website'],
   authors: [{ name: 'Marco Wang' }],
   creator: 'Marco Wang',
   publisher: 'Marco Wang',
-  metadataBase: new URL('https://marcowang.me'),
+  metadataBase: new URL('https://www.marcowang.me'),
   alternates: {
-    canonical: '/',
+    canonical: '/about',
   },
   openGraph: {
     images: '/images/og.png',
-    url: 'https://marcowang.me',
+    url: 'https://www.marcowang.me',
     siteName: 'Marco Wang',
     locale: 'en_US',
     type: 'website',
