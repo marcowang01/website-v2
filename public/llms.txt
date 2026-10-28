@@ -1,0 +1,22 @@
+# Marco Wang
+
+> Marco Wang is a software engineer based in San Francisco, building conversational AI agents at Sierra.
+
+This is Marco's personal portfolio. Previously, he worked at rabbit, Exa, The Boring Company, Workiva, and NU Tiilt Lab. This summary uses the public About page; the linked pages contain the full portfolio and context.
+
+## Pages
+
+- [About](https://www.marcowang.me/about): Current introduction and background.
+- [Spotlight](https://www.marcowang.me/spotlight): Selected projects, including Scribe, Tomo, and Igloo.
+- [Collection](https://www.marcowang.me/collection): Full project collection, descriptions, technologies, and source/demo links. Some projects are marked work in progress.
+- [Resume](https://www.marcowang.me/resume): Work experience, education, and downloadable resume.
+- [Contact](https://www.marcowang.me/contact): Public professional profiles and contact information.
+
+## Professional profiles
+
+- [GitHub](https://github.com/marcowang01)
+- [LinkedIn](https://www.linkedin.com/in/marco-01/)
+
+## Site index
+
+- [Sitemap](https://www.marcowang.me/sitemap.xml)
