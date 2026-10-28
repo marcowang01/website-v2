@@ -1,0 +1,7 @@
+# Public website content is crawlable, including by AI search crawlers.
+# robots.txt is not access control. Do not put private content on public routes.
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://www.marcowang.me/sitemap.xml
